@@ -1,0 +1,3 @@
+REM curl -v "http://localhost:3000/api/links_qa?base_path=G%%3A%%2FP27174%%2FTESTING%%2Fjohn%%2FPRODUCTION%%2FCSA-AB%%2F20180228A&addition_only_code=A&format=XML" 2>&1 | tee curl-links-qa.out
+REM curl -v --noproxy localhost --trace-ascii curl_new_user.trace-ascii.out -H "Content-Type: application/json" -XPOST --data "{\"basePath\":\"\\stooges\\moe\", \"additionOnlyCode\":\"a\"}" http://localhost:3000/links_qa_api/run_links_qa
+curl -v --noproxy localhost --trace-ascii curl_new_user.trace-ascii.out -H "Content-Type: application/json" -XPOST --data "{\"basePath\":\"G:\\p27174\\testing\\john\\production\\csa-ab\\20180228A\", \"additionOnlyCode\":\"a\"}" http://localhost:3000/links_qa_api/run_links_qa
