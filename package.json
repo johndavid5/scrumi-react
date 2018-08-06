@@ -1,7 +1,7 @@
 {
-  "name": "color-organizer",
+  "name": "scrumi-react",
   "version": "6.0.0",
-  "description": "A sample React application",
+  "description": "Keep Track of Tasks",
   "main": "index.js",
   "scripts": {
     "build": "webpack --progress --watch",

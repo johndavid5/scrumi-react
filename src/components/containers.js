@@ -21,6 +21,14 @@ export const NewColor = connect(
         })
 )(AddColorForm)
 
+export const ObjectivesContainer = connect(
+    state => /* mapStateToProps() */
+    ({
+        objectives: {...state.objectives}
+    }),
+    null /* mapDispatchToProps() */
+)(ObjectivesList)
+
 export const LinksQaFormContainer = connect(
     state => /* mapStateToProps() */
         ({
