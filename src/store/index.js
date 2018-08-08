@@ -1,6 +1,6 @@
 /* Let's create a store factory, boys and girls... */
 import { createStore, combineReducers, applyMiddleware } from 'redux'
-import { colors, linksQa } from './reducers'
+import { colors, linksQa, objectives } from './reducers'
 
 /* I thunk we'd use thunks to help us with asynchronous actions... 
 *
@@ -52,7 +52,7 @@ const middleware = server => [
 
 const storeFactory = (server = false, initialState = {}) =>
     applyMiddleware(...middleware(server))(createStore)(
-        combineReducers({colors, linksQa}),
+        combineReducers({colors, linksQa, objectives}),
         initialState
     )
 

@@ -93,3 +93,34 @@ export const linksQa = (state = {}, action={ type: null }) => {
             //return state
     }
 }
+
+
+export const objectives = (state = {}, action={ type: null }) => {
+
+    let sWho = "reducers::objectives";
+
+    logajohn.debug(`${sWho}(): state = `, state )
+    logajohn.debug(`${sWho}(): action = `, action )
+
+    let returno
+
+    switch (action.type) {
+
+        case C.OBJECTIVES_GET:
+
+            returno = {
+                ...state,
+                objectives: action.objectives
+            }
+
+            logajohn.debug(`${sWho}(): SHEMP: Moe, Retoynin' `, JSON.stringify(returno,null,' ') )
+
+            return returno
+
+        default:
+            // Just return a copy of state...
+            returno = {...state}
+            logajohn.debug(`${sWho}(): SHEMP: Moe, Retoynin' `, JSON.stringify(returno,null,' ') )
+            return returno
+    }
+}

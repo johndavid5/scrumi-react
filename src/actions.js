@@ -1,17 +1,24 @@
 import fetch from 'isomorphic-fetch'
 
-const parseResponse = response => response.json()
+const parseResponse = response => {
+    let sWho = "actions.js::parseResponse";
+    console.log(`${sWho}(): response = `, response );
+    return response.json();
+}
 
 const logError = error => console.error(error)
 
 /* Use isomorphic-fetch to send a request to a web
 * service "then" automatically dispatch the response.
 */
-const fetchThenDispatch = (dispatch, url, method, body) =>
+const fetchThenDispatch = (dispatch, url, method, body) => {
+    let sWho = "actions.js::fetchThenDispatch";
+    console.log(`${sWho}(): url = ${url}...`);
     fetch(url, {method, body, headers: { 'Content-Type': 'application/json' }})
         .then(parseResponse)
         .then(dispatch)
         .catch(logError)
+}
 
 /* thunk version of addColor()...
 *  (1) Sends a POST request to http://localhost:3000/api/colors
@@ -25,6 +32,18 @@ export const addColor = (title, color) => dispatch =>
         'POST',
         JSON.stringify({title, color})
     )
+
+/* thunk... */
+export const objectivesFilter = (filters) => dispatch => {
+    //let url = "/objectives_api/objectives" + encodeURIComponent(JSON.stringify(filters))
+    let url = "/objectives_api/objectives";
+    fetchThenDispatch(
+        dispatch,
+        url,
+        'POST',
+        JSON.stringify({...filters})
+    );
+}
 
 /* thunk... */
 export const linksQaRun = (basePath, additionOnlyCode) => dispatch =>

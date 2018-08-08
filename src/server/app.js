@@ -54,7 +54,7 @@ const buildHTMLPage = ({html, state, css}) => `
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Treebuchet</title>
+        <title>Scrumi-React</title>
         <meta charset="utf-8">
         <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">

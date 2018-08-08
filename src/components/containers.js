@@ -5,7 +5,9 @@ import ColorDetails from './ui/ColorDetails'
 import AddColorForm from './ui/AddColorForm'
 import LinksQaRunForm from './ui/LinksQaRunForm'
 import LinksQaResultsComponent from './ui/LinksQaResultsComponent'
-import { addColor, rateColor, removeColor, linksQaRun } from '../actions'
+import ObjectivesFilterForm from './ui/ObjectivesFilterForm'
+import ObjectivesListComponent from './ui/ObjectivesListComponent'
+import { addColor, rateColor, removeColor, linksQaRun, objectivesFilter } from '../actions'
 import { findById } from '../lib/array-helpers'
 import { sortColors } from '../lib/array-helpers'
 
@@ -21,13 +23,39 @@ export const NewColor = connect(
         })
 )(AddColorForm)
 
-export const ObjectivesContainer = connect(
+export const ObjectivesFilterFormContainer = connect(
     state => /* mapStateToProps() */
-    ({
-        objectives: {...state.objectives}
-    }),
-    null /* mapDispatchToProps() */
-)(ObjectivesList)
+        ({
+            objectives: {...state.objectives}
+        }),
+    dispatch => /* mapDispatchToProps() */
+        ({
+            onObjectivesFilter(filters) {
+                dispatch(objectivesFilter(filters))
+            }
+        })
+)(ObjectivesFilterForm)
+
+
+export const ObjectivesListContainer = connect(
+
+    state => /* mapStateToProps() */ {
+
+        let sWho="ObjectivesListContainer::mapStateToProps"
+
+        logajohn.debug(`${sWho}(): state = `, state );
+
+        let returno = 
+        {
+            objectives : {...state.objectives}
+        };
+
+        logajohn.debug(`${sWho}(): returning `, returno );
+
+        return returno;
+    },
+    null
+)(ObjectivesListComponent)
 
 export const LinksQaFormContainer = connect(
     state => /* mapStateToProps() */
