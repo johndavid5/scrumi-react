@@ -99,8 +99,8 @@ export const objectives = (state = {}, action={ type: null }) => {
 
     let sWho = "reducers::objectives";
 
-    logajohn.debug(`${sWho}(): state = `, state )
-    logajohn.debug(`${sWho}(): action = `, action )
+    logajohn.info(`${sWho}(): state = `, state )
+    logajohn.info(`${sWho}(): action = `, action )
 
     let returno
 
@@ -110,17 +110,19 @@ export const objectives = (state = {}, action={ type: null }) => {
 
             returno = {
                 ...state,
-                objectives: action.objectives
+                objectives_filters: action.filters,
+                objectives_list: action.objectives,
+                objectives_timestamp: action.timestamp
             }
 
-            logajohn.debug(`${sWho}(): SHEMP: Moe, Retoynin' `, JSON.stringify(returno,null,' ') )
+            logajohn.info(`${sWho}(): SHEMP: Moe, Retoynin' `, JSON.stringify(returno,null,' ') )
 
             return returno
 
         default:
             // Just return a copy of state...
             returno = {...state}
-            logajohn.debug(`${sWho}(): SHEMP: Moe, Retoynin' `, JSON.stringify(returno,null,' ') )
+            logajohn.info(`${sWho}(): SHEMP: Moe, Retoynin' simple copy of state: `, JSON.stringify(returno,null,' ') )
             return returno
     }
 }

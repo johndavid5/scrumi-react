@@ -25,9 +25,15 @@ export const NewColor = connect(
 
 export const ObjectivesFilterFormContainer = connect(
     state => /* mapStateToProps() */
-        ({
+        {
+        let sWho = "ObjectivesFilterFormContainer::mapStateToProps";
+        console.log(`${sWho}(): state = `, state );
+        let mary_kay_returno = {
             objectives: {...state.objectives}
-        }),
+        }
+        console.log(`${sWho}(): returning mary_kay_returno  = `, mary_kay_returno );
+        return mary_kay_returno;
+        },
     dispatch => /* mapDispatchToProps() */
         ({
             onObjectivesFilter(filters) {

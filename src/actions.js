@@ -2,7 +2,8 @@ import fetch from 'isomorphic-fetch'
 
 const parseResponse = response => {
     let sWho = "actions.js::parseResponse";
-    console.log(`${sWho}(): response = `, response );
+    //console.log(`${sWho}(): response = `, response );
+    //console.log(`${sWho}(): response.json() = `, response.json() );
     return response.json();
 }
 
@@ -36,12 +37,13 @@ export const addColor = (title, color) => dispatch =>
 /* thunk... */
 export const objectivesFilter = (filters) => dispatch => {
     //let url = "/objectives_api/objectives" + encodeURIComponent(JSON.stringify(filters))
-    let url = "/objectives_api/objectives";
+    //let url = "/objectives_api/objectives?name=fred";
+    let url = "/objectives_api/objectives?name=fredrika";
     fetchThenDispatch(
         dispatch,
         url,
-        'POST',
-        JSON.stringify({...filters})
+        'GET',
+        {} 
     );
 }
 

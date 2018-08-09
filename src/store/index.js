@@ -13,13 +13,14 @@ import thunk from 'redux-thunk'
 
 /* For isomorphism, use different loggers on client and server... */
 const clientLogger = store => next => action => {
+    let sWho = "store/index.js/clientLogger"
     if (action.type) {
         let result
         console.groupCollapsed("dispatching", action.type)
-        console.log('prev state', store.getState())
-        console.log('action', action)
+        console.log(sWho + '(): ' +'prev state', store.getState())
+        console.log(sWho + '(): ' + 'action', action)
         result = next(action)
-        console.log('next state', store.getState())
+        console.log(sWho + '(): ' + 'next state', store.getState())
         console.groupEnd()
         return result
     } else {
@@ -28,7 +29,8 @@ const clientLogger = store => next => action => {
 }
 
 const serverLogger = store => next => action => {
-    console.log('\n  dispatching server action\n')
+    let sWho = "store/index/serverLogger"
+    console.log('\n' + sWho + '(): ' + ' dispatching server action\n')
     console.log(action)
     console.log('\n')
     return next(action)

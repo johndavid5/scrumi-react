@@ -10,7 +10,7 @@ const App = () =>
     <Switch>
         {/*<IndexRoute component={LinksQa} />*/}
         {/*<Redirect from="/" to="/links_qa" />*/}
-        <Route path="/" component={Objectives} />
+        {/*<Route path="/" component={Objectives} />*/}
         <Route path="/objectives" component={Objectives} />
         <Route path="/links_qa" component={LinksQa} />
         {/*<Route exact path="/:id" component={Color} />

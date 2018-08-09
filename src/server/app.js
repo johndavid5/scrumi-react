@@ -9,10 +9,13 @@ import { Provider } from 'react-redux'
 import { compose } from 'redux'
 import { StaticRouter } from 'react-router-dom' // When we want to render our component tree to a string...  
 import { renderToString } from 'react-dom/server'
-/* Our color api...as middleware... */
+
+/* Our API's...as middleware... */
 import color_api from './color-api'
 import links_qa_api from './links-qa-api'
 import file_api from './file-api'
+import objectives_api from './objectives-api'
+
 import App from '../components/App'
 import storeFactory from '../store'
 import initialState from '../../data/initialState.json'
@@ -158,7 +161,7 @@ const respond = ({url}, res) =>
     )
 
 const logger = (req, res, next) => {
-    console.log(`${req.method} request for '${req.url}'`)
+    console.log(`app.js::logger(): ${req.method} request for '${req.url}'`)
     next()
 }
 
@@ -180,4 +183,5 @@ export default express()
     .use('/color_api', color_api)
     .use('/links_qa_api', links_qa_api)
     .use('/file_api', file_api)
+    .use('/objectives_api', objectives_api)
     .use(respond)
