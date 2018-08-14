@@ -17,14 +17,40 @@ const ObjectivesListComponent = ( props ) => {
 	logajohn.debug(`${sWho}(): objectives = `, objectives );
 
 
+	const thStyle = {
+	  border: '2px solid purple',
+      color: 'white', 
+      backgroundColor: 'purple',
+	  padding: '2px',
+      textAlign: 'center'
+	};
+
 	const tdStyle = {
 	  border: '2px solid purple',
 	  padding: '2px',
       textAlign: 'left'
 	};
 
+	const timestampStyle = {
+        color: 'purple'
+        /* whiteSpace: 'nowrap' */
+	};
+
 	return (
 		<div className="objectives-list-component container-fluid" style={{paddingLeft: '1em'}}>
+            {
+            <div className="filter-params row">
+                {
+                objectives.objectives_timestamp
+                ?
+                <div className="col-sm-8">
+                    <p style={timestampStyle}>{objectives.objectives_timestamp}</p>
+                </div>
+                :
+                ""
+                }
+            </div>
+                /*
             <div className="filter-params row">
                 <div className="col-sm-8">
                     <h3 style={{whiteSpace: 'nowrap'}}>Base Path: {}</h3>
@@ -39,18 +65,37 @@ const ObjectivesListComponent = ( props ) => {
                     <h3 style={{whiteSpace: 'nowrap'}}>STDERR Rows: {}</h3>
                 </div>
             </div>
-
-			<table className="table">
-			<tbody key="tbody">
+            */}
 			{
 			    //objectives ?
                 //objectives.map((value,index)=>{
 				//return (<tr key={"tr-"+index}><th scope="row" key={index} style={tdStyle}>{index}</th><td style={tdStyle} key={"val-"+index}>{value}</td></tr>);
 			    //}) :
                 //""
+                (objectives && objectives.objectives_list && objectives.objectives_list.length > 0 ) ?
+                (
+			    <table className="table">
+                <thead>
+                <tr> 
+                    <th scope="col" style={thStyle}>Who</th>
+                    <th scope="col" style={thStyle}>What</th>
+                    <th scope="col" style={thStyle}>When</th>
+                </tr>
+                </thead>
+    			<tbody>
+                {
+                    objectives.objectives_list.map((objective,index)=>{
+				    //return (<tr key={index}><td></td><td></td><td></td></tr>);
+				    return (<tr key={index}><td style={tdStyle}>{objective.who}</td><td style={tdStyle}>{objective.what}</td><td style={tdStyle}>{objective.when}</td></tr>);
+			       })
+                }
+			    </tbody>
+    			</table>
+                )
+                :
+                (<h2>No objectives</h2>) 
+                 
 			}
-			</tbody>
-			</table>
 
             { ( debug == true ) ?
 				<div><pre style={{fontSize: '125%', textAlign: 'left'}}>objectives = { JSON.stringify(objectives, null, ' ') }</pre></div> :

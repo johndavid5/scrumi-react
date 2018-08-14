@@ -1,8 +1,8 @@
-//import { LinksQa } from './models/links-qa'
-import { Router } from 'express'
 import C from '../constants'
-import { v4 } from 'uuid'
-const logatim = require('logatim')
+//import { v4 } from 'uuid' // create uuid's on the fly
+import { Objectives } from './models/objectives'
+import { Router } from 'express'
+//const logatim = require('logatim')
 const utils = require('../lib/utils')
 
 /* Our Express Router... */
@@ -38,28 +38,63 @@ router.get("/objectives", (req, res) => {
 //        filter.additionOnlyCode = req.body.additionOnlyCode
 //    }
 
-    function doIt(data, error){
-         let sWho = "doIt"
+//    function doIt(data, error){
+//         let sWho = "doIt"
+//
+//         console.log(`${sWho}(): data = `, data )
+//
+//         console.log(`${sWho}(): error = `, error )
+//
+//         let dispatchee = {
+//            type: C.OBJECTIVES_GET,
+//            filters: filters,
+//            timestamp: timestamp,
+//            objectives: data
+//         }
+//
+//         console.log(`${sWho}(): SHEMP: dispatchin' dhis, Moe: `, dispatchee )
+//
+//         dispatchAndRespond(req, res, dispatchee )
+//    }
 
-         console.log(`${sWho}(): data = `, data )
 
-         console.log(`${sWho}(): error = `, error )
+    //LinksQa.getLinksQa(filter, doIt);
+    // setTimeout( function(){ doIt(faux_objectives, null ) }, 1000 );
+
+    console.log(`${sWho}(): Callin' Objectives.getObjectives( filters = `, filters, `...)`)
+
+    Objectives.getObjectives( filters )
+    .then( (objectives) => {
+
+         console.log(`${sWho}().then: objectives = `, objectives )
 
          let dispatchee = {
             type: C.OBJECTIVES_GET,
             filters: filters,
             timestamp: timestamp,
-            objectives: data
+            objectives: objectives,
+            error: ""
          }
 
          console.log(`${sWho}(): SHEMP: dispatchin' dhis, Moe: `, dispatchee )
 
          dispatchAndRespond(req, res, dispatchee )
-    }
+     })
+     .catch( (error) => {
+         console.log(`${sWho}(): Caught error = `, error )
 
+         let dispatchee = {
+            type: C.OBJECTIVES_GET,
+            filters: filters,
+            timestamp: timestamp,
+            objectives: [],
+            error: error
+         }
 
-    //LinksQa.getLinksQa(filter, doIt);
-    setTimeout( function(){ doIt([{who: "joe", what: "i don't know", when: "whenever"}], null ) }, 1000 );
+         console.log(`${sWho}(): SHEMP: dispatchin' dhis, Moe: `, dispatchee )
+
+         dispatchAndRespond(req, res, dispatchee )
+     })
 
     }/* get() */
 

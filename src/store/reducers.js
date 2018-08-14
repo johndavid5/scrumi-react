@@ -110,9 +110,22 @@ export const objectives = (state = {}, action={ type: null }) => {
 
             returno = {
                 ...state,
+                objectives_loading: false,
                 objectives_filters: action.filters,
                 objectives_list: action.objectives,
-                objectives_timestamp: action.timestamp
+                objectives_timestamp: action.timestamp,
+                objectives_error: action.error
+            }
+
+            logajohn.info(`${sWho}(): SHEMP: Moe, Retoynin' `, JSON.stringify(returno,null,' ') )
+
+            return returno
+
+        case C.OBJECTIVES_LOADING:
+
+            returno = {
+                ...state,
+                objectives_loading: true
             }
 
             logajohn.info(`${sWho}(): SHEMP: Moe, Retoynin' `, JSON.stringify(returno,null,' ') )

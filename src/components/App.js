@@ -9,10 +9,11 @@ import '../stylesheets/APP.scss'
 const App = () =>
     <Switch>
         {/*<IndexRoute component={LinksQa} />*/}
-        {/*<Redirect from="/" to="/links_qa" />*/}
+        {/*<Redirect from="/" to="/objectives" />*}
         {/*<Route path="/" component={Objectives} />*/}
         <Route path="/objectives" component={Objectives} />
         <Route path="/links_qa" component={LinksQa} />
+        <Route path="/colors" component={Colors} />
         {/*<Route exact path="/:id" component={Color} />
         <Route path="/"
             component={({match, location}) => (
