@@ -96,6 +96,25 @@ router.get("/objectives", (req, res) => {
          dispatchAndRespond(req, res, dispatchee )
      })
 
+//        , (error) => {
+//
+//         console.log(`${sWho}(): Caught error = `, error )
+//
+//         let dispatchee = {
+//            type: C.OBJECTIVES_GET,
+//            filters: filters,
+//            timestamp: timestamp,
+//            objectives: [],
+//            error: error
+//         }
+//
+//         console.log(`${sWho}(): SHEMP: dispatchin' dhis, Moe: `, dispatchee )
+//
+//         dispatchAndRespond(req, res, dispatchee )
+//     }
+//     )
+
+
     }/* get() */
 
 )/* router.post(/run_links_qa,...) */

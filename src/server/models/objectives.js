@@ -1,5 +1,8 @@
 import { logajohn } from '../../lib/logajohn'
 
+//var MongoClient = require('mongodb').MongoClient;
+import { MongoClient } from 'mongodb';
+
 //logajohn.setLevel('info')
 logajohn.info("links-qa.js: logajohn.getLevel()=", logajohn.getLevel() )
 
@@ -15,9 +18,9 @@ export class Objectives {
 
         return new Promise( (resolve, reject ) => {
 
-            //if( filter == null ){
-            //    reject( new Error("You supplied a null filter.") )
-            //}
+            if( filter == null ){
+                reject( new Error("You supplied a null filter.") )
+            }
 
             let faux_objectives = [
                 {who: "Moe", what: "I'll murder you!", when: "Now."},
