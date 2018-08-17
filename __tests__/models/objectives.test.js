@@ -20,6 +20,7 @@ describe("ObjectivesModel", () => {
         ObjectivesModel.getObjectives({filter: {}})
         .
         return ObjectivesModel.getObjectives({filter: {}}).then( objectives => {
+            logajohn.debug(`objectives.test.js--"got objectives..."--got back objectives = `, objectives )
             expect(objectives.length).toBeGreaterThan(0);
         });
     });
