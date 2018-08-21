@@ -19,12 +19,12 @@ for(let i = 0; i < process.argv.length; i++ ){
 logajohn.info(`${sWho}(): dbname =`, dbname )
 
 function staticCallback(data,error){ 
-    let sWho = "FileModelDemo::staticCallback";
+    let sWho = "ObjectivesModelDemo::staticCallback";
     logajohn.info(`${sWho}(): SHEMP: Moe, data = `, JSON.stringify(data, null, ' ') )
     logajohn.info(`${sWho}(): SHEMP: Moe, error = `, error )
 }
 
-sWho = "FileModelDemo::static";
+sWho = "ObjectivesModelDemo::static";
 let filter = {}
 let objectivesModel = new Objectives(dbname);
 logajohn.info(`${sWho}(): SHEMP: Moe, callin' objectivesModel.getObjectives( filter = `, filter )

@@ -1,5 +1,6 @@
 export const config = {
-    DEBUG_LEVEL: 'debug' 
+    DEBUG_LEVEL: 'info' 
+    //DEBUG_LEVEL: 'debug' 
 }
 
 //console.log("config=",config)

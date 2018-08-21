@@ -6,12 +6,16 @@
   "scripts": {
     "build": "webpack --progress --watch",
     "prestart": "npm run build",
+    "spread-operator": "babel-node C:/Users/john/projects/bankcello-learning-react/chapter-02/04-es6-objects-and-arrays/03-the-spread-operator/spread-4.js",
+    "backpacking": "babel-node ./spread-4.js",
+    "backpacking-compile": "babel ./spread-4.js",
     "start-server-no-nodemon": "babel-node ./src/server",
     "start-server": "nodemon -e js --exec babel-node ./src/server/index.js",
-    "watch:test": "jest --watch",
-    "test": "jest",
-    "test-no-coverage": "jest --coverage=false",
-    "test-no-coverage-no-notify": "jest --coverage=false --notify=false"
+    "test-watch": "jest --watchAll --coverage=false --notify=false",
+    "clear-jest": "jest --clearCache",
+    "test": "jest --notify=false",
+    "test-quiet": "jest --coverage=false --notify=false",
+    "test-quiet-objectives": "jest --coverage=false --notify=false -t ObjectivesModel"
   },
   "keywords": [
     "React",
@@ -54,6 +58,7 @@
     "httpster": "1.0.3",
     "ignore-styles": "5.0.1",
     "isomorphic-fetch": "2.2.1",
+    "jest": "^21.2.1",
     "log4js": "^2.8.0",
     "logatim": "^0.9.0",
     "pg": "^7.4.3",
