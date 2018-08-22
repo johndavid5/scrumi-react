@@ -13,9 +13,11 @@
     "start-server": "nodemon -e js --exec babel-node ./src/server/index.js",
     "test-watch": "jest --watchAll --coverage=false --notify=false",
     "clear-jest": "jest --clearCache",
-    "test": "jest --notify=false",
+    "jest-config": "jest --showConfig",
+    "test-noisy": "jest",
     "test-quiet": "jest --coverage=false --notify=false",
-    "test-quiet-objectives": "jest --coverage=false --notify=false -t ObjectivesModel"
+    "test-models": "jest --coverage=false --notify=false -t DbModels",
+    "test-models-watch": "jest --watch --coverage=false --notify=false -t DbModels"
   },
   "keywords": [
     "React",
@@ -70,7 +72,8 @@
     "react-router-dom": "4.2.2",
     "redux": "3.7.2",
     "redux-thunk": "2.2.0",
-    "uuid": "3.1.0"
+    "uuid": "3.1.0",
+    "watchman": "^1.0.0"
   },
   "jest": {
     "setupFiles": [
