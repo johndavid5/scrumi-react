@@ -21,23 +21,100 @@ describe("DbModels", () => {
         /* e.g., clear the test database...possibly stock it with test data... */
     })
 
-    let test_users = [
+    let test_users_in = [
         {first_name: "Joe", middle_name: "S.", last_name: "Kovacs"}
         ,{first_name: "Jean", middle_name: "R.", last_name: "Kovacs"}
         //,{first_name: "John", middle_name: "D.", last_name: "Aynedjian"}
         //,{first_name: "Robert", middle_name: "S.", last_name: "Peters"}
     ];
 
-    test_users.forEach( (user)=>{
-	        it( `add user: ${JSON.stringify(user)}`, (done) => {
-	            usersModel.addUser(user)
-	            .then( (newUser)=>{
-                    let userOutExpected = {...user, user_id: newUser.user_id};
-	                expect(newUser).toEqual(userOutExpected);
-                    done();
-	            })
-	        })
+    let test_users_out = [];
+    let user_count_before = null;
+
+    it( `getUsers -- before`, (done) => {
+        usersModel.getUsers({})
+        .then( (users)=> {
+            logajohn.debug(`getUsers() -- before...then...users=`, users)
+            expect( users.length ).toBeGreaterThanOrEqual( 0 )
+            user_count_before = users.length
+            done()
+        })
     })
+
+    it( `addUser...`, (done) => {
+        let num_added = 0
+        test_users_in.forEach( (user)=>{
+	        usersModel.addUser(user)
+	        .then( (newUser)=>{
+                let userOutExpected = {...user, user_id: newUser.user_id};
+	            expect(newUser).toEqual(userOutExpected);
+                test_users_out.push(newUser);
+                if( test_users_out.length == test_users_in.length ){
+                    done();
+                }
+            })
+        })
+    })
+
+    it( `getUsers -- after add`, (done) => {
+        usersModel.getUsers({})
+        .then( (users)=> {
+            logajohn.debug(`getUsers() -- after add...then...users=`, users)
+            expect( users.length ).toEqual( user_count_before + test_users_in.length )
+            done()
+        })
+    })
+
+    it( `deleteUserById: quantity=${test_users_out.length}`, (done) => {
+        let num_deleted = 0
+
+        test_users_out.forEach( (user)=>{
+        logajohn.debug(`deleteUserById(${user.user_id})...`)
+	        usersModel.deleteUserById(user.user_id)
+            .then( (deletedId)=>{
+                logajohn.debug(`deleteUserById(${user.user_id})...then...deletedId=${deletedId}...`)
+	            expect(deletedId).toEqual(user.user_id);
+                num_deleted++
+                if( num_deleted == test_users_out.length ){
+                  done();
+                }
+	         })
+       })
+
+    })
+
+    it( `getUsers -- after delete`, (done) => {
+        usersModel.getUsers({})
+        .then( (users)=> {
+            logajohn.debug(`getUsers() -- after delete...then...users=`, users, `, user_count_before=`, user_count_before)
+            expect( users.length ).toEqual( user_count_before )
+            done()
+        })
+    })
+
+//         test_users_out.forEach( (user)=>{
+//	        it( `deleteUserById: ${JSON.stringify(user)}`, (done) => {
+//              logajohn.debug(`deleteUserById(${user.user_id})...`)
+//	          usersModel.deleteUserById(user.user_id)
+//              .then( (deletedId)=>{
+//                  logajohn.debug(`deleteUserById(${user.user_id})...then...deletedId=${deletedId}...`)
+//	              expect(deletedId).toEqual(user.user_id);
+//                  done();
+//	          })
+//           })
+//         })
+
+//        test_users_out.forEach( (user)=>{
+//	     it( `deleteUserById: ${JSON.stringify(user)}`, (done) => {
+//            logajohn.debug(`deleteUserById(${user.user_id})...`)
+//	        usersModel.deleteUserById(user.user_id)
+//            .then( (deletedId)=>{
+//                    logajohn.debug(`deleteUserById(${user.user_id})...then...deletedId=${deletedId}...`)
+//	                expect(deletedId).toEqual(user.user_id);
+//                    done();
+//	         })
+//	        })
+//        })
     
 
 

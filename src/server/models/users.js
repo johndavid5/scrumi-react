@@ -63,6 +63,75 @@ export class Users {
 
      }/* addUser() */
 
+
+	getUsers( filter ){
+
+        const sWho = "Users::getUsers"
+
+        return new Promise( (resolve, reject ) => {
+        
+	        let config = { database: this.dbname };
+	        logajohn.debug(`${sWho}(): Calling pool = new Pool(`, config , `)...`)
+	        const pool = new Pool( config );
+	
+	        let sQuery =
+        	`SELECT * from users`
+
+	        let args = []
+	
+	        logajohn.debug(`${sWho}(): Calling pool.query("${sQuery}", ${JSON.stringify(args)})...`);
+	
+	        pool.query(sQuery, args)
+	        .then(res => {
+	            logajohn.debug(`${sWho}(): Got res = `, res );
+                resolve( res.rows );
+	        })
+	        .catch(
+                err => setImmediate(() => {
+	                logajohn.debug(`${sWho}(): Caught err = `, err )
+                    reject( err )
+                })
+            )
+	
+        })/* new Promise */
+
+     }/* getUsers() */
+
+	deleteUserById( user_id ){
+
+        const sWho = "Users::deleteUserById"
+
+        return new Promise( (resolve, reject ) => {
+        
+	        let config = { database: this.dbname };
+	        logajohn.debug(`${sWho}(): Calling pool = new Pool(`, config , `)...`)
+	        const pool = new Pool( config );
+	
+	        let sQuery =
+        	`DELETE from users 
+        	 WHERE user_id = $1
+            RETURNING user_id
+        	`
+	        let args = [user_id];
+	
+	        logajohn.debug(`${sWho}(): Calling pool.query("${sQuery}", ${JSON.stringify(args)})...`);
+	
+	        pool.query(sQuery, args)
+	        .then(res => {
+	            logajohn.debug(`${sWho}(): Got res = `, res );
+                resolve( res.rows[0].user_id );
+	        })
+	        .catch(
+                err => setImmediate(() => {
+	                logajohn.debug(`${sWho}(): Caught err = `, err )
+                    reject( err )
+                })
+            )
+	
+        })/* new Promise */
+
+     }/* deleteUserById() */
+
 } /* class Users() */
 
 

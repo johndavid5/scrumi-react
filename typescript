@@ -1,0 +1,59 @@
+Script started on Wed Aug 22 18:28:18 2018
+sh-4.4$ npm run test-models-watch
+
+> scrumi-react@6.0.0 test-models-watch c:\Users\john\projects\scrumi-react
+> jest --watch --coverage=false --notify=false -t DbModels
+
+PASS __tests__\models\dbmodels.test.js
+  ● Console
+
+    console.info node_modules\logatim\dist\logatim.umd.min.js:1
+      [30m[2018-08-22 18:29:22][INFO] objectives.js: logajohn.getLevel()= DEBUG[49m[0m
+    console.info node_modules\logatim\dist\logatim.umd.min.js:1
+      [30m[2018-08-22 18:29:22][INFO] users.js: logajohn.getLevel()= DEBUG[49m[0m
+    console.info node_modules\logatim\dist\logatim.umd.min.js:1
+      [30m[2018-08-22 18:29:22][INFO] dbmodels.test.js: logajohn.getLevel()=DEBUG...[49m[0m
+    console.info node_modules\logatim\dist\logatim.umd.min.js:1
+      [30m[2018-08-22 18:29:22][DEBUG] Users::addUser(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+    console.info node_modules\logatim\dist\logatim.umd.min.js:1
+      [30m[2018-08-22 18:29:22][DEBUG] Users::addUser(): Calling pool.query("INSERT into users 
+              	(first_name, middle_name, last_name)
+              	VALUES
+              	($1, $2, $3)
+                  RETURNING user_id, first_name, middle_name, last_name
+              	", ["Joe","S.","Kovacs"])...[49m[0m
+    console.info node_modules\logatim\dist\logatim.umd.min.js:1
+      [30m[2018-08-22 18:29:23][DEBUG] Users::addUser(): Got res = {"command":"INSERT","rowCount":1,"oid":0,"rows":[{"user_id":29,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"}],"fields":[{"name":"user_id","tableID":16748,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"first_name","tableID":16748,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"middle_name","tableID":16748,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"last_name","tableID":16748,"columnID":4,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"}],"_parsers":[null,null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+    console.info node_modules\logatim\dist\logatim.umd.min.js:1
+      [30m[2018-08-22 18:29:23][DEBUG] Users::addUser(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+    console.info node_modules\logatim\dist\logatim.umd.min.js:1
+      [30m[2018-08-22 18:29:23][DEBUG] Users::addUser(): Calling pool.query("INSERT into users 
+              	(first_name, middle_name, last_name)
+              	VALUES
+              	($1, $2, $3)
+                  RETURNING user_id, first_name, middle_name, last_name
+              	", ["Jean","R.","Kovacs"])...[49m[0m
+    console.info node_modules\logatim\dist\logatim.umd.min.js:1
+      [30m[2018-08-22 18:29:23][DEBUG] Users::addUser(): Got res = {"command":"INSERT","rowCount":1,"oid":0,"rows":[{"user_id":30,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"}],"fields":[{"name":"user_id","tableID":16748,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"first_name","tableID":16748,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"middle_name","tableID":16748,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"last_name","tableID":16748,"columnID":4,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"}],"_parsers":[null,null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+
+Test Suites: 4 skipped, 1 passed, 1 of 5 total
+Tests:       16 skipped, 2 passed, 18 total
+Snapshots:   0 total
+Time:        17.181s
+Ran all test suites with tests matching "DbModels".
+
+Active Filters: test name /DbModels/
+ › Press c to clear filters.
+
+Watch Usage
+ › Press a to run all tests.
+ › Press o to only run tests related to changed files.
+ › Press p to filter by a filename regex pattern.
+ › Press t to filter by a test name regex pattern.
+ › Press q to quit watch mode.
+ › Press Enter to trigger a test run.
+
+sh-4.4$ exit
+
+Script done on Wed Aug 22 18:29:38 2018
