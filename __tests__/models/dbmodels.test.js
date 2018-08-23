@@ -30,6 +30,7 @@ describe("DbModels", () => {
 
     let test_users_out = [];
     let user_count_before = null;
+    let objective_count_before = null;
 
     it( `getUsers -- before`, (done) => {
         usersModel.getUsers({})
@@ -56,6 +57,16 @@ describe("DbModels", () => {
         })
     })
 
+    it( `getObjectives -- before`, (done) => {
+        objectivesModel.getObjectives({})
+        .then( (objectives)=> {
+            logajohn.debug(`getObjectives() -- before...then: objectives =`, objectives)
+            expect( objectives.length ).toBeGreaterThanOrEqual( 0 )
+            objective_count_before = objectives.length
+            done()
+        })
+    })
+
     it( `getUsers -- after add`, (done) => {
         usersModel.getUsers({})
         .then( (users)=> {
@@ -67,7 +78,7 @@ describe("DbModels", () => {
 
     it( `deleteUserById: quantity=${test_users_out.length}`, (done) => {
         let num_deleted = 0
-
+        // Delete all the users one-by-one...
         test_users_out.forEach( (user)=>{
         logajohn.debug(`deleteUserById(${user.user_id})...`)
 	        usersModel.deleteUserById(user.user_id)
