@@ -11,6 +11,7 @@ jest
 
 # Dist is now 100% webpack generated...
 dist/
+build/
 
 # Logs
 logs

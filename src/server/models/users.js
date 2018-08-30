@@ -8,8 +8,12 @@
 * set PGUSER=<postgres_username>
 * set PGPASSWORD=<postgres_password>
 */
-import { config } from '../../../config'
+//import { config } from '../../../config'
+import { config } from '../../config'
+
 import { logajohn } from '../../lib/logajohn'
+
+// Pool is better than Client...
 //const { Client } = require('pg') // PostgreSQL client
 const { Pool } = require('pg') // PostgreSQL client pool...
 

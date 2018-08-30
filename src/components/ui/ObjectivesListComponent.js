@@ -36,6 +36,24 @@ const ObjectivesListComponent = ( props ) => {
         /* whiteSpace: 'nowrap' */
 	};
 
+    const formFullName = (objective)=>{
+        let s_out = ""
+
+        if( objective.first_name ){
+            s_out += objective.first_name
+        }
+
+        if( objective.middle_name && objective.middle_name.length >0 ){
+            s_out += " " + objective.middle_name
+        }
+
+        if( objective.last_name && objective.last_name.length >0 ){
+            s_out += " " + objective.last_name
+        }
+
+        return s_out
+    }
+
 	return (
 		<div className="objectives-list-component container-fluid" style={{paddingLeft: '1em'}}>
             {
@@ -77,16 +95,15 @@ const ObjectivesListComponent = ( props ) => {
 			    <table className="table">
                 <thead>
                 <tr> 
-                    <th scope="col" style={thStyle}>Who</th>
-                    <th scope="col" style={thStyle}>What</th>
-                    <th scope="col" style={thStyle}>When</th>
+                    <th scope="col" style={thStyle}>Description</th>
+                    <th scope="col" style={thStyle}>Assigned To</th>
                 </tr>
                 </thead>
     			<tbody>
                 {
                     objectives.objectives_list.map((objective,index)=>{
 				    //return (<tr key={index}><td></td><td></td><td></td></tr>);
-				    return (<tr key={index}><td style={tdStyle}>{objective.who}</td><td style={tdStyle}>{objective.what}</td><td style={tdStyle}>{objective.when}</td></tr>);
+				    return (<tr key={index}><td style={tdStyle}>{objective.description}</td><td style={tdStyle}>{formFullName(objective)}</td></tr>);
 			       })
                 }
 			    </tbody>

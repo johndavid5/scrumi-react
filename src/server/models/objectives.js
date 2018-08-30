@@ -8,7 +8,9 @@
 * set PGUSER=<postgres_username>
 * set PGPASSWORD=<postgres_password>
 */
-import { config } from '../../../config'
+//import { config } from '../../../config'
+import { config } from '../../config'
+
 import { logajohn } from '../../lib/logajohn'
 const { Client } = require('pg')
 

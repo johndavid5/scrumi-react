@@ -1,11 +1,14 @@
 import { FileModel } from './models/file'
 import { Router } from 'express'
-// This API doesn't dispatch and send Redux actions...
+
+// NOTE: This API doesn't dispatch and send Redux actions...
 // ...just plain old JSON...
 //import C from '../constants'
 //import { v4 } from 'uuid'
+
 import { logajohn } from '../lib/logajohn'
-import { config } from '../../config'
+//import { config } from '../../config'
+import { config } from '../config'
 
 /* Our Express Router... */
 const router = Router() 

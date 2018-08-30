@@ -1,16 +1,11 @@
-//var deepcopy = require('deepcopy');
-
-//var logger = require('../logger'); 
-
-//var config = require('../config'); 
-
-
 import fs from 'fs'
 import path from 'path'
 //import lstat from 'lstat'
 
 import { logajohn } from '../../lib/logajohn'
-import { config } from '../../../config'
+//import { config } from '../../../config'
+import { config } from '../../config'
+
 logajohn.setLevel(config.DEBUG_LEVEL)
 logajohn.debug("file.js: config.DEBUG_LEVEL = ", config.DEBUG_LEVEL )
 logajohn.debug("file.js: logajohn.getLevel()=", logajohn.getLevel() )

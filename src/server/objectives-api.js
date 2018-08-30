@@ -31,6 +31,7 @@ router.get("/objectives", (req, res) => {
     console.log(`${sWho}(): req.query = `, utils.customStringify(req.query) )
 
     let filters = {}
+
 //    if( req.body.basePath ){
 //        filter.basePath = req.body.basePath
 //    }
@@ -61,9 +62,11 @@ router.get("/objectives", (req, res) => {
     //LinksQa.getLinksQa(filter, doIt);
     // setTimeout( function(){ doIt(faux_objectives, null ) }, 1000 );
 
-    console.log(`${sWho}(): Callin' Objectives.getObjectives( filters = `, filters, `...)`)
+    let objectivesModel = new Objectives();
+    //console.log(`${sWho}(): Callin' Objectives.getObjectives( filters = `, filters, `...)`)
+    console.log(`${sWho}(): Callin' objectivesModel.getObjectives( filters = `, filters, `...)`)
 
-    Objectives.getObjectives( filters )
+    objectivesModel.getObjectives( filters )
     .then( (objectives) => {
 
          console.log(`${sWho}().then: objectives = `, objectives )
