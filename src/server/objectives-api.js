@@ -13,10 +13,17 @@ const router = Router()
 * is sent to the client.
 *
 * (1) Dispatch the action to the `serverStore`
+*
+*     NOTE: This only occurs if you supply options: dispatchToStore=true
+*     ...because it's oft-times senseless to write to just write
+*     the entire state to the server-side store...
+*
 * (2) Send the action to the client via the response object.
 */
-const dispatchAndRespond = (req, res, action) => {
-    req.store.dispatch(action)
+const dispatchAndRespond = (req, res, action, options={}) => {
+    if( options.dispatchToStore ){
+        req.store.dispatch(action)
+    }
     res.status(200).json(action)
 }
 
@@ -32,38 +39,14 @@ router.get("/objectives", (req, res) => {
 
     let filters = {}
 
-//    if( req.body.basePath ){
-//        filter.basePath = req.body.basePath
-//    }
-//    if( req.body.additionOnlyCode ){
-//        filter.additionOnlyCode = req.body.additionOnlyCode
-//    }
-
-//    function doIt(data, error){
-//         let sWho = "doIt"
-//
-//         console.log(`${sWho}(): data = `, data )
-//
-//         console.log(`${sWho}(): error = `, error )
-//
-//         let dispatchee = {
-//            type: C.OBJECTIVES_GET,
-//            filters: filters,
-//            timestamp: timestamp,
-//            objectives: data
-//         }
-//
-//         console.log(`${sWho}(): SHEMP: dispatchin' dhis, Moe: `, dispatchee )
-//
-//         dispatchAndRespond(req, res, dispatchee )
-//    }
-
-
-    //LinksQa.getLinksQa(filter, doIt);
-    // setTimeout( function(){ doIt(faux_objectives, null ) }, 1000 );
+    // if( req.body.basePath ){
+    //     filter.basePath = req.body.basePath
+    // }
+    // if( req.body.additionOnlyCode ){
+    //     filter.additionOnlyCode = req.body.additionOnlyCode
+    // }
 
     let objectivesModel = new Objectives();
-    //console.log(`${sWho}(): Callin' Objectives.getObjectives( filters = `, filters, `...)`)
     console.log(`${sWho}(): Callin' objectivesModel.getObjectives( filters = `, filters, `...)`)
 
     objectivesModel.getObjectives( filters )
@@ -98,24 +81,6 @@ router.get("/objectives", (req, res) => {
 
          dispatchAndRespond(req, res, dispatchee )
      })
-
-//        , (error) => {
-//
-//         console.log(`${sWho}(): Caught error = `, error )
-//
-//         let dispatchee = {
-//            type: C.OBJECTIVES_GET,
-//            filters: filters,
-//            timestamp: timestamp,
-//            objectives: [],
-//            error: error
-//         }
-//
-//         console.log(`${sWho}(): SHEMP: dispatchin' dhis, Moe: `, dispatchee )
-//
-//         dispatchAndRespond(req, res, dispatchee )
-//     }
-//     )
 
 
     }/* get() */
