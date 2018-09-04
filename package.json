@@ -4,9 +4,9 @@
   "description": "Keep Track of Tasks",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --progress --watch",
+    "build-client": "webpack --progress --watch",
     "build-server": "babel src -d build --watch",
-    "prestart": "npm run build",
+    "prestart": "npm run build-client; npm run build-server",
     "start-server-babel": "babel-node ./src/server",
     "start-server-nodemon-babel": "nodemon -e js --exec babel-node ./src/server/index.js",
     "start-server-nodemon": "nodemon ./build/server/index.js",

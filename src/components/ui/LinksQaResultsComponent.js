@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
-import '../../stylesheets/LinksQaResultsComponent.scss'
 import { logajohn } from '../../lib/logajohn' 
+
+//import '../../stylesheets/LinksQaResultsComponent.scss'
+import '../../../stylesheets/LinksQaResultsComponent.scss'
 
 //const LinksQaResultsComponent = ({ linksQa={}, debug=true}) => {
 const LinksQaResultsComponent = ( props ) => {

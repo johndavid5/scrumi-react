@@ -17,13 +17,12 @@ https://node-postgres.com/
 * https://jestjs.io/docs/en/mock-functions
 
 * A Jest Express mock:
-  https://github.com/jameswlane/jest-express
-
+    https://github.com/jameswlane/jest-express
 
 * http://www.albertgao.xyz/2017/05/24/how-to-test-expressjs-with-jest-and-supertest/
-  npm install --save supertest
-  npm install --save superagent
+    npm install --save supertest
+    npm install --save superagent
 
 * entire code tree...demo of express app testing with jest
-  https://github.com/gregjopa/express-app-testing-demo
+    https://github.com/gregjopa/express-app-testing-demo
 

@@ -8,7 +8,8 @@ import { withRouter } from 'react-router'
 import StarRating from './StarRating'
 import TimeAgo from './TimeAgo'
 import FaTrash from 'react-icons/lib/fa/trash-o'
-import '../../stylesheets/Color.scss'
+//import '../../stylesheets/Color.scss'
+import '../../../stylesheets/Color.scss'
 
 class Color extends Component {
 

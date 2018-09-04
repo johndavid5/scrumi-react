@@ -5,9 +5,11 @@ import { Component } from 'react'
 // match, history, and location (as props)...
 import { withRouter } from 'react-router'
 import PropTypes from 'prop-types'
-import '../../stylesheets/ObjectivesFilterForm.scss'
 import { logajohn } from '../../lib/logajohn' 
 import { customStringify } from '../../lib/utils' // Safer than JSON.stringify()... 
+
+//import '../../stylesheets/ObjectivesFilterForm.scss'
+import '../../../stylesheets/ObjectivesFilterForm.scss'
 
 class ObjectivesFilterForm extends Component {
 

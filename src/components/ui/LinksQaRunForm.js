@@ -6,9 +6,11 @@ import { Component } from 'react'
 import { withRouter } from 'react-router'
 import FilePicker from './FilePicker'
 import PropTypes from 'prop-types'
-import '../../stylesheets/LinksQaRunForm.scss'
 import { logajohn } from '../../lib/logajohn' 
 import { customStringify } from '../../lib/utils' 
+
+//import '../../stylesheets/LinksQaRunForm.scss'
+import '../../../stylesheets/LinksQaRunForm.scss'
 
 class LinksQaRunForm extends Component {
 

@@ -1,10 +1,12 @@
 import { Component } from 'react'
 import PropTypes from 'prop-types'
-import '../../stylesheets/FilePicker.scss'
 import { logajohn } from '../../lib/logajohn' 
 import { customStringify } from '../../lib/utils' 
 import fetch from 'isomorphic-fetch'
 import path from 'path' // From node...used to concatenate file paths...included as path-browserify via the magic of webpack...
+
+//import '../../stylesheets/FilePicker.scss'
+import '../../../stylesheets/FilePicker.scss'
 
 class FilePicker extends Component {
 

@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
-import '../../stylesheets/ObjectivesListComponent.scss'
 import { logajohn } from '../../lib/logajohn' 
+
+//import '../../stylesheets/ObjectivesListComponent.scss'
+import '../../../stylesheets/ObjectivesListComponent.scss'
 
 //const ObjectivesListComponent = ({ linksQa={}, debug=true}) => {
 const ObjectivesListComponent = ( props ) => {
