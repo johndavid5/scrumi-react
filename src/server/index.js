@@ -12,5 +12,5 @@ global.React = React
 app.set('port', process.env.PORT || 3000)
     .listen(
         app.get('port'),
-        () => console.log(`Scrumi-React running at 'http://localhost:${app.get('port')}'`)
+        () => console.log(`Scrumi-React running at 'http://localhost:${app.get('port')}'`),
     )

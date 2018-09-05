@@ -1,14 +1,16 @@
-import { Route, Redirect, Switch, IndexRoute } from 'react-router-dom'
-import Menu from './ui/Menu'
-import Whoops404 from './ui/Whoops404'
-import { Colors, Color, NewColor } from './containers'
-import LinksQa from './ui/LinksQa'
-import Objectives from './ui/Objectives'
-//import '../stylesheets/APP.scss'
-import '../../stylesheets/APP.scss'
+import {
+ Route, Redirect, Switch, IndexRoute 
+} from 'react-router-dom';
+import Menu from './ui/Menu';
+import Whoops404 from './ui/Whoops404';
+import { Colors, Color, NewColor } from './containers';
+import LinksQa from './ui/LinksQa';
+import Objectives from './ui/Objectives';
+// import '../stylesheets/APP.scss'
+import '../../stylesheets/APP.scss';
 
-const App = () =>
-    <Switch>
+const App = () => (
+<Switch>
         {/*<IndexRoute component={LinksQa} />*/}
         {/*<Redirect from="/" to="/objectives" />*}
         {/*<Route path="/" component={Objectives} />*/}
@@ -31,5 +33,5 @@ const App = () =>
             )} />
          */}
     </Switch>
-
-export default App
+)
+export default App;

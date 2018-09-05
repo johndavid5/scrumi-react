@@ -7,114 +7,104 @@ import LinksQaRunForm from './ui/LinksQaRunForm'
 import LinksQaResultsComponent from './ui/LinksQaResultsComponent'
 import ObjectivesFilterForm from './ui/ObjectivesFilterForm'
 import ObjectivesListComponent from './ui/ObjectivesListComponent'
-import { addColor, rateColor, removeColor, linksQaRun, objectivesFilter } from '../actions'
+import {
+    addColor, rateColor, removeColor, linksQaRun, objectivesFilter,
+} from '../actions'
 import { findById } from '../lib/array-helpers'
 import { sortColors } from '../lib/array-helpers'
 
-import { logajohn } from '../lib/logajohn' 
+import { logajohn } from '../lib/logajohn'
 
 export const NewColor = connect(
     null, /* mapStateToProps() */
-    dispatch => /* mapDispatchToProps() */
-        ({
-            onNewColor(title, color) {
-                dispatch(addColor(title, color))
-            }
-        })
+    dispatch => ({
+        onNewColor(title, color) {
+            dispatch(addColor(title, color))
+        },
+    }),
 )(AddColorForm)
 
 export const ObjectivesFilterFormContainer = connect(
-    state => /* mapStateToProps() */
-        {
-        let sWho = "ObjectivesFilterFormContainer::mapStateToProps";
-        console.log(`${sWho}(): state = `, state );
-        let mary_kay_returno = {
-            objectives: {...state.objectives}
+    (state) => {
+        const sWho = 'ObjectivesFilterFormContainer::mapStateToProps'
+        console.log(`${sWho}(): state = `, state)
+        const mary_kay_returno = {
+            objectives: { ...state.objectives },
         }
-        console.log(`${sWho}(): returning mary_kay_returno  = `, mary_kay_returno );
-        return mary_kay_returno;
+        console.log(`${sWho}(): returning mary_kay_returno  = `, mary_kay_returno)
+        return mary_kay_returno
+    },
+    dispatch => ({
+        onObjectivesFilter(filters) {
+            dispatch(objectivesFilter(filters))
         },
-    dispatch => /* mapDispatchToProps() */
-        ({
-            onObjectivesFilter(filters) {
-                dispatch(objectivesFilter(filters))
-            }
-        })
+    }),
 )(ObjectivesFilterForm)
 
 
 export const ObjectivesListContainer = connect(
 
-    state => /* mapStateToProps() */ {
+    (state) => /* mapStateToProps() */ {
+        const sWho = 'ObjectivesListContainer::mapStateToProps'
 
-        let sWho="ObjectivesListContainer::mapStateToProps"
+        logajohn.debug(`${sWho}(): state = `, state)
 
-        logajohn.debug(`${sWho}(): state = `, state );
+        const returno = {
+            objectives: { ...state.objectives },
+        }
 
-        let returno = 
-        {
-            objectives : {...state.objectives}
-        };
+        logajohn.debug(`${sWho}(): returning `, returno)
 
-        logajohn.debug(`${sWho}(): returning `, returno );
-
-        return returno;
+        return returno
     },
-    null
+    null,
 )(ObjectivesListComponent)
 
 export const LinksQaFormContainer = connect(
-    state => /* mapStateToProps() */
-        ({
-            linksQa: {...state.linksQa}
-        }),
-    dispatch => /* mapDispatchToProps() */
-        ({
-            onLinksQaRun(basePath, additionOnlyCode, timestamp, output) {
-                dispatch(linksQaRun(basePath, additionOnlyCode, timestamp, output))
-            }
-        })
+    state => ({
+        linksQa: { ...state.linksQa },
+    }),
+    dispatch => ({
+        onLinksQaRun(basePath, additionOnlyCode, timestamp, output) {
+            dispatch(linksQaRun(basePath, additionOnlyCode, timestamp, output))
+        },
+    }),
 )(LinksQaRunForm)
 
 export const LinksQaResultsContainer = connect(
-    state => /* mapStateToProps() */ {
+    (state) => /* mapStateToProps() */ {
+        const sWho = 'LinksQaResultsContainer::mapStateToProps'
 
-        let sWho="LinksQaResultsContainer::mapStateToProps"
+        logajohn.debug(`${sWho}(): state = `, state)
 
-        logajohn.debug(`${sWho}(): state = `, state );
+        const returno = {
+            linksQa: { ...state.linksQa },
+        }
 
-        let returno = 
-        {
-            linksQa: {...state.linksQa}
-        };
+        logajohn.debug(`${sWho}(): returning `, returno)
 
-        logajohn.debug(`${sWho}(): returning `, returno );
-
-        return returno;
+        return returno
     },
-    null
+    null,
 )(LinksQaResultsComponent)
 
 
 export const Colors = connect(
-    ({colors}, {match}) =>
-        ({
-            colors: sortColors(colors, match.params.sort)
-        }),
-    dispatch =>
-        ({
-            onRemove(id) {
-                dispatch(removeColor(id))
-            },
-            onRate(id, rating) {
-                dispatch(rateColor(id, rating))
-            }
-        })
+    ({ colors }, { match }) => ({
+        colors: sortColors(colors, match.params.sort),
+    }),
+    dispatch => ({
+        onRemove(id) {
+            dispatch(removeColor(id))
+        },
+        onRate(id, rating) {
+            dispatch(rateColor(id, rating))
+        },
+    }),
 )(ColorList)
 
 export const Color = connect(
-    ({ colors }, { match }) =>
-        ({
-            ...findById(colors, match.params.id)
-        })
+    ({ colors }, { match }) => ({
+        ...findById(colors, match.params.id),
+    }),
 )(ColorDetails)

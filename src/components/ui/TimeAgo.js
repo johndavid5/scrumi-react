@@ -1,9 +1,9 @@
 import { ago } from '../../lib/time-helpers'
 
-const TimeAgo = ({timestamp}) => {
-    return <div className="time-ago">
-        { ago(timestamp) }
+const TimeAgo = ({ timestamp }) => (
+  <div className="time-ago">
+      { ago(timestamp) }
     </div>
-}
+)
 
 export default TimeAgo

@@ -1,10 +1,10 @@
 import fetch from 'isomorphic-fetch'
 
-const parseResponse = response => {
-    let sWho = "actions.js::parseResponse";
-    //console.log(`${sWho}(): response = `, response );
-    //console.log(`${sWho}(): response.json() = `, response.json() );
-    return response.json();
+const parseResponse = (response) => {
+    const sWho = 'actions.js::parseResponse'
+    // console.log(`${sWho}(): response = `, response );
+    // console.log(`${sWho}(): response.json() = `, response.json() );
+    return response.json()
 }
 
 const logError = error => console.error(error)
@@ -13,9 +13,9 @@ const logError = error => console.error(error)
 * service "then" automatically dispatch the response.
 */
 const fetchThenDispatch = (dispatch, url, method, body) => {
-    let sWho = "actions.js::fetchThenDispatch";
-    console.log(`${sWho}(): url = ${url}...`);
-    fetch(url, {method, body, headers: { 'Content-Type': 'application/json' }})
+    const sWho = 'actions.js::fetchThenDispatch'
+    console.log(`${sWho}(): url = ${url}...`)
+    fetch(url, { method, body, headers: { 'Content-Type': 'application/json' } })
         .then(parseResponse)
         .then(dispatch)
         .catch(logError)
@@ -26,49 +26,45 @@ const fetchThenDispatch = (dispatch, url, method, body) => {
 *      along with the title and hex value of the new color.
 *  (2) An ADD_COLOR action object is returned, parsed, and dispatched.
 */
-export const addColor = (title, color) => dispatch =>
-    fetchThenDispatch(
-        dispatch,
-        '/color_api/colors',
-        'POST',
-        JSON.stringify({title, color})
-    )
+export const addColor = (title, color) => dispatch => fetchThenDispatch(
+    dispatch,
+    '/color_api/colors',
+    'POST',
+    JSON.stringify({ title, color }),
+)
 
 /* thunk... */
-export const objectivesFilter = (filters) => dispatch => {
-    //let url = "/objectives_api/objectives" + encodeURIComponent(JSON.stringify(filters))
-    //let url = "/objectives_api/objectives?name=fred";
-    let url = "/objectives_api/objectives?name=fredrika";
+export const objectivesFilter = filters => (dispatch) => {
+    // let url = "/objectives_api/objectives" + encodeURIComponent(JSON.stringify(filters))
+    // let url = "/objectives_api/objectives?name=fred";
+    const url = '/objectives_api/objectives?name=fredrika'
     fetchThenDispatch(
         dispatch,
         url,
         'GET',
-        {} 
-    );
+        {},
+    )
 }
 
 /* thunk... */
-export const linksQaRun = (basePath, additionOnlyCode) => dispatch =>
-    fetchThenDispatch(
-        dispatch,
-        '/links_qa_api/run_links_qa',
-        'POST',
-        JSON.stringify({basePath, additionOnlyCode})
-    )
+export const linksQaRun = (basePath, additionOnlyCode) => dispatch => fetchThenDispatch(
+    dispatch,
+    '/links_qa_api/run_links_qa',
+    'POST',
+    JSON.stringify({ basePath, additionOnlyCode }),
+)
 
 /* thunk... */
-export const removeColor = id => dispatch =>
-    fetchThenDispatch(
-        dispatch,
-        `/color_api/color/${id}`,
-        'DELETE'
-    )
+export const removeColor = id => dispatch => fetchThenDispatch(
+    dispatch,
+    `/color_api/color/${id}`,
+    'DELETE',
+)
 
 /* thunk... */
-export const rateColor = (id, rating) => dispatch =>
-    fetchThenDispatch(
-        dispatch,
-        `/color_api/color/${id}`,
-        'PUT',
-        JSON.stringify({rating})
-    )
+export const rateColor = (id, rating) => dispatch => fetchThenDispatch(
+    dispatch,
+    `/color_api/color/${id}`,
+    'PUT',
+    JSON.stringify({ rating }),
+)

@@ -1,11 +1,12 @@
-import { LinksQa } from './models/links-qa'
 import { Router } from 'express'
-import C from '../constants'
 import { v4 } from 'uuid'
+import { LinksQa } from './models/links-qa'
+import C from '../constants'
+
 const logatim = require('logatim')
 
 /* Our Express Router... */
-const router = Router() 
+const router = Router()
 
 /* Every action created is handled the same way:
 * it is dispatched on the server and then it
@@ -24,63 +25,59 @@ const dispatchAndRespond = (req, res, action) => {
 */
 
 /* Shouldn't this be a GET...? */
-router.post("/run_links_qa", (req, res) => {
+router.post('/run_links_qa', (req, res) => {
+    const timestamp_begin_run = new Date().toString()
 
-    let timestamp_begin_run=new Date().toString()
+    const sWho = 'links-qa-api::post("/run_links_qa")'
 
-    let sWho = "links-qa-api::post(\"/run_links_qa\")"
-
-    console.log(`${sWho}(): timestamp_begin_run=${timestamp_begin_run}...`) 
+    console.log(`${sWho}(): timestamp_begin_run=${timestamp_begin_run}...`)
     logatim.setLevel('info')
-    logatim.green.info(`${sWho}(): timestamp_begin_run=${timestamp_begin_run}...`) 
-    console.log(`${sWho}(): req.body = `, req.body )
+    logatim.green.info(`${sWho}(): timestamp_begin_run=${timestamp_begin_run}...`)
+    console.log(`${sWho}(): req.body = `, req.body)
 
-    let filter = {}
-    if( req.body.basePath ){
+    const filter = {}
+    if (req.body.basePath) {
         filter.basePath = req.body.basePath
     }
-    if( req.body.additionOnlyCode ){
+    if (req.body.additionOnlyCode) {
         filter.additionOnlyCode = req.body.additionOnlyCode
     }
 
-    function doIt(data, error){
-         let sWho = "doIt"
+    function doIt(data, error) {
+        const sWho = 'doIt'
 
-         let timestamp_end_run = new Date().toString()
+        const timestamp_end_run = new Date().toString()
 
-         console.log(`${sWho}(): timestamp_end_run=${timestamp_end_run}...`) 
+        console.log(`${sWho}(): timestamp_end_run=${timestamp_end_run}...`)
 
-         console.log(`${sWho}(): data = `, data )
+        console.log(`${sWho}(): data = `, data)
 
-         console.log(`${sWho}(): error = `, error )
+        console.log(`${sWho}(): error = `, error)
 
-         let dispatchee = {
+        const dispatchee = {
             type: C.LINKS_QA_RUN,
             basePath: req.body.basePath,
             additionOnlyCode: req.body.additionOnlyCode,
-            linksQa: { 
-                error: error,
+            linksQa: {
+                error,
                 output: data,
-                message: "Let off some steam, Bennett!"
+                message: 'Let off some steam, Bennett!',
             },
-            timestamp_begin_run: timestamp_begin_run,
-            timestamp_end_run: timestamp_end_run,
-            timestamp: timestamp_end_run
-         }
+            timestamp_begin_run,
+            timestamp_end_run,
+            timestamp: timestamp_end_run,
+        }
 
-         console.log(`${sWho}(): SHEMP: dispatchin' dhis, Moe: `, dispatchee )
+        console.log(`${sWho}(): SHEMP: dispatchin' dhis, Moe: `, dispatchee)
 
-         dispatchAndRespond(req, res, dispatchee )
+        dispatchAndRespond(req, res, dispatchee)
     }
 
 
-    LinksQa.getLinksQa(filter, doIt);
+    LinksQa.getLinksQa(filter, doIt)
 
-    //setTimeout( doIt, 5000 );
-
-    }
-
-)/* router.post(/run_links_qa,...) */
+    // setTimeout( doIt, 5000 );
+})/* router.post(/run_links_qa,...) */
 
 
 export default router

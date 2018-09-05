@@ -12,14 +12,17 @@
     "start-server-nodemon": "nodemon ./build/server/index.js",
     "start-server-node": "node ./build/server/index.js",
     "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
     "lint-watch": "esw --watch .",
     "test-watch": "jest --watchAll --coverage=false --notify=false",
     "clear-jest": "jest --clearCache",
     "jest-config": "jest --showConfig",
     "test-noisy": "jest",
+    "test-coverage": "jest --coverage=true --notify=false",
     "test-quiet": "jest --coverage=false --notify=false",
     "test-models": "jest --coverage=false --notify=false -t DbModels",
-    "test-models-watch": "jest --watch --coverage=false --notify=false -t DbModels"
+    "test-models-watch": "jest --watch --coverage=false --notify=false -t DbModels",
+    "test-reducer-watch": "jest --watch --coverage=false --notify=false -t Reducer"
   },
   "keywords": [
     "React",

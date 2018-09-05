@@ -1,116 +1,111 @@
 import { sortFunction } from '../../src/lib/array-helpers'
 
-describe("Array Helpers", () => {
-
-    describe("sortBy", () => {
-
+describe('Array Helpers', () => {
+    describe('sortBy', () => {
         const data = [
             {
-                title: "Virginia",
+                title: 'Virginia',
                 rating: 2,
-                timestamp: 'Mon Mar 14 2016 11:38:16 GMT-0700 (PDT)'
+                timestamp: 'Mon Mar 14 2016 11:38:16 GMT-0700 (PDT)',
             },
             {
-                title: "Illinois",
+                title: 'Illinois',
                 rating: 5,
-                timestamp: 'Mon Mar 14 2016 09:20:00 GMT-0700 (PDT)'
+                timestamp: 'Mon Mar 14 2016 09:20:00 GMT-0700 (PDT)',
             },
             {
-                title: "California",
+                title: 'California',
                 rating: 0,
-                timestamp: 'Sun Mar 13 2016 12:00:00 GMT-0700 (PDT)'
+                timestamp: 'Sun Mar 13 2016 12:00:00 GMT-0700 (PDT)',
             },
             {
-                title: "Maryland",
+                title: 'Maryland',
                 rating: 1,
-                timestamp: 'Mon Mar 14 2016 11:38:17 GMT-0700 (PDT)'
-            }
+                timestamp: 'Mon Mar 14 2016 11:38:17 GMT-0700 (PDT)',
+            },
         ]
 
-        it("sorts by title", () => {
+        it('sorts by title', () => {
             const sorted = [...data].sort(sortFunction('SORTED_BY_TITLE'))
 
             // reset console.log...it seems to get hijacked by Jest...
             delete console.log
-            console.log("Can you hear me now, Jest...?");
+            console.log('Can you hear me now, Jest...?')
 
             expect(sorted).toEqual([
                 {
-                    title: "California",
+                    title: 'California',
                     rating: 0,
-                    timestamp: 'Sun Mar 13 2016 12:00:00 GMT-0700 (PDT)'
+                    timestamp: 'Sun Mar 13 2016 12:00:00 GMT-0700 (PDT)',
                 },
                 {
-                    title: "Illinois",
+                    title: 'Illinois',
                     rating: 5,
-                    timestamp: 'Mon Mar 14 2016 09:20:00 GMT-0700 (PDT)'
+                    timestamp: 'Mon Mar 14 2016 09:20:00 GMT-0700 (PDT)',
                 },
                 {
-                    title: "Maryland",
+                    title: 'Maryland',
                     rating: 1,
-                    timestamp: 'Mon Mar 14 2016 11:38:17 GMT-0700 (PDT)'
+                    timestamp: 'Mon Mar 14 2016 11:38:17 GMT-0700 (PDT)',
                 },
                 {
-                    title: "Virginia",
+                    title: 'Virginia',
                     rating: 2,
-                    timestamp: 'Mon Mar 14 2016 11:38:16 GMT-0700 (PDT)'
-                }
+                    timestamp: 'Mon Mar 14 2016 11:38:16 GMT-0700 (PDT)',
+                },
             ])
         })
 
-        it("sorts by rating", () => {
+        it('sorts by rating', () => {
             const sorted = [...data].sort(sortFunction('SORTED_BY_RATING'))
             expect(sorted).toEqual([
                 {
-                    title: "Illinois",
+                    title: 'Illinois',
                     rating: 5,
-                    timestamp: 'Mon Mar 14 2016 09:20:00 GMT-0700 (PDT)'
+                    timestamp: 'Mon Mar 14 2016 09:20:00 GMT-0700 (PDT)',
                 },
                 {
-                    title: "Virginia",
+                    title: 'Virginia',
                     rating: 2,
-                    timestamp: 'Mon Mar 14 2016 11:38:16 GMT-0700 (PDT)'
+                    timestamp: 'Mon Mar 14 2016 11:38:16 GMT-0700 (PDT)',
                 },
                 {
-                    title: "Maryland",
+                    title: 'Maryland',
                     rating: 1,
-                    timestamp: 'Mon Mar 14 2016 11:38:17 GMT-0700 (PDT)'
+                    timestamp: 'Mon Mar 14 2016 11:38:17 GMT-0700 (PDT)',
                 },
                 {
-                    title: "California",
+                    title: 'California',
                     rating: 0,
-                    timestamp: 'Sun Mar 13 2016 12:00:00 GMT-0700 (PDT)'
-                }
+                    timestamp: 'Sun Mar 13 2016 12:00:00 GMT-0700 (PDT)',
+                },
             ])
         })
 
-        it("sorts by date", () => {
+        it('sorts by date', () => {
             const sorted = [...data].sort(sortFunction('SORTED_BY_DATE'))
             expect(sorted).toEqual([
                 {
-                    title: "Maryland",
+                    title: 'Maryland',
                     rating: 1,
-                    timestamp: 'Mon Mar 14 2016 11:38:17 GMT-0700 (PDT)'
+                    timestamp: 'Mon Mar 14 2016 11:38:17 GMT-0700 (PDT)',
                 },
                 {
-                    title: "Virginia",
+                    title: 'Virginia',
                     rating: 2,
-                    timestamp: 'Mon Mar 14 2016 11:38:16 GMT-0700 (PDT)'
+                    timestamp: 'Mon Mar 14 2016 11:38:16 GMT-0700 (PDT)',
                 },
                 {
-                    title: "Illinois",
+                    title: 'Illinois',
                     rating: 5,
-                    timestamp: 'Mon Mar 14 2016 09:20:00 GMT-0700 (PDT)'
+                    timestamp: 'Mon Mar 14 2016 09:20:00 GMT-0700 (PDT)',
                 },
                 {
-                    title: "California",
+                    title: 'California',
                     rating: 0,
-                    timestamp: 'Sun Mar 13 2016 12:00:00 GMT-0700 (PDT)'
-                }
+                    timestamp: 'Sun Mar 13 2016 12:00:00 GMT-0700 (PDT)',
+                },
             ])
-
         })
-
     })
-
 })
