@@ -1,3 +1,4 @@
+'use strict'
 import express from 'express'
 import path from 'path'
 /* Use Express bodyParser middleware to parse incoming

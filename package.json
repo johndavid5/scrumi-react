@@ -22,7 +22,12 @@
     "test-quiet": "jest --coverage=false --notify=false",
     "test-models": "jest --coverage=false --notify=false -t DbModels",
     "test-models-watch": "jest --watch --coverage=false --notify=false -t DbModels",
-    "test-reducer-watch": "jest --watch --coverage=false --notify=false -t Reducer"
+    "test-reducer-watch": "jest --watch --coverage=false --notify=false -t Reducer",
+    "test-objectives-api": "jest --coverage=false --notify=false objectives-api.test.js",
+    "test-objectives-api-watch": "jest --watch --coverage=false --notify=false objectives-api.test.js",
+    "test-objectives-api-watch": "jest --watch --coverage=false --notify=false objectives-api.test.js",
+    "test-app-watch": "jest --watch --coverage=false --notify=false app.test.js",
+    "test-app": "jest --coverage=false --notify=false app.test.js"
   },
   "keywords": [
     "React",
