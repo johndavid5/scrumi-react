@@ -25,9 +25,10 @@
     "test-reducer-watch": "jest --watch --coverage=false --notify=false -t Reducer",
     "test-objectives-api": "jest --coverage=false --notify=false objectives-api.test.js",
     "test-objectives-api-watch": "jest --watch --coverage=false --notify=false objectives-api.test.js",
-    "test-objectives-api-watch": "jest --watch --coverage=false --notify=false objectives-api.test.js",
     "test-app-watch": "jest --watch --coverage=false --notify=false app.test.js",
-    "test-app": "jest --coverage=false --notify=false app.test.js"
+    "test-app": "jest --coverage=false --notify=false app.test.js",
+    "test-objectives-mock": "jest --coverage=false --notify=false objectives-mock.test.js",
+    "test-objectives-mock-watch": "jest --watch --coverage=false --notify=false objectives-mock.test.js"
   },
   "keywords": [
     "React",

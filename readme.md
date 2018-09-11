@@ -16,11 +16,11 @@ https://node-postgres.com/
 * https://jestjs.io/docs/en/asynchronous.html
 * https://jestjs.io/docs/en/mock-functions
 
-* Steps you through express mocks and integration tests...
-    https://codeburst.io/revisiting-node-js-testing-part-2-14f50f8ddab5
-
-* A Jest Express mock...overkill...?
+* A comprehensive Jest-Express mock...
     https://github.com/jameswlane/jest-express
+
+* Steps you through express mock hacks and integration tests...
+    https://codeburst.io/revisiting-node-js-testing-part-2-14f50f8ddab5
 
 * http://www.albertgao.xyz/2017/05/24/how-to-test-expressjs-with-jest-and-supertest/
     npm install --save supertest
