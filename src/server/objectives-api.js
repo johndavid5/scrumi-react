@@ -28,11 +28,10 @@ const dispatchAndRespond = (req, res, action, options = {}) => {
     res.status(200).json(action)
 }
 
-/* HTTP Endpoints via the Express (domain-specific language) `Router`...  */
-router.get('/objectives', (req, res) => {
+export const doGet = (req, res) => {
     const timestamp = new Date().toString()
 
-    const sWho = 'objectives-api::get("/objectives")'
+    const sWho = 'objectives-api::doGet("/objectives")'
 
     // console.log(`${sWho}(): req = `, utils.customStringify(req) )
     console.log(`${sWho}(): req.query = `, utils.customStringify(req.query))
@@ -80,9 +79,12 @@ router.get('/objectives', (req, res) => {
 
             dispatchAndRespond(req, res, dispatchee)
         })
-}, /* get() */
 
-)/* router.post(/run_links_qa,...) */
+}; /* doGet() */
+
+/* HTTP Endpoints via the Express (domain-specific language) `Router`...  */
+router.get('/objectives', doGet );
+
 
 
 export default router

@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 
-//import { logajohn } from '../../../lib/logajohn'
-//logajohn.info('links-qa.js: logajohn.getLevel()=', logajohn.getLevel())
+import { logajohn } from '../../../lib/logajohn'
+logajohn.info('__mocks__/objectives.js: logajohn.getLevel()=', logajohn.getLevel())
 
 const faux_objectives = [
     { who: 'Moe', what: 'I\'ll murder you!', when: 'Now.' },
@@ -13,6 +13,9 @@ const faux_objectives = [
 
 const mockGetObjectives = jest.fn(
     (filter)=>{
+
+        logajohn.info('__mocks__/objectives.js: mockGetObjectives(): filter=', filter )
+
 	    return new Promise((resolve,reject)=>{ 
 	        if (filter == null) {
 	            reject(new Error('You supplied a null filter...'))
@@ -22,8 +25,11 @@ const mockGetObjectives = jest.fn(
 	    })
 })
 
+exports.mockGetObjectives = mockGetObjectives
+
 class Objectives {
     constructor() {
+        logajohn.info('__mocks__/objectives.js: Objectives mock constructor...')
         //this.disable = jest.fn((key) => {
         //    this.setting[key] = false;
         //});
