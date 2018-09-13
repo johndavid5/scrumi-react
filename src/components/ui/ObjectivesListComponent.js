@@ -55,44 +55,52 @@ const ObjectivesListComponent = (props) => {
         return s_out
     }
 
-    return (
-      <div className="objectives-list-component container-fluid" style={{ paddingLeft: '1em' }}>
-            {
-          <div className="filter-params row">
-                    {
-                        objectives.objectives_timestamp
-                            ? (
-                              <div className="col-sm-8">
-                                  <p style={timestampStyle}>{objectives.objectives_timestamp}</p>
-                                </div>
-                            )
-                            : ''
-                    }
-              </div>
-                /*
-            <div className="filter-params row">
+    let timestamp = ( objectives.objectives_timestamp ? (
+              <div className="filter-params row">
                 <div className="col-sm-8">
-                    <h3 style={{whiteSpace: 'nowrap'}}>Base Path: {}</h3>
+                    <p style={timestampStyle}>{objectives.objectives_timestamp}</p>
                 </div>
-                <div className="col-sm-4">
-                    <h3 style={{whiteSpace: 'nowrap'}}>Addition Only Code: {}</h3>
-                </div>
-            </div>
+              </div>
+            ): "" )
 
-            <div className="filter-params row">
-                <div className="col-sm-4">
-                    <h3 style={{whiteSpace: 'nowrap'}}>STDERR Rows: {}</h3>
-                </div>
-            </div>
-            */}
-            {
-			    // objectives ?
-                // objectives.map((value,index)=>{
-                // return (<tr key={"tr-"+index}><th scope="row" key={index} style={tdStyle}>{index}</th><td style={tdStyle} key={"val-"+index}>{value}</td></tr>);
-			    // }) :
-                // ""
-                (objectives && objectives.objectives_list && objectives.objectives_list.length > 0)
-                    ? (
+    let filter_params = ""
+
+    //let filter_params = (  ( 1 == 0 ) ?
+    //    (
+    //        <div className="filter-params row">
+    //            <div className="col-sm-8">
+    //                <h3 style={{whiteSpace: 'nowrap'}}>Base Path: {}</h3>
+    //            </div>
+    //            <div className="col-sm-4">
+    //                <h3 style={{whiteSpace: 'nowrap'}}>Addition Only Code: {}</h3>
+    //            </div>
+    //        </div>
+    //
+    //        <div className="filter-params row">
+    //            <div className="col-sm-4">
+    //                <h3 style={{whiteSpace: 'nowrap'}}>STDERR Rows: {}</h3>
+    //            </div>
+    //        </div> 
+    //     ) : ""  )
+
+    let gears = ""
+    if( objectives && objectives.hasOwnProperty("objectives_fetching") && objectives.objectives_fetching == true ){
+        gears = <img src="/images/gold-brass-gear-cogs-animated-5.gif" width="100" alt="Fetching...stand by..."
+        style={{position: 'absolute',
+            left: 0,
+            right: 0,
+            margin: 'auto'
+        }} />
+    }
+    //let objectives_table = ""
+    //if( objectives && objectives.hasOwnProperty("objectives_fetching") && objectives.objectives_fetching == true ){
+    //    objectives_table = (
+    //     <img src="/images/gold-brass-gear-cogs-animated-5.gif" width="100" alt="Fetching...stand by..." />
+    //   )
+    //}
+    //else {
+        let objectives_table = (  (objectives && objectives.objectives_list && objectives.objectives_list.length > 0) ?
+            (
                       <table className="table">
                             <thead>
                           <tr>
@@ -108,37 +116,34 @@ const ObjectivesListComponent = (props) => {
                                             <td style={tdStyle}>{formFullName(objective)}</td>
                                         </tr>
                                     ))
-                                }
+                          }
                         </tbody>
                         </table>
-                    )
-                    : (<h2>No objectives</h2>)
+                    ) : (<h2>No objectives</h2>)
 
-            }
+        )
+    //}
 
-          { (debug == true)
-                ? (
-                  <div>
-                        <pre style={{ fontSize: '125%', textAlign: 'left' }}>
-objectives =
-                      { JSON.stringify(objectives, null, ' ') }
+    return (
+      <div className="objectives-list-component container-fluid" style={{ paddingLeft: '1em' }}>
+      {timestamp}
+      {filter_params}
+      {gears}
+      {objectives_table}
+      { ((debugee) => {
+          if(debugee == true)
+            return (
+                <div>
+                    <pre style={{ fontSize: '125%', textAlign: 'left' }}>
+                    props = { JSON.stringify(props, null, ' ') }
                     </pre>
-                    </div>
-                )
-                : ''
-    		}
-          { (debug == true)
-                ? (
-                  <div>
-                      <pre style={{ fontSize: '125%', textAlign: 'left' }}>
-props =
-                          { JSON.stringify(props, null, ' ') }
-                        </pre>
-                    </div>
-                )
-                : ''
-    		}
-        </div>
+                </div>
+            )
+          else
+            return ''
+  	      })( debug ) // IIFE
+       }
+       </div>
     )
 }/* const ObjectivesListComponent = ( props ) */
 

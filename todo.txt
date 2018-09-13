@@ -1,0 +1,2 @@
+1. Use HTML5 video in lieue of animated gif in 
+    ./dist/assets/images/gold-brass-gear-cogs-animated-5.gif

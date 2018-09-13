@@ -1,6 +1,49 @@
 import C from '../constants'
 import { logajohn } from '../lib/logajohn'
 
+export const objectives = (state = {}, action = { type: null }) => {
+
+    const sWho = 'reducers::objectives'
+
+    logajohn.info(`${sWho}(): state = `, state)
+    logajohn.info(`${sWho}(): action = `, action)
+
+    let returno
+
+    switch (action.type) {
+        case C.OBJECTIVES_GET:
+
+            returno = {
+                ...state,
+                objectives_filters: action.filters,
+                objectives_list: action.objectives,
+                objectives_timestamp: action.timestamp,
+                objectives_error: action.error,
+            }
+
+            logajohn.info(`${sWho}(): SHEMP: case C.OBJECTIVES_GET: Moe, Retoynin' `, JSON.stringify(returno, null, ' '))
+
+            return returno
+
+        case C.OBJECTIVES_FETCHING:
+
+            returno = {
+                ...state,
+                objectives_fetching: action.objectives_is_fetching,
+            }
+
+            logajohn.info(`${sWho}(): SHEMP: case C.OBJECTIVES_FETCHING: Moe, Retoynin' `, JSON.stringify(returno, null, ' '))
+
+            return returno
+
+        default:
+            // Just return a copy of state...
+            returno = { ...state }
+            logajohn.info(`${sWho}(): SHEMP: default: Moe, Retoynin' simple copy of state: `, JSON.stringify(returno, null, ' '))
+            return returno
+    }
+}
+
 export const color = (state = {}, action = { type: null }) => {
     switch (action.type) {
         case C.ADD_COLOR:
@@ -93,46 +136,3 @@ export const linksQa = (state = {}, action = { type: null }) => {
 }
 
 
-export const objectives = (state = {}, action = { type: null }) => {
-
-    const sWho = 'reducers::objectives'
-
-    logajohn.info(`${sWho}(): state = `, state)
-    logajohn.info(`${sWho}(): action = `, action)
-
-    let returno
-
-    switch (action.type) {
-        case C.OBJECTIVES_GET:
-
-            returno = {
-                ...state,
-                objectives_loading: false,
-                objectives_filters: action.filters,
-                objectives_list: action.objectives,
-                objectives_timestamp: action.timestamp,
-                objectives_error: action.error,
-            }
-
-            logajohn.info(`${sWho}(): SHEMP: Moe, Retoynin' `, JSON.stringify(returno, null, ' '))
-
-            return returno
-
-        case C.OBJECTIVES_LOADING:
-
-            returno = {
-                ...state,
-                objectives_loading: true,
-            }
-
-            logajohn.info(`${sWho}(): SHEMP: Moe, Retoynin' `, JSON.stringify(returno, null, ' '))
-
-            return returno
-
-        default:
-            // Just return a copy of state...
-            returno = { ...state }
-            logajohn.info(`${sWho}(): SHEMP: Moe, Retoynin' simple copy of state: `, JSON.stringify(returno, null, ' '))
-            return returno
-    }
-}
