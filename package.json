@@ -1,8 +1,5 @@
 {
   "name": "scrumi-react",
-  "jest": {
-    "automock": false
-  },
   "version": "6.0.0",
   "description": "Keep Track of Tasks",
   "main": "index.js",
@@ -17,21 +14,21 @@
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
     "lint-watch": "esw --watch .",
-    "test-watch": "jest --watchAll --coverage=false --notify=false",
+    "test-watch": "jest --watchAll --coverage=false",
     "clear-jest": "jest --clearCache",
     "jest-config": "jest --showConfig",
-    "test-noisy": "jest",
-    "test-coverage": "jest --coverage=true --notify=false",
-    "test-quiet": "jest --coverage=false --notify=false",
+    "test": "jest",
+    "test-coverage": "jest --coverage=true",
+    "test-nocoverage": "jest --coverage=false",
     "test-models": "jest --coverage=false --notify=false -t DbModels",
     "test-models-watch": "jest --watch --coverage=false --notify=false -t DbModels",
     "test-reducer-watch": "jest --watch --coverage=false --notify=false -t Reducer",
-    "test-objectives-api": "jest --coverage=false --notify=false objectives-api.test.js",
-    "test-objectives-api-watch": "jest --watch --coverage=false --notify=false objectives-api.test.js",
-    "test-app-watch": "jest --watch --coverage=false --notify=false app.test.js",
-    "test-app": "jest --coverage=false --notify=false app.test.js",
-    "test-objectives-mock": "jest --coverage=false --notify=false objectives-mock.test.js",
-    "test-objectives-mock-watch": "jest --watch --coverage=false --notify=false objectives-mock.test.js"
+    "test-app-watch": "jest --watch --coverage=false app.test.js",
+    "test-app": "jest --coverage=false app.test.js",
+    "test-objectives-mock": "jest --coverage=falseobjectives-mock.test.js",
+    "test-objectives-mock-watch": "jest --watch --coverage=false objectives-mock.test.js",
+    "test-objectives-api": "jest --coverage=false objectives-api.test.js",
+    "test-objectives-api-watch": "jest --watch --coverage=false objectives-api.test.js"
   },
   "keywords": [
     "React",
@@ -102,13 +99,15 @@
     ],
     "modulePathIgnorePatterns": [
       "shim.js",
-      "global.js"
+      "global.js",
+      "build"
     ],
     "verbose": false,
+    "automock": false,
     "bail": false,
     "silent": false,
     "collectCoverage": true,
-    "notify": true,
+    "notify": false,
     "collectCoverageFrom": [
       "src/**"
     ],

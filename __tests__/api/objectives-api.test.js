@@ -1,6 +1,7 @@
 import { config } from '../../src/config'
 import { logajohn } from '../../src/lib/logajohn'
 
+logajohn.setLevel(config.DEBUG_LEVEL)
 logajohn.info(`objectives-api.test.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
 
 //jest.mock('express', () => {
@@ -20,12 +21,14 @@ jest.mock('express')
 
 // Explicitly supply the path to __mocks__/objectives
 // Objectives is now a mock constructor...
-jest.mock('../../src/server/models/objectives',() => {
-  return require('../../src/server/models/__mocks__/objectives');
-}); 
+//jest.mock('../../src/server/models/objectives',() => {
+//  return require('../../src/server/models/__mocks__/objectives');
+//}); 
+
+jest.mock('../../src/server/models/objectives');
 
 import objectives_mock_api_router from '../../src/server/objectives-api'
-import { Objectives as ObjectivesMock, mockGetObjectives } from '../../src/server/models/objectives'
+import { Objectives as ObjectivesMockModel, mockGetObjectives } from '../../src/server/models/objectives'
 
 describe('objectives_api...', () => {
     it('get()...', (done) => {

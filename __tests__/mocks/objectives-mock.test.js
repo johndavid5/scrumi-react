@@ -1,7 +1,7 @@
 // Testing out our mock, actually...
 import { config } from '../../src/config'
 import { logajohn } from '../../src/lib/logajohn'
-import { Objectives } from '../../src/server/models/objectives'
+import { Objectives, mockGetObjectives } from '../../src/server/models/objectives'
 
 // Explicitly supply the path to __mocks__/objectives
 // Objectives is now a mock constructor...
@@ -28,6 +28,7 @@ describe('Objectives mock...', () => {
                 logajohn.debug('__tests__/models/getObjectives() .then: objectives =', objectives)
                 expect(objectives.length).toBeGreaterThanOrEqual(0)
                 expect(objectivesMockModel.getObjectives).toHaveBeenCalledTimes(1)
+                expect(mockGetObjectives).toHaveBeenCalledTimes(1)
                 done()
             })
     })

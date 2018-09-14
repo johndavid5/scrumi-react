@@ -2,8 +2,14 @@ import { Router } from 'express'
 import C from '../constants'
 // import { v4 } from 'uuid' // create uuid's on the fly
 import { Objectives } from './models/objectives'
-// const logatim = require('logatim')
+
 const utils = require('../lib/utils')
+
+import { config } from '../config'
+import { logajohn } from '../lib/logajohn'
+
+logajohn.setLevel(config.DEBUG_LEVEL)
+logajohn.info(`objectives-api.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
 
 /* Our Express Router... */
 const router = Router()
@@ -33,8 +39,18 @@ export const doGet = (req, res) => {
 
     const sWho = 'objectives-api::doGet("/objectives")'
 
-    // console.log(`${sWho}(): req = `, utils.customStringify(req) )
-    console.log(`${sWho}(): req.query = `, utils.customStringify(req.query))
+    console.log(`${sWho}()...`)
+
+    console.log(`${sWho}(): req = `, utils.customStringify(req))
+
+    if( req ){
+        if( req.hasOwnProperty(query) ){
+            console.log(`${sWho}(): req.query = `, utils.customStringify(req.query))
+        }
+        else{
+            console.log(`${sWho}(): req.query -> property don't exist, Moe...`)
+        }
+    }
 
     const filters = {}
 
@@ -60,7 +76,7 @@ export const doGet = (req, res) => {
                 error: '',
             }
 
-            console.log(`${sWho}(): SHEMP: dispatchin' dhis, Moe: `, dispatchee)
+            console.log(`${sWho}(): SHEMP: Callin' dispatchAndRespond() widh...`, dispatchee)
 
             dispatchAndRespond(req, res, dispatchee)
         })
@@ -75,16 +91,15 @@ export const doGet = (req, res) => {
                 error,
             }
 
-            console.log(`${sWho}(): SHEMP: dispatchin' dhis, Moe: `, dispatchee)
+            console.log(`${sWho}(): SHEMP: Callin' dispatchAndRespond() widh...`, dispatchee)
 
             dispatchAndRespond(req, res, dispatchee)
         })
 
-}; /* doGet() */
+} /* doGet() */
 
 /* HTTP Endpoints via the Express (domain-specific language) `Router`...  */
 router.get('/objectives', doGet );
-
 
 
 export default router
