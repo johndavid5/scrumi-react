@@ -20,3 +20,17 @@ export const customStringify = function (v, s) {
         return value
     }, s)
 }
+
+export const errorStringify = function (err, s) {
+    let sOut = customStringify(err, s)
+    if( err.hasOwnProperty("message") ){
+        sOut += "\n" + "message:" + "\"" + err.message + "\""
+        //err.message = err["message"]
+    }
+    if( err.hasOwnProperty("stack") ){
+        sOut += "\n" + "stack:" + "\"" + err.stack + "\""
+        //err.stack = err["stack"]
+    }
+    //return customStringify( err, s )
+    return sOut
+}

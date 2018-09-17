@@ -4,7 +4,7 @@ import logatim from 'logatim' // ES6
 
 export const dateTimeStamp = () => {
     const le_date = new Date()
-    return `${le_date.getFullYear()}-${lpad(le_date.getMonth() + 1, '0', 2)}-${lpad(le_date.getDate(), '0', 2)} ${lpad(le_date.getHours(), '0', 2)}:${lpad(le_date.getMinutes(), '0', 2)}:${lpad(le_date.getSeconds(), '0', 2)}`
+    return `${le_date.getFullYear()}-${lpad(le_date.getMonth() + 1, '0', 2)}-${lpad(le_date.getDate(), '0', 2)} ${lpad(le_date.getHours(), '0', 2)}:${lpad(le_date.getMinutes(), '0', 2)}:${lpad(le_date.getSeconds(), '0', 2)}.${le_date.getMilliseconds()}`
     // return "" + le_date.year();
     // return le_date.getFullYear()
 }

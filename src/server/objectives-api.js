@@ -12,7 +12,7 @@ logajohn.setLevel(config.DEBUG_LEVEL)
 logajohn.info(`objectives-api.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
 
 /* Our Express Router... */
-const router = Router()
+const router = new Router()
 
 /* Every action created is handled the same way:
 * it is dispatched on the server and then it
@@ -26,29 +26,41 @@ const router = Router()
 *     you respond to a request.
 *
 * (2) Send the action to the client via the response object.
+* 
 */
 const dispatchAndRespond = (req, res, action, options = {}) => {
+
+    const sWho = "objectives-api::dispatchAndRespond";
+
     if (options.dispatchToStore) {
         req.store.dispatch(action)
     }
-    res.status(200).json(action)
+
+    //logajohn.info(`${sWho}(): Calling res.status(200).json(action)...`)
+    //res.status(200).json(action) -- refactor into 2 calls so express mock doesn't trip over chained calls...
+    logajohn.info(`${sWho}(): Calling res.status(200)...`)
+    res.status(200)
+    logajohn.info(`${sWho}(): Calling res.json(action), action = `, action )
+    res.json(action)
+
 }
 
-export const doGet = (req, res) => {
+export const doGet = (req, res, callback) => {
     const timestamp = new Date().toString()
 
     const sWho = 'objectives-api::doGet("/objectives")'
 
-    console.log(`${sWho}()...`)
+    logajohn.info(`${sWho}()...`)
 
-    console.log(`${sWho}(): req = `, utils.customStringify(req))
+    logajohn.info(`${sWho}(): req = `, utils.customStringify(req))
+    logajohn.info(`${sWho}(): res = `, utils.customStringify(res))
 
     if( req ){
-        if( req.hasOwnProperty(query) ){
-            console.log(`${sWho}(): req.query = `, utils.customStringify(req.query))
+        if( req.hasOwnProperty('query') ){
+            logajohn.info(`${sWho}(): req.query = `, utils.customStringify(req.query))
         }
         else{
-            console.log(`${sWho}(): req.query -> property don't exist, Moe...`)
+            logajohn.info(`${sWho}(): Sorry, req.query property don't exist, Moe...`)
         }
     }
 
@@ -64,6 +76,7 @@ export const doGet = (req, res) => {
     const objectivesModel = new Objectives()
     console.log(`${sWho}(): Callin' objectivesModel.getObjectives( filters = `, filters, '...)')
 
+    //Promise.resolve("OK") 
     objectivesModel.getObjectives(filters)
         .then((objectives) => {
             console.log(`${sWho}().then: objectives = `, objectives)
@@ -79,9 +92,21 @@ export const doGet = (req, res) => {
             console.log(`${sWho}(): SHEMP: Callin' dispatchAndRespond() widh...`, dispatchee)
 
             dispatchAndRespond(req, res, dispatchee)
+
+            if( callback ){
+                callback();
+            }
         })
         .catch((error) => {
             console.log(`${sWho}(): Caught error = `, error)
+
+            // https://stackoverflow.com/questions/38513493/why-are-my-js-promise-catch-error-objects-empty
+            if(error.hasOwnProperty('message')){
+                console.log(`${sWho}(): Caught error.message = '`, error.message, `'`)
+            }
+            if(error.hasOwnProperty('stack')){
+                console.log(`${sWho}(): Caught error.stack = '`, error.stack, `'`)
+            }
 
             const dispatchee = {
                 type: C.OBJECTIVES_GET,
@@ -94,6 +119,10 @@ export const doGet = (req, res) => {
             console.log(`${sWho}(): SHEMP: Callin' dispatchAndRespond() widh...`, dispatchee)
 
             dispatchAndRespond(req, res, dispatchee)
+
+            if( callback ){
+                callback();
+            }
         })
 
 } /* doGet() */

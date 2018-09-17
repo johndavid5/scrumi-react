@@ -100,10 +100,12 @@
     "modulePathIgnorePatterns": [
       "shim.js",
       "global.js",
-      "build"
+      "build",
+      "~$"
     ],
-    "verbose": false,
+    "verbose": true,
     "automock": false,
+    "clearMocks": true,
     "bail": false,
     "silent": false,
     "collectCoverage": true,
