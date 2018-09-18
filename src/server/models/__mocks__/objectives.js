@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 
 import { logajohn } from '../../../lib/logajohn'
-logajohn.info('__mocks__/objectives.js: logajohn.getLevel()=', logajohn.getLevel())
+logajohn.debug('__mocks__/objectives.js: logajohn.getLevel()=', logajohn.getLevel())
 
 const faux_objectives = [
     { who: 'Moe', what: 'I\'ll murder you!', when: 'Now.' },
@@ -14,7 +14,7 @@ const faux_objectives = [
 const mockGetObjectives = jest.fn(
     (filter)=>{
 
-        logajohn.info('__mocks__/objectives.js: mockGetObjectives(): filter=', filter )
+        logajohn.debug('./src/server/models/__mocks__/objectives.js: mockGetObjectives(): filter=', filter )
 
 	    return new Promise((resolve,reject)=>{ 
 	        if (filter == null) {
@@ -29,7 +29,7 @@ exports.mockGetObjectives = mockGetObjectives
 
 class Objectives {
     constructor() {
-        logajohn.info('__mocks__/objectives.js: Objectives mock constructor...')
+        logajohn.debug('./src/server/models/__mocks__/objectives.js: Objectives mock constructor...')
         //this.disable = jest.fn((key) => {
         //    this.setting[key] = false;
         //});

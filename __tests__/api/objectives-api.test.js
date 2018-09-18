@@ -3,7 +3,7 @@ import { logajohn } from '../../src/lib/logajohn'
 import { errorStringify, customStringify } from '../../src/lib/utils'
 
 logajohn.setLevel(config.DEBUG_LEVEL)
-logajohn.info(`objectives-api.test.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
+logajohn.debug(`objectives-api.test.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
 
 //jest.mock('express', () => {
 //  return require('../../__mocks__/express');
@@ -45,10 +45,10 @@ describe('objectives_api...', () => {
        const sWho = "objectives-api.test.js: beforeAll()"
        try {
           mockObjectives = await mockObjectivesModel.getObjectives({}) 
-          logajohn.info(`${sWho}(): SHEMP: Moe, my first time usin' async await...got mockObjectives = `, mockObjectives )
+          logajohn.debug(`${sWho}(): SHEMP: Moe, my first time usin' async await...got mockObjectives = `, mockObjectives )
        }
        catch( err ){
-          logajohn.info(`${sWho}(): Trouble with mockObjectives: `, errorStringify(err) )
+          logajohn.debug(`${sWho}(): Trouble with mockObjectives: `, errorStringify(err) )
        }
        await mockObjectivesModel.getObjectives.mockClear()
     });
@@ -59,40 +59,40 @@ describe('objectives_api...', () => {
 
 //    it('get()...', async (done) => {
 //        const sWho = "objectives-api.test.js::get"
-//        logajohn.info(`${sWho}(): objectives_mock_api_router.get('/objectives')...`)
+//        logajohn.debug(`${sWho}(): objectives_mock_api_router.get('/objectives')...`)
 //
-//        //logajohn.info(`${sWho}(): SHEMP: Moe, befo' anyting...mockGetObjectives.mock.calls = `, mockGetObjectives.mock.calls )
-//        //logajohn.info(`${sWho}(): SHEMP: Moe, befo' anythin...mockGetObjectives.mock.results = `, mockGetObjectives.mock.results )
+//        //logajohn.debug(`${sWho}(): SHEMP: Moe, befo' anyting...mockGetObjectives.mock.calls = `, mockGetObjectives.mock.calls )
+//        //logajohn.debug(`${sWho}(): SHEMP: Moe, befo' anythin...mockGetObjectives.mock.results = `, mockGetObjectives.mock.results )
 //
 //        objectives_mock_api_router.get('/objectives')
 //        expect(objectives_mock_api_router.get).toBeCalledWith('/objectives');
 //
-//        //logajohn.info(`${sWho}(): SHEMP: Moe, after...mockGetObjectives.mock.calls = `, mockGetObjectives.mock.calls )
-//        //logajohn.info(`${sWho}(): SHEMP: Moe, after...mockGetObjectives.mock.results = `, mockGetObjectives.mock.results )
-//        logajohn.info(`${sWho}(): SHEMP: Moe, expect(mockGetObjectives).toHaveBeenCalledTimes(1)...`)
+//        //logajohn.debug(`${sWho}(): SHEMP: Moe, after...mockGetObjectives.mock.calls = `, mockGetObjectives.mock.calls )
+//        //logajohn.debug(`${sWho}(): SHEMP: Moe, after...mockGetObjectives.mock.results = `, mockGetObjectives.mock.results )
+//        logajohn.debug(`${sWho}(): SHEMP: Moe, expect(mockGetObjectives).toHaveBeenCalledTimes(1)...`)
 //        expect(mockGetObjectives).toHaveBeenCalledTimes(1)
 //        //expect(mockGetObjectives.mock.calls.length).toBe(1)
 //
 //        expect(objectives_mock_api_router.response.status).toHaveBeenCalledTimes(1)
 //        expect(objectives_mock_api_router.response.status).toBeCalledWith(200)
 //        expect(objectives_mock_api_router.response.json).toHaveBeenCalledTimes(1)
-//        logajohn.info(`${sWho}(): done()...`)
+//        logajohn.debug(`${sWho}(): done()...`)
 //        done();
 //    })
 
-    it('doGet()...', (done) => {
+    test('doGet()...', (done) => {
         const sWho = "objectives-api.test.js::doGet"
-        logajohn.info(`${sWho}()...`)
+        logajohn.debug(`${sWho}()...`)
 
         let request_mock = new RequestMock();
         let response_mock = new ResponseMock();
 
-        //response_mock.status = jest.fn().mockImplementation( (status_code) => { logajohn.info("CURLY: response_mock.status: status_code = ", status_code ) } );
+        //response_mock.status = jest.fn().mockImplementation( (status_code) => { logajohn.debug("CURLY: response_mock.status: status_code = ", status_code ) } );
 
         //response_mock.status.mockClear();
 
-        logajohn.info(`${sWho}(): Here goes, Moe...`)
-        doGet(request_mock, response_mock, ()=>{
+        logajohn.debug(`${sWho}(): Here goes, Moe...`)
+        doGet(request_mock, response_mock, { callback: ()=>{
 
             expect(mockGetObjectives).toHaveBeenCalledTimes(1)
 
@@ -102,26 +102,74 @@ describe('objectives_api...', () => {
             expect(response_mock.json).toHaveBeenCalledTimes(1)
             //expect(response_mock.json).toHaveBeenCalled()
             
-            logajohn.info(`${sWho}() mockGetObjectives.mock.calls = `, mockGetObjectives.mock.calls )
-            logajohn.info(`${sWho}() response_mock.status.mock.calls = `, response_mock.status.mock.calls )
-            logajohn.info(`${sWho}() response_mock.status.mock.calls.length = `, response_mock.status.mock.calls.length )
+            logajohn.debug(`${sWho}() mockGetObjectives.mock.calls = `, mockGetObjectives.mock.calls )
+            logajohn.debug(`${sWho}() response_mock.status.mock.calls = `, response_mock.status.mock.calls )
+            logajohn.debug(`${sWho}() response_mock.status.mock.calls.length = `, response_mock.status.mock.calls.length )
             //expect(response_mock.status.mock.calls.length).toEqual(1)
-            logajohn.info(`${sWho}() response_mock.json.mock.calls = `, response_mock.json.mock.calls )
-            logajohn.info(`${sWho}() response_mock.json.mock.calls.length = `, response_mock.json.mock.calls.length )
+            logajohn.debug(`${sWho}() response_mock.json.mock.calls = `, response_mock.json.mock.calls )
+            logajohn.debug(`${sWho}() response_mock.json.mock.calls.length = `, response_mock.json.mock.calls.length )
 
             let payload = response_mock.json.mock.calls[0][0]
 
-            logajohn.info(`${sWho}() payload = `, payload )
-            logajohn.info(`${sWho}() Does payload.type = `, payload.type, ` equal constants.OBJECTIVES_GET = `, constants.OBJECTIVES_GET, `...?` )
+            logajohn.debug(`${sWho}() payload = `, payload )
+            logajohn.debug(`${sWho}() Does payload.type = `, payload.type, ` equal constants.OBJECTIVES_GET = `, constants.OBJECTIVES_GET, `...?` )
 
             expect(payload.type).toEqual(constants.OBJECTIVES_GET)
 
-            logajohn.info(`${sWho}() Does payload.objectives = `, payload.objectives, ` equal mockObjectives = `, mockObjectives, `...?` )
+            logajohn.debug(`${sWho}() Does payload.objectives = `, payload.objectives, ` equal mockObjectives = `, mockObjectives, `...?` )
 
             expect(payload.objectives).toEqual(mockObjectives)
 
+            expect(payload.error).toEqual('')
+
             done();
-        })
+          }
+        }
+        )
+    })
+
+
+    test('doGet() -- null filter -- error', (done) => {
+        const sWho = "objectives-api.test.js::doGet() -- null filter -- error"
+        logajohn.debug(`${sWho}()...`)
+
+        let request_mock = new RequestMock();
+        let response_mock = new ResponseMock();
+
+        logajohn.debug(`${sWho}(): Here goes, Moe...`)
+        doGet(request_mock, response_mock, { filters: null, callback: ()=>{
+
+            expect(mockGetObjectives).toHaveBeenCalledTimes(1)
+
+            expect(response_mock.status).toHaveBeenCalledTimes(1)
+            //expect(response_mock.status).toHaveBeenCalled()
+            expect(response_mock.status).toBeCalledWith(200)
+            expect(response_mock.json).toHaveBeenCalledTimes(1)
+            //expect(response_mock.json).toHaveBeenCalled()
+            
+            logajohn.debug(`${sWho}() mockGetObjectives.mock.calls = `, mockGetObjectives.mock.calls )
+            logajohn.debug(`${sWho}() response_mock.status.mock.calls = `, response_mock.status.mock.calls )
+            logajohn.debug(`${sWho}() response_mock.status.mock.calls.length = `, response_mock.status.mock.calls.length )
+            //expect(response_mock.status.mock.calls.length).toEqual(1)
+            logajohn.debug(`${sWho}() response_mock.json.mock.calls = `, response_mock.json.mock.calls )
+            logajohn.debug(`${sWho}() response_mock.json.mock.calls.length = `, response_mock.json.mock.calls.length )
+
+            let payload = response_mock.json.mock.calls[0][0]
+
+            logajohn.debug(`${sWho}() payload = `, payload )
+            logajohn.debug(`${sWho}() Does payload.type = `, payload.type, ` equal constants.OBJECTIVES_GET = `, constants.OBJECTIVES_GET, `...?` )
+
+            expect(payload.type).toEqual(constants.OBJECTIVES_GET)
+
+            logajohn.debug(`${sWho}(): SHEMP: Moe,  payload.error = `, errorStringify(payload.error) )
+            expect(payload.error).toEqual(expect.anything())
+            expect(payload.error).not.toEqual('')
+            expect(payload.error.message).toEqual('You supplied a null filter...')
+
+            done();
+            }
+          }
+        )
     })
 
 })
@@ -136,7 +184,7 @@ describe('objectives_api...', () => {
 //  };
 //  router.get('/objectives', (req,res) )
 //
-//  logajohn.info(`${sWho}(): json.mock.calls = `, json.mock.calls )
+//  logajohn.debug(`${sWho}(): json.mock.calls = `, json.mock.calls )
 //
 //  expect(json.mock.calls).toHaveLength(1);
 //  done();
@@ -147,7 +195,7 @@ describe('objectives_api...', () => {
 //import { logajohn } from '../../src/lib/logajohn'
 //
 //logajohn.setLevel(config.DEBUG_LEVEL)
-//logajohn.info(`objectives-api.test.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
+//logajohn.debug(`objectives-api.test.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
 //
 ////jest.mock('express', () => {
 ////  return require('../../../jest-express');
@@ -196,7 +244,7 @@ describe('objectives_api...', () => {
 //  };
 //  router.get('/objectives', (req,res) )
 //
-//  logajohn.info(`${sWho}(): json.mock.calls = `, json.mock.calls )
+//  logajohn.debug(`${sWho}(): json.mock.calls = `, json.mock.calls )
 //
 //  expect(json.mock.calls).toHaveLength(1);
 //  done();

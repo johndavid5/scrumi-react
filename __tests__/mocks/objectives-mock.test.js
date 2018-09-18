@@ -11,7 +11,7 @@ jest.mock('../../src/server/models/objectives',() => {
 
 
 logajohn.setLevel(config.DEBUG_LEVEL)
-logajohn.info(`objectives.test.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
+logajohn.debug(`objectives-mock.test.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
 
 describe('Objectives mock...', () => {
 
@@ -36,7 +36,7 @@ describe('Objectives mock...', () => {
     it('getObjectives()--exception if null filter', (done) => {
         objectivesMockModel.getObjectives(null)
             .catch((err) => {
-                logajohn.debug('__tests__/models/getObjectives()--exception if null filter .catch: err.name =', err.name, ', err.message = ', err.message )
+                logajohn.debug('__tests__/mocks/objectives-mock.test.js/getObjectives()--exception if null filter .catch: err.name =', err.name, ', err.message = ', err.message )
                 expect(err).toBeDefined()
                 //expect(err).toEqual('You supplied a null filter...')
                 expect(err.name).toEqual('Error')

@@ -17,12 +17,13 @@ const { Client } = require('pg')
 
 // logajohn.setLevel('info')
 logajohn.setLevel(config.DEBUG_LEVEL)
-logajohn.info('objectives.js: logajohn.getLevel()=', logajohn.getLevel())
+logajohn.debug('objectives.js: logajohn.getLevel()=', logajohn.getLevel())
 
 /**
 * execs links_qa script and returns output
 */
 export class Objectives {
+
     constructor(dbname = 'scrumi') {
         this.dbname = dbname
     }
@@ -30,7 +31,10 @@ export class Objectives {
     getObjectives(filter) {
         const sWho = 'Objectives::getObjectives'
 
+        logajohn.debug(`${sWho}(): filter = `, filter )
+
         return new Promise((resolve, reject) => {
+
             if (filter == null) {
                 reject(new Error('You supplied a null filter.'))
             }
@@ -79,7 +83,7 @@ LEFT OUTER JOIN
         }) /* return new Promise( (resolve, reject ) => { */
     } /* getObjectives() */
 
-    //            logajohn.info(`${sWho}(): Calling client.connect()...`);
+    //            logajohn.debug(`${sWho}(): Calling client.connect()...`);
     //
     //            client.connect( (err) => {
     //              if (err) {

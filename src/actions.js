@@ -85,7 +85,7 @@ export const objectivesFilter = (filters) => (dispatch) => {
 	        dispatch,
 	        url,
 	        'GET',
-            {},
+            null,
 	        ()=>{
 	            objectivesIsFetching( dispatch, false )
 	        }

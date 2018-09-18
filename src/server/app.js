@@ -19,7 +19,12 @@ import objectives_api from './objectives-api'
 
 import App from '../components/App'
 import storeFactory from '../store'
-import initialState from '../../data/initialState.json'
+
+// No, thank you...we're full stackers here, not front-enders, so
+// if we're going to fetch an initial state, we'll fetch it from the database,
+// not from a JSON file...
+//import initialState from '../../data/initialState.json'
+let initialState = {}
 
 import { logajohn } from '../lib/logajohn'
 // import logatim from 'logatim'
@@ -41,6 +46,12 @@ const serverStore = storeFactory(true, initialState)
 
 /* Save the state to a new JSON file every time the state changes...
 * The `serverStore` is now the main source of truth.
+* ...NOT!
+* Actually, we're not automatically updating the
+* store on the server side any more...instead we'll
+* write to the database upon update...the database
+* will be our single source of truth on the server
+* side, thank you very much...
 */
 serverStore.subscribe(() => fs.writeFile(
     path.join(__dirname, '../../data/initialState.json'),

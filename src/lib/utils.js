@@ -21,8 +21,10 @@ export const customStringify = function (v, s) {
     }, s)
 }
 
+// https://stackoverflow.com/questions/38513493/why-are-my-js-promise-catch-error-objects-empty
 export const errorStringify = function (err, s) {
-    let sOut = customStringify(err, s)
+    let sOut = ""
+
     if( err.hasOwnProperty("message") ){
         sOut += "\n" + "message:" + "\"" + err.message + "\""
         //err.message = err["message"]
@@ -31,6 +33,15 @@ export const errorStringify = function (err, s) {
         sOut += "\n" + "stack:" + "\"" + err.stack + "\""
         //err.stack = err["stack"]
     }
-    //return customStringify( err, s )
+
+    let sCustom = customStringify(err, s)
+    if( sCustom && !sCustom == "{}" ){
+        sOut += "\n" + sCustom
+    }
+
     return sOut
 }
+
+let utils = { customStringify: customStringify, errorStringify: errorStringify }
+export { utils }
+export default utils

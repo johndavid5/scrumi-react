@@ -19,7 +19,7 @@ const { Pool } = require('pg') // PostgreSQL client pool...
 
 // logajohn.setLevel('info')
 logajohn.setLevel(config.DEBUG_LEVEL)
-logajohn.info('users.js: logajohn.getLevel()=', logajohn.getLevel())
+logajohn.debug('users.js: logajohn.getLevel()=', logajohn.getLevel())
 
 /**
 * execs links_qa script and returns output

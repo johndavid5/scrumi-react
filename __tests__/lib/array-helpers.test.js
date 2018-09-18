@@ -28,9 +28,9 @@ describe('Array Helpers', () => {
         it('sorts by title', () => {
             const sorted = [...data].sort(sortFunction('SORTED_BY_TITLE'))
 
-            // reset console.log...it seems to get hijacked by Jest...
-            delete console.log
-            console.log('Can you hear me now, Jest...?')
+            // Test: reset console.log...it seems to get hijacked by Jest...
+            // delete console.log
+            // console.log('Can you hear me now, Jest...?')
 
             expect(sorted).toEqual([
                 {

@@ -4,13 +4,15 @@
 import { config } from '../../src/config'
 import { Objectives } from '../../src/server/models/objectives'
 import { Users } from '../../src/server/models/users'
+
 import { logajohn } from '../../src/lib/logajohn'
+import { errorStringify } from '../../src/lib/utils'
 
 const usersModel = new Users(config.TEST_DB_NAME)
 const objectivesModel = new Objectives(config.TEST_DB_NAME)
 
 logajohn.setLevel(config.DEBUG_LEVEL)
-logajohn.info(`dbmodels.test.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
+logajohn.debug(`__tests__/models/dbmodels.test.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
 
 describe('DbModels', () => {
 
@@ -41,6 +43,7 @@ describe('DbModels', () => {
             })
     })
 
+
     it('addUser...', (done) => {
         const numAdded = 0
         testUsersIn.forEach((user) => {
@@ -66,6 +69,21 @@ describe('DbModels', () => {
             })
     })
 
+    it('getObjectives -- null filter -- error', (done) => {
+        let sWho = "getObjectives() -- null filter"
+        logajohn.debug(`${sWho}...`)
+        objectivesModel.getObjectives(null) // Should reject promise if you supply null filter...
+            .then((objectives) => {
+                logajohn.debug(`${sWho}...then...objectives=`, objectives)
+                done.fail(new Error('Promise should have been rejected'))
+            })
+            .catch( (err)=> {
+                logajohn.debug(`${sWho}...caught err = `, errorStringify(err) )
+                expect(err).toEqual(expect.anything()) // Error is not null and not undefined...
+                done()
+            })
+    })
+
     it('getUsers -- after add', (done) => {
         usersModel.getUsers({})
             .then((users) => {
@@ -74,6 +92,7 @@ describe('DbModels', () => {
                 done()
             })
     })
+
 
     it(`deleteUserById: quantity=${testUsersOut.length}`, (done) => {
         let num_deleted = 0
