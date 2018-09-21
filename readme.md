@@ -34,3 +34,7 @@ https://node-postgres.com/
 
 * Use Puppeteer for end-to-end tests:
     https://blog.logrocket.com/end-to-end-testing-react-apps-with-puppeteer-and-jest-ce2f414b4fd7
+
+* How to Mock isomorphic-fetch without Really Trying:
+    https://github.com/jefflau/jest-fetch-mock
+    https://github.com/jefflau/jest-fetch-mock/blob/master/src/index.js

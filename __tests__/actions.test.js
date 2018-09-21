@@ -8,7 +8,10 @@ import { faux_objectives } from '../data/fauxObjectives'
 import { config } from '../src/config'
 import { logajohn } from '../src/lib/logajohn'
 import { errorStringify } from '../src/lib/utils'
+
+import { mockFetch, mockFetchSetOutput } from 'isomorphic-fetch'
  
+// isomorphic-fetch is getting mocked at global scope...see __tests__/global.js...
 jest.mock('isomorphic-fetch') // Need to mock isomorphic-fetch for objectivesFilter() action creator...
 
 logajohn.setLevel(config.DEBUG_LEVEL)
@@ -17,6 +20,7 @@ logajohn.debug(`__tests__/actions.test.js: logajohn.getLevel()=${logajohn.getLev
 describe("Action Creators", () => {
 
     let store
+    let faux_action
 
     describe("objectivesFilter() thunk-based action creator...", () => {
 
@@ -28,6 +32,17 @@ describe("Action Creators", () => {
             store = storeFactory(bServer,{"objectives": {"name":"Moe"}})
             logajohn.debug(`${sWho}(): SHEMP: Moe, after constructin' store, store.getState() = `, store.getState() )
             logajohn.debug(`${sWho}(): SHEMP: Moe, after constructin' store, typeof store.dispatch = `, (typeof store.dispatch) )
+
+            // Fetch mocked globally...
+            //fetch.resetMocks()
+            //mockFetch.resetMocks()
+            faux_action = {"type":"OBJECTIVES_GET",
+                "filters":{},
+                "timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)",
+                "objectives": faux_objectives,
+                "error":""}
+            //fetch.mockResponse(JSON.stringify(faux_action))
+            mockFetchSetOutput(JSON.stringify(faux_action))
 
             let le_filters = {}
             logajohn.debug(`${sWho}(): SHEMP: Moe, dispatchin' objectivesFilter()...here goes nuttin'...!`)
@@ -45,14 +60,14 @@ describe("Action Creators", () => {
         it("should have objectives", () =>{
             let sWho = "__tests__/actions.js: objectivesFilter(): should have objectives"
             logajohn.debug(`${sWho}(): SHEMP: Moe, store.getState() = `, store.getState() )
-            expect(store.getState().objectives_list.length).toBe(faux_objectives.length)
-            expect(store.getState().objectives_list).toEqual(faux_objectives)
+            expect(store.getState().objectives.objectives_list.length).toBe(faux_objectives.length)
+            expect(store.getState().objectives.objectives_list).toEqual(faux_objectives)
         })
 
         it("should have timestamp", () => {
             let sWho = "__tests__/actions.js: objectivesFilter(): should have timestamp"
             logajohn.debug(`${sWho}(): SHEMP: Moe, store.getState() = `, store.getState() )
-            expect(store.getState().timestamp).toBeDefined()
+            expect(store.getState().objecttives.timestamp).toBeDefined()
         })
 
     })/* describe("objectivesFilter() thunk-based action creator..." */

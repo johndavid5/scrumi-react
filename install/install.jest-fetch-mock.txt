@@ -1,0 +1,16 @@
+c:\Users\john\projects\scrumi-react>npm install --save-dev jest-fetch-mock
+scrumi-react@6.0.0 c:\Users\john\projects\scrumi-react
++-- jest-fetch-mock@1.6.6
+| `-- promise-polyfill@7.1.2
++-- UNMET PEER DEPENDENCY react@16.0.0
+`-- UNMET PEER DEPENDENCY react-dom@16.0.0
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules\chokidar\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.2.3 (node_modules\sane\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.2.2 (node_modules\watchpack\node_modules\chokidar\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN react-icons@2.2.5 requires a peer of react@^0.14.0 || ^15.0.0 but none was installed.
+npm WARN react-icons@2.2.5 requires a peer of react-dom@^0.14.0 || ^15.0.0 but none was installed.
+npm WARN scrumi-react@6.0.0 No repository field.

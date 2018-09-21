@@ -9,8 +9,8 @@ logajohn.info(`src/actions.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
 
 const parseResponse = (response) => {
     const sWho = 'actions.js::parseResponse'
-    // logajohn.info(`${sWho}(): response = `, response );
-    // logajohn.info(`${sWho}(): response.json() = `, response.json() );
+    logajohn.info(`${sWho}(): response = `, response );
+    //logajohn.info(`${sWho}(): response.json() = `, response.json() );
     return response.json()
 }
 
