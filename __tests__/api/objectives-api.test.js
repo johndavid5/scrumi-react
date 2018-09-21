@@ -162,7 +162,8 @@ describe('objectives_api...', () => {
             expect(payload.type).toEqual(constants.OBJECTIVES_GET)
 
             logajohn.debug(`${sWho}(): SHEMP: Moe,  payload.error = `, errorStringify(payload.error) )
-            expect(payload.error).toEqual(expect.anything())
+            //expect(payload.error).toEqual(expect.anything())
+            expect(payload.error).toBeDefined()
             expect(payload.error).not.toEqual('')
             expect(payload.error.message).toEqual('You supplied a null filter...')
 

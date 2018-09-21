@@ -79,7 +79,8 @@ describe('DbModels', () => {
             })
             .catch( (err)=> {
                 logajohn.debug(`${sWho}...caught err = `, errorStringify(err) )
-                expect(err).toEqual(expect.anything()) // Error is not null and not undefined...
+                //expect(err).toEqual(expect.anything()) // Error is not null and not undefined...
+                expect(err).toBeDefined() // Error is not null and not undefined...
                 done()
             })
     })

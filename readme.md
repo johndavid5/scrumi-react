@@ -32,3 +32,5 @@ https://node-postgres.com/
 * supertest:
     https://github.com/visionmedia/supertest
 
+* Use Puppeteer for end-to-end tests:
+    https://blog.logrocket.com/end-to-end-testing-react-apps-with-puppeteer-and-jest-ce2f414b4fd7

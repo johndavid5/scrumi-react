@@ -3,7 +3,12 @@ import { v4 } from 'uuid'
 import { LinksQa } from './models/links-qa'
 import C from '../constants'
 
-const logatim = require('logatim')
+//const logatim = require('logatim')
+import { config } from '../config'
+import { logajohn } from '../lib/logajohn'
+
+logajohn.setLevel(config.DEBUG_LEVEL)
+logajohn.debug(`./src/server/links-qa-api.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
 
 /* Our Express Router... */
 const router = Router()
@@ -30,10 +35,10 @@ router.post('/run_links_qa', (req, res) => {
 
     const sWho = 'links-qa-api::post("/run_links_qa")'
 
-    console.log(`${sWho}(): timestamp_begin_run=${timestamp_begin_run}...`)
-    logatim.setLevel('info')
-    logatim.green.info(`${sWho}(): timestamp_begin_run=${timestamp_begin_run}...`)
-    console.log(`${sWho}(): req.body = `, req.body)
+    logajohn.debug(`${sWho}(): timestamp_begin_run=${timestamp_begin_run}...`)
+    //logatim.setLevel('info')
+    //logatim.green.info(`${sWho}(): timestamp_begin_run=${timestamp_begin_run}...`)
+    logajohn.debug(`${sWho}(): req.body = `, req.body)
 
     const filter = {}
     if (req.body.basePath) {

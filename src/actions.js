@@ -1,10 +1,16 @@
 import fetch from 'isomorphic-fetch'
 import C from './constants' // For Actions dispatched immediately by client...
 
+import { config } from './config'
+import { logajohn } from './lib/logajohn'
+
+logajohn.setLevel(config.DEBUG_LEVEL)
+logajohn.info(`src/actions.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
+
 const parseResponse = (response) => {
     const sWho = 'actions.js::parseResponse'
-    // console.log(`${sWho}(): response = `, response );
-    // console.log(`${sWho}(): response.json() = `, response.json() );
+    // logajohn.info(`${sWho}(): response = `, response );
+    // logajohn.info(`${sWho}(): response.json() = `, response.json() );
     return response.json()
 }
 
@@ -18,19 +24,19 @@ const logError = error => console.error(error)
 */
 const fetchThenDispatch = (dispatch, url, method, body, callback) => {
     const sWho = 'actions.js::fetchThenDispatch'
-    console.log(`${sWho}(): url = ${url}...`)
-    console.log(`${sWho}(): method = ${method}...`)
-    console.log(`${sWho}(): body = `, body )
+    logajohn.info(`${sWho}(): url = ${url}...`)
+    logajohn.info(`${sWho}(): method = ${method}...`)
+    logajohn.info(`${sWho}(): body = `, body )
     fetch(url, { method, body, headers: { 'Content-Type': 'application/json' } })
         .then(parseResponse)
         //.then(dispatch)
         .then((response)=>{
-            console.log(`${sWho}(): Calling dispatch( response ), response = `, response )
+            logajohn.info(`${sWho}(): Calling dispatch( response ), response = `, response )
             dispatch(response)
         })
         .then((out)=>{
             if( callback ){
-                console.log(`${sWho}(): Calling callback( out ), out = `, out )
+                logajohn.info(`${sWho}(): Calling callback( out ), out = `, out )
                 callback(out);
             }
         })
@@ -39,16 +45,23 @@ const fetchThenDispatch = (dispatch, url, method, body, callback) => {
 
 
 // Immediate dispatch of thunk...
+// NOTE: Not all your action creators have to be thunks.
+// The `redux-thunk` middleware knows the difference between
+// thunks and action objects.  Action objects are immediately
+// dispatched.
 export const objectivesIsFetching = ( dispatch, isFetching ) => {
 
   const sWho = "actions.js:objectivesIsFetching"
+
+  //logajohn.info(`${sWho}(): dispatch = `, dispatch )
+  logajohn.info(`${sWho}(): isFetching = `, isFetching )
 
   let dispatchee = { 
     type: C.OBJECTIVES_FETCHING,
     objectives_is_fetching: isFetching
   }
 
-  console.log(`${sWho}(): Calling dispatch(`, dispatchee, `)...`)
+  logajohn.info(`${sWho}(): Calling dispatch(`, dispatchee, `)...`)
 
   dispatch( dispatchee ) 
 }
@@ -58,30 +71,24 @@ export const objectivesFilter = (filters) => (dispatch) => {
 
     const sWho = "actions.js::objectivesFilter"
 
-    console.log(`${sWho}()...callin' objectivesIsFetching(dispatch, true)...`)
+    logajohn.info(`${sWho}()...filters = `, filters )
+    logajohn.info(`${sWho}()...typeof dispatch = `, (typeof dispatch) )
+
+    // "Thunks have another benefit. They can invoke
+    //  dispatch() or getState() asynchronously as many
+    //  times as they like, and they are not
+    //  limited to dispatching one type of action."
+
+    logajohn.info(`${sWho}()...callin' objectivesIsFetching(dispatch, true)...`)
     objectivesIsFetching( dispatch, true )
-
-    // Fake Latency...just for testing the spinning gears...
-    //let faux_delay_ms = 10000
-    let faux_delay_ms = 0
-
-    console.log(`${sWho}(): setTimeout( fetchThenDispatch(...), faux_delay_ms = ${faux_delay_ms} )...`);
-
+    
     // let url = "/objectives_api/objectives" + encodeURIComponent(JSON.stringify(filters))
     // let url = "/objectives_api/objectives?name=fred";
     const url = '/objectives_api/objectives?name=fredrika'
 
-    //fetchThenDispatch(
-    //    dispatch,
-    //    url,
-    //    'GET',
-    //    {},
-    //)
+    logajohn.info(`${sWho}(): Callin' fetchThenDispatch(${url})...`)
 
-    setTimeout(
-	    ()=> {
-
-          fetchThenDispatch(
+     fetchThenDispatch(
 	        dispatch,
 	        url,
 	        'GET',
@@ -89,11 +96,31 @@ export const objectivesFilter = (filters) => (dispatch) => {
 	        ()=>{
 	            objectivesIsFetching( dispatch, false )
 	        }
-	      )
-        },
-	    faux_delay_ms
-    );
-}
+	 )
+
+		//    // Fake Latency...just for testing the spinning gears...
+		//    let faux_delay_ms = 10000
+		//    //let faux_delay_ms = 0
+		//
+		//    logajohn.info(`${sWho}(): setTimeout( fetchThenDispatch(${url}), faux_delay_ms = ${faux_delay_ms} )...`);
+		//
+		//    setTimeout(
+		//	    ()=> {
+		//
+		//          fetchThenDispatch(
+		//	        dispatch,
+		//	        url,
+		//	        'GET',
+		//            null,
+		//	        ()=>{
+		//	            //objectivesIsFetching( dispatch, false )
+		//	        }
+		//	      )
+		//        },
+		//	    faux_delay_ms
+		//    );
+
+}/* objectivesFilter()() */
 
 /* thunk version of addColor()...
 *  (1) Sends a POST request to http://localhost:3000/api/colors
