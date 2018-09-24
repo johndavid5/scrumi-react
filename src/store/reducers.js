@@ -5,8 +5,8 @@ export const objectives = (state = {}, action = { type: null }) => {
 
     const sWho = 'reducers::objectives'
 
-    logajohn.info(`${sWho}(): state = `, state)
-    logajohn.info(`${sWho}(): action = `, action)
+    logajohn.debug(`${sWho}(): state = `, state)
+    logajohn.debug(`${sWho}(): action = `, action)
 
     let returno
 
@@ -21,7 +21,7 @@ export const objectives = (state = {}, action = { type: null }) => {
                 objectives_error: action.error,
             }
 
-            logajohn.info(`${sWho}(): SHEMP: case C.OBJECTIVES_GET: Moe, Retoynin' `, JSON.stringify(returno, null, ' '))
+            logajohn.debug(`${sWho}(): SHEMP: case C.OBJECTIVES_GET: Moe, Retoynin' `, JSON.stringify(returno, null, ' '))
 
             return returno
 
@@ -32,14 +32,14 @@ export const objectives = (state = {}, action = { type: null }) => {
                 objectives_fetching: action.objectives_is_fetching,
             }
 
-            logajohn.info(`${sWho}(): SHEMP: case C.OBJECTIVES_FETCHING: Moe, Retoynin' `, JSON.stringify(returno, null, ' '))
+            logajohn.debug(`${sWho}(): SHEMP: case C.OBJECTIVES_FETCHING: Moe, Retoynin' `, JSON.stringify(returno, null, ' '))
 
             return returno
 
         default:
             // Just return a copy of state...
             returno = { ...state }
-            logajohn.info(`${sWho}(): SHEMP: default: Moe, Retoynin' simple copy of state: `, JSON.stringify(returno, null, ' '))
+            logajohn.debug(`${sWho}(): SHEMP: default: Moe, Retoynin' simple copy of state: `, JSON.stringify(returno, null, ' '))
             return returno
     }
 }

@@ -5,18 +5,18 @@ import { config } from '../src/config'
 import { logajohn } from '../src/lib/logajohn'
 
 logajohn.setLevel(config.DEBUG_LEVEL)
-logajohn.info('__mocks__/express.js: logajohn.getLevel()=', logajohn.getLevel())
+logajohn.debug('__mocks__/express.js: logajohn.getLevel()=', logajohn.getLevel())
 
 export const mockGet = jest.fn(
     (path,callback)=>{
-        logajohn.info('__mocks__/express.js: mockGet(): path=', path, 'callback=', callback )
+        logajohn.debug('__mocks__/express.js: mockGet(): path=', path, 'callback=', callback )
 });
 //exports.mockGet = mockGet;
 //export mockGet;
 
 class Express {
     constructor() {
-        logajohn.info('__mocks__/express.js: Express mock constructor...')
+        logajohn.debug('__mocks__/express.js: Express mock constructor...')
 
         this.get = mockGet;
 

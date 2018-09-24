@@ -3,6 +3,12 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import { colors, linksQa, objectives } from './reducers'
 
+import { config } from '../config'
+import { logajohn } from '../lib/logajohn'
+
+logajohn.setLevel(config.DEBUG_LEVEL)
+logajohn.debug(`./src/store/index.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
+
 /* I thunk we'd use thunks to help us with asynchronous actions...
 *
 * These action creators, called thunks, will allow us to wait
@@ -29,9 +35,9 @@ const clientLogger = store => next => (action) => {
 
 const serverLogger = store => next => (action) => {
     const sWho = 'store/index/serverLogger'
-    console.log(`\n${sWho}(): ` + ' dispatching server action\n')
-    console.log(action)
-    console.log('\n')
+    logajohn.debug(`\n${sWho}(): ` + ' dispatching server action = ', action)
+    //console.log(`server action = `, action)
+    //console.log('\n')
     return next(action)
 }
 

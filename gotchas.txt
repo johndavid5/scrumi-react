@@ -1,0 +1,22 @@
+1. 9/24/2018: Spent hours trying to figure out why I was getting  
+     "Error: Actions must be plain objects. Use custom middleware for async actions."
+   ...until I figured out by use of (typeof dispatchee) and
+   dispatchee.constructor.name that I was dispatching JSON rather than an
+   actual plain old JavaScript object...just to add to the confusion,
+   unbeknownst to me, the fetch API's response.json() does not return JSON...but in fact
+   parses the body text as JSON and returns a plain old JavaScript
+   object...probably via JSON.parse()...of course, it makes much more
+   sense to store the body as a string since that's what get sent over
+   the wire...we don't sent JavaScript objects over the wire, do we,
+   now...the body of the response is a string...although it is oft-times
+   a JSON string...
+
+
+  console.error src\actions.js:18
+    Error: Actions must be plain objects. Use custom middleware for async actions.
+        at dispatch (c:\Users\john\projects\scrumi-react\node_modules\redux\lib\createStore.js:165:13)
+        at c:\Users\john\projects\scrumi-react\node_modules\redux-thunk\lib\index.js:14:16
+        at c:\Users\john\projects\scrumi-react\src\store\index.js:35:20
+        at c:\Users\john\projects\scrumi-react\src\actions.js:38:9
+        at process._tickCallback (internal/process/next_tick.js:103:7)
+ 

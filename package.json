@@ -33,7 +33,8 @@
     "test-objectives-mock": "jest objectives-mock.test.js",
     "test-objectives-mock-watch": "jest --watch objectives-mock.test.js",
     "test-objectives-api": "jest objectives-api.test.js",
-    "test-objectives-api-watch": "jest --watch objectives-api.test.js"
+    "test-objectives-api-watch": "jest --watch objectives-api.test.js",
+    "test-objectives-filter-form": "jest --watch ObjectivesFilterForm.test.js"
   },
   "keywords": [
     "React",

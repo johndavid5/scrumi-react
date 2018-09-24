@@ -9,7 +9,8 @@ import { config } from '../src/config'
 import { logajohn } from '../src/lib/logajohn'
 import { errorStringify } from '../src/lib/utils'
 
-import { mockFetch, mockFetchSetOutput } from 'isomorphic-fetch'
+//import { mockFetch, mockFetchSetOutput } from 'isomorphic-fetch'
+import fetch from 'isomorphic-fetch'
  
 // isomorphic-fetch is getting mocked at global scope...see __tests__/global.js...
 jest.mock('isomorphic-fetch') // Need to mock isomorphic-fetch for objectivesFilter() action creator...
@@ -33,16 +34,17 @@ describe("Action Creators", () => {
             logajohn.debug(`${sWho}(): SHEMP: Moe, after constructin' store, store.getState() = `, store.getState() )
             logajohn.debug(`${sWho}(): SHEMP: Moe, after constructin' store, typeof store.dispatch = `, (typeof store.dispatch) )
 
-            // Fetch mocked globally...
-            //fetch.resetMocks()
-            //mockFetch.resetMocks()
+            fetch.resetMocks()
+
             faux_action = {"type":"OBJECTIVES_GET",
                 "filters":{},
                 "timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)",
                 "objectives": faux_objectives,
                 "error":""}
-            //fetch.mockResponse(JSON.stringify(faux_action))
-            mockFetchSetOutput(JSON.stringify(faux_action))
+
+            // Set the response that we desire when isomorphic fetch is called within the actions.js file...
+            fetch.mockResponse(JSON.stringify(faux_action))
+            
 
             let le_filters = {}
             logajohn.debug(`${sWho}(): SHEMP: Moe, dispatchin' objectivesFilter()...here goes nuttin'...!`)
@@ -67,7 +69,7 @@ describe("Action Creators", () => {
         it("should have timestamp", () => {
             let sWho = "__tests__/actions.js: objectivesFilter(): should have timestamp"
             logajohn.debug(`${sWho}(): SHEMP: Moe, store.getState() = `, store.getState() )
-            expect(store.getState().objecttives.timestamp).toBeDefined()
+            expect(store.getState().objectives.objectives_timestamp).toBeDefined()
         })
 
     })/* describe("objectivesFilter() thunk-based action creator..." */

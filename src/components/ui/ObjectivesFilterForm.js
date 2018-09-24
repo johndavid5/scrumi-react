@@ -79,7 +79,7 @@ class ObjectivesFilterForm extends Component {
         <div className="container-fluid">
         <hr/>
         <form className="objectives-filter-form form-inline" onSubmit={this.submit}>
-            <button>Re-Load Objectives</button>
+            <button id="load-objectives">Re-Load Objectives</button>
         </form>
         <hr/>
         </div>

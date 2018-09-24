@@ -1,4 +1,5 @@
-//require('isomorphic-fetch')
+// https://github.com/jefflau/jest-fetch-mock
+require('isomorphic-fetch')
 
 if (!Promise) {
   Promise = require('promise-polyfill');

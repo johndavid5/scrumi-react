@@ -5,12 +5,13 @@ import { config } from './config'
 import { logajohn } from './lib/logajohn'
 
 logajohn.setLevel(config.DEBUG_LEVEL)
-logajohn.info(`src/actions.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
+logajohn.debug(`src/actions.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
 
 const parseResponse = (response) => {
     const sWho = 'actions.js::parseResponse'
-    logajohn.info(`${sWho}(): response = `, response );
-    //logajohn.info(`${sWho}(): response.json() = `, response.json() );
+    logajohn.debug(`${sWho}(): response = `, response );
+    logajohn.debug(`${sWho}(): response.json = `, response.json );
+    logajohn.debug(`${sWho}(): response.json() = `, response.json() );
     return response.json()
 }
 
@@ -24,20 +25,26 @@ const logError = error => console.error(error)
 */
 const fetchThenDispatch = (dispatch, url, method, body, callback) => {
     const sWho = 'actions.js::fetchThenDispatch'
-    logajohn.info(`${sWho}(): url = ${url}...`)
-    logajohn.info(`${sWho}(): method = ${method}...`)
-    logajohn.info(`${sWho}(): body = `, body )
+    logajohn.debug(`${sWho}(): url = ${url}...`)
+    logajohn.debug(`${sWho}(): method = ${method}...`)
+    logajohn.debug(`${sWho}(): body = `, body )
     fetch(url, { method, body, headers: { 'Content-Type': 'application/json' } })
         .then(parseResponse)
         //.then(dispatch)
         .then((response)=>{
-            logajohn.info(`${sWho}(): Calling dispatch( response ), response = `, response )
+            logajohn.debug(`${sWho}(): Calling dispatch( response ), response = `, response )
+            logajohn.debug(`${sWho}(): Calling dispatch( response ), typeof response = '` + (typeof response) + `'...`)
+            logajohn.debug(`${sWho}(): Calling dispatch( response ), response.constructor.name = '`+ response.constructor.name +`'...`)
             dispatch(response)
+            logajohn.debug(`${sWho}(): Returned from dispatch( response ), response = `, response )
         })
         .then((out)=>{
             if( callback ){
-                logajohn.info(`${sWho}(): Calling callback( out ), out = `, out )
+                logajohn.debug(`${sWho}(): Calling callback( out ), out = `, out )
                 callback(out);
+            }
+            else{
+                logajohn.debug(`${sWho}(): Callback is falsey, so not calling callback( out ), out = `, out )
             }
         })
         .catch(logError)
@@ -53,15 +60,17 @@ export const objectivesIsFetching = ( dispatch, isFetching ) => {
 
   const sWho = "actions.js:objectivesIsFetching"
 
-  //logajohn.info(`${sWho}(): dispatch = `, dispatch )
-  logajohn.info(`${sWho}(): isFetching = `, isFetching )
+  //logajohn.debug(`${sWho}(): dispatch = `, dispatch )
+  logajohn.debug(`${sWho}(): isFetching = `, isFetching )
 
   let dispatchee = { 
     type: C.OBJECTIVES_FETCHING,
     objectives_is_fetching: isFetching
   }
 
-  logajohn.info(`${sWho}(): Calling dispatch(`, dispatchee, `)...`)
+  logajohn.debug(`${sWho}(): Calling dispatch( dispatchee ), dispatchee = `, dispatchee, `...`)
+  logajohn.debug(`${sWho}(): Calling dispatch( dispatchee ), typeof dispatchee = '` + (typeof dispatchee) + `'...`)
+  logajohn.debug(`${sWho}(): Calling dispatch( dispatchee ), dispatchee.constructor.name = '` + (dispatchee.constructor.name) + `'...`)
 
   dispatch( dispatchee ) 
 }
@@ -71,22 +80,22 @@ export const objectivesFilter = (filters) => (dispatch) => {
 
     const sWho = "actions.js::objectivesFilter"
 
-    logajohn.info(`${sWho}()...filters = `, filters )
-    logajohn.info(`${sWho}()...typeof dispatch = `, (typeof dispatch) )
+    logajohn.debug(`${sWho}()...filters = `, filters )
+    logajohn.debug(`${sWho}()...typeof dispatch = `, (typeof dispatch) )
 
     // "Thunks have another benefit. They can invoke
     //  dispatch() or getState() asynchronously as many
     //  times as they like, and they are not
     //  limited to dispatching one type of action."
 
-    logajohn.info(`${sWho}()...callin' objectivesIsFetching(dispatch, true)...`)
+    logajohn.debug(`${sWho}()...callin' objectivesIsFetching(dispatch, true)...`)
     objectivesIsFetching( dispatch, true )
     
     // let url = "/objectives_api/objectives" + encodeURIComponent(JSON.stringify(filters))
     // let url = "/objectives_api/objectives?name=fred";
     const url = '/objectives_api/objectives?name=fredrika'
 
-    logajohn.info(`${sWho}(): Callin' fetchThenDispatch(${url})...`)
+    logajohn.debug(`${sWho}(): Callin' fetchThenDispatch(${url})...`)
 
      fetchThenDispatch(
 	        dispatch,
@@ -102,7 +111,7 @@ export const objectivesFilter = (filters) => (dispatch) => {
 		//    let faux_delay_ms = 10000
 		//    //let faux_delay_ms = 0
 		//
-		//    logajohn.info(`${sWho}(): setTimeout( fetchThenDispatch(${url}), faux_delay_ms = ${faux_delay_ms} )...`);
+		//    logajohn.debug(`${sWho}(): setTimeout( fetchThenDispatch(${url}), faux_delay_ms = ${faux_delay_ms} )...`);
 		//
 		//    setTimeout(
 		//	    ()=> {

@@ -30,7 +30,8 @@ jest.mock('../../src/server/models/objectives');
 
 import { Request as RequestMock } from 'request'
 import { Response as ResponseMock } from 'response'
-import { router as objectives_mock_api_router, doGet }  from '../../src/server/objectives-api'
+//import { router as objectives_mock_api_router, doGet }  from '../../src/server/objectives-api'
+import { doGet }  from '../../src/server/objectives-api'
 import { Objectives as ObjectivesMockModel, mockGetObjectives } from '../../src/server/models/objectives'
 
 import constants from '../../src/constants'
