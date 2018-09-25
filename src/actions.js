@@ -89,6 +89,7 @@ export const objectivesFilter = (filters) => (dispatch) => {
     //  limited to dispatching one type of action."
 
     logajohn.debug(`${sWho}()...callin' objectivesIsFetching(dispatch, true)...`)
+
     objectivesIsFetching( dispatch, true )
     
     // let url = "/objectives_api/objectives" + encodeURIComponent(JSON.stringify(filters))

@@ -6,13 +6,16 @@ import Adapter from 'enzyme-adapter-react-16'
 
 Enzyme.configure({ adapter: new Adapter() })
 
-// For testing, add React to the global scope... 
+// For testing, add React, ReactDOM, and Enzyme
+// to the global scope...
 global.React = React
 global.ReactDOM = ReactDOM
 global.Enzyme = Enzyme
 
 // Add mock isomorphic fetch to the global scope for your pleasure and enjoyment...
 // ...see https://github.com/jefflau/jest-fetch-mock....
+// ...actually we hacked our own in __mocks__ inspired by
+// jefflau's version...
 //global.fetch = require('jest-fetch-mock')
 
 window.localStorage = {}

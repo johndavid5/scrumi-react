@@ -9,10 +9,7 @@ import { config } from '../src/config'
 import { logajohn } from '../src/lib/logajohn'
 import { errorStringify } from '../src/lib/utils'
 
-//import { mockFetch, mockFetchSetOutput } from 'isomorphic-fetch'
 import fetch from 'isomorphic-fetch'
- 
-// isomorphic-fetch is getting mocked at global scope...see __tests__/global.js...
 jest.mock('isomorphic-fetch') // Need to mock isomorphic-fetch for objectivesFilter() action creator...
 
 logajohn.setLevel(config.DEBUG_LEVEL)

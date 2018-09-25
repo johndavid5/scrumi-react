@@ -15,14 +15,6 @@ import { sortColors } from '../lib/array-helpers'
 
 import { logajohn } from '../lib/logajohn'
 
-export const NewColor = connect(
-    null, /* mapStateToProps() */
-    dispatch => ({
-        onNewColor(title, color) {
-            dispatch(addColor(title, color))
-        },
-    }),
-)(AddColorForm)
 
 export const ObjectivesFilterFormContainer = connect(
     (state) => {
@@ -60,6 +52,7 @@ export const ObjectivesListContainer = connect(
     null,
 )(ObjectivesListComponent)
 
+
 export const LinksQaFormContainer = connect(
     state => ({
         linksQa: { ...state.linksQa },
@@ -88,6 +81,14 @@ export const LinksQaResultsContainer = connect(
     null,
 )(LinksQaResultsComponent)
 
+export const NewColor = connect(
+    null, /* mapStateToProps() */
+    dispatch => ({
+        onNewColor(title, color) {
+            dispatch(addColor(title, color))
+        },
+    }),
+)(AddColorForm)
 
 export const Colors = connect(
     ({ colors }, { match }) => ({

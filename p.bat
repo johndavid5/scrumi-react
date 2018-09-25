@@ -15,4 +15,5 @@ REM yarn run test-actions-watch 2>&1 | py ./scripts/strip-colors.py -tee p.out |
 REM yarn run test-actions-watch 2>&1 | tee p.out
 REM yarn run test-objectives-api-watch 2>&1 | tee p.out
 REM yarn run test-watch-all 2>&1 | tee p.out
-yarn run test-objectives-filter-form 2>&1 | tee p.out
+REM yarn run test-objectives-filter-form 2>&1 | tee p.out
+yarn run test-objectives-filter-form-container 2>&1 | tee p.out
