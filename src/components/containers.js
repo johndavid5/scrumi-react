@@ -33,7 +33,7 @@ export const ObjectivesFilterFormContainer = connect(
         onObjectivesFilter(filters) {
             const sWho = './src/components/containers.js: ObjectivesFilterFormContainer::mapDispatchToProps'
             logajohn.debug(`${sWho}(): SHEMP: Moe, dispatchin' objectivesFilter(filters), with filters = `, filters )
-            logajohn.debug(`${sWho}(): SHEMP: Moe, dispatch = `, dispatch )
+            logajohn.debug(`${sWho}(): SHEMP: Moe, typeof dispatch = `, (typeof dispatch) )
             dispatch(objectivesFilter(filters))
         },
     }),
