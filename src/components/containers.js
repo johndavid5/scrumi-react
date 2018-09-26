@@ -13,21 +13,27 @@ import {
 import { findById } from '../lib/array-helpers'
 import { sortColors } from '../lib/array-helpers'
 
+import { config } from '../config'
 import { logajohn } from '../lib/logajohn'
 
+logajohn.setLevel(config.DEBUG_LEVEL)
+logajohn.debug(`src/components/containers.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
 
 export const ObjectivesFilterFormContainer = connect(
     (state) => {
-        const sWho = 'ObjectivesFilterFormContainer::mapStateToProps'
+        const sWho = './src/components/containers.js: ObjectivesFilterFormContainer::mapStateToProps'
         console.log(`${sWho}(): state = `, state)
         const mary_kay_returno = {
             objectives: { ...state.objectives },
         }
-        console.log(`${sWho}(): returning mary_kay_returno  = `, mary_kay_returno)
+        logajohn.debug(`${sWho}(): SHEMP: Moe, retoynin' mary_kay_returno  = `, mary_kay_returno)
         return mary_kay_returno
     },
     dispatch => ({
         onObjectivesFilter(filters) {
+            const sWho = './src/components/containers.js: ObjectivesFilterFormContainer::mapDispatchToProps'
+            logajohn.debug(`${sWho}(): SHEMP: Moe, dispatchin' objectivesFilter(filters), with filters = `, filters )
+            logajohn.debug(`${sWho}(): SHEMP: Moe, dispatch = `, dispatch )
             dispatch(objectivesFilter(filters))
         },
     }),

@@ -38,3 +38,13 @@ https://node-postgres.com/
 * How to Mock isomorphic-fetch without Really Trying:
     https://github.com/jefflau/jest-fetch-mock
     https://github.com/jefflau/jest-fetch-mock/blob/master/src/index.js
+
+* Mentioning thunks for Redux Store::dispatch()...
+
+    https://redux.js.org/api/store#dispatch-action
+    "However, if you wrap createStore with applyMiddleware, the middleware can interpret actions differently, and provide support for dispatching async actions. Async actions are usually asynchronous primitives like Promises, Observables, or thunks."
+
+    https://redux.js.org/recipes/writingtests
+    "For async action creators using Redux Thunk or other middleware, it's best to completely mock the Redux store for tests. You can apply the middleware to a mock store using redux-mock-store. You can also use fetch-mock to mock the HTTP requests."
+
+    https://github.com/dmitry-zaets/redux-mock-store

@@ -4,6 +4,12 @@ import deepFreeze from 'deep-freeze'
 import Enzyme from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
+import { config } from '../src/config'
+import { logajohn } from '../src/lib/logajohn'
+
+logajohn.setLevel(config.DEBUG_LEVEL)
+logajohn.debug(`__tests__/global.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
+
 Enzyme.configure({ adapter: new Adapter() })
 
 // For testing, add React, ReactDOM, and Enzyme
@@ -22,6 +28,9 @@ window.localStorage = {}
 console.groupCollapsed = jest.fn()
 console.log = jest.fn()
 console.groupEnd = jest.fn()
+
+logajohn.info("__tests__/global.js: Callin' jest.setTimeout(10000)...")
+jest.setTimeout(10000)
 
 global._testColors = deepFreeze([
     {

@@ -7,6 +7,7 @@ import { faux_objectives } from '../data/fauxObjectives'
 
 import { config } from '../src/config'
 import { logajohn } from '../src/lib/logajohn'
+
 import { errorStringify } from '../src/lib/utils'
 
 import fetch from 'isomorphic-fetch'
