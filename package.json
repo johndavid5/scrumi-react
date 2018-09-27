@@ -103,7 +103,8 @@
       "shim.js",
       "global.js",
       "build",
-      "~$"
+      "~$",
+      "\\.swp$"
     ],
     "verbose": true,
     "automock": false,
