@@ -1,0 +1,2135 @@
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterFormContainer.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+
+Test Suites: 0 of 9 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0s, estimated 5s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterFormContainer.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+
+Test Suites: 0 of 9 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        1s, estimated 5s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterFormContainer.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+
+Test Suites: 0 of 9 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        2s, estimated 5s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterFormContainer.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+
+Test Suites: 0 of 9 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        3s, estimated 5s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterFormContainer.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+
+Test Suites: 0 of 9 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        4s, estimated 5s  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:12.584][DEBUG] __tests__/global.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:12.589][INFO] __tests__/global.js: Callin' jest.setTimeout(10000)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:12.663][DEBUG] __tests__/global.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:12.668][INFO] __tests__/global.js: Callin' jest.setTimeout(10000)...[49m[0m
+
+[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterFormContainer.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+
+Test Suites: 0 of 9 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        5s  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.60][DEBUG] objectives.js: logajohn.getLevel()= DEBUG[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.64][DEBUG] users.js: logajohn.getLevel()= DEBUG[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.67][DEBUG] __tests__/models/dbmodels.test.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.79][DEBUG] Users::getUsers(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.80][DEBUG] Users::getUsers(): Calling pool.query("SELECT * from users", [])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.191][DEBUG] __tests__/global.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.198][INFO] __tests__/global.js: Callin' jest.setTimeout(10000)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.756][DEBUG] __mocks__/isomorphic-fetch.js: logajohn.getLevel()= DEBUG[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.757][DEBUG] __mocks__/isomorphic-fetch.js: mockResponse() SHEMP: Moe, body =[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.778][INFO] src/actions.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.783][DEBUG] src/components/containers.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.797][DEBUG] __tests__/components/containers/ObjectivesFilterFormContainer.test.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.820][DEBUG] ./src/components/containers.js: ObjectivesFilterFormContainer::mapStateToProps(): SHEMP: Moe, retoynin' mary_kay_returno  = {"objectives":{}}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.831][DEBUG] __tests__/components/containers/ObjectivesFilterformContainer.test.js: dispatches an OBJECTIVES_GET action(): SHEMP: Moe, jasmine.DEFAULT_TIMEOUT_INTERVAL = 5000[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.832][DEBUG] __tests__/components/containers/ObjectivesFilterformContainer.test.js: dispatches an OBJECTIVES_GET action(): SHEMP: Moe, before onObjectivesFilter(), _faux_store.getActions() = [][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.832][DEBUG] __tests__/components/containers/ObjectivesFilterformContainer.test.js: dispatches an OBJECTIVES_GET action(): SHEMP: Moe, before onObjectivesFilter(), _faux_store.getState() = {"objectives":{}}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.832][DEBUG] __mocks__/isomorphic-fetch.js: mockResponse() SHEMP: Moe, body = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.833][DEBUG] __tests__/components/containers/ObjectivesFilterformContainer.test.js: dispatches an OBJECTIVES_GET action(): Callin' onObjectivesFilter()...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.839][DEBUG] ./src/components/containers.js: ObjectivesFilterFormContainer::mapDispatchToProps(): SHEMP: Moe, dispatchin' objectivesFilter(filters), with filters = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.840][DEBUG] ./src/components/containers.js: ObjectivesFilterFormContainer::mapDispatchToProps(): SHEMP: Moe, typeof dispatch = function[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.841][INFO] actions.js::objectivesFilter()...filters = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.841][INFO] actions.js::objectivesFilter()...typeof dispatch = function[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.841][INFO] actions.js::objectivesFilter()...callin' objectivesIsFetching(dispatch, true)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.842][INFO] actions.js:objectivesIsFetching(): isFetching = true[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.842][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), typeof dispatch = function[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.842][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), dispatchee = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":true} ...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.843][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), typeof dispatchee = 'object'...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.843][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), dispatchee.constructor.name = 'Object'...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.845][DEBUG] storeSubscriber(): SHEMP: Looks like a store change, Moe..._faux_store.getState()= {"objectives":{}}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.845][DEBUG] storeSubscriber(): SHEMP: Looks like a store change, Moe..._faux_store.getActions()= [{"type":"OBJECTIVES_FETCHING","objectives_is_fetching":true}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.846][INFO] actions.js::objectivesFilter(): Callin' fetchThenDispatch(/objectives_api/objectives?name=fredrika)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.847][INFO] actions.js::fetchThenDispatch(): url = /objectives_api/objectives?name=fredrika...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.847][INFO] actions.js::fetchThenDispatch(): method = GET...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.847][INFO] actions.js::fetchThenDispatch(): body = null[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.848][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.constructor(): SHEMP: Moe, body arg = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.849][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.constructor(): SHEMP: Moe, this.body (direct assign from arg) = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.849][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.constructor(): SHEMP: Moe, this.init = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.850][DEBUG] __tests__/components/containers/ObjectivesFilterformContainer.test.js: dispatches an OBJECTIVES_GET action(): SHEMP: Moe, after onObjectivesFilter(), _faux_store.getActions() = [{"type":"OBJECTIVES_FETCHING","objectives_is_fetching":true}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.850][DEBUG] __tests__/components/containers/ObjectivesFilterformContainer.test.js: dispatches an OBJECTIVES_GET action(): SHEMP: Moe, after onObjectivesFilter(), _faux_store.getState() = {"objectives":{}}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.851][INFO] actions.js::parseResponse(): response = {"body":"{\"type\":\"OBJECTIVES_GET\",\"filters\":{},\"timestamp\":\"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)\",\"objectives\":[{\"task_id\":1,\"description\":\"Wash glassware\",\"user_id_assigned_to\":1,\"first_name\":\"Joe\",\"middle_name\":\"S.\",\"last_name\":\"Kovacs\"},{\"task_id\":2,\"description\":\"Arrange files\",\"user_id_assigned_to\":2,\"first_name\":\"Jean\",\"middle_name\":\"R.\",\"last_name\":\"Kovacs\"},{\"task_id\":3,\"description\":\"Run Cyanide analysis\",\"user_id_assigned_to\":3,\"first_name\":\"John\",\"middle_name\":\"D.\",\"last_name\":\"Aynedjian\"}],\"error\":\"\"}"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[30m[2018-09-28 18:42:13.852][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, this = {"body":"{\"type\":\"OBJECTIVES_GET\",\"filters\":{},\"timestamp\":\"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)\",\"objectives\":[{\"task_id\":1,\"description\":\"Wash glassware\",\"user_id_assigned_to\":1,\"first_name\":\"Joe\",\"middle_name\":\"S.\",\"last_name\":\"Kovacs\"},{\"task_id\":2,\"description\":\"Arrange files\",\"user_id_assigned_to\":2,\"first_name\":\"Jean\",\"middle_name\":\"R.\",\"last_name\":\"Kovacs\"},{\"task_id\":3,\"description\":\"Run Cyanide analysis\",\"user_id_assigned_to\":3,\"first_name\":\"John\",\"middle_name\":\"D.\",\"last_name\":\"Aynedjian\"}],\"error\":\"\"}"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.852][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, this.body = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.852][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, (typeof this.body) = 'string'[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.853][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, this.body.constructor = ' function String() { [native code] }'[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.853][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, retoynin' returno = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [2018-09-28 18:42:13.851][INFO] actions.js::parseResponse(): response.json = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.854][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, this = {"body":"{\"type\":\"OBJECTIVES_GET\",\"filters\":{},\"timestamp\":\"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)\",\"objectives\":[{\"task_id\":1,\"description\":\"Wash glassware\",\"user_id_assigned_to\":1,\"first_name\":\"Joe\",\"middle_name\":\"S.\",\"last_name\":\"Kovacs\"},{\"task_id\":2,\"description\":\"Arrange files\",\"user_id_assigned_to\":2,\"first_name\":\"Jean\",\"middle_name\":\"R.\",\"last_name\":\"Kovacs\"},{\"task_id\":3,\"description\":\"Run Cyanide analysis\",\"user_id_assigned_to\":3,\"first_name\":\"John\",\"middle_name\":\"D.\",\"last_name\":\"Aynedjian\"}],\"error\":\"\"}"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.855][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, this.body = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.855][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, (typeof this.body) = 'string'[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.855][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, this.body.constructor = ' function String() { [native code] }'[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.856][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, retoynin' returno = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.856][INFO] actions.js::parseResponse(): response.json() = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.856][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, this = {"body":"{\"type\":\"OBJECTIVES_GET\",\"filters\":{},\"timestamp\":\"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)\",\"objectives\":[{\"task_id\":1,\"description\":\"Wash glassware\",\"user_id_assigned_to\":1,\"first_name\":\"Joe\",\"middle_name\":\"S.\",\"last_name\":\"Kovacs\"},{\"task_id\":2,\"description\":\"Arrange files\",\"user_id_assigned_to\":2,\"first_name\":\"Jean\",\"middle_name\":\"R.\",\"last_name\":\"Kovacs\"},{\"task_id\":3,\"description\":\"Run Cyanide analysis\",\"user_id_assigned_to\":3,\"first_name\":\"John\",\"middle_name\":\"D.\",\"last_name\":\"Aynedjian\"}],\"error\":\"\"}"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.857][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, this.body = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.857][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, (typeof this.body) = 'string'[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.857][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, this.body.constructor = ' function String() { [native code] }'[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.858][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, retoynin' returno = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.858][INFO] actions.js::fetchThenDispatch(): Calling dispatch( response ), response = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.858][INFO] actions.js::fetchThenDispatch(): Calling dispatch( response ), typeof response = 'object'...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.858][INFO] actions.js::fetchThenDispatch(): Calling dispatch( response ), response.constructor.name = 'Object'...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.859][DEBUG] storeSubscriber(): SHEMP: Looks like a store change, Moe..._faux_store.getState()= {"objectives":{}}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.859][DEBUG] storeSubscriber(): SHEMP: Looks like a store change, Moe..._faux_store.getActions()= [{"type":"OBJECTIVES_FETCHING","objectives_is_fetching":true},{"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.859][INFO] actions.js::fetchThenDispatch(): Returned from dispatch( response ), response = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.860][INFO] actions.js::fetchThenDispatch(): Calling callback( out ), out = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.860][INFO] actions.js:objectivesIsFetching(): isFetching = false[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.860][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), typeof dispatch = function[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.861][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), dispatchee = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":false} ...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.861][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), typeof dispatchee = 'object'...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.861][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), dispatchee.constructor.name = 'Object'...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.861][DEBUG] storeSubscriber(): SHEMP: Looks like a store change, Moe..._faux_store.getState()= {"objectives":{}}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:13.862][DEBUG] storeSubscriber(): SHEMP: Looks like a store change, Moe..._faux_store.getActions()= [{"type":"OBJECTIVES_FETCHING","objectives_is_fetching":true},{"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""},{"type":"OBJECTIVES_FETCHING","objectives_is_fetching":false}][49m[0m
+
+[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1APASS __tests__\components\containers\ObjectivesFilterFormContainer.test.js
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterFormContainer.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+
+Test Suites: 0 of 9 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        5s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  <ObjectivesFilterFormContainer /> Container 
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterFormContainer.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+
+Test Suites: 0 of 9 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        5s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    √ dispatches an OBJECTIVES_GET action (37ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterFormContainer.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+
+Test Suites: 0 of 9 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        5s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterFormContainer.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+
+Test Suites: 0 of 9 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        5s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterFormContainer.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+
+Test Suites: 0 of 9 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        5s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+ RUNS  ...actions.test.js
+
+Test Suites: 1 passed, 1 of 9 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6s  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.50][DEBUG] __tests__/global.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.50][INFO] __tests__/global.js: Callin' jest.setTimeout(10000)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.93][DEBUG] Users::getUsers(): Caught err = {"code":"ECONNREFUSED","errno":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":5432}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.97][DEBUG] Users::addUser(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.97][DEBUG] Users::addUser(): Calling pool.query("INSERT into users 
+            	(first_name, middle_name, last_name)
+            	VALUES
+            	($1, $2, $3)
+                RETURNING user_id, first_name, middle_name, last_name
+            	", ["Joe","S.","Kovacs"])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.98][DEBUG] Users::addUser(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.99][DEBUG] Users::addUser(): Calling pool.query("INSERT into users 
+            	(first_name, middle_name, last_name)
+            	VALUES
+            	($1, $2, $3)
+                RETURNING user_id, first_name, middle_name, last_name
+            	", ["Jean","R.","Kovacs"])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.124][DEBUG] ./src/store/index.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.125][DEBUG] __mocks__/isomorphic-fetch.js: logajohn.getLevel()= DEBUG[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.125][DEBUG] __mocks__/isomorphic-fetch.js: mockResponse() SHEMP: Moe, body =[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.126][INFO] src/actions.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.127][DEBUG] __tests__/actions.test.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[30m[2018-09-28 18:42:14.131][DEBUG] reducers::linksQa(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.131][DEBUG] reducers::linksQa(): action = {"type":"@@redux/INIT"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.131][DEBUG] reducers::linksQa(): action.basePath = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.132][DEBUG] reducers::linksQa(): action.additionOnlyCode = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.132][DEBUG] reducers::linksQa(): action.timestamp = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.132][DEBUG] reducers::linksQa(): action.linksQa = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.132][DEBUG] reducers::linksQa(): SHEMP: Moe, Retoynin' {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.133][DEBUG] reducers::linksQa(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.133][DEBUG] reducers::linksQa(): action = {"type":"@@redux/PROBE_UNKNOWN_ACTION_q.4.2.m.n.k"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.133][DEBUG] reducers::linksQa(): action.basePath = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.134][DEBUG] reducers::linksQa(): action.additionOnlyCode = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.134][DEBUG] reducers::linksQa(): action.timestamp = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.134][DEBUG] reducers::linksQa(): action.linksQa = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.135][DEBUG] reducers::linksQa(): SHEMP: Moe, Retoynin' {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.135][DEBUG] reducers::objectives(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.135][DEBUG] reducers::objectives(): action = {"type":"@@redux/INIT"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.136][DEBUG] reducers::objectives(): SHEMP: default: Moe, Retoynin' simple copy of state: {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.136][DEBUG] reducers::objectives(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.136][DEBUG] reducers::objectives(): action = {"type":"@@redux/PROBE_UNKNOWN_ACTION_z.7.c.5.r"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.136][DEBUG] reducers::objectives(): SHEMP: default: Moe, Retoynin' simple copy of state: {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.137][DEBUG] reducers::linksQa(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.138][INFO] ObjectivesFilterForm(1.1.10)::constructor(): this.props= {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.138][DEBUG] reducers::linksQa(): action = {"type":"@@redux/INIT"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.138][DEBUG] reducers::linksQa(): action.basePath = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.138][INFO] ObjectivesFilterForm(1.1.10)::constructor(): this.state= undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.138][DEBUG] reducers::linksQa(): action.additionOnlyCode = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.139][DEBUG] reducers::linksQa(): action.timestamp = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.139][INFO] ObjectivesFilterForm::render(): this.state = null[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.139][DEBUG] reducers::linksQa(): action.linksQa = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.139][INFO] ObjectivesFilterForm::render(): this.props = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.139][DEBUG] reducers::linksQa(): SHEMP: Moe, Retoynin' {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.139][DEBUG] reducers::objectives(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.140][DEBUG] reducers::objectives(): action = {"type":"@@redux/INIT"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.140][DEBUG] reducers::objectives(): SHEMP: default: Moe, Retoynin' simple copy of state: {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [2018-09-28 18:42:14.130][DEBUG] __tests__/actions.js: objectivesFilter(): beforeAll(): SHEMP: Moe, storeFactory = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.141][DEBUG] reducers::linksQa(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.141][DEBUG] reducers::linksQa(): action = {"type":"@@redux/INIT"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.141][DEBUG] reducers::linksQa(): action.basePath = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.142][DEBUG] reducers::linksQa(): action.additionOnlyCode = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.142][DEBUG] reducers::linksQa(): action.timestamp = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.142][DEBUG] reducers::linksQa(): action.linksQa = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.142][DEBUG] reducers::linksQa(): SHEMP: Moe, Retoynin' {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.143][DEBUG] reducers::linksQa(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.143][DEBUG] reducers::linksQa(): action = {"type":"@@redux/PROBE_UNKNOWN_ACTION_t.0.k.q.c.b"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.143][DEBUG] reducers::linksQa(): action.basePath = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.144][DEBUG] reducers::linksQa(): action.additionOnlyCode = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.144][DEBUG] reducers::linksQa(): action.timestamp = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.144][DEBUG] reducers::linksQa(): action.linksQa = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.144][DEBUG] reducers::linksQa(): SHEMP: Moe, Retoynin' {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.145][DEBUG] reducers::objectives(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.145][DEBUG] reducers::objectives(): action = {"type":"@@redux/INIT"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.145][DEBUG] reducers::objectives(): SHEMP: default: Moe, Retoynin' simple copy of state: {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.145][DEBUG] reducers::objectives(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.146][DEBUG] reducers::objectives(): action = {"type":"@@redux/PROBE_UNKNOWN_ACTION_y.9.f.y.w.c"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.146][DEBUG] reducers::objectives(): SHEMP: default: Moe, Retoynin' simple copy of state: {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.146][DEBUG] reducers::linksQa(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.147][DEBUG] reducers::linksQa(): action = {"type":"@@redux/INIT"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.147][DEBUG] reducers::linksQa(): action.basePath = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.147][DEBUG] reducers::linksQa(): action.additionOnlyCode = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.147][DEBUG] reducers::linksQa(): action.timestamp = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.148][DEBUG] reducers::linksQa(): action.linksQa = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.148][DEBUG] reducers::linksQa(): SHEMP: Moe, Retoynin' {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.148][DEBUG] reducers::objectives(): state = {"name":"Moe"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.148][DEBUG] reducers::objectives(): action = {"type":"@@redux/INIT"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.149][DEBUG] reducers::objectives(): SHEMP: default: Moe, Retoynin' simple copy of state: {
+     "name": "Moe"
+    }[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.149][DEBUG] __tests__/actions.js: objectivesFilter(): beforeAll(): SHEMP: Moe, after constructin' store, store.getState() = {"colors":[],"linksQa":{},"objectives":{"name":"Moe"}}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.150][DEBUG] __tests__/actions.js: objectivesFilter(): beforeAll(): SHEMP: Moe, after constructin' store, typeof store.dispatch = function[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.150][DEBUG] __mocks__/isomorphic-fetch.js: mockResponse() SHEMP: Moe, body = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.150][DEBUG] __tests__/actions.js: objectivesFilter(): beforeAll(): SHEMP: Moe, dispatchin' objectivesFilter()...here goes nuttin'...![49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.150][INFO] actions.js::objectivesFilter()...filters = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.151][INFO] actions.js::objectivesFilter()...typeof dispatch = function[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.151][INFO] actions.js::objectivesFilter()...callin' objectivesIsFetching(dispatch, true)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.151][INFO] actions.js:objectivesIsFetching(): isFetching = true[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.151][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), typeof dispatch = function[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.152][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), dispatchee = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":true} ...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.152][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), typeof dispatchee = 'object'...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.152][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), dispatchee.constructor.name = 'Object'...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.153][DEBUG] 
+    store/index/serverLogger():  dispatching server action = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":true}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.153][DEBUG] reducers::linksQa(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.153][DEBUG] reducers::linksQa(): action = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":true}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.153][DEBUG] reducers::linksQa(): action.basePath = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.154][DEBUG] reducers::linksQa(): action.additionOnlyCode = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.154][DEBUG] reducers::linksQa(): action.timestamp = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.154][DEBUG] reducers::linksQa(): action.linksQa = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.155][DEBUG] reducers::linksQa(): SHEMP: Moe, Retoynin' {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.155][DEBUG] reducers::objectives(): state = {"name":"Moe"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.155][DEBUG] reducers::objectives(): action = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":true}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.155][DEBUG] reducers::objectives(): SHEMP: case C.OBJECTIVES_FETCHING: Moe, Retoynin' {
+     "name": "Moe",
+     "objectives_fetching": true
+    }[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.156][INFO] actions.js::objectivesFilter(): Callin' fetchThenDispatch(/objectives_api/objectives?name=fredrika)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.156][INFO] actions.js::fetchThenDispatch(): url = /objectives_api/objectives?name=fredrika...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.156][INFO] actions.js::fetchThenDispatch(): method = GET...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.156][INFO] actions.js::fetchThenDispatch(): body = null[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.157][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.constructor(): SHEMP: Moe, body arg = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.157][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.constructor(): SHEMP: Moe, this.body (direct assign from arg) = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.157][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.constructor(): SHEMP: Moe, this.init = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.157][DEBUG] __tests__/actions.js: objectivesFilter(): beforeAll(): SHEMP: Moe, after dispatchin' objectivesFilter(), store.getState() = {"colors":[],"linksQa":{},"objectives":{"name":"Moe","objectives_fetching":true}}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.158][INFO] actions.js::parseResponse(): response = {"body":"{\"type\":\"OBJECTIVES_GET\",\"filters\":{},\"timestamp\":\"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)\",\"objectives\":[{\"task_id\":1,\"description\":\"Wash glassware\",\"user_id_assigned_to\":1,\"first_name\":\"Joe\",\"middle_name\":\"S.\",\"last_name\":\"Kovacs\"},{\"task_id\":2,\"description\":\"Arrange files\",\"user_id_assigned_to\":2,\"first_name\":\"Jean\",\"middle_name\":\"R.\",\"last_name\":\"Kovacs\"},{\"task_id\":3,\"description\":\"Run Cyanide analysis\",\"user_id_assigned_to\":3,\"first_name\":\"John\",\"middle_name\":\"D.\",\"last_name\":\"Aynedjian\"}],\"error\":\"\"}"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[30m[2018-09-28 18:42:14.158][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, this = {"body":"{\"type\":\"OBJECTIVES_GET\",\"filters\":{},\"timestamp\":\"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)\",\"objectives\":[{\"task_id\":1,\"description\":\"Wash glassware\",\"user_id_assigned_to\":1,\"first_name\":\"Joe\",\"middle_name\":\"S.\",\"last_name\":\"Kovacs\"},{\"task_id\":2,\"description\":\"Arrange files\",\"user_id_assigned_to\":2,\"first_name\":\"Jean\",\"middle_name\":\"R.\",\"last_name\":\"Kovacs\"},{\"task_id\":3,\"description\":\"Run Cyanide analysis\",\"user_id_assigned_to\":3,\"first_name\":\"John\",\"middle_name\":\"D.\",\"last_name\":\"Aynedjian\"}],\"error\":\"\"}"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.159][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, this.body = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.159][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, (typeof this.body) = 'string'[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.159][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, this.body.constructor = ' function String() { [native code] }'[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.159][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, retoynin' returno = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [2018-09-28 18:42:14.158][INFO] actions.js::parseResponse(): response.json = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.160][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, this = {"body":"{\"type\":\"OBJECTIVES_GET\",\"filters\":{},\"timestamp\":\"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)\",\"objectives\":[{\"task_id\":1,\"description\":\"Wash glassware\",\"user_id_assigned_to\":1,\"first_name\":\"Joe\",\"middle_name\":\"S.\",\"last_name\":\"Kovacs\"},{\"task_id\":2,\"description\":\"Arrange files\",\"user_id_assigned_to\":2,\"first_name\":\"Jean\",\"middle_name\":\"R.\",\"last_name\":\"Kovacs\"},{\"task_id\":3,\"description\":\"Run Cyanide analysis\",\"user_id_assigned_to\":3,\"first_name\":\"John\",\"middle_name\":\"D.\",\"last_name\":\"Aynedjian\"}],\"error\":\"\"}"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.160][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, this.body = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.160][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, (typeof this.body) = 'string'[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.161][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, this.body.constructor = ' function String() { [native code] }'[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.161][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, retoynin' returno = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.161][INFO] actions.js::parseResponse(): response.json() = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.161][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, this = {"body":"{\"type\":\"OBJECTIVES_GET\",\"filters\":{},\"timestamp\":\"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)\",\"objectives\":[{\"task_id\":1,\"description\":\"Wash glassware\",\"user_id_assigned_to\":1,\"first_name\":\"Joe\",\"middle_name\":\"S.\",\"last_name\":\"Kovacs\"},{\"task_id\":2,\"description\":\"Arrange files\",\"user_id_assigned_to\":2,\"first_name\":\"Jean\",\"middle_name\":\"R.\",\"last_name\":\"Kovacs\"},{\"task_id\":3,\"description\":\"Run Cyanide analysis\",\"user_id_assigned_to\":3,\"first_name\":\"John\",\"middle_name\":\"D.\",\"last_name\":\"Aynedjian\"}],\"error\":\"\"}"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.162][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, this.body = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.162][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, (typeof this.body) = 'string'[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.162][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, this.body.constructor = ' function String() { [native code] }'[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.162][DEBUG] __mocks__/isomorphic-fetch.js: JResponse.json(): SHEMP: Moe, retoynin' returno = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.163][INFO] actions.js::fetchThenDispatch(): Calling dispatch( response ), response = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.163][INFO] actions.js::fetchThenDispatch(): Calling dispatch( response ), typeof response = 'object'...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.163][INFO] ObjectivesFilterForm(1.1.10)::constructor(): this.props= {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.163][INFO] actions.js::fetchThenDispatch(): Calling dispatch( response ), response.constructor.name = 'Object'...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.164][INFO] ObjectivesFilterForm(1.1.10)::constructor(): this.state= undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.164][INFO] ObjectivesFilterForm::render(): this.state = null[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.164][INFO] ObjectivesFilterForm::render(): this.props = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.166][DEBUG] 
+    store/index/serverLogger():  dispatching server action = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.166][DEBUG] reducers::linksQa(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.167][DEBUG] reducers::linksQa(): action = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.167][DEBUG] reducers::linksQa(): action.basePath = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.167][DEBUG] reducers::linksQa(): action.additionOnlyCode = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.167][DEBUG] reducers::linksQa(): action.timestamp = Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.168][DEBUG] reducers::linksQa(): action.linksQa = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.168][DEBUG] reducers::linksQa(): SHEMP: Moe, Retoynin' {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.168][DEBUG] reducers::objectives(): state = {"name":"Moe","objectives_fetching":true}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.169][DEBUG] reducers::objectives(): action = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.169][DEBUG] reducers::objectives(): SHEMP: case C.OBJECTIVES_GET: Moe, Retoynin' {
+     "name": "Moe",
+     "objectives_fetching": true,
+     "objectives_filters": {},
+     "objectives_list": [
+      {
+       "task_id": 1,
+       "description": "Wash glassware",
+       "user_id_assigned_to": 1,
+       "first_name": "Joe",
+       "middle_name": "S.",
+       "last_name": "Kovacs"
+      },
+      {
+       "task_id": 2,
+       "description": "Arrange files",
+       "user_id_assigned_to": 2,
+       "first_name": "Jean",
+       "middle_name": "R.",
+       "last_name": "Kovacs"
+      },
+      {
+       "task_id": 3,
+       "description": "Run Cyanide analysis",
+       "user_id_assigned_to": 3,
+       "first_name": "John",
+       "middle_name": "D.",
+       "last_name": "Aynedjian"
+      }
+     ],
+     "objectives_timestamp": "Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)",
+     "objectives_error": ""
+    }[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.169][INFO] actions.js::fetchThenDispatch(): Returned from dispatch( response ), response = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.170][INFO] actions.js::fetchThenDispatch(): Calling callback( out ), out = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.170][INFO] actions.js:objectivesIsFetching(): isFetching = false[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.170][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), typeof dispatch = function[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.171][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), dispatchee = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":false} ...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.171][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), typeof dispatchee = 'object'...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.171][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), dispatchee.constructor.name = 'Object'...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.172][DEBUG] 
+    store/index/serverLogger():  dispatching server action = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.172][DEBUG] reducers::linksQa(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.172][DEBUG] reducers::linksQa(): action = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.172][DEBUG] reducers::linksQa(): action.basePath = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.173][DEBUG] reducers::linksQa(): action.additionOnlyCode = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.173][DEBUG] reducers::linksQa(): action.timestamp = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.173][DEBUG] reducers::linksQa(): action.linksQa = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.174][DEBUG] reducers::linksQa(): SHEMP: Moe, Retoynin' {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.174][DEBUG] reducers::objectives(): state = {"name":"Moe","objectives_fetching":true,"objectives_filters":{},"objectives_list":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"objectives_timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives_error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.174][DEBUG] reducers::objectives(): action = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.174][DEBUG] reducers::objectives(): SHEMP: case C.OBJECTIVES_FETCHING: Moe, Retoynin' {
+     "name": "Moe",
+     "objectives_fetching": false,
+     "objectives_filters": {},
+     "objectives_list": [
+      {
+       "task_id": 1,
+       "description": "Wash glassware",
+       "user_id_assigned_to": 1,
+       "first_name": "Joe",
+       "middle_name": "S.",
+       "last_name": "Kovacs"
+      },
+      {
+       "task_id": 2,
+       "description": "Arrange files",
+       "user_id_assigned_to": 2,
+       "first_name": "Jean",
+       "middle_name": "R.",
+       "last_name": "Kovacs"
+      },
+      {
+       "task_id": 3,
+       "description": "Run Cyanide analysis",
+       "user_id_assigned_to": 3,
+       "first_name": "John",
+       "middle_name": "D.",
+       "last_name": "Aynedjian"
+      }
+     ],
+     "objectives_timestamp": "Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)",
+     "objectives_error": ""
+    }[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.175][DEBUG] __tests__/actions.js: objectivesFilter(): should have objectives(): SHEMP: Moe, store.getState() = {"colors":[],"linksQa":{},"objectives":{"name":"Moe","objectives_fetching":false,"objectives_filters":{},"objectives_list":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"objectives_timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives_error":""}}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.178][DEBUG] __tests__/actions.js: objectivesFilter(): should have timestamp(): SHEMP: Moe, store.getState() = {"colors":[],"linksQa":{},"objectives":{"name":"Moe","objectives_fetching":false,"objectives_filters":{},"objectives_list":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"objectives_timestamp":"Thu Sep 20 2018 19:25:00 GMT-0400 (Eastern Daylight Time)","objectives_error":""}}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[30m[2018-09-28 18:42:14.180][DEBUG] reducers::linksQa(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.181][DEBUG] reducers::linksQa(): action = {"type":"@@redux/INIT"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.181][DEBUG] reducers::linksQa(): action.basePath = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.181][DEBUG] reducers::linksQa(): action.additionOnlyCode = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.182][DEBUG] reducers::linksQa(): action.timestamp = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.182][DEBUG] reducers::linksQa(): action.linksQa = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.182][DEBUG] reducers::linksQa(): SHEMP: Moe, Retoynin' {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.182][DEBUG] reducers::linksQa(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.183][DEBUG] reducers::linksQa(): action = {"type":"@@redux/PROBE_UNKNOWN_ACTION_8.j.4.8.x"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.183][DEBUG] reducers::linksQa(): action.basePath = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.183][DEBUG] reducers::linksQa(): action.additionOnlyCode = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.184][DEBUG] reducers::linksQa(): action.timestamp = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.184][DEBUG] reducers::linksQa(): action.linksQa = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.184][DEBUG] reducers::linksQa(): SHEMP: Moe, Retoynin' {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.184][DEBUG] reducers::objectives(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.185][DEBUG] reducers::objectives(): action = {"type":"@@redux/INIT"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.185][DEBUG] reducers::objectives(): SHEMP: default: Moe, Retoynin' simple copy of state: {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.185][DEBUG] reducers::objectives(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.185][DEBUG] reducers::objectives(): action = {"type":"@@redux/PROBE_UNKNOWN_ACTION_k.u.9.3.3.m"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.186][DEBUG] reducers::objectives(): SHEMP: default: Moe, Retoynin' simple copy of state: {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.186][DEBUG] reducers::linksQa(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.187][DEBUG] reducers::linksQa(): action = {"type":"@@redux/INIT"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.187][DEBUG] reducers::linksQa(): action.basePath = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.187][DEBUG] reducers::linksQa(): action.additionOnlyCode = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.187][DEBUG] reducers::linksQa(): action.timestamp = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.188][DEBUG] reducers::linksQa(): action.linksQa = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.188][DEBUG] reducers::linksQa(): SHEMP: Moe, Retoynin' {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.188][DEBUG] reducers::objectives(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.188][DEBUG] reducers::objectives(): action = {"type":"@@redux/INIT"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.189][DEBUG] reducers::objectives(): SHEMP: default: Moe, Retoynin' simple copy of state: {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [2018-09-28 18:42:14.180][DEBUG] __tests__/actions.js: objectivesIsFetching():beforeAll(): SHEMP: Moe, storeFactory = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.189][DEBUG] reducers::linksQa(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.189][DEBUG] reducers::linksQa(): action = {"type":"@@redux/INIT"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.190][DEBUG] reducers::linksQa(): action.basePath = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.190][INFO] ObjectivesFilterForm(1.1.10)::constructor(): this.props= {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.190][DEBUG] reducers::linksQa(): action.additionOnlyCode = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.190][INFO] ObjectivesFilterForm(1.1.10)::constructor(): this.state= undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.190][DEBUG] reducers::linksQa(): action.timestamp = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.190][INFO] ObjectivesFilterForm::render(): this.state = null[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.190][DEBUG] reducers::linksQa(): action.linksQa = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.191][INFO] ObjectivesFilterForm::render(): this.props = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.191][DEBUG] reducers::linksQa(): SHEMP: Moe, Retoynin' {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.191][DEBUG] reducers::linksQa(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.191][DEBUG] reducers::linksQa(): action = {"type":"@@redux/PROBE_UNKNOWN_ACTION_1.5.r.k.l"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.192][DEBUG] reducers::linksQa(): action.basePath = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.192][DEBUG] reducers::linksQa(): action.additionOnlyCode = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.192][DEBUG] reducers::linksQa(): action.timestamp = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.192][DEBUG] reducers::linksQa(): action.linksQa = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.192][DEBUG] reducers::linksQa(): SHEMP: Moe, Retoynin' {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.193][DEBUG] reducers::objectives(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.193][DEBUG] reducers::objectives(): action = {"type":"@@redux/INIT"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.193][DEBUG] reducers::objectives(): SHEMP: default: Moe, Retoynin' simple copy of state: {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.194][DEBUG] reducers::objectives(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.194][DEBUG] reducers::objectives(): action = {"type":"@@redux/PROBE_UNKNOWN_ACTION_z.h.d.g.a.c"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.194][DEBUG] reducers::objectives(): SHEMP: default: Moe, Retoynin' simple copy of state: {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.194][DEBUG] reducers::linksQa(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.195][DEBUG] reducers::linksQa(): action = {"type":"@@redux/INIT"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.195][DEBUG] reducers::linksQa(): action.basePath = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.195][DEBUG] reducers::linksQa(): action.additionOnlyCode = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.195][DEBUG] reducers::linksQa(): action.timestamp = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.196][DEBUG] reducers::linksQa(): action.linksQa = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.196][DEBUG] reducers::linksQa(): SHEMP: Moe, Retoynin' {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.196][DEBUG] reducers::objectives(): state = {"name":"Shemp"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.196][DEBUG] reducers::objectives(): action = {"type":"@@redux/INIT"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.197][DEBUG] reducers::objectives(): SHEMP: default: Moe, Retoynin' simple copy of state: {
+     "name": "Shemp"
+    }[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.197][DEBUG] __tests__/actions.js: objectivesIsFetching():beforeAll(): SHEMP: Moe, store.getState() = {"colors":[],"linksQa":{},"objectives":{"name":"Shemp"}}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.197][INFO] actions.js:objectivesIsFetching(): isFetching = true[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.198][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), typeof dispatch = function[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.198][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), dispatchee = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":true} ...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.198][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), typeof dispatchee = 'object'...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.199][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), dispatchee.constructor.name = 'Object'...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.199][DEBUG] 
+    store/index/serverLogger():  dispatching server action = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":true}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.200][DEBUG] reducers::linksQa(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.200][DEBUG] reducers::linksQa(): action = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":true}[49m[0m
+
+[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1APASS __tests__\components\ui\ObjectivesFilterForm.test.js
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+ RUNS  ...actions.test.js
+
+Test Suites: 1 passed, 1 of 9 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.200][DEBUG] reducers::linksQa(): action.basePath = undefined[49m[0m
+
+  <ObjectivesFilterForm /> UI Component
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+ RUNS  ...actions.test.js
+
+Test Suites: 1 passed, 1 of 9 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    √ renders submit button (37ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+ RUNS  ...actions.test.js
+
+Test Suites: 1 passed, 1 of 9 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    √ submit causes error if onObjectivesFilter prop not supplied (27ms)
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.201][DEBUG] reducers::linksQa(): action.additionOnlyCode = undefined[49m[0m
+
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+ RUNS  ...actions.test.js
+
+Test Suites: 1 passed, 1 of 9 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    √ submit invokes onObjectivesFilter (5ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+ RUNS  ...actions.test.js
+
+Test Suites: 1 passed, 1 of 9 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+ RUNS  ...actions.test.js
+
+Test Suites: 1 passed, 1 of 9 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6s  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.201][DEBUG] reducers::linksQa(): action.timestamp = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.201][DEBUG] reducers::linksQa(): action.linksQa = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.202][DEBUG] reducers::linksQa(): SHEMP: Moe, Retoynin' {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.202][DEBUG] reducers::objectives(): state = {"name":"Shemp"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.202][DEBUG] reducers::objectives(): action = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":true}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.203][DEBUG] reducers::objectives(): SHEMP: case C.OBJECTIVES_FETCHING: Moe, Retoynin' {
+     "name": "Shemp",
+     "objectives_fetching": true
+    }[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.203][DEBUG] __tests__/actions.js: can dispatch OBJECTIVES_FETCHING true(): SHEMP: Moe, store.getState() = {"colors":[],"linksQa":{},"objectives":{"name":"Shemp","objectives_fetching":true}}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.205][INFO] actions.js:objectivesIsFetching(): isFetching = false[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.205][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), typeof dispatch = function[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.205][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), dispatchee = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":false} ...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.206][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), typeof dispatchee = 'object'...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.206][INFO] actions.js:objectivesIsFetching(): Calling dispatch( dispatchee ), dispatchee.constructor.name = 'Object'...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.207][DEBUG] 
+    store/index/serverLogger():  dispatching server action = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.207][DEBUG] reducers::linksQa(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.208][DEBUG] reducers::linksQa(): action = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.208][DEBUG] reducers::linksQa(): action.basePath = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.208][DEBUG] reducers::linksQa(): action.additionOnlyCode = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.209][DEBUG] reducers::linksQa(): action.timestamp = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.209][DEBUG] reducers::linksQa(): action.linksQa = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.209][DEBUG] reducers::linksQa(): SHEMP: Moe, Retoynin' {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.209][DEBUG] reducers::objectives(): state = {"name":"Shemp","objectives_fetching":true}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.210][DEBUG] reducers::objectives(): action = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.210][DEBUG] reducers::objectives(): SHEMP: case C.OBJECTIVES_FETCHING: Moe, Retoynin' {
+     "name": "Shemp",
+     "objectives_fetching": false
+    }[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.210][DEBUG] __tests__/actions.js: can dispatch OBJECTIVES_FETCHING false(): SHEMP: Moe, store.getState() = {"colors":[],"linksQa":{},"objectives":{"name":"Shemp","objectives_fetching":false}}[49m[0m
+
+[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1APASS __tests__\actions.test.js
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+ RUNS  ...actions.test.js
+
+Test Suites: 1 passed, 1 of 9 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  Action Creators
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+ RUNS  ...actions.test.js
+
+Test Suites: 1 passed, 1 of 9 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    objectivesFilter() thunk-based action creator...
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+ RUNS  ...actions.test.js
+
+Test Suites: 1 passed, 1 of 9 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      √ should have objectives (3ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+ RUNS  ...actions.test.js
+
+Test Suites: 1 passed, 1 of 9 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      √ should have timestamp (1ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+ RUNS  ...actions.test.js
+
+Test Suites: 1 passed, 1 of 9 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    objectivesIsFetching()...client-based action...(even though it uses immediately dispatched thunks...)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+ RUNS  ...actions.test.js
+
+Test Suites: 1 passed, 1 of 9 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      √ can dispatch OBJECTIVES_FETCHING true (7ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+ RUNS  ...actions.test.js
+
+Test Suites: 1 passed, 1 of 9 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      √ can dispatch OBJECTIVES_FETCHING false (7ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+ RUNS  ...actions.test.js
+
+Test Suites: 1 passed, 1 of 9 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...ObjectivesFilterForm.test.js
+ RUNS  ...actions.test.js
+
+Test Suites: 1 passed, 1 of 9 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-api.test.js
+ RUNS  ...array-helpers.test.js
+
+Test Suites: 3 passed, 3 of 9 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        6s  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.371][DEBUG] __tests__/global.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.371][INFO] __tests__/global.js: Callin' jest.setTimeout(10000)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.377][DEBUG] __tests__/global.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.377][INFO] __tests__/global.js: Callin' jest.setTimeout(10000)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.431][DEBUG] __mocks__/express.js: logajohn.getLevel()= DEBUG[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.435][DEBUG] __mocks__/objectives.js: logajohn.getLevel()= DEBUG[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.437][DEBUG] objectives-api.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.437][DEBUG] __mocks__/express.js: Express mock constructor...[49m[0m
+
+[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1APASS __tests__\lib\array-helpers.test.js
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-api.test.js
+ RUNS  ...array-helpers.test.js
+
+Test Suites: 3 passed, 3 of 9 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  Array Helpers
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-api.test.js
+ RUNS  ...array-helpers.test.js
+
+Test Suites: 3 passed, 3 of 9 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    sortBy
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-api.test.js
+ RUNS  ...array-helpers.test.js
+
+Test Suites: 3 passed, 3 of 9 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      √ sorts by title (2ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-api.test.js
+ RUNS  ...array-helpers.test.js
+
+Test Suites: 3 passed, 3 of 9 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      √ sorts by rating (1ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-api.test.js
+ RUNS  ...array-helpers.test.js
+
+Test Suites: 3 passed, 3 of 9 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      √ sorts by date
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-api.test.js
+ RUNS  ...array-helpers.test.js
+
+Test Suites: 3 passed, 3 of 9 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-api.test.js
+ RUNS  ...array-helpers.test.js
+
+Test Suites: 3 passed, 3 of 9 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        6s  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[30m[2018-09-28 18:42:14.439][DEBUG] objectives-api::doGet("/objectives")()...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.439][DEBUG] objectives-api::doGet("/objectives")(): req = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.440][DEBUG] objectives-api::doGet("/objectives")(): res = undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.440][DEBUG] ./src/server/models/__mocks__/objectives.js: Objectives mock constructor...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.440][DEBUG] objectives-api::doGet("/objectives")(): Callin' objectivesModel.getObjectives( filters = {} ...)[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.441][DEBUG] ./src/server/models/__mocks__/objectives.js: mockGetObjectives(): filter= {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [2018-09-28 18:42:14.438][DEBUG] __mocks__/express.js: mockGet(): path= /objectives callback= undefined[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.442][DEBUG] objectives-api.test.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.442][DEBUG] ./src/server/models/__mocks__/objectives.js: Objectives mock constructor...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.444][DEBUG] objectives-api::doGet("/objectives")().then: objectives = [{"who":"Moe","what":"I'll murder you!","when":"Now."},{"who":"Larry","what":"No, Moe!","when":"Later."},{"who":"Shemp","what":"Meep, Meep, Meep!","when":"Always."},{"who":"Curly-Joe","what":"Hey, Moe...!","when":"After."}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.444][DEBUG] objectives-api::doGet("/objectives")(): SHEMP: Callin' dispatchAndRespond() widh... {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Fri Sep 28 2018 18:42:14 GMT-0400 (Eastern Daylight Time)","objectives":[{"who":"Moe","what":"I'll murder you!","when":"Now."},{"who":"Larry","what":"No, Moe!","when":"Later."},{"who":"Shemp","what":"Meep, Meep, Meep!","when":"Always."},{"who":"Curly-Joe","what":"Hey, Moe...!","when":"After."}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.445][DEBUG] objectives-api::dispatchAndRespond(): Calling res.status(200)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.446][DEBUG] objectives-api::doGet("/objectives")(): Caught error = 
+    message:"Cannot read property 'status' of undefined"
+    stack:"TypeError: Cannot read property 'status' of undefined
+        at dispatchAndRespond (c:\inetpub\wwwroot\scrumi-react\src\server\objectives-api.js:42:9)
+        at c:\inetpub\wwwroot\scrumi-react\src\server\objectives-api.js:106:9
+        at <anonymous>
+        at process._tickDomainCallback (internal/process/next_tick.js:228:7)"[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.446][DEBUG] objectives-api::doGet("/objectives")(): SHEMP: Callin' dispatchAndRespond() widh... {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Fri Sep 28 2018 18:42:14 GMT-0400 (Eastern Daylight Time)","objectives":[],"error":{}}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.446][DEBUG] objectives-api::dispatchAndRespond(): Calling res.status(200)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.448][DEBUG] ./src/server/models/__mocks__/objectives.js: mockGetObjectives(): filter= {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.448][DEBUG] objectives-api.test.js: beforeAll()(): SHEMP: Moe, my first time usin' async await...got mockObjectives = [{"who":"Moe","what":"I'll murder you!","when":"Now."},{"who":"Larry","what":"No, Moe!","when":"Later."},{"who":"Shemp","what":"Meep, Meep, Meep!","when":"Always."},{"who":"Curly-Joe","what":"Hey, Moe...!","when":"After."}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.450][DEBUG] objectives-api.test.js::doGet()...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.451][DEBUG] objectives-api.test.js::doGet(): Here goes, Moe...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.451][DEBUG] objectives-api::doGet("/objectives")()...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.451][DEBUG] objectives-api::doGet("/objectives")(): req = {"baseUrl":"","body":"","cookies":{},"fresh":false,"headers":{},"hostname":"","ip":"","ips":[],"method":"","originalUrl":"","params":{},"path":"","protocol":"","query":{},"route":{},"secure":false,"signedCookies":{},"stale":false,"subdomains":[],"xhr":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.452][DEBUG] objectives-api::doGet("/objectives")(): res = {"headersSent":false,"locals":{}}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.452][DEBUG] objectives-api::doGet("/objectives")(): req.query = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.453][DEBUG] ./src/server/models/__mocks__/objectives.js: Objectives mock constructor...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.453][DEBUG] objectives-api::doGet("/objectives")(): Callin' objectivesModel.getObjectives( filters = {} ...)[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.453][DEBUG] ./src/server/models/__mocks__/objectives.js: mockGetObjectives(): filter= {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.454][DEBUG] objectives-api::doGet("/objectives")().then: objectives = [{"who":"Moe","what":"I'll murder you!","when":"Now."},{"who":"Larry","what":"No, Moe!","when":"Later."},{"who":"Shemp","what":"Meep, Meep, Meep!","when":"Always."},{"who":"Curly-Joe","what":"Hey, Moe...!","when":"After."}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.454][DEBUG] objectives-api::doGet("/objectives")(): SHEMP: Callin' dispatchAndRespond() widh... {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Fri Sep 28 2018 18:42:14 GMT-0400 (Eastern Daylight Time)","objectives":[{"who":"Moe","what":"I'll murder you!","when":"Now."},{"who":"Larry","what":"No, Moe!","when":"Later."},{"who":"Shemp","what":"Meep, Meep, Meep!","when":"Always."},{"who":"Curly-Joe","what":"Hey, Moe...!","when":"After."}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.455][DEBUG] objectives-api::dispatchAndRespond(): Calling res.status(200)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.455][DEBUG] objectives-api::dispatchAndRespond(): Calling res.json(action), action = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Fri Sep 28 2018 18:42:14 GMT-0400 (Eastern Daylight Time)","objectives":[{"who":"Moe","what":"I'll murder you!","when":"Now."},{"who":"Larry","what":"No, Moe!","when":"Later."},{"who":"Shemp","what":"Meep, Meep, Meep!","when":"Always."},{"who":"Curly-Joe","what":"Hey, Moe...!","when":"After."}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.459][DEBUG] objectives-api.test.js::doGet() mockGetObjectives.mock.calls = [[{}]][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.459][DEBUG] objectives-api.test.js::doGet() response_mock.status.mock.calls = [[200]][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.464][DEBUG] objectives-api.test.js::doGet() response_mock.status.mock.calls.length = 1[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.465][DEBUG] objectives-api.test.js::doGet() response_mock.json.mock.calls = [[{"type":"OBJECTIVES_GET","filters":{},"timestamp":"Fri Sep 28 2018 18:42:14 GMT-0400 (Eastern Daylight Time)","objectives":[{"who":"Moe","what":"I'll murder you!","when":"Now."},{"who":"Larry","what":"No, Moe!","when":"Later."},{"who":"Shemp","what":"Meep, Meep, Meep!","when":"Always."},{"who":"Curly-Joe","what":"Hey, Moe...!","when":"After."}],"error":""}]][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.465][DEBUG] objectives-api.test.js::doGet() response_mock.json.mock.calls.length = 1[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.466][DEBUG] objectives-api.test.js::doGet() payload = {"type":"OBJECTIVES_GET","filters":{},"timestamp":"Fri Sep 28 2018 18:42:14 GMT-0400 (Eastern Daylight Time)","objectives":[{"who":"Moe","what":"I'll murder you!","when":"Now."},{"who":"Larry","what":"No, Moe!","when":"Later."},{"who":"Shemp","what":"Meep, Meep, Meep!","when":"Always."},{"who":"Curly-Joe","what":"Hey, Moe...!","when":"After."}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.466][DEBUG] objectives-api.test.js::doGet() Does payload.type = OBJECTIVES_GET  equal constants.OBJECTIVES_GET = OBJECTIVES_GET ...?[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.467][DEBUG] objectives-api.test.js::doGet() Does payload.objectives = [{"who":"Moe","what":"I'll murder you!","when":"Now."},{"who":"Larry","what":"No, Moe!","when":"Later."},{"who":"Shemp","what":"Meep, Meep, Meep!","when":"Always."},{"who":"Curly-Joe","what":"Hey, Moe...!","when":"After."}]  equal mockObjectives = [{"who":"Moe","what":"I'll murder you!","when":"Now."},{"who":"Larry","what":"No, Moe!","when":"Later."},{"who":"Shemp","what":"Meep, Meep, Meep!","when":"Always."},{"who":"Curly-Joe","what":"Hey, Moe...!","when":"After."}] ...?[49m[0m
+
+(node:16956) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'status' of undefined
+(node:16956) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:16956) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1APASS __tests__\api\objectives-api.test.js
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-api.test.js
+ RUNS  ...array-helpers.test.js
+
+Test Suites: 3 passed, 3 of 9 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  objectives_api...
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-api.test.js
+ RUNS  ...array-helpers.test.js
+
+Test Suites: 3 passed, 3 of 9 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    √ doGet()... (19ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-api.test.js
+ RUNS  ...array-helpers.test.js
+
+Test Suites: 3 passed, 3 of 9 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-api.test.js
+ RUNS  ...array-helpers.test.js
+
+Test Suites: 3 passed, 3 of 9 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-mock.test.js
+ RUNS  ...objectives-reducers.test.js
+
+Test Suites: 5 passed, 5 of 9 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        6s  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.672][DEBUG] __tests__/global.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.673][INFO] __tests__/global.js: Callin' jest.setTimeout(10000)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.699][DEBUG] __tests__/global.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.700][INFO] __tests__/global.js: Callin' jest.setTimeout(10000)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.729][DEBUG] reducers::objectives(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.729][DEBUG] reducers::objectives(): action = {"type":"OBJECTIVES_GET","filters":{"description":"build"},"timestamp":"Fri Sep 28 2018 18:42:14 GMT-0400 (Eastern Daylight Time)","objectives":[{"task_id":1,"description":"Wash glassware","user_id_assigned_to":1,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"},{"task_id":2,"description":"Arrange files","user_id_assigned_to":2,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"task_id":3,"description":"Run Cyanide analysis","user_id_assigned_to":3,"first_name":"John","middle_name":"D.","last_name":"Aynedjian"}],"error":""}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.729][DEBUG] reducers::objectives(): SHEMP: case C.OBJECTIVES_GET: Moe, Retoynin' {
+     "objectives_filters": {
+      "description": "build"
+     },
+     "objectives_list": [
+      {
+       "task_id": 1,
+       "description": "Wash glassware",
+       "user_id_assigned_to": 1,
+       "first_name": "Joe",
+       "middle_name": "S.",
+       "last_name": "Kovacs"
+      },
+      {
+       "task_id": 2,
+       "description": "Arrange files",
+       "user_id_assigned_to": 2,
+       "first_name": "Jean",
+       "middle_name": "R.",
+       "last_name": "Kovacs"
+      },
+      {
+       "task_id": 3,
+       "description": "Run Cyanide analysis",
+       "user_id_assigned_to": 3,
+       "first_name": "John",
+       "middle_name": "D.",
+       "last_name": "Aynedjian"
+      }
+     ],
+     "objectives_timestamp": "Fri Sep 28 2018 18:42:14 GMT-0400 (Eastern Daylight Time)",
+     "objectives_error": ""
+    }[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.731][DEBUG] reducers::objectives(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.732][DEBUG] reducers::objectives(): action = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":true}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.732][DEBUG] reducers::objectives(): SHEMP: case C.OBJECTIVES_FETCHING: Moe, Retoynin' {
+     "objectives_fetching": true
+    }[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.733][DEBUG] reducers::objectives(): state = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.733][DEBUG] reducers::objectives(): action = {"type":"OBJECTIVES_FETCHING","objectives_is_fetching":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.734][DEBUG] reducers::objectives(): SHEMP: case C.OBJECTIVES_FETCHING: Moe, Retoynin' {
+     "objectives_fetching": false
+    }[49m[0m
+
+[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1APASS __tests__\store\reducers\objectives-reducers.test.js
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-mock.test.js
+ RUNS  ...objectives-reducers.test.js
+
+Test Suites: 5 passed, 5 of 9 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  objectives reducers
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-mock.test.js
+ RUNS  ...objectives-reducers.test.js
+
+Test Suites: 5 passed, 5 of 9 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    √ OBJECTIVES_GET success (3ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-mock.test.js
+ RUNS  ...objectives-reducers.test.js
+
+Test Suites: 5 passed, 5 of 9 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    √ OBJECTIVES_FETCHING true (2ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-mock.test.js
+ RUNS  ...objectives-reducers.test.js
+
+Test Suites: 5 passed, 5 of 9 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    √ OBJECTIVES_FETCHING false (2ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-mock.test.js
+ RUNS  ...objectives-reducers.test.js
+
+Test Suites: 5 passed, 5 of 9 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-mock.test.js
+ RUNS  ...objectives-reducers.test.js
+
+Test Suites: 5 passed, 5 of 9 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        6s  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.757][DEBUG] __mocks__/objectives.js: logajohn.getLevel()= DEBUG[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.757][DEBUG] objectives-mock.test.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.758][DEBUG] ./src/server/models/__mocks__/objectives.js: Objectives mock constructor...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.761][DEBUG] ./src/server/models/__mocks__/objectives.js: mockGetObjectives(): filter= {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.762][DEBUG] __tests__/models/getObjectives() .then: objectives = [{"who":"Moe","what":"I'll murder you!","when":"Now."},{"who":"Larry","what":"No, Moe!","when":"Later."},{"who":"Shemp","what":"Meep, Meep, Meep!","when":"Always."},{"who":"Curly-Joe","what":"Hey, Moe...!","when":"After."}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.764][DEBUG] ./src/server/models/__mocks__/objectives.js: mockGetObjectives(): filter= null[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.765][DEBUG] __tests__/mocks/objectives-mock.test.js/getObjectives()--exception if null filter .catch: err.name = Error , err.message = You supplied a null filter...[49m[0m
+
+[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1APASS __tests__\mocks\objectives-mock.test.js
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-mock.test.js
+ RUNS  ...objectives-reducers.test.js
+
+Test Suites: 5 passed, 5 of 9 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  Objectives mock...
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-mock.test.js
+ RUNS  ...objectives-reducers.test.js
+
+Test Suites: 5 passed, 5 of 9 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    √ getObjectives() (4ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-mock.test.js
+ RUNS  ...objectives-reducers.test.js
+
+Test Suites: 5 passed, 5 of 9 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    √ getObjectives()--exception if null filter (2ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-mock.test.js
+ RUNS  ...objectives-reducers.test.js
+
+Test Suites: 5 passed, 5 of 9 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...objectives-mock.test.js
+ RUNS  ...objectives-reducers.test.js
+
+Test Suites: 5 passed, 5 of 9 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+ RUNS  ...dbmodels.test.js
+ RUNS  ...time-helpers.test.js
+
+Test Suites: 7 passed, 7 of 9 total
+Tests:       17 passed, 17 total
+Snapshots:   0 total
+Time:        6s  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.875][DEBUG] __tests__/global.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:14.876][INFO] __tests__/global.js: Callin' jest.setTimeout(10000)...[49m[0m
+
+[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1APASS __tests__\lib\time-helpers.test.js
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...time-helpers.test.js
+
+Test Suites: 7 passed, 7 of 9 total
+Tests:       17 passed, 17 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  Time Helpers
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...time-helpers.test.js
+
+Test Suites: 7 passed, 7 of 9 total
+Tests:       17 passed, 17 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    ago
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...time-helpers.test.js
+
+Test Suites: 7 passed, 7 of 9 total
+Tests:       17 passed, 17 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      √ less than a minute (2ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...time-helpers.test.js
+
+Test Suites: 7 passed, 7 of 9 total
+Tests:       17 passed, 17 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      √ 5 minutes (1ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...time-helpers.test.js
+
+Test Suites: 7 passed, 7 of 9 total
+Tests:       17 passed, 17 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      √ 2 hours
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...time-helpers.test.js
+
+Test Suites: 7 passed, 7 of 9 total
+Tests:       17 passed, 17 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      √ 1 day (1ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...time-helpers.test.js
+
+Test Suites: 7 passed, 7 of 9 total
+Tests:       17 passed, 17 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      √ 5 days
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...time-helpers.test.js
+
+Test Suites: 7 passed, 7 of 9 total
+Tests:       17 passed, 17 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      √ over a month
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...time-helpers.test.js
+
+Test Suites: 7 passed, 7 of 9 total
+Tests:       17 passed, 17 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A      √ years ago (1ms)
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...time-helpers.test.js
+
+Test Suites: 7 passed, 7 of 9 total
+Tests:       17 passed, 17 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+
+ RUNS  ...dbmodels.test.js
+ RUNS  ...time-helpers.test.js
+
+Test Suites: 7 passed, 7 of 9 total
+Tests:       17 passed, 17 total
+Snapshots:   0 total
+Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+ RUNS  ...dbmodels.test.js
+
+Test Suites: 8 passed, 8 of 9 total
+Tests:       24 passed, 24 total
+Snapshots:   0 total
+Time:        7s  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:15.103][DEBUG] Users::addUser(): Caught err = {"code":"ECONNREFUSED","errno":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":5432}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:15.107][DEBUG] Objectives::getObjectives(): filter = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:15.108][DEBUG] Objectives::getObjectives(): Calling client = new Client(config), config = {"database":"scrumi-test"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:15.110][DEBUG] Objectives::getObjectives(): Calling client.connect()...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:15.112][DEBUG] Users::addUser(): Caught err = {"code":"ECONNREFUSED","errno":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":5432}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:15.113][DEBUG] getObjectives() -- null filter...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:15.114][DEBUG] Objectives::getObjectives(): filter = null[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:15.115][DEBUG] Objectives::getObjectives(): Calling client = new Client(config), config = {"database":"scrumi-test"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:15.116][DEBUG] Objectives::getObjectives(): Calling client.connect()...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:15.118][DEBUG] getObjectives() -- null filter...caught err = 
+    message:"You supplied a null filter."
+    stack:"Error: You supplied a null filter.
+        at c:\inetpub\wwwroot\scrumi-react\src\server\models\objectives.js:39:28
+        at new Promise (<anonymous>)
+        at Objectives.getObjectives (c:\inetpub\wwwroot\scrumi-react\src\server\models\objectives.js:36:20)
+        at Object.<anonymous> (c:\inetpub\wwwroot\scrumi-react\__tests__\models\dbmodels.test.js:75:25)
+        at resolve (c:\inetpub\wwwroot\scrumi-react\node_modules\jest-jasmine2\build\queue_runner.js:46:12)
+        at new Promise (<anonymous>)
+        at mapper (c:\inetpub\wwwroot\scrumi-react\node_modules\jest-jasmine2\build\queue_runner.js:34:499)
+        at promise.then (c:\inetpub\wwwroot\scrumi-react\node_modules\jest-jasmine2\build\queue_runner.js:74:39)
+        at <anonymous>
+        at runMicrotasksCallback (internal/process/next_tick.js:121:5)
+        at _combinedTickCallback (internal/process/next_tick.js:131:7)
+        at process._tickDomainCallback (internal/process/next_tick.js:218:9)"[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:15.125][DEBUG] Users::getUsers(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:15.125][DEBUG] Users::getUsers(): Calling pool.query("SELECT * from users", [])...[49m[0m
+
+[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+ RUNS  ...dbmodels.test.js
+
+Test Suites: 8 passed, 8 of 9 total
+Tests:       24 passed, 24 total
+Snapshots:   0 total
+Time:        8s  console.error node_modules\logatim\dist\logatim.umd.min.js:1
+    [31m[2018-09-28 18:42:16.129][ERROR] Objectives::getObjectives(): Caught err: Error: connect ECONNREFUSED 127.0.0.1:5432
+        at Object._errnoException (util.js:1022:11)
+        at _exceptionWithHostPort (util.js:1044:20)
+        at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:16.130][DEBUG] Objectives::getObjectives(): Calling client.end()...[49m[0m
+
+  console.error node_modules\logatim\dist\logatim.umd.min.js:1
+    [31m[2018-09-28 18:42:16.134][ERROR] Objectives::getObjectives(): Calling reject( err.stack )...[49m[0m
+
+  console.error node_modules\logatim\dist\logatim.umd.min.js:1
+    [31m[2018-09-28 18:42:16.139][ERROR] Objectives::getObjectives(): Caught err: Error: connect ECONNREFUSED 127.0.0.1:5432
+        at Object._errnoException (util.js:1022:11)
+        at _exceptionWithHostPort (util.js:1044:20)
+        at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:16.140][DEBUG] Objectives::getObjectives(): Calling client.end()...[49m[0m
+
+  console.error node_modules\logatim\dist\logatim.umd.min.js:1
+    [31m[2018-09-28 18:42:16.142][ERROR] Objectives::getObjectives(): Calling reject( err.stack )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:16.143][DEBUG] Users::getUsers(): Caught err = {"code":"ECONNREFUSED","errno":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":5432}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:16.145][DEBUG] Users::getUsers(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:16.146][DEBUG] Users::getUsers(): Calling pool.query("SELECT * from users", [])...[49m[0m
+
+[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+ RUNS  ...dbmodels.test.js
+
+Test Suites: 8 passed, 8 of 9 total
+Tests:       24 passed, 24 total
+Snapshots:   0 total
+Time:        9s  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-09-28 18:42:17.152][DEBUG] Users::getUsers(): Caught err = {"code":"ECONNREFUSED","errno":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":5432}[49m[0m
+
+[K[1A[K[1A[K[1A[K[1A[K[1A[K[1AFAIL __tests__\models\dbmodels.test.js
+
+ RUNS  ...dbmodels.test.js
+
+Test Suites: 8 passed, 8 of 9 total
+Tests:       24 passed, 24 total
+Snapshots:   0 total
+Time:        9s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  DbModels
+
+ RUNS  ...dbmodels.test.js
+
+Test Suites: 8 passed, 8 of 9 total
+Tests:       24 passed, 24 total
+Snapshots:   0 total
+Time:        9s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    × getUsers -- before (1020ms)
+
+ RUNS  ...dbmodels.test.js
+
+Test Suites: 8 passed, 8 of 9 total
+Tests:       24 passed, 24 total
+Snapshots:   0 total
+Time:        9s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    × addUser... (1009ms)
+
+ RUNS  ...dbmodels.test.js
+
+Test Suites: 8 passed, 8 of 9 total
+Tests:       24 passed, 24 total
+Snapshots:   0 total
+Time:        9s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    × getObjectives -- before (7ms)
+
+ RUNS  ...dbmodels.test.js
+
+Test Suites: 8 passed, 8 of 9 total
+Tests:       24 passed, 24 total
+Snapshots:   0 total
+Time:        9s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    √ getObjectives -- null filter -- error (11ms)
+
+ RUNS  ...dbmodels.test.js
+
+Test Suites: 8 passed, 8 of 9 total
+Tests:       24 passed, 24 total
+Snapshots:   0 total
+Time:        9s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    × getUsers -- after add (1013ms)
+
+ RUNS  ...dbmodels.test.js
+
+Test Suites: 8 passed, 8 of 9 total
+Tests:       24 passed, 24 total
+Snapshots:   0 total
+Time:        9s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    × deleteUserById: quantity=0 (7ms)
+
+ RUNS  ...dbmodels.test.js
+
+Test Suites: 8 passed, 8 of 9 total
+Tests:       24 passed, 24 total
+Snapshots:   0 total
+Time:        9s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A    × getUsers -- after delete (1009ms)
+
+ RUNS  ...dbmodels.test.js
+
+Test Suites: 8 passed, 8 of 9 total
+Tests:       24 passed, 24 total
+Snapshots:   0 total
+Time:        9s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+
+ RUNS  ...dbmodels.test.js
+
+Test Suites: 8 passed, 8 of 9 total
+Tests:       24 passed, 24 total
+Snapshots:   0 total
+Time:        9s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A  ● DbModels › getUsers -- before
+
+    connect ECONNREFUSED 127.0.0.1:5432
+      
+      at Object._errnoException (util.js:1022:11)
+      at _exceptionWithHostPort (util.js:1044:20)
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+
+  ● DbModels › addUser...
+
+    connect ECONNREFUSED 127.0.0.1:5432
+      
+      at Object._errnoException (util.js:1022:11)
+      at _exceptionWithHostPort (util.js:1044:20)
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+
+  ● DbModels › getObjectives -- before
+
+    connect ECONNREFUSED 127.0.0.1:5432
+      
+      at Object._errnoException (util.js:1022:11)
+      at _exceptionWithHostPort (util.js:1044:20)
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+
+  ● DbModels › getUsers -- after add
+
+    connect ECONNREFUSED 127.0.0.1:5432
+      
+      at Object._errnoException (util.js:1022:11)
+      at _exceptionWithHostPort (util.js:1044:20)
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14) thrown
+
+  ● DbModels › deleteUserById: quantity=0
+
+    connect ECONNREFUSED 127.0.0.1:5432
+      
+      at Object._errnoException (util.js:1022:11)
+      at _exceptionWithHostPort (util.js:1044:20)
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+
+  ● DbModels › getUsers -- after delete
+
+    connect ECONNREFUSED 127.0.0.1:5432
+      
+      at Object._errnoException (util.js:1022:11)
+      at _exceptionWithHostPort (util.js:1044:20)
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+
+
+ RUNS  ...dbmodels.test.js
+
+Test Suites: 8 passed, 8 of 9 total
+Tests:       24 passed, 24 total
+Snapshots:   0 total
+Time:        9s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1ATest Suites: 1 failed, 8 passed, 9 total
+Tests:       6 failed, 25 passed, 31 total
+Snapshots:   0 total
+Time:        9.493s
+Ran all test suites.

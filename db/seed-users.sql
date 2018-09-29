@@ -8,7 +8,7 @@ values
 
 insert into users ( first_name, middle_name, last_name)
 values
-( '"Zero"', '', ''),
+( 'Chris' '"Zero"' 'Absher', '', ''),
 ( 'Jane', '', 'Dennison'),
 ( 'Upesh', '', 'Vayas'),
 ( 'Rob', '', 'Peters'),

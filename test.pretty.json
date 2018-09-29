@@ -1,0 +1,425 @@
+{
+  "numFailedTestSuites": 1,
+  "numFailedTests": 6,
+  "numPassedTestSuites": 8,
+  "numPassedTests": 25,
+  "numPendingTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 0,
+  "numTotalTestSuites": 9,
+  "numTotalTests": 31,
+  "snapshot": {
+    "added": 0,
+    "didUpdate": false,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "unmatched": 0,
+    "updated": 0
+  },
+  "startTime": 1538174527875,
+  "success": false,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "<ObjectivesFilterFormContainer /> Container "
+          ],
+          "failureMessages": [],
+          "fullName": "<ObjectivesFilterFormContainer /> Container  dispatches an OBJECTIVES_GET action",
+          "status": "passed",
+          "title": "dispatches an OBJECTIVES_GET action"
+        }
+      ],
+      "endTime": 1538174533868,
+      "message": "",
+      "name": "c:\\inetpub\\wwwroot\\scrumi-react\\__tests__\\components\\containers\\ObjectivesFilterFormContainer.test.js",
+      "startTime": 1538174532668,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "<ObjectivesFilterForm /> UI Component"
+          ],
+          "failureMessages": [],
+          "fullName": "<ObjectivesFilterForm /> UI Component renders submit button",
+          "status": "passed",
+          "title": "renders submit button"
+        },
+        {
+          "ancestorTitles": [
+            "<ObjectivesFilterForm /> UI Component"
+          ],
+          "failureMessages": [],
+          "fullName": "<ObjectivesFilterForm /> UI Component submit causes error if onObjectivesFilter prop not supplied",
+          "status": "passed",
+          "title": "submit causes error if onObjectivesFilter prop not supplied"
+        },
+        {
+          "ancestorTitles": [
+            "<ObjectivesFilterForm /> UI Component"
+          ],
+          "failureMessages": [],
+          "fullName": "<ObjectivesFilterForm /> UI Component submit invokes onObjectivesFilter",
+          "status": "passed",
+          "title": "submit invokes onObjectivesFilter"
+        }
+      ],
+      "endTime": 1538174534196,
+      "message": "",
+      "name": "c:\\inetpub\\wwwroot\\scrumi-react\\__tests__\\components\\ui\\ObjectivesFilterForm.test.js",
+      "startTime": 1538174533199,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Action Creators",
+            "objectivesFilter() thunk-based action creator..."
+          ],
+          "failureMessages": [],
+          "fullName": "Action Creators objectivesFilter() thunk-based action creator... should have objectives",
+          "status": "passed",
+          "title": "should have objectives"
+        },
+        {
+          "ancestorTitles": [
+            "Action Creators",
+            "objectivesFilter() thunk-based action creator..."
+          ],
+          "failureMessages": [],
+          "fullName": "Action Creators objectivesFilter() thunk-based action creator... should have timestamp",
+          "status": "passed",
+          "title": "should have timestamp"
+        },
+        {
+          "ancestorTitles": [
+            "Action Creators",
+            "objectivesIsFetching()...client-based action...(even though it uses immediately dispatched thunks...)"
+          ],
+          "failureMessages": [],
+          "fullName": "Action Creators objectivesIsFetching()...client-based action...(even though it uses immediately dispatched thunks...) can dispatch OBJECTIVES_FETCHING true",
+          "status": "passed",
+          "title": "can dispatch OBJECTIVES_FETCHING true"
+        },
+        {
+          "ancestorTitles": [
+            "Action Creators",
+            "objectivesIsFetching()...client-based action...(even though it uses immediately dispatched thunks...)"
+          ],
+          "failureMessages": [],
+          "fullName": "Action Creators objectivesIsFetching()...client-based action...(even though it uses immediately dispatched thunks...) can dispatch OBJECTIVES_FETCHING false",
+          "status": "passed",
+          "title": "can dispatch OBJECTIVES_FETCHING false"
+        }
+      ],
+      "endTime": 1538174534211,
+      "message": "",
+      "name": "c:\\inetpub\\wwwroot\\scrumi-react\\__tests__\\actions.test.js",
+      "startTime": 1538174534051,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Array Helpers",
+            "sortBy"
+          ],
+          "failureMessages": [],
+          "fullName": "Array Helpers sortBy sorts by title",
+          "status": "passed",
+          "title": "sorts by title"
+        },
+        {
+          "ancestorTitles": [
+            "Array Helpers",
+            "sortBy"
+          ],
+          "failureMessages": [],
+          "fullName": "Array Helpers sortBy sorts by rating",
+          "status": "passed",
+          "title": "sorts by rating"
+        },
+        {
+          "ancestorTitles": [
+            "Array Helpers",
+            "sortBy"
+          ],
+          "failureMessages": [],
+          "fullName": "Array Helpers sortBy sorts by date",
+          "status": "passed",
+          "title": "sorts by date"
+        }
+      ],
+      "endTime": 1538174534437,
+      "message": "",
+      "name": "c:\\inetpub\\wwwroot\\scrumi-react\\__tests__\\lib\\array-helpers.test.js",
+      "startTime": 1538174534377,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "objectives_api..."
+          ],
+          "failureMessages": [],
+          "fullName": "objectives_api... doGet()...",
+          "status": "passed",
+          "title": "doGet()..."
+        }
+      ],
+      "endTime": 1538174534468,
+      "message": "",
+      "name": "c:\\inetpub\\wwwroot\\scrumi-react\\__tests__\\api\\objectives-api.test.js",
+      "startTime": 1538174534372,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "objectives reducers"
+          ],
+          "failureMessages": [],
+          "fullName": "objectives reducers OBJECTIVES_GET success",
+          "status": "passed",
+          "title": "OBJECTIVES_GET success"
+        },
+        {
+          "ancestorTitles": [
+            "objectives reducers"
+          ],
+          "failureMessages": [],
+          "fullName": "objectives reducers OBJECTIVES_FETCHING true",
+          "status": "passed",
+          "title": "OBJECTIVES_FETCHING true"
+        },
+        {
+          "ancestorTitles": [
+            "objectives reducers"
+          ],
+          "failureMessages": [],
+          "fullName": "objectives reducers OBJECTIVES_FETCHING false",
+          "status": "passed",
+          "title": "OBJECTIVES_FETCHING false"
+        }
+      ],
+      "endTime": 1538174534735,
+      "message": "",
+      "name": "c:\\inetpub\\wwwroot\\scrumi-react\\__tests__\\store\\reducers\\objectives-reducers.test.js",
+      "startTime": 1538174534673,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Objectives mock..."
+          ],
+          "failureMessages": [],
+          "fullName": "Objectives mock... getObjectives()",
+          "status": "passed",
+          "title": "getObjectives()"
+        },
+        {
+          "ancestorTitles": [
+            "Objectives mock..."
+          ],
+          "failureMessages": [],
+          "fullName": "Objectives mock... getObjectives()--exception if null filter",
+          "status": "passed",
+          "title": "getObjectives()--exception if null filter"
+        }
+      ],
+      "endTime": 1538174534766,
+      "message": "",
+      "name": "c:\\inetpub\\wwwroot\\scrumi-react\\__tests__\\mocks\\objectives-mock.test.js",
+      "startTime": 1538174534700,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Time Helpers",
+            "ago"
+          ],
+          "failureMessages": [],
+          "fullName": "Time Helpers ago less than a minute",
+          "status": "passed",
+          "title": "less than a minute"
+        },
+        {
+          "ancestorTitles": [
+            "Time Helpers",
+            "ago"
+          ],
+          "failureMessages": [],
+          "fullName": "Time Helpers ago 5 minutes",
+          "status": "passed",
+          "title": "5 minutes"
+        },
+        {
+          "ancestorTitles": [
+            "Time Helpers",
+            "ago"
+          ],
+          "failureMessages": [],
+          "fullName": "Time Helpers ago 2 hours",
+          "status": "passed",
+          "title": "2 hours"
+        },
+        {
+          "ancestorTitles": [
+            "Time Helpers",
+            "ago"
+          ],
+          "failureMessages": [],
+          "fullName": "Time Helpers ago 1 day",
+          "status": "passed",
+          "title": "1 day"
+        },
+        {
+          "ancestorTitles": [
+            "Time Helpers",
+            "ago"
+          ],
+          "failureMessages": [],
+          "fullName": "Time Helpers ago 5 days",
+          "status": "passed",
+          "title": "5 days"
+        },
+        {
+          "ancestorTitles": [
+            "Time Helpers",
+            "ago"
+          ],
+          "failureMessages": [],
+          "fullName": "Time Helpers ago over a month",
+          "status": "passed",
+          "title": "over a month"
+        },
+        {
+          "ancestorTitles": [
+            "Time Helpers",
+            "ago"
+          ],
+          "failureMessages": [],
+          "fullName": "Time Helpers ago years ago",
+          "status": "passed",
+          "title": "years ago"
+        }
+      ],
+      "endTime": 1538174534925,
+      "message": "",
+      "name": "c:\\inetpub\\wwwroot\\scrumi-react\\__tests__\\lib\\time-helpers.test.js",
+      "startTime": 1538174534876,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [
+            "Error: connect ECONNREFUSED 127.0.0.1:5432\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)"
+          ],
+          "fullName": "DbModels getUsers -- before",
+          "status": "failed",
+          "title": "getUsers -- before"
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [
+            "Error: connect ECONNREFUSED 127.0.0.1:5432\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)"
+          ],
+          "fullName": "DbModels addUser...",
+          "status": "failed",
+          "title": "addUser..."
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [
+            "Error: connect ECONNREFUSED 127.0.0.1:5432\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)"
+          ],
+          "fullName": "DbModels getObjectives -- before",
+          "status": "failed",
+          "title": "getObjectives -- before"
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [],
+          "fullName": "DbModels getObjectives -- null filter -- error",
+          "status": "passed",
+          "title": "getObjectives -- null filter -- error"
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [
+            "Error: connect ECONNREFUSED 127.0.0.1:5432\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14) thrown"
+          ],
+          "fullName": "DbModels getUsers -- after add",
+          "status": "failed",
+          "title": "getUsers -- after add"
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [
+            "Error: connect ECONNREFUSED 127.0.0.1:5432\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)"
+          ],
+          "fullName": "DbModels deleteUserById: quantity=0",
+          "status": "failed",
+          "title": "deleteUserById: quantity=0"
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [
+            "Error: connect ECONNREFUSED 127.0.0.1:5432\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)"
+          ],
+          "fullName": "DbModels getUsers -- after delete",
+          "status": "failed",
+          "title": "getUsers -- after delete"
+        }
+      ],
+      "endTime": 1538174537185,
+      "message": "  ● DbModels › getUsers -- before\n\n    connect ECONNREFUSED 127.0.0.1:5432\n      \n      at Object._errnoException (util.js:1022:11)\n      at _exceptionWithHostPort (util.js:1044:20)\n      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)\n\n  ● DbModels › addUser...\n\n    connect ECONNREFUSED 127.0.0.1:5432\n      \n      at Object._errnoException (util.js:1022:11)\n      at _exceptionWithHostPort (util.js:1044:20)\n      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)\n\n  ● DbModels › getObjectives -- before\n\n    connect ECONNREFUSED 127.0.0.1:5432\n      \n      at Object._errnoException (util.js:1022:11)\n      at _exceptionWithHostPort (util.js:1044:20)\n      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)\n\n  ● DbModels › getUsers -- after add\n\n    connect ECONNREFUSED 127.0.0.1:5432\n      \n      at Object._errnoException (util.js:1022:11)\n      at _exceptionWithHostPort (util.js:1044:20)\n      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14) thrown\n\n  ● DbModels › deleteUserById: quantity=0\n\n    connect ECONNREFUSED 127.0.0.1:5432\n      \n      at Object._errnoException (util.js:1022:11)\n      at _exceptionWithHostPort (util.js:1044:20)\n      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)\n\n  ● DbModels › getUsers -- after delete\n\n    connect ECONNREFUSED 127.0.0.1:5432\n      \n      at Object._errnoException (util.js:1022:11)\n      at _exceptionWithHostPort (util.js:1044:20)\n      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)\n",
+      "name": "c:\\inetpub\\wwwroot\\scrumi-react\\__tests__\\models\\dbmodels.test.js",
+      "startTime": 1538174532590,
+      "status": "failed",
+      "summary": ""
+    }
+  ],
+  "wasInterrupted": false
+}

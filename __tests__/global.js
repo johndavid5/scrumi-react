@@ -29,8 +29,8 @@ console.groupCollapsed = jest.fn()
 console.log = jest.fn()
 console.groupEnd = jest.fn()
 
-logajohn.info("__tests__/global.js: Callin' jest.setTimeout(10000)...")
-jest.setTimeout(10000)
+//logajohn.info("__tests__/global.js: Callin' jest.setTimeout(10000)...")
+//jest.setTimeout(10000)
 
 global._testColors = deepFreeze([
     {

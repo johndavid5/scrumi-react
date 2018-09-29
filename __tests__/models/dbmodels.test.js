@@ -1,6 +1,5 @@
 // Testing actual models...connecting to the database...
 // ...not using mocks...
-
 import { config } from '../../src/config'
 import { Objectives } from '../../src/server/models/objectives'
 import { Users } from '../../src/server/models/users'

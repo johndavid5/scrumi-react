@@ -58,7 +58,7 @@ const ObjectivesListComponent = (props) => {
     let timestamp = ( objectives.objectives_timestamp ? (
               <div className="filter-params row">
                 <div className="col-sm-8">
-                    <p style={timestampStyle}>{objectives.objectives_timestamp}</p>
+                    <p id="objectives-timestamp" style={timestampStyle}>{objectives.objectives_timestamp}</p>
                 </div>
               </div>
             ): "" )
@@ -85,7 +85,7 @@ const ObjectivesListComponent = (props) => {
 
     let gears = ""
     if( objectives && objectives.hasOwnProperty("objectives_fetching") && objectives.objectives_fetching == true ){
-        gears = <img src="/images/gold-brass-gear-cogs-animated-5.gif" width="100" alt="Fetching...stand by..."
+        gears = <img id="spinning-gears" src="/images/gold-brass-gear-cogs-animated-5.gif" width="100" alt="Fetching...stand by..."
         style={{position: 'absolute',
             left: 0,
             right: 0,
@@ -101,7 +101,7 @@ const ObjectivesListComponent = (props) => {
     //else {
         let objectives_table = (  (objectives && objectives.objectives_list && objectives.objectives_list.length > 0) ?
             (
-                      <table className="table">
+                      <table className="table" id="objectives-table">
                             <thead>
                           <tr>
                               <th scope="col" style={thStyle}>Description</th>

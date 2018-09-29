@@ -130,49 +130,49 @@ describe('objectives_api...', () => {
     })
 
 
-    test('doGet() -- null filter -- error', (done) => {
-        const sWho = "objectives-api.test.js::doGet() -- null filter -- error"
-        logajohn.debug(`${sWho}()...`)
-
-        let request_mock = new RequestMock();
-        let response_mock = new ResponseMock();
-
-        logajohn.debug(`${sWho}(): Here goes, Moe...`)
-        doGet(request_mock, response_mock, { filters: null, callback: ()=>{
-
-            expect(mockGetObjectives).toHaveBeenCalledTimes(1)
-
-            expect(response_mock.status).toHaveBeenCalledTimes(1)
-            //expect(response_mock.status).toHaveBeenCalled()
-            expect(response_mock.status).toBeCalledWith(200)
-            expect(response_mock.json).toHaveBeenCalledTimes(1)
-            //expect(response_mock.json).toHaveBeenCalled()
-            
-            logajohn.debug(`${sWho}() mockGetObjectives.mock.calls = `, mockGetObjectives.mock.calls )
-            logajohn.debug(`${sWho}() response_mock.status.mock.calls = `, response_mock.status.mock.calls )
-            logajohn.debug(`${sWho}() response_mock.status.mock.calls.length = `, response_mock.status.mock.calls.length )
-            //expect(response_mock.status.mock.calls.length).toEqual(1)
-            logajohn.debug(`${sWho}() response_mock.json.mock.calls = `, response_mock.json.mock.calls )
-            logajohn.debug(`${sWho}() response_mock.json.mock.calls.length = `, response_mock.json.mock.calls.length )
-
-            let payload = response_mock.json.mock.calls[0][0]
-
-            logajohn.debug(`${sWho}() payload = `, payload )
-            logajohn.debug(`${sWho}() Does payload.type = `, payload.type, ` equal constants.OBJECTIVES_GET = `, constants.OBJECTIVES_GET, `...?` )
-
-            expect(payload.type).toEqual(constants.OBJECTIVES_GET)
-
-            logajohn.debug(`${sWho}(): SHEMP: Moe,  payload.error = `, errorStringify(payload.error) )
-            //expect(payload.error).toEqual(expect.anything())
-            expect(payload.error).toBeDefined()
-            expect(payload.error).not.toEqual('')
-            expect(payload.error.message).toEqual('You supplied a null filter...')
-
-            done();
-            }
-          }
-        )
-    })
+//    test('doGet() -- null filter -- error', (done) => {
+//        const sWho = "objectives-api.test.js::doGet() -- null filter -- error"
+//        logajohn.debug(`${sWho}()...`)
+//
+//        let request_mock = new RequestMock();
+//        let response_mock = new ResponseMock();
+//
+//        logajohn.debug(`${sWho}(): Here goes, Moe...`)
+//        doGet(request_mock, response_mock, { filters: null, callback: ()=>{
+//
+//            expect(mockGetObjectives).toHaveBeenCalledTimes(1)
+//
+//            expect(response_mock.status).toHaveBeenCalledTimes(1)
+//            //expect(response_mock.status).toHaveBeenCalled()
+//            expect(response_mock.status).toBeCalledWith(200)
+//            expect(response_mock.json).toHaveBeenCalledTimes(1)
+//            //expect(response_mock.json).toHaveBeenCalled()
+//            
+//            logajohn.debug(`${sWho}() mockGetObjectives.mock.calls = `, mockGetObjectives.mock.calls )
+//            logajohn.debug(`${sWho}() response_mock.status.mock.calls = `, response_mock.status.mock.calls )
+//            logajohn.debug(`${sWho}() response_mock.status.mock.calls.length = `, response_mock.status.mock.calls.length )
+//            //expect(response_mock.status.mock.calls.length).toEqual(1)
+//            logajohn.debug(`${sWho}() response_mock.json.mock.calls = `, response_mock.json.mock.calls )
+//            logajohn.debug(`${sWho}() response_mock.json.mock.calls.length = `, response_mock.json.mock.calls.length )
+//
+//            let payload = response_mock.json.mock.calls[0][0]
+//
+//            logajohn.debug(`${sWho}() payload = `, payload )
+//            logajohn.debug(`${sWho}() Does payload.type = `, payload.type, ` equal constants.OBJECTIVES_GET = `, constants.OBJECTIVES_GET, `...?` )
+//
+//            expect(payload.type).toEqual(constants.OBJECTIVES_GET)
+//
+//            logajohn.debug(`${sWho}(): SHEMP: Moe,  payload.error = `, errorStringify(payload.error) )
+//            //expect(payload.error).toEqual(expect.anything())
+//            expect(payload.error).toBeDefined()
+//            expect(payload.error).not.toEqual('')
+//            expect(payload.error.message).toEqual('You supplied a null filter...')
+//
+//            done();
+//            }
+//          }
+//        )
+//    })
 
 })
 

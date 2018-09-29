@@ -1,2 +1,15 @@
-1. Use HTML5 video in lieue of animated gif in 
+1. fancy: Use HTML5 video in lieue of animated gif in 
     ./dist/assets/images/gold-brass-gear-cogs-animated-5.gif
+
+2. Get rid of leftover stuff from treebuchet, etc. (to make istanbul say we're
+   closer to 100% coverage)...then tweak tests to bring us closer to 100%
+   coverage...
+
+3. Add "end-to-end" tests for the REST API...(using actual node request objects
+   and/or supertest for not quite end-to-end...)...we may be OK with using
+   the actual database for these...(these may not _really_ be necessary
+   since we're testing out the models themselves -- complete with DB
+   connections, and also testing out the api's...but they are a good
+   way to make sure everything's functioning REST-fully...)
+
+4. Add full end-to-end tests with Jest and Puppeteer...

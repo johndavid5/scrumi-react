@@ -1,0 +1,6 @@
+Note: For accessing PostgreSQL, set environmental variables...
+   PGUSER=<username>
+   PGPASSWORD=<pass>
+where <username> and <pass> 
+are supplied by your database
+administrator...

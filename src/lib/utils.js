@@ -1,4 +1,9 @@
-/** https://stackoverflow.com/questions/11616630/json-stringify-avoid-typeerror-converting-circular-structure-to-json/11616993 */
+/** https://stackoverflow.com/questions/11616630/json-stringify-avoid-typeerror-converting-circular-structure-to-json/11616993 
+*
+* To prevent
+* TypeError: Converting circular structure to JSON
+*      at JSON.stringify (<anonymous>)
+*/
 export const customStringify = function (v, s) {
     if( typeof v == "undefined" ){
         return "undefined"
