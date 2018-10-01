@@ -28,7 +28,15 @@ describe('DbModels', () => {
         // ,{first_name: "Robert", middle_name: "S.", last_name: "Peters"}
     ]
 
+    const testObjectivesIn = [
+        { description: 'Wash glassware' },
+        { description: 'Arrange files' }
+        // ,{first_name: "John", middle_name: "D.", last_name: "Aynedjian"}
+        // ,{first_name: "Robert", middle_name: "S.", last_name: "Peters"}
+    ]
+
     const testUsersOut = []
+    const testObjectivesOut = []
     let userCountBefore = null
     let objectiveCountBefore = null
 
@@ -68,6 +76,53 @@ describe('DbModels', () => {
             })
     })
 
+    it('addObjective()...', (done) => {
+        let sWho = 'addObjective'
+
+        const numAdded = 0
+        testObjectivesIn.forEach((objective, index) => {
+
+            objective.user_id_assigned_to = testUsersOut[index].user_id
+
+            logajohn.debug(`${sWho}() -- SHEMP: Calling addObjective(objective), objective = `, objective )
+
+	        objectivesModel.addObjective(objective)
+	        .then((newObjective) => {
+                const objectiveOutExpected = { ...objective, task_id: newObjective.task_id }
+	            expect(newObjective).toEqual(objectiveOutExpected)
+                    testObjectivesOut.push(newObjective)
+                    if (testObjectivesOut.length == testObjectivesIn.length) {
+                        done()
+                    }
+                })
+        })
+    })
+
+    it('getObjectives -- after add', (done) => {
+        objectivesModel.getObjectives({})
+            .then((objectives) => {
+                logajohn.debug('getObjectives() -- after...then: objectives =', objectives)
+                expect(objectives.length).toBeGreaterThanOrEqual(0)
+                expect(objectives.length).toEqual(objectiveCountBefore + testObjectivesIn.length)
+                done()
+            })
+    })
+
+    it('getObjectives -- description filter', (done) => {
+        let sWho = 'getObjectives -- description filter'
+        let filter = { description_filter: 'glassware' }
+
+        logajohn.debug(`${sWho}(): filter = `, filter )
+
+        objectivesModel.getObjectives( filter )
+            .then((objectives) => {
+                logajohn.debug(`${sWho}(): after...then: objectives =`, objectives)
+                // Should just be the one test objective with description 'Wash glassware' 
+                expect(objectives.length).toEqual(1)
+                done()
+            })
+    })
+
     it('getObjectives -- null filter -- error', (done) => {
         let sWho = "getObjectives() -- null filter"
         logajohn.debug(`${sWho}...`)
@@ -94,20 +149,70 @@ describe('DbModels', () => {
     })
 
 
-    it(`deleteUserById: quantity=${testUsersOut.length}`, (done) => {
+
+    it(`deleteObjectiveById()...`, (done) => {
+
+        let sWho = `test deleteObjectiveById`
+
+        let num_deleted = 0
+
+        // Delete all the objectives one-by-one...
+        testObjectivesOut.forEach((objective) => {
+
+            logajohn.debug(`${sWho}(): Calling deleteObjectiveById(${objective.task_id})...`)
+
+	        objectivesModel.deleteObjectiveById(objective.task_id)
+            .then((deletedId) => {
+                logajohn.debug(`${sWho}(): After deleteObjectiveById(${objective.task_id})...then...deletedId=${deletedId}...`)
+
+  	            expect(deletedId).toEqual(objective.task_id)
+                num_deleted++
+                if (num_deleted == testObjectivesOut.length) {
+                    done()
+                }
+	         })
+             .catch( (err)=> {
+                logajohn.debug(`${sWho}...caught err = `, errorStringify(err) )
+             })
+        })
+    })
+
+    it('getObjectives -- after delete', (done) => {
+        objectivesModel.getObjectives({})
+            .then((objectives) => {
+                logajohn.debug('getObjectives() -- after delete...then...objectives=', objectives, ', objectiveCountBefore=', objectiveCountBefore)
+                expect(objectives.length).toEqual(objectiveCountBefore)
+                done()
+            })
+    })
+
+
+    it(`deleteUserById()...`, (done) => {
+
+        let sWho = 'dbmodels.test.js: deleteUserById'
+
         let num_deleted = 0
         // Delete all the users one-by-one...
         testUsersOut.forEach((user) => {
-            logajohn.debug(`deleteUserById(${user.user_id})...`)
+
+            logajohn.debug(`${sWho}(${user.user_id})...`)
+
 	        usersModel.deleteUserById(user.user_id)
                 .then((deletedId) => {
-                    logajohn.debug(`deleteUserById(${user.user_id})...then...deletedId=${deletedId}...`)
-	            expect(deletedId).toEqual(user.user_id)
+
+                    logajohn.debug(`${sWho}(${user.user_id})...then...deletedId=${deletedId}...`)
+
+    	            expect(deletedId).toEqual(user.user_id)
+
                     num_deleted++
+
                     if (num_deleted == testUsersOut.length) {
                         done()
                     }
 	         })
+            .catch( (err)=> {
+                logajohn.debug(`${sWho}...caught err = `, errorStringify(err) )
+            })
         })
     })
 

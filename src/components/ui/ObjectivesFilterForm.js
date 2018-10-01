@@ -26,16 +26,10 @@ class ObjectivesFilterForm extends Component {
         let sWho = `ObjectivesFilterForm(${this.VERSION})::constructor`
         logajohn.debug(`${sWho}(): this.props=`, customStringify(this.props, ' '))
 
-        //this.state = {
-        //    show_picker: true,
-        //    picker_start_folder_list: [ "G:", "K:" ],
-        //    base_path : (this.props.linksQa.basePath ? this.props.linksQa.basePath : this.DEFAULT_BASE_PATH )
-        //}
-
         logajohn.debug(`${sWho}(): this.state=`, this.state)
 
         this.submit = this.submit.bind(this)
-        this.onChange = this.onChange.bind(this)
+        //this.onChange = this.onChange.bind(this)
     }
 
     submit(e) {
@@ -46,10 +40,11 @@ class ObjectivesFilterForm extends Component {
         logajohn.debug(`${sWho}(): this.props = `, customStringify(this.props) )
         logajohn.debug(`${sWho}(): this.state = `, customStringify(this.state) )
 
-        const { basePath, additionOnlyCode } = this.refs 
+        let _description_filter
+
         const { onObjectivesFilter } = this.props; // Get dispatch method from props...
 
-        let filters = {};
+        let filters = { description_filter: _description_filter};
 
         e.preventDefault()
 
@@ -64,14 +59,14 @@ class ObjectivesFilterForm extends Component {
         //basePath.focus()
     }
 
-    onChange(e){
-        let sWho = "LinksQaRunForm::onChange"
-        logajohn.debug(`${sWho}(): this.refs = `, this.refs)
-        logajohn.debug(`${sWho}(): e = `, e)
-        logajohn.debug(`${sWho}(): e.target.name = `, e.target.name)
-        logajohn.debug(`${sWho}(): e.target.value = `, e.target.value)
-        this.refs[e.target.name] = e.target.value
-    }
+    //onChange(e){
+    //    let sWho = "ObjectivesFilterForm::onChange"
+    //    logajohn.debug(`${sWho}(): this.refs = `, this.refs)
+    //    logajohn.debug(`${sWho}(): e = `, e)
+    //    logajohn.debug(`${sWho}(): e.target.name = `, e.target.name)
+    //    logajohn.debug(`${sWho}(): e.target.value = `, e.target.value)
+    //    this.refs[e.target.name] = e.target.value
+    //}
 
     render() { 
         
@@ -86,6 +81,7 @@ class ObjectivesFilterForm extends Component {
         <hr/>
         <form className="objectives-filter-form form-inline" onSubmit={this.submit}>
             <button id="load-objectives">Re-Load Objectives</button>
+            description_filter:<input type="text" id="description-filter" ref={ input => _description_filter = input } />
         </form>
         <hr/>
         </div>

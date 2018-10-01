@@ -13,7 +13,10 @@ import { config } from '../../config'
 
 import { logajohn } from '../../lib/logajohn'
 
-const { Client } = require('pg')
+//const { Client } = require('pg')
+
+// Pool is better than Client...
+const { Pool } = require('pg') // PostgreSQL client pool...
 
 // logajohn.setLevel('info')
 logajohn.setLevel(config.DEBUG_LEVEL)
@@ -28,6 +31,43 @@ export class Objectives {
         this.dbname = dbname
     }
 
+    addObjective(objective) {
+
+        const sWho = 'Objectives::addObjective'
+
+        return new Promise((resolve, reject) => {
+
+	        const config = { database: this.dbname }
+
+	        logajohn.debug(`${sWho}(): Calling pool = new Pool(`, config, ')...')
+	        const pool = new Pool(config)
+
+	        const sQuery = `INSERT into tasks 
+        	(description, user_id_assigned_to)
+        	VALUES
+        	($1, $2)
+            RETURNING task_id, description, user_id_assigned_to
+        	`
+	        const args = [objective.description, objective.user_id_assigned_to]
+
+	        logajohn.debug(`${sWho}(): Calling pool.query("${sQuery}", ${JSON.stringify(args)})...`)
+
+	        pool.query(sQuery, args)
+	        .then((res) => {
+	            logajohn.debug(`${sWho}(): Resolving with res = `, res)
+                    resolve(res.rows[0])
+	        })
+	        .catch(
+                    err => setImmediate(() => {
+	                logajohn.debug(`${sWho}(): Caught err, rejecting with err = `, err)
+                        reject(err)
+                    }),
+            )
+
+        })/* new Promise */
+
+    }/* addObjective() */
+
     getObjectives(filter) {
         const sWho = 'Objectives::getObjectives'
 
@@ -39,121 +79,90 @@ export class Objectives {
                 reject(new Error('You supplied a null filter.'))
             }
 
+            let args = []
+            let wheres = []
+            if( filter.description_filter ){
+                // NOTE: string concatenation operator in PostgreSQL is "||" 
+                wheres.push("\t" + "t.description like '%' || $" + (wheres.length+1) + " || '%'")
+                args.push(filter.description_filter)
+            }
+
+            let sWheres = "" 
+            if( wheres.length > 0 ){
+                sWheres = "\n" + 
+                "WHERE\n" +
+                wheres.join("\n" + "AND" + "\n")
+            }
+
             const config = { database: this.dbname }
 
-            const sQuery = `
+            let sQuery = `
 SELECT
     t.task_id, t.description, t.user_id_assigned_to,
     u.first_name, u.middle_name, u.last_name  
 FROM 
     tasks t
 LEFT OUTER JOIN
-    users u ON t.user_id_assigned_to = u.user_id
+    users u ON t.user_id_assigned_to = u.user_id`
 
-`
+if( sWheres ){ 
+    sQuery += sWheres
+}
 
-            logajohn.debug(`${sWho}(): Calling client = new Client(config), config = `, config)
+            //logajohn.debug(`${sWho}(): Calling client = new Client(config), config = `, config)
+            //const client = new Client(config)
 
-            const client = new Client(config)
+	        logajohn.debug(`${sWho}(): Calling pool = new Pool(`, config, ')...')
+	        const pool = new Pool(config)
 
+	        logajohn.debug(`${sWho}(): Calling pool.query("${sQuery}", ${JSON.stringify(args)})...`)
 
-            logajohn.debug(`${sWho}(): Calling client.connect()...`)
-            client.connect()
-                .then(() => {
-                    logajohn.debug(`${sWho}(): connected...`)
-                })
-                .then(() => {
-                    logajohn.debug('Executing sQuery = ', sQuery)
-                    return client.query(sQuery, [])
-                })
-                .then((res) => {
-                    logajohn.debug(`${sWho}(): Got res = `, res)
-                    logajohn.debug(`${sWho}(): Calling client.end()...`)
-                    client.end()
-                    logajohn.debug(`${sWho}(): Calling resolve( res.rows )...`)
+	        pool.query(sQuery, args)
+	        .then((res) => {
+	            logajohn.debug(`${sWho}(): resolving with res = `, res)
                     resolve(res.rows)
-                })
-                .catch((err) => {
-                    logajohn.error(`${sWho}(): Caught err: `, err.stack)
-                    logajohn.debug(`${sWho}(): Calling client.end()...`)
-                    client.end()
-                    logajohn.error(`${sWho}(): Calling reject( err.stack )...`)
-                    reject(err.stack)
-                })
-        }) /* return new Promise( (resolve, reject ) => { */
+	        })
+	        .catch(
+                 err => setImmediate(() => {
+	                logajohn.debug(`${sWho}(): rejecting with err = `, err)
+                      reject(err)
+                  }),
+            )
+
+        }) /* return new Promise( (resolve, reject ) =>  */
     } /* getObjectives() */
 
-    //            logajohn.debug(`${sWho}(): Calling client.connect()...`);
-    //
-    //            client.connect( (err) => {
-    //              if (err) {
-    //                console.error('connection error: ', err.stack )
-    //                reject( "connection error"  )
-    //              } else {
-    //                    console.log('connected')
-    //
-    //
-    //
-    //        //console.log(`Executing sQuery = `, sQuery );
-    //
-    //        //client.query('SELECT $1::text as message', ['Hello world!'], (err, res) => {
-    //        client.query(sQuery, [], (err, res) => {
-    //
-    //           if( err ){
-    //             console.error(`${sWho}(): query error: `, err.stack)
-    //             console.error(`${sWho}(): Calling reject( err.stack )...`);
-    //             reject( err.stack );
-    //           }
-    //           else{
-    //             console.log(`${sWho}(): res = `, res )
-    //             console.log(`${sWho}(): Calling resolve( res.rows )...`)
-    //             resolve( res.rows );
-    //           }
-    //           //console.log(err ? err.stack : res.rows[0].message) // Hello World!
-    //           client.end()
-    //       })
-    //  }
-    // });
-    //           if( err ){
-    //             console.error(`${sWho}(): query error: `, err.stack)
-    //             console.error(`${sWho}(): Calling reject( err.stack )...`);
-    //             reject( err.stack );
-    //           }
-    //           else{
-    //             console.log(`${sWho}(): res = `, res )
-    //             console.log(`${sWho}(): Calling resolve( res.rows )...`)
-    //             resolve( res.rows );
-    //           }
-    //           //console.log(err ? err.stack : res.rows[0].message) // Hello World!
-    //           client.end()
-    //       })
-    //
-    //                //client.query('SELECT $1::text as message', ['Hello world!'], (err, res) => {
-    //
-    //                  if( err ){
-    //                    console.error(`${sWho}(): query error: `, err.stack)
-    //                    reject( err.stack );
-    //                  }
-    //                  else{
-    //                    console.log(`${sWho}(): res: `, res )
-    //                    resolve( res.rows );
-    //                  }
-    //                  //console.log(err ? err.stack : res.rows[0].message) // Hello World!
-    //                  client.end()
-    //                })
-    //            })
-    //            .catch( err => {
-    //                console.error(`${sWho}(): connection error: `, err.stack)
-    //                reject( err.stack )
-    //            })
-    //
-    // let faux_objectives = [
-    //    {who: "Moe", what: "I'll murder you!", when: "Now."},
-    //    {who: "Larry", what: "No, Moe!", when: "Later."},
-    //    {who: "Shemp", what: "Meep, Meep, Meep!", when: "Always."}
-    // ];
-    //
-    // resolve( faux_objectives );
+    deleteObjectiveById(task_id) {
+        const sWho = 'Objectives::deleteObjectiveById'
+
+        return new Promise((resolve, reject) => {
+
+	        const config = { database: this.dbname }
+	        logajohn.debug(`${sWho}(): Calling pool = new Pool(`, config, ')...')
+	        const pool = new Pool(config)
+
+	        const sQuery = `DELETE from tasks
+        	 WHERE task_id = $1
+            RETURNING task_id
+        	`
+	        const args = [task_id]
+
+	        logajohn.debug(`${sWho}(): Calling pool.query("${sQuery}", ${JSON.stringify(args)})...`)
+
+	        pool.query(sQuery, args)
+	        .then((res) => {
+	            logajohn.debug(`${sWho}(): resolving with res.rows[0].task_id, res = `, res)
+                    resolve(res.rows[0].task_id)
+	        })
+	        .catch(
+                    err => setImmediate(() => {
+	                logajohn.debug(`${sWho}(): Caught err, rejecting with err = `, err)
+                        reject(err)
+                    }),
+                )
+        })/* new Promise */
+    }/* deleteObjectiveById() */
+
 } /* class Objectives() */
 
 // module.exports = Objectives;

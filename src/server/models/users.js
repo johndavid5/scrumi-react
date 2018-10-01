@@ -33,7 +33,9 @@ export class Users {
         const sWho = 'Users::addUser'
 
         return new Promise((resolve, reject) => {
+
 	        const config = { database: this.dbname }
+
 	        logajohn.debug(`${sWho}(): Calling pool = new Pool(`, config, ')...')
 	        const pool = new Pool(config)
 
@@ -66,7 +68,9 @@ export class Users {
         const sWho = 'Users::getUsers'
 
         return new Promise((resolve, reject) => {
+
 	        const config = { database: this.dbname }
+
 	        logajohn.debug(`${sWho}(): Calling pool = new Pool(`, config, ')...')
 	        const pool = new Pool(config)
 
@@ -78,15 +82,16 @@ export class Users {
 
 	        pool.query(sQuery, args)
 	        .then((res) => {
-	            logajohn.debug(`${sWho}(): Got res = `, res)
+	            logajohn.debug(`${sWho}(): resolving with res = `, res)
                     resolve(res.rows)
 	        })
 	        .catch(
-                    err => setImmediate(() => {
-	                logajohn.debug(`${sWho}(): Caught err = `, err)
-                        reject(err)
-                    }),
-                )
+                 err => setImmediate(() => {
+	                logajohn.debug(`${sWho}(): rejecting with err = `, err)
+                      reject(err)
+                  }),
+            )
+
         })/* new Promise */
     }/* getUsers() */
 
