@@ -49,20 +49,24 @@ describe("<ObjectivesFilterForm /> UI Component", () => {
         let sWho = "ObjectivesFilterForm.test.js: submit invokes onObjectivesFilter -- description filter passed along"
 
         const _onObjectivesFilter = jest.fn()
-        let wrapper = mount(<ObjectivesFilterForm onObjectivesFilter={_onObjectivesFilter} />)
-
         let s_description_filter = 'glassware'
 
+        let wrapper = mount(<ObjectivesFilterForm descriptionFilter={s_description_filter} onObjectivesFilter={_onObjectivesFilter} />)
+
+
         //let le_props = wrapper.instance().props
-        let le_props = wrapper.props()
-        logajohn.debug(`${sWho}(): le_props = `, le_props )
-        le_props.refs._description_filter.value = s_description_filter
-        wrapper.setProps(le_props )
+        //let le_props = wrapper.props()
+        //logajohn.debug(`${sWho}(): le_props = `, le_props )
+        //le_props.refs._description_filter.value = s_description_filter
+        //wrapper.setProps(le_props )
 
         //logajohn.debug(`${sWho}(): After: wrapper.instance().props = `, wrapper.instance().props )
-        logajohn.debug(`${sWho}(): After: wrapper.props() = `, wrapper.props() )
+        //logajohn.debug(`${sWho}(): After: wrapper.props() = `, wrapper.props() )
 
-            wrapper.find('#load-objectives')
+        //wrapper.find('#load-objectives')
+        //    .simulate('change', {target: {value: s_description_filter}});
+
+        wrapper.find('#load-objectives')
                 .simulate('submit')
 
         logajohn.debug(`${sWho}(): _onObjectivesFilter.calls = `,  _onObjectivesFilter.calls )

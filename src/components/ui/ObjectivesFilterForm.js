@@ -26,27 +26,29 @@ class ObjectivesFilterForm extends Component {
         let sWho = `ObjectivesFilterForm(${this.VERSION})::constructor`
         logajohn.info(`${sWho}(): this.props=`, customStringify(this.props, ' '))
 
+        this.state = {
+            descriptionFilter: props.descriptionFilter ? props.descriptionFilter : ''
+        }
+
         logajohn.info(`${sWho}(): this.state=`, this.state)
 
         this.submit = this.submit.bind(this)
-        //this.onChange = this.onChange.bind(this)
+        this.handleInputChange = this.handleInputChange.bind(this)
     }
 
-    submit(e) {
+    submit(event) {
 
         let sWho = "ObjectivesFilterForm::submit";
 
-        logajohn.info(`${sWho}(): this.refs = `, customStringify(this.refs) )
+        //logajohn.info(`${sWho}(): this.refs = `, customStringify(this.refs) )
         logajohn.info(`${sWho}(): this.props = `, customStringify(this.props) )
         logajohn.info(`${sWho}(): this.state = `, customStringify(this.state) )
 
-        const { _description_filter } = this.refs;
-
         const { onObjectivesFilter } = this.props; // Get dispatch method from props...
 
-        let filters = { description_filter: _description_filter.value};
+        let filters = { description_filter: this.state.descriptionFilter};
 
-        e.preventDefault()
+        event.preventDefault()
 
         logajohn.info(`${sWho}(): Calling onObjectivesFilter(filters=`, customStringify(filters), `...`);
         
@@ -59,14 +61,28 @@ class ObjectivesFilterForm extends Component {
         //basePath.focus()
     }
 
-    //onChange(e){
-    //    let sWho = "ObjectivesFilterForm::onChange"
-    //    logajohn.info(`${sWho}(): this.refs = `, this.refs)
-    //    logajohn.info(`${sWho}(): e = `, e)
-    //    logajohn.info(`${sWho}(): e.target.name = `, e.target.name)
-    //    logajohn.info(`${sWho}(): e.target.value = `, e.target.value)
-    //    this.refs[e.target.name] = e.target.value
-    //}
+    handleInputChange(event) {
+
+        let sWho = "ObjectivesFilterForm::handleInputChange"
+
+	    const target = event.target;
+        //logajohn.info(`${sWho}(): target = `, customStringify(target) )
+
+	    const value = target.type === 'checkbox' ? target.checked : target.value;
+        logajohn.info(`${sWho}(): value = `, customStringify(value) )
+
+	    const name = target.name;
+        logajohn.info(`${sWho}(): name = `, customStringify(name) )
+	
+        let stateSetter = {
+	      [name]: value
+	    };
+
+        logajohn.info(`${sWho}(): stateSetter = `, customStringify(stateSetter) )
+
+	    this.setState( stateSetter )
+    }
+
 
     render() { 
         
@@ -81,7 +97,7 @@ class ObjectivesFilterForm extends Component {
         <hr/>
         <form className="objectives-filter-form form-inline" onSubmit={this.submit}>
             <button id="load-objectives">Re-Load Objectives</button>
-            description_filter:<input type="text" id="description-filter" ref="_description_filter" />
+            description_filter:<input type="text" id="description-filter" name="descriptionFilter" value={this.state.descriptionFilter} onChange={this.handleInputChange} />
         </form>
         <hr/>
         </div>
