@@ -13,3 +13,9 @@
    way to make sure everything's functioning REST-fully...)
 
 4. Add full end-to-end tests with Jest and Puppeteer...
+
+5. Add first filter -- description_filter 
+        [x] dbmodels.test.js -- test that DB model filters by description
+        [x] ObjectivesFilterForm.test.js -- test that description filter is
+               passed in call to onObjectivesFilter... 
+

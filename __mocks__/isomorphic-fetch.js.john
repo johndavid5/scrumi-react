@@ -6,6 +6,8 @@ import { logajohn } from '../src/lib/logajohn'
 logajohn.setLevel(config.DEBUG_LEVEL)
 logajohn.debug('__mocks__/isomorphic-fetch.js: logajohn.getLevel()=', logajohn.getLevel())
 
+let sWhere = '__mocks__/isomorphic-fetch.js'
+
 //function ResponseWrapper(body, init) {
 //  if (body && typeof body.constructor === 'function' && body.constructor.__isFallback) {
 //    const response = new ActualResponse(null, init)
@@ -70,21 +72,32 @@ class JResponse {
 //   return this.body
 //}
 
-const fetch = jest.fn()
+
+const fetch = jest.fn();
+
+//const fetch = jest.fn().mockImplementation( (url, options)=>{
+//    let sWho = sWhat + ': fetchMockImplementation'
+//    logajohn.debug(`${sWho}(): invoked with url = ${url}, options = `, options )
+//})
+
 //fetch.Headers = Headers
 //fetch.Response = ResponseWrapper
 //fetch.Request = Request
 
 fetch.mockResponse = (body, init) => {
 
-  logajohn.debug('__mocks__/isomorphic-fetch.js: mockResponse() SHEMP: Moe, body = ', body )
+  let sWho = sWhere + ': fetch.mockResponse'
+  logajohn.debug(sWho + ' SHEMP: Moe, body = ', body, ', init = ', init )
 
-  return fetch.mockImplementation((url,options) => {
-    logajohn.debug('__mocks__/isomorphic-fetch.js: mockImplementation(url="'+url+'", options=', options, ')...')
-    logajohn.debug('__mocks__/isomorphic-fetch.js: mockImplementation(): fetch.mock = ', fetch.mock, '...' )
-    return Promise.resolve(new JResponse(body, init))
+  return fetch.mockImplementation((url, options) => {
+
+    let sWho = sWhere + ': fetch.mockResponse::fetch.mockImplementation(url, options)'
+    logajohn.debug(`${sWho}: SHEMP: Moe, I was called wit' url='${url}', and wit' options = `, options, '...' )
+    logajohn.debug(sWho + '(): Calling Promise.resolve(new JResponse(body, init)), with body=', body, ', and init = ', init)
+
+    Promise.resolve(new JResponse(body, init))
     //Promise.resolve(new ResponseWrapper(body, init))
-    })
+  })
 }
 
 fetch.mockReject = error => {
