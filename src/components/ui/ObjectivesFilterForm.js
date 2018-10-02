@@ -15,7 +15,7 @@ import { customStringify } from '../../lib/utils' // Safer than JSON.stringify()
 import '../../../stylesheets/ObjectivesFilterForm.scss'
 
 logajohn.setLevel(config.DEBUG_LEVEL)
-logajohn.debug(`src/components/ui/ObjectivesFilterForm.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
+logajohn.info(`src/components/ui/ObjectivesFilterForm.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
 
 class ObjectivesFilterForm extends Component {
 
@@ -24,9 +24,9 @@ class ObjectivesFilterForm extends Component {
     constructor(props){
         super(props)
         let sWho = `ObjectivesFilterForm(${this.VERSION})::constructor`
-        logajohn.debug(`${sWho}(): this.props=`, customStringify(this.props, ' '))
+        logajohn.info(`${sWho}(): this.props=`, customStringify(this.props, ' '))
 
-        logajohn.debug(`${sWho}(): this.state=`, this.state)
+        logajohn.info(`${sWho}(): this.state=`, this.state)
 
         this.submit = this.submit.bind(this)
         //this.onChange = this.onChange.bind(this)
@@ -36,19 +36,19 @@ class ObjectivesFilterForm extends Component {
 
         let sWho = "ObjectivesFilterForm::submit";
 
-        logajohn.debug(`${sWho}(): this.refs = `, customStringify(this.refs) )
-        logajohn.debug(`${sWho}(): this.props = `, customStringify(this.props) )
-        logajohn.debug(`${sWho}(): this.state = `, customStringify(this.state) )
+        logajohn.info(`${sWho}(): this.refs = `, customStringify(this.refs) )
+        logajohn.info(`${sWho}(): this.props = `, customStringify(this.props) )
+        logajohn.info(`${sWho}(): this.state = `, customStringify(this.state) )
 
-        let _description_filter
+        const { _description_filter } = this.refs;
 
         const { onObjectivesFilter } = this.props; // Get dispatch method from props...
 
-        let filters = { description_filter: _description_filter};
+        let filters = { description_filter: _description_filter.value};
 
         e.preventDefault()
 
-        logajohn.debug(`${sWho}(): Calling onObjectivesFilter(filters=`, filters, `...`);
+        logajohn.info(`${sWho}(): Calling onObjectivesFilter(filters=`, customStringify(filters), `...`);
         
         onObjectivesFilter(filters);
 
@@ -61,10 +61,10 @@ class ObjectivesFilterForm extends Component {
 
     //onChange(e){
     //    let sWho = "ObjectivesFilterForm::onChange"
-    //    logajohn.debug(`${sWho}(): this.refs = `, this.refs)
-    //    logajohn.debug(`${sWho}(): e = `, e)
-    //    logajohn.debug(`${sWho}(): e.target.name = `, e.target.name)
-    //    logajohn.debug(`${sWho}(): e.target.value = `, e.target.value)
+    //    logajohn.info(`${sWho}(): this.refs = `, this.refs)
+    //    logajohn.info(`${sWho}(): e = `, e)
+    //    logajohn.info(`${sWho}(): e.target.name = `, e.target.name)
+    //    logajohn.info(`${sWho}(): e.target.value = `, e.target.value)
     //    this.refs[e.target.name] = e.target.value
     //}
 
@@ -72,16 +72,16 @@ class ObjectivesFilterForm extends Component {
         
         let sWho = "ObjectivesFilterForm::render"
 
-        logajohn.debug(`${sWho}(): this.state = `, this.state )
+        logajohn.info(`${sWho}(): this.state = `, this.state )
 
-        logajohn.debug(`${sWho}(): this.props = `, this.props )
+        logajohn.info(`${sWho}(): this.props = `, this.props )
 
         return (
         <div className="container-fluid">
         <hr/>
         <form className="objectives-filter-form form-inline" onSubmit={this.submit}>
             <button id="load-objectives">Re-Load Objectives</button>
-            description_filter:<input type="text" id="description-filter" ref={ input => _description_filter = input } />
+            description_filter:<input type="text" id="description-filter" ref="_description_filter" />
         </form>
         <hr/>
         </div>

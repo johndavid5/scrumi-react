@@ -22,16 +22,16 @@ describe("<ObjectivesFilterForm /> UI Component", () => {
     //    mount(<ObjectivesFilterForm />).find('#load-objectives').simulate('click')
     //})
 
-//    it("submit causes error if onObjectivesFilter prop not supplied", () => {
-//        let errCaught = null
-//        try {
-//            mount(<ObjectivesFilterForm />).find('#load-objectives').simulate('submit')
-//        }
-//        catch(err){
-//            errCaught = err
-//        }
-//        expect(errCaught).not.toBeNull()
-//    })
+    it("submit causes error if onObjectivesFilter prop not supplied", () => {
+        let errCaught = null
+        try {
+            mount(<ObjectivesFilterForm />).find('#load-objectives').simulate('submit')
+        }
+        catch(err){
+            errCaught = err
+        }
+        expect(errCaught).not.toBeNull()
+    })
 
     it("submit invokes onObjectivesFilter", () => {
 
@@ -44,23 +44,50 @@ describe("<ObjectivesFilterForm /> UI Component", () => {
         expect(_onObjectivesFilter).toBeCalled()
     })
 
-//    it("submit invokes onObjectivesFilter -- description filter passed along", () => {
-//
-//        let sWho = "ObjectivesFilterForm.test.js: submit invokes onObjectivesFilter -- description filter passed along"
-//
-//        const _onObjectivesFilter = jest.fn()
-//        let form = mount(<ObjectivesFilterForm onObjectivesFilter={_onObjectivesFilter} />)
-//
-//        let description_filter_component = form.find('#description-filter').get(0)
-//        let s_description_filter = 'glassware'
-//        description_filter_component.value = s_description_filter
-//
-//        mounter.find('#load-objectives')
-//            .simulate('submit')
-//
-//        logajohn.debug(`${sWho}(): _onObjectivesFilter.calls = `,  _onObjectivesFilter.calls )
-//        expect(_onObjectivesFilter).toBeCalledWith({description_filter: 'glassware'})
-//
-//    })
+    it("submit invokes onObjectivesFilter -- description filter passed along", () => {
+
+        let sWho = "ObjectivesFilterForm.test.js: submit invokes onObjectivesFilter -- description filter passed along"
+
+        const _onObjectivesFilter = jest.fn()
+        let wrapper = mount(<ObjectivesFilterForm onObjectivesFilter={_onObjectivesFilter} />)
+
+        let s_description_filter = 'glassware'
+
+        //let le_props = wrapper.instance().props
+        let le_props = wrapper.props()
+        logajohn.debug(`${sWho}(): le_props = `, le_props )
+        le_props.refs._description_filter.value = s_description_filter
+        wrapper.setProps(le_props )
+
+        //logajohn.debug(`${sWho}(): After: wrapper.instance().props = `, wrapper.instance().props )
+        logajohn.debug(`${sWho}(): After: wrapper.props() = `, wrapper.props() )
+
+            wrapper.find('#load-objectives')
+                .simulate('submit')
+
+        logajohn.debug(`${sWho}(): _onObjectivesFilter.calls = `,  _onObjectivesFilter.calls )
+        expect(_onObjectivesFilter).toBeCalledWith({description_filter: 'glassware'})
+        
+
+        //wrapper.find('#description-filter').simulate('change', {
+        //  target: { value: s_description_filter }
+        //})
+
+        //wrapper.find('#description-filter').simulate('keydown', { which: 'a' })
+
+        //let description_filter_component = wrapper.find('#description-filter')
+
+        //description_filter_component.value = s_description_filter
+        //description_filter_component.simulate('change', { target: { s_description_filter } })
+        //description_filter_component.props().value = s_description_filter
+
+        //logajohn.debug(`${sWho}(): description_filter_component.props().value = `, description_filter_component.props().value )
+        //expect(description_filter_component.props().value).toEqual(s_description_filter)
+        
+        //wrapper.find('#input-value').simulate('change', { target: { '10' } })
+        // then, to check if the value was changed:
+        //expect(wrapper.find('#input-value').props().value).toEqual('10')
+
+    })
 
 })
