@@ -36,7 +36,6 @@ import { Objectives as ObjectivesMockModel, mockGetObjectives } from '../../src/
 
 import constants from '../../src/constants'
 
-
 describe('objectives_api...', () => {
 
     let mockObjectives = {};
@@ -86,6 +85,7 @@ describe('objectives_api...', () => {
         logajohn.debug(`${sWho}()...`)
 
         let request_mock = new RequestMock();
+        request_mock.setQuery("description_filter", "Macduff");
         let response_mock = new ResponseMock();
 
         //response_mock.status = jest.fn().mockImplementation( (status_code) => { logajohn.debug("CURLY: response_mock.status: status_code = ", status_code ) } );
@@ -93,9 +93,12 @@ describe('objectives_api...', () => {
         //response_mock.status.mockClear();
 
         logajohn.debug(`${sWho}(): Here goes, Moe...`)
+
+
         doGet(request_mock, response_mock, { callback: ()=>{
 
             expect(mockGetObjectives).toHaveBeenCalledTimes(1)
+            expect(mockGetObjectives).toHaveBeenCalledWith({"description_filter": "Macduff"})
 
             expect(response_mock.status).toHaveBeenCalledTimes(1)
             //expect(response_mock.status).toHaveBeenCalled()

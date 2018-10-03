@@ -4,6 +4,8 @@ import C from './constants' // For Actions dispatched immediately by client...
 import { config } from './config'
 import { logajohn } from './lib/logajohn'
 
+import { utils } from './lib/utils'
+
 logajohn.setLevel(config.DEBUG_LEVEL)
 logajohn.debug(`src/actions.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
 
@@ -77,7 +79,7 @@ export const objectivesIsFetching = ( dispatch, isFetching ) => {
   logajohn.debug(`${sWho}(): Calling dispatch( dispatchee ), dispatchee.constructor.name = '` + (dispatchee.constructor.name) + `'...`)
 
   dispatch( dispatchee ) 
-}
+}/* objectivesIsFetching() */
 
 /* thunk... */
 export const objectivesFilter = (filters) => (dispatch) => {
@@ -96,9 +98,10 @@ export const objectivesFilter = (filters) => (dispatch) => {
 
     objectivesIsFetching( dispatch, true )
     
-    // let url = "/objectives_api/objectives" + encodeURIComponent(JSON.stringify(filters))
-    // let url = "/objectives_api/objectives?name=fred";
-    const url = '/objectives_api/objectives?name=fredrika'
+    // const url = "/objectives_api/objectives" + encodeURIComponent(JSON.stringify(filters))
+    // const url = "/objectives_api/objectives?name=fred";
+    // const url = '/objectives_api/objectives?name=fredrika'
+    const url = '/objectives_api/objectives?' + utils.objectToQueryString(filters)
 
     logajohn.debug(`${sWho}(): Callin' fetchThenDispatch(${url})...`)
 

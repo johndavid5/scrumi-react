@@ -9,7 +9,8 @@ import { config } from '../config'
 import { logajohn } from '../lib/logajohn'
 
 logajohn.setLevel(config.DEBUG_LEVEL)
-logajohn.debug(`objectives-api.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
+logajohn.info(`objectives-api.js: config.DEBUG_LEVEL = `, config.DEBUG_LEVEL )
+logajohn.info(`objectives-api.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
 
 /* Our Express Router... */
 const router = new Router()
@@ -36,12 +37,24 @@ const dispatchAndRespond = (req, res, action, options = {}) => {
         req.store.dispatch(action)
     }
 
-    //logajohn.debug(`${sWho}(): Calling res.status(200).json(action)...`)
+    //logajohn.info(`${sWho}(): Calling res.status(200).json(action)...`)
     //res.status(200).json(action) -- refactor into 2 calls so express mock doesn't trip over chained calls...
-    logajohn.debug(`${sWho}(): Calling res.status(200)...`)
-    res.status(200)
-    logajohn.debug(`${sWho}(): Calling res.json(action), action = `, action )
-    res.json(action)
+    
+    if( res ){
+        logajohn.info(`${sWho}(): Calling res.status(200)...`)
+        res.status(200)
+    }
+    else {
+        logajohn.info(`${sWho}(): Not calling res.status(200)...`)
+    }
+
+    if( res ){
+        logajohn.info(`${sWho}(): Calling res.json(action), action = `, action )
+        res.json(action)
+    }
+    else {
+        logajohn.info(`${sWho}(): Not calling res.json(action)...`)
+    }
 
 }
 
@@ -52,32 +65,28 @@ export const doGet = (req, res, options) => {
 
     const sWho = 'objectives-api::doGet("/objectives")'
 
-    logajohn.debug(`${sWho}()...`)
+    logajohn.info(`${sWho}()...`)
 
-    logajohn.debug(`${sWho}(): req = `, utils.customStringify(req))
-    logajohn.debug(`${sWho}(): res = `, utils.customStringify(res))
-
-    if( req ){
-        if( req.hasOwnProperty('query') ){
-            logajohn.debug(`${sWho}(): req.query = `, utils.customStringify(req.query))
-        }
-        else{
-            logajohn.debug(`${sWho}(): Sorry, req.query property don't exist, Moe...`)
-        }
-    }
+    logajohn.info(`${sWho}(): req = `, utils.customStringify(req))
+    logajohn.info(`${sWho}(): res = `, utils.customStringify(res))
 
     let filters = {}
 
-    if (options && options.hasOwnProperty('filters') ){
-        filters = options.filters
+    if( req ){
+        if( req.hasOwnProperty('query') ){
+            logajohn.info(`${sWho}(): req.query = `, utils.customStringify(req.query))
+            logajohn.info(`${sWho}(): Setting filters equal to req.query...`)
+            filters = {...req.query}
+        }
+        else{
+            logajohn.info(`${sWho}(): Sorry, req.query property don't exist, Moe...`)
+        }
     }
-    else{
-        // if( req.body.basePath ){
-        //     filters.basePath = req.body.basePath
-        // }
-        // if( req.body.additionOnlyCode ){
-        //     filters.additionOnlyCode = req.body.additionOnlyCode
-        // }
+
+    // Only if we needed to pass filters via options param...for testing...normally they should go in via req.query...
+    if (options && options.hasOwnProperty('filters') ){
+        logajohn.info(`${sWho}(): Setting filters equal to options.filters...`)
+        filters = {...options.filters}
     }
 
     let callback = null
@@ -86,12 +95,12 @@ export const doGet = (req, res, options) => {
     }
 
     const objectivesModel = new Objectives()
-    logajohn.debug(`${sWho}(): Callin' objectivesModel.getObjectives( filters = `, filters, '...)')
+    logajohn.info(`${sWho}(): Callin' objectivesModel.getObjectives( filters = `, filters, '...)')
 
     //Promise.resolve("OK") 
     objectivesModel.getObjectives(filters)
         .then((objectives) => {
-            logajohn.debug(`${sWho}().then: objectives = `, objectives)
+            logajohn.info(`${sWho}().then: objectives = `, objectives)
 
             const dispatchee = {
                 type: C.OBJECTIVES_GET,
@@ -101,7 +110,7 @@ export const doGet = (req, res, options) => {
                 error: '',
             }
 
-            logajohn.debug(`${sWho}(): SHEMP: Callin' dispatchAndRespond() widh...`, dispatchee)
+            logajohn.info(`${sWho}(): SHEMP: Callin' dispatchAndRespond() widh...`, dispatchee)
 
             dispatchAndRespond(req, res, dispatchee)
 
@@ -110,7 +119,7 @@ export const doGet = (req, res, options) => {
             }
         })
         .catch((error) => {
-            logajohn.debug(`${sWho}(): Caught error = `, utils.errorStringify(error))
+            logajohn.info(`${sWho}(): Caught error = `, utils.errorStringify(error))
 
             const dispatchee = {
                 type: C.OBJECTIVES_GET,
@@ -120,7 +129,7 @@ export const doGet = (req, res, options) => {
                 error,
             }
 
-            logajohn.debug(`${sWho}(): SHEMP: Callin' dispatchAndRespond() widh...`, dispatchee)
+            logajohn.info(`${sWho}(): SHEMP: Callin' dispatchAndRespond() widh...`, dispatchee)
 
             dispatchAndRespond(req, res, dispatchee)
 

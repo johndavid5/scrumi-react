@@ -46,7 +46,7 @@ describe("Action Creators", () => {
             fetch.mockResponse(JSON.stringify(faux_action))
             
 
-            let le_filters = {"description_filter": "MacBeth"}
+            let le_filters = {"description_filter": "Macbeth"}
             logajohn.debug(`${sWho}(): SHEMP: Moe, before dispatchin' objectivesFilter(), fetch.mock = `, fetch.mock )
             logajohn.debug(`${sWho}(): SHEMP: Moe, dispatchin' objectivesFilter()...here goes nuttin'...!`)
             //store.dispatch(objectivesFilter(le_filters))
@@ -83,10 +83,10 @@ describe("Action Creators", () => {
             logajohn.debug(`${sWho}(): SHEMP: Moe, fetch.mock.calls = `, fetch.mock.calls )
             // I think some wise guy is re-setting the mocks, so I saved ourMockSnapshot from before...
             logajohn.debug(`${sWho}(): SHEMP: Moe, ourMockSnapshot = `, ourMockSnapshot )
-            //const url_expect = /(?i)description_filter=MacBeth/;
-            //expect(fetch.mock.calls[0][0]).toEqual(expect.stringMatching(url_expect))
-            //expect(fetch.mock.calls[0][0]).toEqual("MacBeth")
-            expect(ourMockSnapshot.calls[0][0]).toEqual("MacBeth")
+
+            const url_expect = /description_filter=Macbeth/;
+            expect(ourMockSnapshot.calls[0][0]).toEqual(expect.stringMatching(url_expect))
+            //expect(ourMockSnapshot.calls[0][0]).toEqual("MacBeth")
         })
 
     })/* describe("objectivesFilter() thunk-based action creator..." */

@@ -28,4 +28,6 @@ REM nodemon -e js --exec babel-node node_modules\jest\bin\jest.js --no-colors --
 REM babel-node node_modules\jest\bin\jest.js --watchAll
 REM babel-node node_modules\jest\bin\jest.js --watch --no-colors "dbmodels.test.js$" 2>&1 | tee p.out
 REM babel-node node_modules\jest\bin\jest.js --watch --no-colors "ObjectivesFilterForm.test.js$" 2>&1 | tee p.out
-babel-node node_modules\jest\bin\jest.js --watch "actions.test.js$" 2>&1 | tee p.out
+REM babel-node node_modules\jest\bin\jest.js --watch "utils.test.js$" 2>&1 | tee p.out
+REm babel-node node_modules\jest\bin\jest.js --watch "actions.test.js$" 2>&1 | tee p.out
+babel-node node_modules\jest\bin\jest.js --watch "objectives-api.test.js$" 2>&1 | tee p.out

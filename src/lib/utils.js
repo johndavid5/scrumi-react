@@ -47,6 +47,71 @@ export const errorStringify = function (err, s) {
     return sOut
 }
 
-let utils = { customStringify: customStringify, errorStringify: errorStringify }
+/**
+* @note: this one also converts recursive objects (using php "array" notation for the query string)
+*
+* @source: https://stackoverflow.com/questions/1714786/query-string-encoding-of-a-javascript-object
+*/
+export const objectToQueryString = function(obj, prefix) {
+
+  var str = [], p;
+
+  for (p in obj) {
+    if (obj.hasOwnProperty(p)) {
+      var k = prefix ? prefix + "[" + p + "]" : p,
+        v = obj[p];
+      str.push((v !== null && typeof v === "object") ?
+        objectToQueryString(v, k) :
+        encodeURIComponent(k) + "=" + encodeURIComponent(v));
+    }
+  }
+  return str.join("&");
+
+} /* objectToQueryString() */
+
+/*
+* https://stackoverflow.com/questions/2090551/parse-query-string-in-javascript
+*/
+export const queryStringToObject = function(queryString) {
+
+    if( queryString[1] == "?" ){
+        queryString = queryString.substring(1)
+    }
+
+    //var args = queryString.substring(1).split('&');
+    var args = queryString.split('&');
+
+    var argsParsed = {};
+
+    var i, arg, kvp, key, value;
+
+    for (i=0; i < args.length; i++) {
+
+        arg = args[i];
+
+        if (-1 === arg.indexOf('=')) {
+
+            argsParsed[decodeURIComponent(arg).trim()] = true;
+        }
+        else {
+
+            kvp = arg.split('=');
+
+            key = decodeURIComponent(kvp[0]).trim();
+
+            value = decodeURIComponent(kvp[1]).trim();
+
+            argsParsed[key] = value;
+        }
+    }
+
+    return argsParsed;
+
+} /* queryStringToObject() */
+
+
+//let utils = { customStringify: customStringify, errorStringify: errorStringify }
+// Or, using object literal assignment...
+let utils = { customStringify, errorStringify, objectToQueryString, queryStringToObject }
 export { utils }
 export default utils
