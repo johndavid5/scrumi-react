@@ -31,6 +31,19 @@ describe("<ObjectivesListComponent /> UI Component", () => {
         expect(findee.text()).toBe(faux_timestamp)
     })
 
+    it("renders filters...", () => {
+        let sWho = `${sWhere}: <ObjectivesListComponent /> UI Component -- renders filters`
+
+        let faux_description_filter = "glass"
+        let faux_objectives_filters = { "description_filter": faux_description_filter }
+
+        let wrapper = mount(<ObjectivesListComponent objectives={{objectives_filters: faux_objectives_filters}} />)
+        let findee = wrapper.find('#static-description-filter')
+        logajohn.debug(`${sWho} -- SHEMP: Moe, findee.text() = `, findee.text() )
+        expect(findee.length).toBe(1)
+        expect(findee.text()).toBe(faux_description_filter)
+    })
+
     it("does not render timestamp if objectives.objectives_timestamp is not supplied...", () => {
         let wrapper = mount(<ObjectivesListComponent objectives={{}} />)
         expect(wrapper.find('#objectives-timestamp').length).toBe(0)
@@ -87,31 +100,15 @@ describe("<ObjectivesListComponent /> UI Component", () => {
         expect(wrapper.find('#spinning-gears').length).toBe(0)
     })
 
-    // it("renders submit button", () =>
-    //    expect(mount(<ObjectivesListComponent />).find('#load-objectives').length)
-    //        .toBe(1))
-
-    //it("click does not cause error", () => {
-    //    mount(<ObjectivesListComponent />).find('#load-objectives').simulate('click')
-    //})
-
-    //it("submit causes error if onObjectivesFilter prop not supplied", () => {
-    //    let errCaught = null
-    //    try {
-    //        mount(<ObjectivesListComponent />).find('#load-objectives').simulate('submit')
-    //    }
-    //    catch(err){
-    //        errCaught = err
-    //    }
-    //    expect(errCaught).not.toBeNull()
-    //})
-
-    //it("submit invokes onObjectivesFilter", () => {
-    //    const _onObjectivesFilter = jest.fn()
-    //    mount(<ObjectivesListComponent onObjectivesFilter={_onObjectivesFilter} />)
-    //        .find('#load-objectives')
-    //        .simulate('submit')
-    //    expect(_onObjectivesFilter).toBeCalled()
-    //})
+//    it("click on heading invokes onObjectivesFilter", () => {
+//
+//        let sWho = "ObjectivesListComponent.test.js: click on heading invokes onObjectivesFilter"
+//
+//        const _onObjectivesFilter = jest.fn()
+//        mount(<ObjectivesFilterForm onObjectivesFilter={_onObjectivesFilter} />)
+//            .find('#sort-by-description')
+//            .simulate('click')
+//        expect(_onObjectivesFilter).toBeCalled()
+//    })
 
 })

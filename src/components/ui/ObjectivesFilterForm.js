@@ -96,8 +96,23 @@ class ObjectivesFilterForm extends Component {
         <div className="container-fluid">
         <hr/>
         <form className="objectives-filter-form form-inline" onSubmit={this.submit}>
-            <button id="load-objectives">Re-Load Objectives</button>
-            description_filter:<input type="text" id="description-filter" name="descriptionFilter" value={this.state.descriptionFilter} onChange={this.handleInputChange} />
+
+         <button id="load-objectives" type="submit" className="btn btn-success" aria-label="Load Objectives">
+            <span class="glyphicon glyphicon-refresh" aria-hidden="true" style={{fontWeight: 'bold'}}></span>
+         </button>
+
+         <label for="description-filter" style={{paddingLeft: '2px', paddingRight: '2px'}}>Description Filter:</label>
+         <input type="text" className="form-control" id="description-filter" name="descriptionFilter" aria-label="Description Filter" value={this.state.descriptionFilter} onChange={this.handleInputChange} />
+        
+        {/*<label class="sr-only" for="description-filter">Description Filter</label>
+         <div class="input-group">
+           <div class="input-group-prepend">
+             <div class="input-group-text">Description Filter</div>
+           </div>
+           <input type="text" class="form-control" id="description-filter" name="descriptionFilter" value={this.state.descriptionFilter} onChange={this.handleInputChange} >
+         </div>*/}
+
+
         </form>
         <hr/>
         </div>

@@ -83,7 +83,8 @@ export class Objectives {
             let wheres = []
             if( filter.description_filter ){
                 // NOTE: string concatenation operator in PostgreSQL is "||" 
-                wheres.push("\t" + "t.description like '%' || $" + (wheres.length+1) + " || '%'")
+                //wheres.push("\t" + "t.description like '%' || $" + (wheres.length+1) + " || '%'")
+                wheres.push("\t" + "t.description ILIKE '%' || $" + (wheres.length+1) + " || '%'") // Use case-insensitive PostgreSQL specific "ILIKE" in lieu of "like"...
                 args.push(filter.description_filter)
             }
 

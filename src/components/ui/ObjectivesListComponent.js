@@ -32,9 +32,13 @@ const ObjectivesListComponent = (props) => {
         textAlign: 'left',
     }
 
+    const gefilterStyle = {
+        color: 'blue'
+    }
+
     const timestampStyle = {
         color: 'purple',
-    /* whiteSpace: 'nowrap' */
+        whiteSpace: 'nowrap'
     }
 
     const formFullName = (objective) => {
@@ -63,7 +67,16 @@ const ObjectivesListComponent = (props) => {
               </div>
             ): "" )
 
-    let filter_params = ""
+    let gefilters = []
+    
+    if( objectives && objectives.objectives_filters && objectives.objectives_filters.description_filter ){
+        gefilters.push( 
+              <div className="filter-params row">
+                 <div class="col-sm-6 col-form-label" style={gefilterStyle}>Description Filter: <span id="static-description-filter">{objectives.objectives_filters.description_filter}</span></div>
+              </div>
+        )
+    }
+    
 
     //let filter_params = (  ( 1 == 0 ) ?
     //    (
@@ -127,7 +140,7 @@ const ObjectivesListComponent = (props) => {
     return (
       <div className="objectives-list-component container-fluid" style={{ paddingLeft: '1em' }}>
       {timestamp}
-      {filter_params}
+      {gefilters}
       {gears}
       {objectives_table}
       { ((debugee) => {

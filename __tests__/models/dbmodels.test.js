@@ -24,15 +24,16 @@ describe('DbModels', () => {
     const testUsersIn = [
         { first_name: 'Joe', middle_name: 'S.', last_name: 'Kovacs' },
         { first_name: 'Jean', middle_name: 'R.', last_name: 'Kovacs' },
-        // ,{first_name: "John", middle_name: "D.", last_name: "Aynedjian"}
-        // ,{first_name: "Robert", middle_name: "S.", last_name: "Peters"}
+        {first_name: "Arnold", middle_name: "", last_name: "Schwarzenegger"},
+        {first_name: "Robert", middle_name: "S.", last_name: "Peters"}
     ]
 
+    // Note: supply index in testUsersIn...we'll use the user_id for the database insert...
     const testObjectivesIn = [
-        { description: 'Wash glassware' },
-        { description: 'Arrange files' }
-        // ,{first_name: "John", middle_name: "D.", last_name: "Aynedjian"}
-        // ,{first_name: "Robert", middle_name: "S.", last_name: "Peters"}
+        { description: 'Wash glassware', user_index: 0 },
+        { description: 'Arrange files', user_index: 1 },
+        { description: 'I\'ll be back, Bennett!', user_index: 2},
+        { description: 'Let off some steam, Bennett!', user_index: 2}
     ]
 
     const testUsersOut = []
@@ -40,12 +41,24 @@ describe('DbModels', () => {
     let userCountBefore = null
     let objectiveCountBefore = null
 
+    it('getObjectives -- before', (done) => {
+        objectivesModel.getObjectives({})
+            .then((objectives) => {
+                logajohn.debug('getObjectives() -- before...then: objectives =', objectives)
+                expect(objectives.length).toBeGreaterThanOrEqual(0)
+                objectiveCountBefore = objectives.length
+                logajohn.debug('getObjectives() -- before...then: objectiveCountBefore =', objectiveCountBefore)
+                done()
+            })
+    })
+
     it('getUsers -- before', (done) => {
         usersModel.getUsers({})
             .then((users) => {
                 logajohn.debug('getUsers() -- before...then...users=', users)
                 expect(users.length).toBeGreaterThanOrEqual(0)
                 userCountBefore = users.length
+                logajohn.debug('getUsers() -- before...then: userCountBefore =', userCountBefore)
                 done()
             })
     })
@@ -66,15 +79,6 @@ describe('DbModels', () => {
         })
     })
 
-    it('getObjectives -- before', (done) => {
-        objectivesModel.getObjectives({})
-            .then((objectives) => {
-                logajohn.debug('getObjectives() -- before...then: objectives =', objectives)
-                expect(objectives.length).toBeGreaterThanOrEqual(0)
-                objectiveCountBefore = objectives.length
-                done()
-            })
-    })
 
     it('addObjective()...', (done) => {
         let sWho = 'addObjective'
@@ -82,7 +86,11 @@ describe('DbModels', () => {
         const numAdded = 0
         testObjectivesIn.forEach((objective, index) => {
 
-            objective.user_id_assigned_to = testUsersOut[index].user_id
+            // Set user_id based on testUsersOut...
+            objective.user_id_assigned_to = testUsersOut[objective.user_index].user_id
+
+            // Do away with objective.user_index...it will throw off our expect later...
+            delete objective.user_index
 
             logajohn.debug(`${sWho}() -- SHEMP: Calling addObjective(objective), objective = `, objective )
 
@@ -98,27 +106,48 @@ describe('DbModels', () => {
         })
     })
 
-    it('getObjectives -- after add', (done) => {
+    it('getObjectives -- after add -- length', (done) => {
         objectivesModel.getObjectives({})
             .then((objectives) => {
-                logajohn.debug('getObjectives() -- after...then: objectives =', objectives)
+                logajohn.debug('getObjectives() -- after add -- length...then: objectives =', objectives)
                 expect(objectives.length).toBeGreaterThanOrEqual(0)
                 expect(objectives.length).toEqual(objectiveCountBefore + testObjectivesIn.length)
                 done()
             })
     })
 
-    it('getObjectives -- description filter', (done) => {
-        let sWho = 'getObjectives -- description filter'
-        let filter = { description_filter: 'glassware' }
+    it('getObjectives -- description filter -- case insensitive', (done) => {
+        let sWho = 'getObjectives -- description filter -- case insensitive'
+        let filter = { description_filter: 'GlAsSwArE' }  // case insensitive: 'GlAsSwArE' to match 'glassware'...
 
         logajohn.debug(`${sWho}(): filter = `, filter )
 
         objectivesModel.getObjectives( filter )
             .then((objectives) => {
                 logajohn.debug(`${sWho}(): after...then: objectives =`, objectives)
-                // Should just be the one test objective with description 'Wash glassware' 
-                expect(objectives.length).toEqual(1)
+                // Should just be the one of the _new_ test objective with description 'Wash glassware' 
+                expect(objectives.length).toEqual(1+objectiveCountBefore)
+                done()
+            })
+    })
+
+    it('getObjectives -- sort_by description', (done) => {
+
+        let sWho = 'getObjectives -- sort_by description'
+
+        let filter = { sort_by_field: 'description', sort_by_asc_desc: 'asc' }
+
+        logajohn.debug(`${sWho}(): filter = `, filter )
+
+        let expected_descriptions_array = testObjectivesIn.map( element => element.description ).sort()
+        logajohn.debug(`${sWho}(): expected_descriptions_array = `, expected_descriptions_array )
+
+        objectivesModel.getObjectives( filter )
+            .then((objectives) => {
+                logajohn.debug(`${sWho}(): after...then: objectives =`, objectives)
+                let output_descriptions_array = objectives.map( element => element.description )
+                logajohn.debug(`${sWho}(): output_descriptions_array = `, output_descriptions_array )
+                expect(output_descriptions_array).toEqual(expected_descriptions_array)
                 done()
             })
     })
