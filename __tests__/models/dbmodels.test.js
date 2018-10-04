@@ -117,7 +117,9 @@ describe('DbModels', () => {
     })
 
     it('getObjectives -- description filter -- case insensitive', (done) => {
+
         let sWho = 'getObjectives -- description filter -- case insensitive'
+
         let filter = { description_filter: 'GlAsSwArE' }  // case insensitive: 'GlAsSwArE' to match 'glassware'...
 
         logajohn.debug(`${sWho}(): filter = `, filter )
@@ -125,6 +127,8 @@ describe('DbModels', () => {
         objectivesModel.getObjectives( filter )
             .then((objectives) => {
                 logajohn.debug(`${sWho}(): after...then: objectives =`, objectives)
+                logajohn.debug(`${sWho}(): after...then: objectives.length =`, objectives.length)
+                logajohn.debug(`${sWho}(): after...then: objectiveCountBefore =`, objectivesCountBefore)
                 // Should just be the one of the _new_ test objective with description 'Wash glassware' 
                 expect(objectives.length).toEqual(1+objectiveCountBefore)
                 done()
@@ -209,7 +213,7 @@ describe('DbModels', () => {
     it('getObjectives -- after delete', (done) => {
         objectivesModel.getObjectives({})
             .then((objectives) => {
-                logajohn.debug('getObjectives() -- after delete...then...objectives=', objectives, ', objectiveCountBefore=', objectiveCountBefore)
+                logajohn.debug('getObjectives() -- after delete...then...objectives=', objectives, ', objectives.length = ', objectives.length, 'objectiveCountBefore=', objectiveCountBefore)
                 expect(objectives.length).toEqual(objectiveCountBefore)
                 done()
             })
