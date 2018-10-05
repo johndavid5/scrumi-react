@@ -1,0 +1,5 @@
+CREATE FUNCTION full_name_simple(first_name TEXT, middle_name TEXT, last_name TEXT) RETURNS TEXT AS $$
+BEGIN
+ return first_name || ' ' || middle_name || ' ' || last_name; 
+END;
+$$ LANGUAGE PLPGSQL;

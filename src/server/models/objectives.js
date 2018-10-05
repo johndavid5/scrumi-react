@@ -95,20 +95,39 @@ export class Objectives {
                 wheres.join("\n" + "AND" + "\n")
             }
 
+            let sOrderBy = ""
+
+            if( filter.sort_by_field ){
+                if( filter.sort_by_field.toLowerCase() == 'description' ){ 
+                    sOrderBy = "\nORDER BY description"
+                }
+
+                if( filter.sort_by_asc_desc && filter.sort_by_asc_desc.toUpperCase() == 'ASC' ){
+                    sOrderBy += " ASC"
+                }
+                else if( filter.sort_by_asc_desc && filter.sort_by_asc_desc.toUpperCase() == 'DESC' ){
+                    sOrderBy += " DESC"
+                }
+            }
+
             const config = { database: this.dbname }
 
             let sQuery = `
-SELECT
-    t.task_id, t.description, t.user_id_assigned_to,
-    u.first_name, u.middle_name, u.last_name  
-FROM 
-    tasks t
-LEFT OUTER JOIN
-    users u ON t.user_id_assigned_to = u.user_id`
+            SELECT
+                t.task_id, t.description, t.user_id_assigned_to,
+                u.first_name, u.middle_name, u.last_name  
+            FROM 
+                tasks t
+            LEFT OUTER JOIN
+                users u ON t.user_id_assigned_to = u.user_id`
 
-if( sWheres ){ 
-    sQuery += sWheres
-}
+            if( sWheres ){ 
+                sQuery += sWheres
+            }
+
+            if( sOrderBy ){ 
+                sQuery += sOrderBy
+            }
 
             //logajohn.debug(`${sWho}(): Calling client = new Client(config), config = `, config)
             //const client = new Client(config)

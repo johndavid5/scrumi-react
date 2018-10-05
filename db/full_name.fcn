@@ -1,0 +1,40 @@
+CREATE OR REPLACE FUNCTION full_name(first_name text, middle_name text, last_name text) RETURNS text AS $$
+ DECLARE full_name text := '';
+BEGIN
+ if ( first_name IS NULL ) THEN
+   first_name := '';
+  END IF;
+
+ if( middle_name IS NULL ) THEN
+   middle_name := '';
+ END IF;
+
+ if( last_name IS NULL ) THEN
+   last_name := '';
+ END IF;
+
+ first_name := TRIM(first_name);
+ middle_name := TRIM(middle_name);
+ last_name := TRIM(last_name);
+
+ if( LENGTH(first_name) > 0 ) THEN
+    full_name = first_name;
+ END IF;
+
+ if( LENGTH(middle_name) > 0 ) THEN
+    if( LENGTH(full_name) > 0 ) THEN
+      full_name = CONCAT(full_name,' ');  
+    END IF;
+    full_name = CONCAT(full_name, middle_name);
+ END IF;
+
+ if( LENGTH(last_name) > 0 ) THEN
+    if( LENGTH(full_name) > 0 ) THEN
+      full_name = CONCAT(full_name,' ');  
+    END IF;
+    full_name = CONCAT(full_name, last_name);
+ END IF;
+
+ RETURN full_name;
+END;
+$$ LANGUAGE PLPGSQL;
