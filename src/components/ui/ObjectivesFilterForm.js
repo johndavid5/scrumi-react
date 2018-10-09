@@ -33,6 +33,7 @@ class ObjectivesFilterForm extends Component {
         logajohn.info(`${sWho}(): this.state=`, this.state)
 
         this.submit = this.submit.bind(this)
+
         this.handleInputChange = this.handleInputChange.bind(this)
     }
 
@@ -59,7 +60,9 @@ class ObjectivesFilterForm extends Component {
         //_addition_only_code.value = ''
 
         //basePath.focus()
-    }
+
+    }/* submit() */
+
 
     handleInputChange(event) {
 

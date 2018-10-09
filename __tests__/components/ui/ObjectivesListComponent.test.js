@@ -61,18 +61,32 @@ describe("<ObjectivesListComponent /> UI Component", () => {
         let num_rows = wrapper.find('#objectives-table').find('tr').length
         logajohn.debug(`${sWho} -- SHEMP: Moe, wrapper.find('#objectives-table').find('tr').length = `, num_rows )
 
+        // faux_objectives.length+1 because of extra <tr> with <th> headings...
+        expect(wrapper.find('#objectives-table').find('tr').length).toBe(faux_objectives.length+1)
+
         // Forgive me, Reverend Mother, for indulging in some imperative programming in the form of a for() loop...I have sinned...
         // Stick with declarative programming, my child...go and sin no more...
-        //for(let i=0; i<num_rows; i++ ){
+        for(let i=0; i<num_rows; i++ ){
             // Enzyme Error: can only call .html() on single node...
             //logajohn.debug(`${sWho} -- SHEMP: Moe, wrapper.find('#objectives-table').find('tr').get(i).html() = `, wrapper.find('#objectives-table').find('tr').get(i).html() )
             // TypeError: Converting circular structure to JSON
             //    at JSON.stringify (<anonymous>)
+            // Huge data structure...
             //logajohn.debug(`${sWho} -- SHEMP: Moe, wrapper.find('#objectives-table').find('tr').get(${i}) = ${customStringify(wrapper.find('#objectives-table').find('tr').get(i), ' ')}...` )
-        //}
+        }
 
-        // faux_objectives.length+1 because of extra <tr> with <th> headings...
-        expect(wrapper.find('#objectives-table').find('tr').length).toBe(faux_objectives.length+1)
+        faux_objectives.forEach((faux_objective)=>{
+            ['description', 'full_name'].forEach((field)=>{
+                let le_id = '#'+ field + '-' + faux_objective.objective_id
+                logajohn.debug(`${sWho} -- SHEMP: Moe, look for id = '${le_id}' in there, Moe...`)
+                ////logajohn.debug(`${sWho} -- SHEMP: Moe, wrapper.find(${le_id}) = `, customStringify(wrapper.find(le_id)) )
+                //logajohn.debug(`${sWho} -- SHEMP: Moe, wrapper.find(${le_id}).length = `, wrapper.find(le_id).length )
+                //logajohn.debug(`${sWho} -- SHEMP: Moe, wrapper.find(${le_id}).text() = '${wrapper.find(le_id).text()}'...`)
+                expect(wrapper.find(le_id).length).toBe(1)
+                expect(wrapper.find(le_id).text()).toEqual(faux_objective[field])
+            })
+        })
+
     })
 
     it("does not renders table of objectives if objectives.objectives_list is nonexistent...", () => {
@@ -100,15 +114,19 @@ describe("<ObjectivesListComponent /> UI Component", () => {
         expect(wrapper.find('#spinning-gears').length).toBe(0)
     })
 
-//    it("click on heading invokes onObjectivesFilter", () => {
-//
-//        let sWho = "ObjectivesListComponent.test.js: click on heading invokes onObjectivesFilter"
-//
-//        const _onObjectivesFilter = jest.fn()
-//        mount(<ObjectivesFilterForm onObjectivesFilter={_onObjectivesFilter} />)
-//            .find('#sort-by-description')
-//            .simulate('click')
-//        expect(_onObjectivesFilter).toBeCalled()
-//    })
+    it("click on heading invokes onObjectivesFilter - description ", () => {
+
+        let sWho = sWhere + ": click on heading invokes onObjectivesFilter - description "
+
+        const _onObjectivesFilter = jest.fn()
+
+        mount(<ObjectivesListComponent onObjectivesFilter={_onObjectivesFilter} objectives={{objectives_list: faux_objectives}} />)
+            .find('#sort-by-description')
+            .simulate('click')
+
+        logajohn.debug(`${sWho} -- SHEMP: Moe, _onObjectivesFilter.mock.calls=`, _onObjectivesFilter.mock.calls )
+
+        expect(_onObjectivesFilter).toBeCalled()
+    })
 
 })

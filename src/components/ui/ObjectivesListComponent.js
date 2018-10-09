@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
 import { logajohn } from '../../lib/logajohn'
 
+import { customStringify } from '../../lib/utils' // Safer than JSON.stringify()... 
+
 // import '../../stylesheets/ObjectivesListComponent.scss'
 import '../../../stylesheets/ObjectivesListComponent.scss'
 
@@ -59,6 +61,24 @@ const ObjectivesListComponent = (props) => {
         return s_out
     }
 
+    const sortBy = (event) => {
+
+        let sWho = "ObjectivesListComponent::sort";
+
+        logajohn.info(`${sWho}(): props = `, customStringify(props) )
+
+        const { onObjectivesFilter } = props; // Get dispatch method from props...
+
+        let filters = { sort_by_field: 'joe', sort_by_asc_desc: 'desc' };
+
+        event.preventDefault()
+
+        logajohn.info(`${sWho}(): Calling onObjectivesFilter(filters=`, customStringify(filters), `...`);
+        
+        onObjectivesFilter(filters);
+
+    }/* sortBy() */
+
     let timestamp = ( objectives.objectives_timestamp ? (
               <div className="filter-params row">
                 <div className="col-sm-8">
@@ -72,7 +92,7 @@ const ObjectivesListComponent = (props) => {
     if( objectives && objectives.objectives_filters && objectives.objectives_filters.description_filter ){
         gefilters.push( 
               <div className="filter-params row">
-                 <div class="col-sm-6 col-form-label" style={gefilterStyle}>Description Filter: <span id="static-description-filter">{objectives.objectives_filters.description_filter}</span></div>
+                 <div className="col-sm-6 col-form-label" style={gefilterStyle}>Description Filter: <span id="static-description-filter">{objectives.objectives_filters.description_filter}</span></div>
               </div>
         )
     }
@@ -117,16 +137,16 @@ const ObjectivesListComponent = (props) => {
                       <table className="table" id="objectives-table">
                             <thead>
                           <tr>
-                              <th scope="col" style={thStyle}>Description</th>
-                              <th scope="col" style={thStyle}>Assigned To</th>
+                              <th scope="col" id="sort-by-description" onClick={sortBy} style={thStyle}>Description</th>
+                              <th scope="col" id="sort-by-full-name" onClick={sortBy} style={thStyle}>Assigned To</th>
                             </tr>
                         </thead>
                             <tbody>
                           {
                                     objectives.objectives_list.map((objective, index) => (
-                                      <tr key={index}>
-                                          <td style={tdStyle}>{objective.description}</td>
-                                            <td style={tdStyle}>{formFullName(objective)}</td>
+                                      <tr key={objective.objective_id}>
+                                          <td style={tdStyle} id={'description-' + objective.objective_id}>{objective.description}</td>
+                                          <td style={tdStyle} id={'full_name-' + objective.objective_id}>{objective.full_name}</td>
                                         </tr>
                                     ))
                           }

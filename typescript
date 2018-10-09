@@ -1,56 +1,730 @@
-Script started on Tue Sep 18 16:09:58 2018
-sh-4.4$ exitgvim package.json &
-[1] 15284
-sh-4.4$ npm run test-watch
+Script started on Mon Oct  8 22:21:54 2018
+sh-4.3$ babel-node node_modules\jest\bin\jest.js --watch --no-colors "dbmodels
+.test.js$" 2>&1 | tee p.out                 
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'c:\inetpub\wwwroot\scrumi-react\node_modulesjestbinjest.js'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Function.Module.runMain (module.js:693:10)
+    at Object.<anonymous> (C:\Users\John.diana\AppData\Roaming\npm\node_modules\babel-cli\lib\_babel-node.js:154:22)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+sh-4.3$ babel-node node_modules\jest\bin\jest.js --watch --no-colors "dbmodels
+.test.js$"[Ash-4.3$ babel-node node_modules\jest\bin\jest.js --watch --no-colors "dbmodeljest\bin\jest.js --watch --no-colors "dbmodels.
+[1P[Ash-4.3$ babel-node node_modules/jest\bin\jest.js --watch --no-colors "dbmodels
+[1@.[Ah-4.3$ babel-node node_modules/jest\bin\jest.js --watch --no-colors "dbmodels.
+[1P[Ash-4.3$ babel-node node_modules/jest/bin\jest.js --watch --no-colors "dbmodels
+[1@.[Ah-4.3$ babel-node node_modules/jest/bin\jest.js --watch --no-colors "dbmodels.
+[1P[Ash-4.3$ babel-node node_modules/jest/bin/jest.js --watch --no-colors "dbmodels
+[1@.[Ah-4.3$ babel-node node_modules/jest/bin/
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:16.35][DEBUG] __tests__/global.js: logajohn.getLevel()=DEBUG...[49m[0m
 
-> scrumi-react@6.0.0 test-watch c:\Users\john\projects\scrumi-react
-> jest --watch
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.343][DEBUG] objectives.js: logajohn.getLevel()= DEBUG[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.346][DEBUG] users.js: logajohn.getLevel()= DEBUG[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.349][DEBUG] __tests__/models/dbmodels.test.js: logajohn.getLevel()=DEBUG...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.356][DEBUG] Objectives::getObjectives(): filter = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.357][DEBUG] Objectives::getObjectives(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.357][DEBUG] Objectives::getObjectives(): Calling pool.query("
+                SELECT
+                    o.objective_id, o.description, o.user_id_assigned_to,
+                    u.first_name, u.middle_name, u.last_name,
+                    full_name(u.first_name, u.middle_name, u.last_name)  
+                FROM 
+                    objectives o
+                LEFT OUTER JOIN
+                    users u ON o.user_id_assigned_to = u.user_id", [])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.421][DEBUG] Objectives::getObjectives(): resolving with res = {"command":"SELECT","rowCount":0,"oid":null,"rows":[],"fields":[{"name":"objective_id","tableID":16459,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"description","tableID":16459,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"user_id_assigned_to","tableID":16459,"columnID":3,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"first_name","tableID":16423,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"middle_name","tableID":16423,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"last_name","tableID":16423,"columnID":4,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"full_name","tableID":0,"columnID":0,"dataTypeID":25,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null,null,null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.421][DEBUG] getObjectives() -- before...then: objectives = [][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.424][DEBUG] getObjectives() -- before...then: objectiveCountBefore = 0[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.425][DEBUG] Users::getUsers(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.426][DEBUG] Users::getUsers(): Calling pool.query("SELECT * from users", [])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.471][DEBUG] Users::getUsers(): resolving with res = {"command":"SELECT","rowCount":0,"oid":null,"rows":[],"fields":[{"name":"user_id","tableID":16423,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"first_name","tableID":16423,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"middle_name","tableID":16423,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"last_name","tableID":16423,"columnID":4,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"}],"_parsers":[null,null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.471][DEBUG] getUsers() -- before...then...users= [][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.472][DEBUG] getUsers() -- before...then: userCountBefore = 0[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.473][DEBUG] Users::addUser(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.473][DEBUG] Users::addUser(): Calling pool.query("INSERT into users 
+            	(first_name, middle_name, last_name)
+            	VALUES
+            	($1, $2, $3)
+                RETURNING user_id, first_name, middle_name, last_name
+            	", ["Joe","S.","Kovacs"])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.474][DEBUG] Users::addUser(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.474][DEBUG] Users::addUser(): Calling pool.query("INSERT into users 
+            	(first_name, middle_name, last_name)
+            	VALUES
+            	($1, $2, $3)
+                RETURNING user_id, first_name, middle_name, last_name
+            	", ["Jean","R.","Kovacs"])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.475][DEBUG] Users::addUser(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.475][DEBUG] Users::addUser(): Calling pool.query("INSERT into users 
+            	(first_name, middle_name, last_name)
+            	VALUES
+            	($1, $2, $3)
+                RETURNING user_id, first_name, middle_name, last_name
+            	", ["Arnold","","Schwarzenegger"])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.475][DEBUG] Users::addUser(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.476][DEBUG] Users::addUser(): Calling pool.query("INSERT into users 
+            	(first_name, middle_name, last_name)
+            	VALUES
+            	($1, $2, $3)
+                RETURNING user_id, first_name, middle_name, last_name
+            	", ["Robert","S.","Peters"])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.573][DEBUG] Users::addUser(): Got res = {"command":"INSERT","rowCount":1,"oid":0,"rows":[{"user_id":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"}],"fields":[{"name":"user_id","tableID":16423,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"first_name","tableID":16423,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"middle_name","tableID":16423,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"last_name","tableID":16423,"columnID":4,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"}],"_parsers":[null,null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.577][DEBUG] Users::addUser(): Got res = {"command":"INSERT","rowCount":1,"oid":0,"rows":[{"user_id":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger"}],"fields":[{"name":"user_id","tableID":16423,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"first_name","tableID":16423,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"middle_name","tableID":16423,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"last_name","tableID":16423,"columnID":4,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"}],"_parsers":[null,null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.578][DEBUG] Users::addUser(): Got res = {"command":"INSERT","rowCount":1,"oid":0,"rows":[{"user_id":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters"}],"fields":[{"name":"user_id","tableID":16423,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"first_name","tableID":16423,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"middle_name","tableID":16423,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"last_name","tableID":16423,"columnID":4,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"}],"_parsers":[null,null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.583][DEBUG] Users::addUser(): Got res = {"command":"INSERT","rowCount":1,"oid":0,"rows":[{"user_id":179,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"}],"fields":[{"name":"user_id","tableID":16423,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"first_name","tableID":16423,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"middle_name","tableID":16423,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"last_name","tableID":16423,"columnID":4,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"}],"_parsers":[null,null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.583][DEBUG] __tests__/models/dbmodels.test.js::addUser...() -- SHEMP: donezo!  testUsersOut = [{"user_id":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"user_id":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger"},{"user_id":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters"},{"user_id":179,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.584][DEBUG] __tests__/models/dbmodels.test.js::addUser...() -- SHEMP: donezo!  testUsersOutIdMap = {"176":{"user_id":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},"177":{"user_id":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters"},"178":{"user_id":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger"},"179":{"user_id":179,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"}}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.584][DEBUG] __tests__/models/dbmodels.test.js::addObjective()() -- SHEMP: Calling addObjective(objective), objective = {"description":"Wash glassware","user_id_assigned_to":176}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.585][DEBUG] Objectives::addObjective(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.585][DEBUG] Objectives::addObjective(): Calling pool.query("INSERT into objectives 
+            	(description, user_id_assigned_to)
+            	VALUES
+            	($1, $2)
+                RETURNING objective_id, description, user_id_assigned_to
+            	", ["Wash glassware",176])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.586][DEBUG] __tests__/models/dbmodels.test.js::addObjective()() -- SHEMP: Calling addObjective(objective), objective = {"description":"Arrange files","user_id_assigned_to":178}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.586][DEBUG] Objectives::addObjective(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.586][DEBUG] Objectives::addObjective(): Calling pool.query("INSERT into objectives 
+            	(description, user_id_assigned_to)
+            	VALUES
+            	($1, $2)
+                RETURNING objective_id, description, user_id_assigned_to
+            	", ["Arrange files",178])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.587][DEBUG] __tests__/models/dbmodels.test.js::addObjective()() -- SHEMP: Calling addObjective(objective), objective = {"description":"I'll be back, Bennett!","user_id_assigned_to":177}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.587][DEBUG] Objectives::addObjective(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.587][DEBUG] Objectives::addObjective(): Calling pool.query("INSERT into objectives 
+            	(description, user_id_assigned_to)
+            	VALUES
+            	($1, $2)
+                RETURNING objective_id, description, user_id_assigned_to
+            	", ["I'll be back, Bennett!",177])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.588][DEBUG] __tests__/models/dbmodels.test.js::addObjective()() -- SHEMP: Calling addObjective(objective), objective = {"description":"Let off some steam, Bennett!","user_id_assigned_to":177}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.588][DEBUG] Objectives::addObjective(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.588][DEBUG] Objectives::addObjective(): Calling pool.query("INSERT into objectives 
+            	(description, user_id_assigned_to)
+            	VALUES
+            	($1, $2)
+                RETURNING objective_id, description, user_id_assigned_to
+            	", ["Let off some steam, Bennett!",177])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.669][DEBUG] Objectives::addObjective(): Resolving with res = {"command":"INSERT","rowCount":1,"oid":0,"rows":[{"objective_id":46,"description":"Arrange files","user_id_assigned_to":178}],"fields":[{"name":"objective_id","tableID":16459,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"description","tableID":16459,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"user_id_assigned_to","tableID":16459,"columnID":3,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.673][DEBUG] Objectives::addObjective(): Resolving with res = {"command":"INSERT","rowCount":1,"oid":0,"rows":[{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176}],"fields":[{"name":"objective_id","tableID":16459,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"description","tableID":16459,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"user_id_assigned_to","tableID":16459,"columnID":3,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.674][DEBUG] Objectives::addObjective(): Resolving with res = {"command":"INSERT","rowCount":1,"oid":0,"rows":[{"objective_id":48,"description":"Let off some steam, Bennett!","user_id_assigned_to":177}],"fields":[{"name":"objective_id","tableID":16459,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"description","tableID":16459,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"user_id_assigned_to","tableID":16459,"columnID":3,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.674][DEBUG] Objectives::addObjective(): Resolving with res = {"command":"INSERT","rowCount":1,"oid":0,"rows":[{"objective_id":49,"description":"I'll be back, Bennett!","user_id_assigned_to":177}],"fields":[{"name":"objective_id","tableID":16459,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"description","tableID":16459,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"user_id_assigned_to","tableID":16459,"columnID":3,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.675][DEBUG] __tests__/models/dbmodels.test.js::addObjective()() -- SHEMP: donezo!  testObjectivesOut = [{"objective_id":46,"description":"Arrange files","user_id_assigned_to":178},{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176},{"objective_id":48,"description":"Let off some steam, Bennett!","user_id_assigned_to":177},{"objective_id":49,"description":"I'll be back, Bennett!","user_id_assigned_to":177}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.675][DEBUG] __tests__/models/dbmodels.test.js::addObjective()() -- SHEMP: donezo!  testObjectivesOutIdMap = {"46":{"objective_id":46,"description":"Arrange files","user_id_assigned_to":178},"47":{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176},"48":{"objective_id":48,"description":"Let off some steam, Bennett!","user_id_assigned_to":177},"49":{"objective_id":49,"description":"I'll be back, Bennett!","user_id_assigned_to":177}}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.682][DEBUG] Objectives::getObjectives(): filter = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.682][DEBUG] Objectives::getObjectives(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.682][DEBUG] Objectives::getObjectives(): Calling pool.query("
+                SELECT
+                    o.objective_id, o.description, o.user_id_assigned_to,
+                    u.first_name, u.middle_name, u.last_name,
+                    full_name(u.first_name, u.middle_name, u.last_name)  
+                FROM 
+                    objectives o
+                LEFT OUTER JOIN
+                    users u ON o.user_id_assigned_to = u.user_id", [])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.738][DEBUG] Objectives::getObjectives(): resolving with res = {"command":"SELECT","rowCount":4,"oid":null,"rows":[{"objective_id":46,"description":"Arrange files","user_id_assigned_to":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger","full_name":"Arnold Schwarzenegger"},{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs","full_name":"Jean R. Kovacs"},{"objective_id":48,"description":"Let off some steam, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":49,"description":"I'll be back, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"}],"fields":[{"name":"objective_id","tableID":16459,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"description","tableID":16459,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"user_id_assigned_to","tableID":16459,"columnID":3,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"first_name","tableID":16423,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"middle_name","tableID":16423,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"last_name","tableID":16423,"columnID":4,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"full_name","tableID":0,"columnID":0,"dataTypeID":25,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null,null,null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.738][DEBUG] getObjectives() -- after add -- length...then: objectives = [{"objective_id":46,"description":"Arrange files","user_id_assigned_to":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger","full_name":"Arnold Schwarzenegger"},{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs","full_name":"Jean R. Kovacs"},{"objective_id":48,"description":"Let off some steam, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":49,"description":"I'll be back, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.739][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- description filter -- case insensitive(): filter = {"description_filter":"GlAsSwArE"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.739][DEBUG] Objectives::getObjectives(): filter = {"description_filter":"GlAsSwArE"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.740][DEBUG] Objectives::getObjectives(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.740][DEBUG] Objectives::getObjectives(): Calling pool.query("
+                SELECT
+                    o.objective_id, o.description, o.user_id_assigned_to,
+                    u.first_name, u.middle_name, u.last_name,
+                    full_name(u.first_name, u.middle_name, u.last_name)  
+                FROM 
+                    objectives o
+                LEFT OUTER JOIN
+                    users u ON o.user_id_assigned_to = u.user_id
+    WHERE
+    	o.description ILIKE '%' || $1 || '%'", ["GlAsSwArE"])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.789][DEBUG] Objectives::getObjectives(): resolving with res = {"command":"SELECT","rowCount":1,"oid":null,"rows":[{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs","full_name":"Jean R. Kovacs"}],"fields":[{"name":"objective_id","tableID":16459,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"description","tableID":16459,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"user_id_assigned_to","tableID":16459,"columnID":3,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"first_name","tableID":16423,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"middle_name","tableID":16423,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"last_name","tableID":16423,"columnID":4,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"full_name","tableID":0,"columnID":0,"dataTypeID":25,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null,null,null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.789][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- description filter -- case insensitive(): after...then: objectives = [{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs","full_name":"Jean R. Kovacs"}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.790][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- description filter -- case insensitive(): after...then: objectives.length = 1[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.791][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by description ASC(): filter = {"sort_by_field":"description","sort_by_asc_desc":"asc"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.794][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by description ASC(): expected_descriptions_array = ["Arrange files","I'll be back, Bennett!","Let off some steam, Bennett!","Wash glassware"][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.794][DEBUG] Objectives::getObjectives(): filter = {"sort_by_field":"description","sort_by_asc_desc":"asc"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.795][DEBUG] Objectives::getObjectives(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.795][DEBUG] Objectives::getObjectives(): Calling pool.query("
+                SELECT
+                    o.objective_id, o.description, o.user_id_assigned_to,
+                    u.first_name, u.middle_name, u.last_name,
+                    full_name(u.first_name, u.middle_name, u.last_name)  
+                FROM 
+                    objectives o
+                LEFT OUTER JOIN
+                    users u ON o.user_id_assigned_to = u.user_id
+    ORDER BY description ASC", [])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.858][DEBUG] Objectives::getObjectives(): resolving with res = {"command":"SELECT","rowCount":4,"oid":null,"rows":[{"objective_id":46,"description":"Arrange files","user_id_assigned_to":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger","full_name":"Arnold Schwarzenegger"},{"objective_id":49,"description":"I'll be back, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":48,"description":"Let off some steam, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs","full_name":"Jean R. Kovacs"}],"fields":[{"name":"objective_id","tableID":16459,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"description","tableID":16459,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"user_id_assigned_to","tableID":16459,"columnID":3,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"first_name","tableID":16423,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"middle_name","tableID":16423,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"last_name","tableID":16423,"columnID":4,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"full_name","tableID":0,"columnID":0,"dataTypeID":25,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null,null,null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.858][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by description ASC(): after...then: objectives = [{"objective_id":46,"description":"Arrange files","user_id_assigned_to":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger","full_name":"Arnold Schwarzenegger"},{"objective_id":49,"description":"I'll be back, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":48,"description":"Let off some steam, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs","full_name":"Jean R. Kovacs"}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.859][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by description ASC(): after...then: new_objectives = [{"objective_id":46,"description":"Arrange files","user_id_assigned_to":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger","full_name":"Arnold Schwarzenegger"},{"objective_id":49,"description":"I'll be back, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":48,"description":"Let off some steam, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs","full_name":"Jean R. Kovacs"}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.859][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by description ASC(): output_descriptions_array = ["Arrange files","I'll be back, Bennett!","Let off some steam, Bennett!","Wash glassware"][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.860][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by description DESC(): filter = {"sort_by_field":"description","sort_by_asc_desc":"desc"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.861][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by description DESC(): expected_descriptions_array = ["Wash glassware","Let off some steam, Bennett!","I'll be back, Bennett!","Arrange files"][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.861][DEBUG] Objectives::getObjectives(): filter = {"sort_by_field":"description","sort_by_asc_desc":"desc"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.862][DEBUG] Objectives::getObjectives(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.862][DEBUG] Objectives::getObjectives(): Calling pool.query("
+                SELECT
+                    o.objective_id, o.description, o.user_id_assigned_to,
+                    u.first_name, u.middle_name, u.last_name,
+                    full_name(u.first_name, u.middle_name, u.last_name)  
+                FROM 
+                    objectives o
+                LEFT OUTER JOIN
+                    users u ON o.user_id_assigned_to = u.user_id
+    ORDER BY description DESC", [])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.935][DEBUG] Objectives::getObjectives(): resolving with res = {"command":"SELECT","rowCount":4,"oid":null,"rows":[{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs","full_name":"Jean R. Kovacs"},{"objective_id":48,"description":"Let off some steam, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":49,"description":"I'll be back, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":46,"description":"Arrange files","user_id_assigned_to":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger","full_name":"Arnold Schwarzenegger"}],"fields":[{"name":"objective_id","tableID":16459,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"description","tableID":16459,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"user_id_assigned_to","tableID":16459,"columnID":3,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"first_name","tableID":16423,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"middle_name","tableID":16423,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"last_name","tableID":16423,"columnID":4,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"full_name","tableID":0,"columnID":0,"dataTypeID":25,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null,null,null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.935][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by description DESC(): after...then: objectives = [{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs","full_name":"Jean R. Kovacs"},{"objective_id":48,"description":"Let off some steam, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":49,"description":"I'll be back, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":46,"description":"Arrange files","user_id_assigned_to":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger","full_name":"Arnold Schwarzenegger"}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.936][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by description DESC(): after...then: new_objectives = [{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs","full_name":"Jean R. Kovacs"},{"objective_id":48,"description":"Let off some steam, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":49,"description":"I'll be back, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":46,"description":"Arrange files","user_id_assigned_to":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger","full_name":"Arnold Schwarzenegger"}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.937][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by description DESC(): output_descriptions_array = ["Wash glassware","Let off some steam, Bennett!","I'll be back, Bennett!","Arrange files"][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.938][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by full_name ASC(): filter = {"sort_by_field":"full_name","sort_by_asc_desc":"asc"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.939][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by full_name ASC(): expected_full_name_array = ["Arnold Schwarzenegger","Jean R. Kovacs","Robert S. Peters","Robert S. Peters"][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.940][DEBUG] Objectives::getObjectives(): filter = {"sort_by_field":"full_name","sort_by_asc_desc":"asc"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.940][DEBUG] Objectives::getObjectives(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.941][DEBUG] Objectives::getObjectives(): Calling pool.query("
+                SELECT
+                    o.objective_id, o.description, o.user_id_assigned_to,
+                    u.first_name, u.middle_name, u.last_name,
+                    full_name(u.first_name, u.middle_name, u.last_name)  
+                FROM 
+                    objectives o
+                LEFT OUTER JOIN
+                    users u ON o.user_id_assigned_to = u.user_id
+    ORDER BY full_name(u.first_name, u.middle_name, u.last_name) ASC", [])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.999][DEBUG] Objectives::getObjectives(): resolving with res = {"command":"SELECT","rowCount":4,"oid":null,"rows":[{"objective_id":46,"description":"Arrange files","user_id_assigned_to":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger","full_name":"Arnold Schwarzenegger"},{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs","full_name":"Jean R. Kovacs"},{"objective_id":48,"description":"Let off some steam, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":49,"description":"I'll be back, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"}],"fields":[{"name":"objective_id","tableID":16459,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"description","tableID":16459,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"user_id_assigned_to","tableID":16459,"columnID":3,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"first_name","tableID":16423,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"middle_name","tableID":16423,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"last_name","tableID":16423,"columnID":4,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"full_name","tableID":0,"columnID":0,"dataTypeID":25,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null,null,null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:17.999][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by full_name ASC(): after...then: objectives = [{"objective_id":46,"description":"Arrange files","user_id_assigned_to":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger","full_name":"Arnold Schwarzenegger"},{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs","full_name":"Jean R. Kovacs"},{"objective_id":48,"description":"Let off some steam, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":49,"description":"I'll be back, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.0][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by full_name ASC(): after...then: new_objectives = [{"objective_id":46,"description":"Arrange files","user_id_assigned_to":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger","full_name":"Arnold Schwarzenegger"},{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs","full_name":"Jean R. Kovacs"},{"objective_id":48,"description":"Let off some steam, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":49,"description":"I'll be back, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.0][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by full_name ASC(): output_full_name_array = ["Arnold Schwarzenegger","Jean R. Kovacs","Robert S. Peters","Robert S. Peters"][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.1][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by full_name DESC(): filter = {"sort_by_field":"full_name","sort_by_asc_desc":"desc"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.1][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by full_name DESC(): expected_full_name_array = ["Robert S. Peters","Robert S. Peters","Jean R. Kovacs","Arnold Schwarzenegger"][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.1][DEBUG] Objectives::getObjectives(): filter = {"sort_by_field":"full_name","sort_by_asc_desc":"desc"}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.2][DEBUG] Objectives::getObjectives(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.2][DEBUG] Objectives::getObjectives(): Calling pool.query("
+                SELECT
+                    o.objective_id, o.description, o.user_id_assigned_to,
+                    u.first_name, u.middle_name, u.last_name,
+                    full_name(u.first_name, u.middle_name, u.last_name)  
+                FROM 
+                    objectives o
+                LEFT OUTER JOIN
+                    users u ON o.user_id_assigned_to = u.user_id
+    ORDER BY full_name(u.first_name, u.middle_name, u.last_name) DESC", [])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.63][DEBUG] Objectives::getObjectives(): resolving with res = {"command":"SELECT","rowCount":4,"oid":null,"rows":[{"objective_id":48,"description":"Let off some steam, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":49,"description":"I'll be back, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs","full_name":"Jean R. Kovacs"},{"objective_id":46,"description":"Arrange files","user_id_assigned_to":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger","full_name":"Arnold Schwarzenegger"}],"fields":[{"name":"objective_id","tableID":16459,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"description","tableID":16459,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"user_id_assigned_to","tableID":16459,"columnID":3,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"first_name","tableID":16423,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"middle_name","tableID":16423,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"last_name","tableID":16423,"columnID":4,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"full_name","tableID":0,"columnID":0,"dataTypeID":25,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null,null,null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.64][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by full_name DESC(): after...then: objectives = [{"objective_id":48,"description":"Let off some steam, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":49,"description":"I'll be back, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs","full_name":"Jean R. Kovacs"},{"objective_id":46,"description":"Arrange files","user_id_assigned_to":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger","full_name":"Arnold Schwarzenegger"}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.64][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by full_name DESC(): after...then: new_objectives = [{"objective_id":48,"description":"Let off some steam, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":49,"description":"I'll be back, Bennett!","user_id_assigned_to":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters","full_name":"Robert S. Peters"},{"objective_id":47,"description":"Wash glassware","user_id_assigned_to":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs","full_name":"Jean R. Kovacs"},{"objective_id":46,"description":"Arrange files","user_id_assigned_to":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger","full_name":"Arnold Schwarzenegger"}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.64][DEBUG] __tests__/models/dbmodels.test.js::getObjectives -- sort_by full_name DESC(): output_full_name_array = ["Robert S. Peters","Robert S. Peters","Jean R. Kovacs","Arnold Schwarzenegger"][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.65][DEBUG] __tests__/models/dbmodels.test.js::getObjectives() -- null filter...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.65][DEBUG] Objectives::getObjectives(): filter = null[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.66][DEBUG] __tests__/models/dbmodels.test.js::getObjectives() -- null filter...caught err = 
+    message:"You supplied a null filter."
+    stack:"Error: You supplied a null filter.
+        at c:\inetpub\wwwroot\scrumi-react\src\server\models\objectives.js:125:28
+        at new Promise (<anonymous>)
+        at Objectives.getObjectives (c:\inetpub\wwwroot\scrumi-react\src\server\models\objectives.js:122:20)
+        at Object.<anonymous> (c:\inetpub\wwwroot\scrumi-react\__tests__\models\dbmodels.test.js:311:25)
+        at resolve (c:\inetpub\wwwroot\scrumi-react\node_modules\jest-jasmine2\build\queue_runner.js:46:12)
+        at new Promise (<anonymous>)
+        at mapper (c:\inetpub\wwwroot\scrumi-react\node_modules\jest-jasmine2\build\queue_runner.js:34:499)
+        at promise.then (c:\inetpub\wwwroot\scrumi-react\node_modules\jest-jasmine2\build\queue_runner.js:74:39)
+        at <anonymous>
+        at process._tickDomainCallback (internal/process/next_tick.js:228:7)"[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.67][DEBUG] Users::getUsers(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.68][DEBUG] Users::getUsers(): Calling pool.query("SELECT * from users", [])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.113][DEBUG] Users::getUsers(): resolving with res = {"command":"SELECT","rowCount":4,"oid":null,"rows":[{"user_id":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"user_id":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters"},{"user_id":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger"},{"user_id":179,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"}],"fields":[{"name":"user_id","tableID":16423,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"first_name","tableID":16423,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"middle_name","tableID":16423,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"last_name","tableID":16423,"columnID":4,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"}],"_parsers":[null,null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.113][DEBUG] getUsers() -- after add...then...users= [{"user_id":176,"first_name":"Jean","middle_name":"R.","last_name":"Kovacs"},{"user_id":177,"first_name":"Robert","middle_name":"S.","last_name":"Peters"},{"user_id":178,"first_name":"Arnold","middle_name":"","last_name":"Schwarzenegger"},{"user_id":179,"first_name":"Joe","middle_name":"S.","last_name":"Kovacs"}][49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.114][DEBUG] __tests__/models/dbmodels.test.js::test deleteObjectiveById(): Calling deleteObjectiveById(46)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.115][DEBUG] Objectives::deleteObjectiveById(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.115][DEBUG] Objectives::deleteObjectiveById(): Calling pool.query("DELETE from objectives 
+            	 WHERE objective_id = $1
+                RETURNING objective_id
+            	", [46])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.115][DEBUG] __tests__/models/dbmodels.test.js::test deleteObjectiveById(): Calling deleteObjectiveById(47)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.116][DEBUG] Objectives::deleteObjectiveById(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.116][DEBUG] Objectives::deleteObjectiveById(): Calling pool.query("DELETE from objectives 
+            	 WHERE objective_id = $1
+                RETURNING objective_id
+            	", [47])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.116][DEBUG] __tests__/models/dbmodels.test.js::test deleteObjectiveById(): Calling deleteObjectiveById(48)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.117][DEBUG] Objectives::deleteObjectiveById(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.117][DEBUG] Objectives::deleteObjectiveById(): Calling pool.query("DELETE from objectives 
+            	 WHERE objective_id = $1
+                RETURNING objective_id
+            	", [48])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.117][DEBUG] __tests__/models/dbmodels.test.js::test deleteObjectiveById(): Calling deleteObjectiveById(49)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.118][DEBUG] Objectives::deleteObjectiveById(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.118][DEBUG] Objectives::deleteObjectiveById(): Calling pool.query("DELETE from objectives 
+            	 WHERE objective_id = $1
+                RETURNING objective_id
+            	", [49])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.235][DEBUG] Objectives::deleteObjectiveById(): resolving with res.rows[0].objective_id, res = {"command":"DELETE","rowCount":1,"oid":null,"rows":[{"objective_id":48}],"fields":[{"name":"objective_id","tableID":16459,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.236][DEBUG] __tests__/models/dbmodels.test.js::test deleteObjectiveById(): After deleteObjectiveById(48)...then...deletedId=48...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.242][DEBUG] Objectives::deleteObjectiveById(): resolving with res.rows[0].objective_id, res = {"command":"DELETE","rowCount":1,"oid":null,"rows":[{"objective_id":49}],"fields":[{"name":"objective_id","tableID":16459,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.243][DEBUG] __tests__/models/dbmodels.test.js::test deleteObjectiveById(): After deleteObjectiveById(49)...then...deletedId=49...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.247][DEBUG] Objectives::deleteObjectiveById(): resolving with res.rows[0].objective_id, res = {"command":"DELETE","rowCount":1,"oid":null,"rows":[{"objective_id":46}],"fields":[{"name":"objective_id","tableID":16459,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.248][DEBUG] __tests__/models/dbmodels.test.js::test deleteObjectiveById(): After deleteObjectiveById(46)...then...deletedId=46...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.251][DEBUG] Objectives::deleteObjectiveById(): resolving with res.rows[0].objective_id, res = {"command":"DELETE","rowCount":1,"oid":null,"rows":[{"objective_id":47}],"fields":[{"name":"objective_id","tableID":16459,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.252][DEBUG] __tests__/models/dbmodels.test.js::test deleteObjectiveById(): After deleteObjectiveById(47)...then...deletedId=47...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.252][DEBUG] Objectives::getObjectives(): filter = {}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.253][DEBUG] Objectives::getObjectives(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.253][DEBUG] Objectives::getObjectives(): Calling pool.query("
+                SELECT
+                    o.objective_id, o.description, o.user_id_assigned_to,
+                    u.first_name, u.middle_name, u.last_name,
+                    full_name(u.first_name, u.middle_name, u.last_name)  
+                FROM 
+                    objectives o
+                LEFT OUTER JOIN
+                    users u ON o.user_id_assigned_to = u.user_id", [])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.299][DEBUG] Objectives::getObjectives(): resolving with res = {"command":"SELECT","rowCount":0,"oid":null,"rows":[],"fields":[{"name":"objective_id","tableID":16459,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"description","tableID":16459,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"user_id_assigned_to","tableID":16459,"columnID":3,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"first_name","tableID":16423,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"middle_name","tableID":16423,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"last_name","tableID":16423,"columnID":4,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"full_name","tableID":0,"columnID":0,"dataTypeID":25,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null,null,null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.299][DEBUG] __tests__/models/dbmodels.test.js: getObjectives -- after delete...then...objectives= [] , objectives.length = 0 objectiveCountBefore= 0[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.300][DEBUG] __tests__/models/dbmodels.test.js: deleteUserById(176)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.301][DEBUG] Users::deleteUserById(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.301][DEBUG] Users::deleteUserById(): Calling pool.query("DELETE from users 
+            	 WHERE user_id = $1
+                RETURNING user_id
+            	", [176])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.301][DEBUG] __tests__/models/dbmodels.test.js: deleteUserById(178)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.302][DEBUG] Users::deleteUserById(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.302][DEBUG] Users::deleteUserById(): Calling pool.query("DELETE from users 
+            	 WHERE user_id = $1
+                RETURNING user_id
+            	", [178])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.302][DEBUG] __tests__/models/dbmodels.test.js: deleteUserById(177)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.303][DEBUG] Users::deleteUserById(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.303][DEBUG] Users::deleteUserById(): Calling pool.query("DELETE from users 
+            	 WHERE user_id = $1
+                RETURNING user_id
+            	", [177])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.304][DEBUG] __tests__/models/dbmodels.test.js: deleteUserById(179)...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.304][DEBUG] Users::deleteUserById(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.304][DEBUG] Users::deleteUserById(): Calling pool.query("DELETE from users 
+            	 WHERE user_id = $1
+                RETURNING user_id
+            	", [179])...[49m[0m
 
 PASS __tests__\models\dbmodels.test.js
   DbModels
-    √ getUsers -- before (373ms)
-    √ addUser... (84ms)
-    √ getObjectives -- before (68ms)
-    √ getObjectives -- null filter -- error (16ms)
-    √ getUsers -- after add (78ms)
-    √ deleteUserById: quantity=0 (90ms)
-    √ getUsers -- after delete (57ms)
+    √ getObjectives -- before (70ms)
+    √ getUsers -- before (47ms)
+    √ addUser... (112ms)
+    √ addObjective()... (97ms)
+    √ getObjectives -- after add -- length (58ms)
+    √ getObjectives -- description filter -- case insensitive (52ms)
+    √ getObjectives -- sort_by description ASC (69ms)
+    √ getObjectives -- sort_by description DESC (77ms)
+    √ getObjectives -- sort_by full_name ASC (63ms)
+    √ getObjectives -- sort_by full_name DESC (65ms)
+    √ getObjectives -- null filter -- error (2ms)
+    √ getUsers -- after add (47ms)
+    √ deleteObjectiveById()... (138ms)
+    √ getObjectives -- after delete (48ms)
+    √ deleteUserById()... (107ms)
+    √ getUsers -- after delete (44ms)
 
-PASS __tests__\api\objectives-api.test.js
-  objectives_api...
-    √ doGet()... (15ms)
-    √ doGet() -- null filter -- error (10ms)
-
-PASS __tests__\lib\array-helpers.test.js
-  Array Helpers
-    sortBy
-      √ sorts by title (3ms)
-      √ sorts by rating (1ms)
-      √ sorts by date (1ms)
-
-PASS __tests__\mocks\objectives-mock.test.js
-  Objectives mock...
-    √ getObjectives() (4ms)
-    √ getObjectives()--exception if null filter (3ms)
-
-Test Suites: 4 passed, 4 total
-Tests:       14 passed, 14 total
+Test Suites: 1 passed, 1 total
+Tests:       16 passed, 16 total
 Snapshots:   0 total
-Time:        5.133s
-Ran all test suites related to changed files.
+Time:        4.087s
+Ran all test suites matching /dbmodels.test.js$/i.
+
+Active Filters: filename /dbmodels.test.js$/
+ › Press c to clear filters.
 
 Watch Usage
  › Press a to run all tests.
+ › Press o to only run tests related to changed files.
  › Press p to filter by a filename regex pattern.
  › Press t to filter by a test name regex pattern.
  › Press q to quit watch mode.
  › Press Enter to trigger a test run.
-q
-[1]+  Done                    gvim package.json
-sh-4.4$ 
-sh-4.4$ 
-sh-4.4$ 
-sh-4.4$ exit
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.393][DEBUG] Users::deleteUserById(): Got res = {"command":"DELETE","rowCount":1,"oid":null,"rows":[{"user_id":178}],"fields":[{"name":"user_id","tableID":16423,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.393][DEBUG] __tests__/models/dbmodels.test.js: deleteUserById(178)...then...deletedId=178...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.398][DEBUG] Users::deleteUserById(): Got res = {"command":"DELETE","rowCount":1,"oid":null,"rows":[{"user_id":177}],"fields":[{"name":"user_id","tableID":16423,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.398][DEBUG] __tests__/models/dbmodels.test.js: deleteUserById(177)...then...deletedId=177...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.403][DEBUG] Users::deleteUserById(): Got res = {"command":"DELETE","rowCount":1,"oid":null,"rows":[{"user_id":179}],"fields":[{"name":"user_id","tableID":16423,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.403][DEBUG] __tests__/models/dbmodels.test.js: deleteUserById(179)...then...deletedId=179...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.406][DEBUG] Users::deleteUserById(): Got res = {"command":"DELETE","rowCount":1,"oid":null,"rows":[{"user_id":176}],"fields":[{"name":"user_id","tableID":16423,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.407][DEBUG] __tests__/models/dbmodels.test.js: deleteUserById(176)...then...deletedId=176...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.407][DEBUG] Users::getUsers(): Calling pool = new Pool( {"database":"scrumi-test"} )...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.408][DEBUG] Users::getUsers(): Calling pool.query("SELECT * from users", [])...[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.450][DEBUG] Users::getUsers(): resolving with res = {"command":"SELECT","rowCount":0,"oid":null,"rows":[],"fields":[{"name":"user_id","tableID":16423,"columnID":1,"dataTypeID":23,"dataTypeSize":4,"dataTypeModifier":-1,"format":"text"},{"name":"first_name","tableID":16423,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"middle_name","tableID":16423,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"},{"name":"last_name","tableID":16423,"columnID":4,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":104,"format":"text"}],"_parsers":[null,null,null,null],"RowCtor":null,"rowAsArray":false}[49m[0m
+
+  console.info node_modules\logatim\dist\logatim.umd.min.js:1
+    [30m[2018-10-08 22:23:18.451][DEBUG] getUsers() -- after delete...then...users= [] , userCountBefore= 0[49m[0m
+
+events.js:183
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EPERM: operation not permitted, lstat 'c:\inetpub\wwwroot\scrumi-react\.typescript.swp'
+sh-4.3$ ls -l a8     -al *.sqp  wp
+ls: cannot access '*.swp': No such file or directory
+sh-4.3$ pwd
+/cygdrive/c/inetpub/wwwroot/scrumi-react
+sh-4.3$ ls a- -al      -al 
+total 1970
+drwxrwx---+ 1 John None      0 Oct  8 22:24 .
+drwxrwx---+ 1 John None      0 Oct  4 22:35 ..
+-rwxrwx---+ 1 John None     68 Jun  7 20:51 .babelrc
+-rwxrwx---+ 1 John None     48 Aug 30 20:32 .eslintignore
+-rwxrwx---+ 1 John None    494 Sep  5 20:29 .eslintrc.yml
+drwxrwx---+ 1 John None      0 Oct  8 21:22 .git
+-rwxrwx---+ 1 John None    846 Sep 26 21:45 .gitignore
+-rwxrwx---+ 1 John None  12288 Oct  8 22:24 .p.bat.swp
+-rwxrwx---+ 1 John None   9120 Oct  8 20:49 .p.bat.un~
+-rwxrwx---+ 1 John None 380168 Oct  8 21:55 .p.out.un~
+drwxrwx---+ 1 John None      0 Oct  2 19:53 __mocks__
+drwxrwx---+ 1 John None      0 Oct  8 21:41 __tests__
+drwxrwx---+ 1 John None      0 Sep 28 17:50 build
+drwxrwx---+ 1 John None      0 Sep 29 00:14 coverage
+drwxrwx---+ 1 John None      0 Aug 14 20:42 curl
+drwxrwx---+ 1 John None      0 Oct  8 19:30 data
+drwxrwx---+ 1 John None      0 Oct  8 21:33 db
+drwxrwx---+ 1 John None      0 Sep  5 20:29 demos
+drwxrwx---+ 1 John None      0 Sep 28 20:54 dist
+drwxrwx---+ 1 John None      0 Sep 28 22:33 documentation
+-rwxrwx---+ 1 John None   1363 Sep 26 21:45 gotchas.txt
+drwxrwx---+ 1 John None      0 Sep 26 21:45 install
+-rwxrwx---+ 1 John None    198 Jun 28 21:08 install.sh
+-rwxrwx---+ 1 John None    132 Sep 26 21:45 milestones.txt
+drwxrwx---+ 1 John None      0 Sep 26 21:51 node_modules
+-rw-rw-r--+ 1 John None 129082 Sep 28 23:12 p.1.out
+-rwxrwx---+ 1 John None   2412 Oct  8 20:49 p.bat
+-rwxrwx---+ 1 John None   2412 Oct  8 20:02 p.bat~
+-rwxrwx---+ 1 John None 129082 Sep 28 23:12 p.debug.out
+-rw-rw-r--+ 1 John None   7638 Sep 28 23:21 p.info.out
+-rwxrwx---+ 1 John None  63171 Oct  8 22:20 p.out
+-rwxrwx---+ 1 John None 539315 Sep 26 21:51 package-lock.json
+-rwxrwx---+ 1 John None   4150 Oct  8 16:58 package.json
+-rwxrwx---+ 1 John None   1970 Sep 26 21:46 readme.md
+drwxrwx---+ 1 John None      0 Sep 26 21:45 scripts
+drwxrwx---+ 1 John None      0 Oct  8 21:33 src
+-rwxrwx---+ 1 John None     57 Jun  7 20:51 status.bat
+-rwxrwx---+ 1 John None   2978 Jul 25 21:45 status.txt
+drwxrwx---+ 1 John None      0 Sep  5 20:29 stylesheets
+-rwxrwx---+ 1 John None 133112 Sep 28 18:42 test.err
+-rwxrwx---+ 1 John None  11054 Sep 28 18:42 test.json
+-rwxrwx---+ 1 John None  15760 Sep 28 18:43 test.pretty.json
+-rwxrwx---+ 1 John None   1040 Oct  2 19:53 todo.txt
+-rwxrwx---+ 1 John None  65536 Oct  8 22:23 typescript
+-rwxrwx---+ 1 John None    782 Oct  8 16:52 v.bat
+-rwxrwx---+ 1 John None   2358 Sep  5 20:29 webpack.config.js
+sh-4.3$ ls -al  | rep     grep type
+-rwxrwx---+ 1 John None  65536 Oct  8 22:23 typescript
+sh-4.3$ 
+sh-4.3$ 
+sh-4.3$ 
+sh-4.3$ 
+sh-4.3$ quit
+sh: quit: command not found
+sh-4.3$ exit
 exit
 
-Script done on Tue Sep 18 16:10:51 2018
+Script done on Mon Oct  8 22:27:01 2018

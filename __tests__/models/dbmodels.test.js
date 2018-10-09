@@ -30,8 +30,8 @@ describe('DbModels', () => {
     const testUsersIn = [
         { first_name: 'Joe', middle_name: 'S.', last_name: 'Kovacs' },
         { first_name: 'Jean', middle_name: 'R.', last_name: 'Kovacs' },
-        {first_name: "Arnold", middle_name: "", last_name: "Schwarzenegger"},
-        {first_name: "Robert", middle_name: "S.", last_name: "Peters"}
+        { first_name: "Arnold", middle_name: "", last_name: "Schwarzenegger" },
+        { first_name: "Robert", middle_name: "S.", last_name: "Peters" }
     ]
 
     // Note: supply index in testUsersIn...we'll use the user_id for the database insert...
@@ -43,9 +43,11 @@ describe('DbModels', () => {
     ]
 
     const testUsersOut = [] // The newly added users...
+    const testUsersOutIdMap = {} // For quick lookup by user_id... 
 
     const testObjectivesOut = [] // The newly added objectives...
-    const testObjectivesOutIdMap = {} // For quick determination if we're dealing with one of our newly added objectives...
+    const testObjectivesOutIdMap = {} // For quick lookup by objective_id...
+
  
 
     let userCountBefore = null
@@ -75,14 +77,23 @@ describe('DbModels', () => {
 
 
     it('addUser...', (done) => {
+
+        let sWho = sWhere + '::addUser...'
+
         const numAdded = 0
+
         testUsersIn.forEach((user) => {
 	        usersModel.addUser(user)
 	        .then((newUser) => {
                     const userOutExpected = { ...user, user_id: newUser.user_id }
 	            expect(newUser).toEqual(userOutExpected)
+
                     testUsersOut.push(newUser)
+                    testUsersOutIdMap[newUser.user_id] = newUser
+
                     if (testUsersOut.length == testUsersIn.length) {
+                        logajohn.debug(`${sWho}() -- SHEMP: donezo!  testUsersOut = `, testUsersOut )
+                        logajohn.debug(`${sWho}() -- SHEMP: donezo!  testUsersOutIdMap = `, testUsersOutIdMap )
                         done()
                     }
                 })
@@ -92,7 +103,7 @@ describe('DbModels', () => {
 
     it('addObjective()...', (done) => {
 
-        let sWho = 'addObjective()'
+        let sWho = sWhere + '::addObjective()'
 
         const numAdded = 0
         testObjectivesIn.forEach((objective, index) => {
@@ -108,12 +119,12 @@ describe('DbModels', () => {
 	        objectivesModel.addObjective(objective)
 	        .then((newObjective) => {
 
-                    const objectiveOutExpected = { ...objective, task_id: newObjective.task_id }
+                    const objectiveOutExpected = { ...objective, objective_id: newObjective.objective_id }
 
     	            expect(newObjective).toEqual(objectiveOutExpected)
 
                     testObjectivesOut.push(newObjective)
-                    testObjectivesOutIdMap[newObjective.task_id] = newObjective
+                    testObjectivesOutIdMap[newObjective.objective_id] = newObjective
 
                     if (testObjectivesOut.length == testObjectivesIn.length) {
                         logajohn.debug(`${sWho}() -- SHEMP: donezo!  testObjectivesOut = `, testObjectivesOut )
@@ -136,7 +147,7 @@ describe('DbModels', () => {
 
     it('getObjectives -- description filter -- case insensitive', (done) => {
 
-        let sWho = 'getObjectives -- description filter -- case insensitive'
+        let sWho = sWhere + '::getObjectives -- description filter -- case insensitive'
 
         let filter = { description_filter: 'GlAsSwArE' }  // case insensitive: 'GlAsSwArE' to match 'glassware'...
 
@@ -149,7 +160,7 @@ describe('DbModels', () => {
 
                 // Get rid of objectives that we didn't add ourselves as part
                 // of the test...
-                let new_objectives = objectives.filter( objective => testObjectivesOutIdMap.hasOwnProperty(objective.task_id) )
+                let new_objectives = objectives.filter( objective => testObjectivesOutIdMap.hasOwnProperty(objective.objective_id) )
 
                 // Should just be the one of the _new_ test objective with description 'Wash glassware' 
                 expect(new_objectives.length).toEqual(1)
@@ -159,13 +170,13 @@ describe('DbModels', () => {
 
     it('getObjectives -- sort_by description ASC', (done) => {
 
-        let sWho = 'getObjectives -- sort_by description ASC'
+        let sWho = sWhere + '::getObjectives -- sort_by description ASC'
 
         let filter = { sort_by_field: 'description', sort_by_asc_desc: 'asc' }
 
         logajohn.debug(`${sWho}(): filter = `, filter )
 
-        let expected_descriptions_array = testObjectivesIn.map( element => element.description ).sort()
+        let expected_descriptions_array = testObjectivesIn.map( element => element.description ).sort( (a,b)=>+1*a.localeCompare(b) )
         logajohn.debug(`${sWho}(): expected_descriptions_array = `, expected_descriptions_array )
 
         objectivesModel.getObjectives( filter )
@@ -174,7 +185,7 @@ describe('DbModels', () => {
 
                 // Get rid of objectives that we didn't add ourselves as part
                 // of the test...
-                let new_objectives = objectives.filter( objective => testObjectivesOutIdMap.hasOwnProperty(objective.task_id) )
+                let new_objectives = objectives.filter( objective => testObjectivesOutIdMap.hasOwnProperty(objective.objective_id) )
 
                 logajohn.debug(`${sWho}(): after...then: new_objectives =`, new_objectives)
 
@@ -190,7 +201,7 @@ describe('DbModels', () => {
 
     it('getObjectives -- sort_by description DESC', (done) => {
 
-        let sWho = 'getObjectives -- sort_by description DESC'
+        let sWho = sWhere + '::getObjectives -- sort_by description DESC'
 
         let filter = { sort_by_field: 'description', sort_by_asc_desc: 'desc' }
 
@@ -206,7 +217,7 @@ describe('DbModels', () => {
 
                 // Get rid of objectives that we didn't add ourselves as part
                 // of the test...
-                let new_objectives = objectives.filter( objective => testObjectivesOutIdMap.hasOwnProperty(objective.task_id) )
+                let new_objectives = objectives.filter( objective => testObjectivesOutIdMap.hasOwnProperty(objective.objective_id) )
 
                 logajohn.debug(`${sWho}(): after...then: new_objectives =`, new_objectives)
 
@@ -220,8 +231,82 @@ describe('DbModels', () => {
             })
     })
 
+    it('getObjectives -- sort_by full_name ASC', (done) => {
+
+        let sWho = sWhere + '::getObjectives -- sort_by full_name ASC'
+
+        let filter = { sort_by_field: 'full_name', sort_by_asc_desc: 'asc' }
+
+        logajohn.debug(`${sWho}(): filter = `, filter )
+
+        let expected_full_name_array = testObjectivesOut.map( (testObjectiveOut)=>{
+           let user_id = testObjectiveOut.user_id_assigned_to
+           let user = testUsersOutIdMap[user_id]
+           let full_name = Objectives.fullName( user.first_name, user.middle_name, user.last_name )
+           return full_name
+        }).sort( (a,b)=>+1*a.localeCompare(b) )
+
+        logajohn.debug(`${sWho}(): expected_full_name_array = `, expected_full_name_array )
+
+        objectivesModel.getObjectives( filter )
+            .then((objectives) => {
+                logajohn.debug(`${sWho}(): after...then: objectives =`, objectives)
+
+                // Get rid of objectives that we didn't add ourselves as part
+                // of the test...
+                let new_objectives = objectives.filter( objective => testObjectivesOutIdMap.hasOwnProperty(objective.objective_id) )
+
+                logajohn.debug(`${sWho}(): after...then: new_objectives =`, new_objectives)
+
+                // Just the descriptions...
+                let output_full_name_array = new_objectives.map( element => element.full_name )
+
+                logajohn.debug(`${sWho}(): output_full_name_array = `, output_full_name_array )
+                expect(output_full_name_array).toEqual(expected_full_name_array)
+
+                done()
+            })
+    })
+
+    it('getObjectives -- sort_by full_name DESC', (done) => {
+
+        let sWho = sWhere + '::getObjectives -- sort_by full_name DESC'
+
+        let filter = { sort_by_field: 'full_name', sort_by_asc_desc: 'desc' }
+
+        logajohn.debug(`${sWho}(): filter = `, filter )
+
+        let expected_full_name_array = testObjectivesOut.map( (testObjectiveOut)=>{
+           let user_id = testObjectiveOut.user_id_assigned_to
+           let user = testUsersOutIdMap[user_id]
+           let full_name = Objectives.fullName( user.first_name, user.middle_name, user.last_name )
+           return full_name
+        }).sort( (a,b)=>-1*a.localeCompare(b) )
+
+        logajohn.debug(`${sWho}(): expected_full_name_array = `, expected_full_name_array )
+
+        objectivesModel.getObjectives( filter )
+            .then((objectives) => {
+                logajohn.debug(`${sWho}(): after...then: objectives =`, objectives)
+
+                // Get rid of objectives that we didn't add ourselves as part
+                // of the test...
+                let new_objectives = objectives.filter( objective => testObjectivesOutIdMap.hasOwnProperty(objective.objective_id) )
+
+                logajohn.debug(`${sWho}(): after...then: new_objectives =`, new_objectives)
+
+                // Just the descriptions...
+                let output_full_name_array = new_objectives.map( element => element.full_name )
+
+                logajohn.debug(`${sWho}(): output_full_name_array = `, output_full_name_array )
+                expect(output_full_name_array).toEqual(expected_full_name_array)
+
+                done()
+            })
+    })
+
     it('getObjectives -- null filter -- error', (done) => {
-        let sWho = "getObjectives() -- null filter"
+        let sWho = sWhere + "::getObjectives() -- null filter"
         logajohn.debug(`${sWho}...`)
         objectivesModel.getObjectives(null) // Should reject promise if you supply null filter...
             .then((objectives) => {
@@ -249,20 +334,20 @@ describe('DbModels', () => {
 
     it(`deleteObjectiveById()...`, (done) => {
 
-        let sWho = `test deleteObjectiveById`
+        let sWho = sWhere + `::test deleteObjectiveById`
 
         let num_deleted = 0
 
         // Delete all the objectives one-by-one...
         testObjectivesOut.forEach((objective) => {
 
-            logajohn.debug(`${sWho}(): Calling deleteObjectiveById(${objective.task_id})...`)
+            logajohn.debug(`${sWho}(): Calling deleteObjectiveById(${objective.objective_id})...`)
 
-	        objectivesModel.deleteObjectiveById(objective.task_id)
+	        objectivesModel.deleteObjectiveById(objective.objective_id)
             .then((deletedId) => {
-                logajohn.debug(`${sWho}(): After deleteObjectiveById(${objective.task_id})...then...deletedId=${deletedId}...`)
+                logajohn.debug(`${sWho}(): After deleteObjectiveById(${objective.objective_id})...then...deletedId=${deletedId}...`)
 
-  	            expect(deletedId).toEqual(objective.task_id)
+  	            expect(deletedId).toEqual(objective.objective_id)
                 num_deleted++
                 if (num_deleted == testObjectivesOut.length) {
                     done()
@@ -377,7 +462,7 @@ describe('DbModels', () => {
 
     /* Any teardown...? */
     afterAll(() => {
-        const sWho = 'objectives.test.js::afterAll'
+        const sWho = sWhere + '::objectives.test.js::afterAll'
     /* e.g., clear the test database... */
     })
 })

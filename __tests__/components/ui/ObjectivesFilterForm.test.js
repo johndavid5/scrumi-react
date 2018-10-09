@@ -53,7 +53,6 @@ describe("<ObjectivesFilterForm /> UI Component", () => {
 
         let wrapper = mount(<ObjectivesFilterForm descriptionFilter={s_description_filter} onObjectivesFilter={_onObjectivesFilter} />)
 
-
         //let le_props = wrapper.instance().props
         //let le_props = wrapper.props()
         //logajohn.debug(`${sWho}(): le_props = `, le_props )

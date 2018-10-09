@@ -20,6 +20,7 @@
     "jest-config": "jest --showConfig",
     "test": "jest",
     "test-all": "jest --all",
+    "test-watch": "jest --watch",
     "test-watch-all": "jest --watchAll",
     "test-coverage": "jest --coverage=true",
     "test-app": "jest --watch app.test.js",
@@ -104,8 +105,17 @@
       "shim.js",
       "global.js",
       "build",
-      "~$",
-      "\\.swp"
+      "~",
+      ".swp",
+      ".tmp",
+      "4913"
+    ],
+    "testPathIgnorePatterns": [
+      "~",
+      ".swp",
+      ".tmp",
+      "4913",
+      "node_modules"
     ],
     "verbose": true,
     "automock": false,

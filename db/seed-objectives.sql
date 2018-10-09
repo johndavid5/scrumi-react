@@ -1,5 +1,5 @@
 
-insert into tasks (  description, user_id_assigned_to ) 
+insert into objectives (  description, user_id_assigned_to ) 
 values
 ( 'Wash glassware', 1 ),
 ( 'Arrange files', 2 ),
@@ -7,7 +7,7 @@ values
 ;
 
 
-insert into tasks (  description, user_id_assigned_to ) 
+insert into objectives (  description, user_id_assigned_to ) 
 values
 ( 'Digest Fort Dix Samples', 4 )
 ,( 'Act Important', 5 )

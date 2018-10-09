@@ -19,7 +19,6 @@ REM yarn run test-objectives-filter-form-container 2>&1 | tee p.out
 REM yarn run test-watch-all 2>&1 | tee p.out
 REM babel-node node_modules\jest\bin\jest.js --watch dbmodels.test.js
 REM babel-node node_modules\jest\bin\jest.js --watch --no-colors ObjectivesListComponent.test.js 2>&1 | tee p.out
-REM babel-node node_modules\jest\bin\jest.js --watch --no-colors "ObjectivesListComponent.test.js$" 2>&1 | tee p.out
 REM LARRY: What an idea...! Since jest likes to crash so much, why not hook it into nodemon...
 REM ...except it doesn't seem to respond to Enter to re-run...but it should still respond
 REM to code changes...but re-starting the whole thing takes forever upon code change...
@@ -31,4 +30,8 @@ REM babel-node node_modules\jest\bin\jest.js --watch "actions.test.js$" 2>&1 | t
 REM babel-node node_modules\jest\bin\jest.js --watch "objectives-api.test.js$" 2>&1 | tee p.out
 REM babel-node node_modules\jest\bin\jest.js --watchAll 2>&1 | tee p.out
 REM babel-node node_modules\jest\bin\jest.js --watch 2>&1 | tee p.out
-babel-node node_modules\jest\bin\jest.js --watch --no-colors "dbmodels.test.js$" 2>&1 | tee p.out
+REM babel-node node_modules\jest\bin\jest.js --watch --no-colors "ObjectivesListComponent.test.js$" 2>&1 | tee p.out
+REM babel-node node_modules\jest\bin\jest.js --watch --no-colors "dbmodels.test.js$" 2>&1 | tee p.out
+REM for bash and script -> typescript
+REM babel-node node_modules/jest/bin/jest.js --watch --no-colors "dbmodels.test.js$"
+babel-node node_modules\jest\bin\jest.js --watch --no-colors "ObjectivesListComponent.test.js$" 2>&1 | tee p.out

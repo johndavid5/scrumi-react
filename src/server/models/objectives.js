@@ -31,6 +31,52 @@ export class Objectives {
         this.dbname = dbname
     }
 
+    // Mirrors full_name custom Postgres function...use mostly for testing...
+    static fullName(firstName, middleName, lastName){
+        if( ! firstName ){
+           firstName = "" 
+        }
+        else{
+            firstName = firstName.trim()
+        }
+
+        if( ! middleName ){
+           middleName = "" 
+        }
+        else{
+            middleName = middleName.trim()
+        }
+
+        if( ! lastName ){
+           lastName = "" 
+        }
+        else{
+            lastName = lastName.trim()
+        }
+
+        let sFullName = ""
+
+        if( firstName.length > 0 ){
+            sFullName += firstName
+        }
+
+        if( middleName.length > 0 ){
+            if( sFullName.length > 0 ){
+                sFullName += ' ';
+            }
+            sFullName += middleName
+        }
+
+        if( lastName.length > 0 ){
+            if( sFullName.length > 0 ){
+                sFullName += ' ';
+            }
+            sFullName += lastName
+        }
+
+        return sFullName
+    }/* static fullName() */
+
     addObjective(objective) {
 
         const sWho = 'Objectives::addObjective'
@@ -42,11 +88,11 @@ export class Objectives {
 	        logajohn.debug(`${sWho}(): Calling pool = new Pool(`, config, ')...')
 	        const pool = new Pool(config)
 
-	        const sQuery = `INSERT into tasks 
+	        const sQuery = `INSERT into objectives 
         	(description, user_id_assigned_to)
         	VALUES
         	($1, $2)
-            RETURNING task_id, description, user_id_assigned_to
+            RETURNING objective_id, description, user_id_assigned_to
         	`
 	        const args = [objective.description, objective.user_id_assigned_to]
 
@@ -83,8 +129,8 @@ export class Objectives {
             let wheres = []
             if( filter.description_filter ){
                 // NOTE: string concatenation operator in PostgreSQL is "||" 
-                //wheres.push("\t" + "t.description like '%' || $" + (wheres.length+1) + " || '%'")
-                wheres.push("\t" + "t.description ILIKE '%' || $" + (wheres.length+1) + " || '%'") // Use case-insensitive PostgreSQL specific "ILIKE" in lieu of "like"...
+                //wheres.push("\t" + "o.description like '%' || $" + (wheres.length+1) + " || '%'")
+                wheres.push("\t" + "o.description ILIKE '%' || $" + (wheres.length+1) + " || '%'") // Use case-insensitive PostgreSQL specific "ILIKE" in lieu of "like"...
                 args.push(filter.description_filter)
             }
 
@@ -101,7 +147,12 @@ export class Objectives {
                 if( filter.sort_by_field.toLowerCase() == 'description' ){ 
                     sOrderBy = "\nORDER BY description"
                 }
+                else if( filter.sort_by_field.toLowerCase() == 'full_name' ){ 
+                    sOrderBy = "\nORDER BY full_name(u.first_name, u.middle_name, u.last_name)"
+                }
+            }
 
+            if( sOrderBy.length > 0 ){
                 if( filter.sort_by_asc_desc && filter.sort_by_asc_desc.toUpperCase() == 'ASC' ){
                     sOrderBy += " ASC"
                 }
@@ -114,12 +165,13 @@ export class Objectives {
 
             let sQuery = `
             SELECT
-                t.task_id, t.description, t.user_id_assigned_to,
-                u.first_name, u.middle_name, u.last_name  
+                o.objective_id, o.description, o.user_id_assigned_to,
+                u.first_name, u.middle_name, u.last_name,
+                full_name(u.first_name, u.middle_name, u.last_name)  
             FROM 
-                tasks t
+                objectives o
             LEFT OUTER JOIN
-                users u ON t.user_id_assigned_to = u.user_id`
+                users u ON o.user_id_assigned_to = u.user_id`
 
             if( sWheres ){ 
                 sQuery += sWheres
@@ -152,7 +204,7 @@ export class Objectives {
         }) /* return new Promise( (resolve, reject ) =>  */
     } /* getObjectives() */
 
-    deleteObjectiveById(task_id) {
+    deleteObjectiveById(objective_id) {
         const sWho = 'Objectives::deleteObjectiveById'
 
         return new Promise((resolve, reject) => {
@@ -161,18 +213,18 @@ export class Objectives {
 	        logajohn.debug(`${sWho}(): Calling pool = new Pool(`, config, ')...')
 	        const pool = new Pool(config)
 
-	        const sQuery = `DELETE from tasks
-        	 WHERE task_id = $1
-            RETURNING task_id
+	        const sQuery = `DELETE from objectives 
+        	 WHERE objective_id = $1
+            RETURNING objective_id
         	`
-	        const args = [task_id]
+	        const args = [objective_id]
 
 	        logajohn.debug(`${sWho}(): Calling pool.query("${sQuery}", ${JSON.stringify(args)})...`)
 
 	        pool.query(sQuery, args)
 	        .then((res) => {
-	            logajohn.debug(`${sWho}(): resolving with res.rows[0].task_id, res = `, res)
-                    resolve(res.rows[0].task_id)
+	            logajohn.debug(`${sWho}(): resolving with res.rows[0].objective_id, res = `, res)
+                    resolve(res.rows[0].objective_id)
 	        })
 	        .catch(
                     err => setImmediate(() => {
