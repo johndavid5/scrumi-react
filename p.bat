@@ -29,9 +29,13 @@ REM babel-node node_modules\jest\bin\jest.js --watch "utils.test.js$" 2>&1 | tee
 REM babel-node node_modules\jest\bin\jest.js --watch "actions.test.js$" 2>&1 | tee p.out
 REM babel-node node_modules\jest\bin\jest.js --watch "objectives-api.test.js$" 2>&1 | tee p.out
 REM babel-node node_modules\jest\bin\jest.js --watchAll 2>&1 | tee p.out
-REM babel-node node_modules\jest\bin\jest.js --watch 2>&1 | tee p.out
 REM babel-node node_modules\jest\bin\jest.js --watch --no-colors "ObjectivesListComponent.test.js$" 2>&1 | tee p.out
 REM babel-node node_modules\jest\bin\jest.js --watch --no-colors "dbmodels.test.js$" 2>&1 | tee p.out
 REM for bash and script -> typescript
-REM babel-node node_modules/jest/bin/jest.js --watch --no-colors "dbmodels.test.js$"
-babel-node node_modules\jest\bin\jest.js --watch --no-colors "ObjectivesListComponent.test.js$" 2>&1 | tee p.out
+REM babel-node node_modules\jest\bin\jest.js --debug --verbose --watch --no-colors "SortButton.test.js" 2>&1 | tee p.out
+REM babel-node node_modules\jest\bin\jest.js --watch --json --outputFile test.json 2>&1 | tee p.out
+REM babel-node node_modules/jest/bin/jest.js --watch --no-colors "dbmodels.test.js$" 2>&1 | tee p.out
+REM babel-node node_modules\jest\bin\jest.js --debug --verbose --watch --no-colors "ObjectivesListComponent.test.js$" 2>&1 | tee p.out
+REM babel-node node_modules\jest\bin\jest.js --debug --verbose --watch --no-colors "ObjectivesListComponent.test.js|SortButton.test.js" 2>&1 | tee p.out
+REM babel-node node_modules\jest\bin\jest.js --debug --verbose --watch --no-colors "ObjectivesListContainer.test.js" 2>&1 | tee p.out
+babel-node node_modules\jest\bin\jest.js --watchAll 2>&1 | tee p.out

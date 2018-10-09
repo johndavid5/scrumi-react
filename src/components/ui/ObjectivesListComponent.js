@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types'
+import SortButton from './SortButton'
+
 import { logajohn } from '../../lib/logajohn'
 
-import { customStringify } from '../../lib/utils' // Safer than JSON.stringify()... 
+import { customStringify, strEqualsIgnoreCase } from '../../lib/utils' // Safer than JSON.stringify()... 
 
 // import '../../stylesheets/ObjectivesListComponent.scss'
 import '../../../stylesheets/ObjectivesListComponent.scss'
@@ -61,15 +63,17 @@ const ObjectivesListComponent = (props) => {
         return s_out
     }
 
-    const sortBy = (event) => {
+    const sortBy = (event, sWhat, sAscDesc) => {
 
-        let sWho = "ObjectivesListComponent::sort";
+        let sWho = "ObjectivesListComponent::sortby";
 
+        logajohn.info(`${sWho}(): event = `, customStringify(event) )
+        logajohn.info(`${sWho}(): event.target = `, customStringify(event.target) )
         logajohn.info(`${sWho}(): props = `, customStringify(props) )
 
         const { onObjectivesFilter } = props; // Get dispatch method from props...
 
-        let filters = { sort_by_field: 'joe', sort_by_asc_desc: 'desc' };
+        let filters = { sort_by_field: sWhat, sort_by_asc_desc: sAscDesc };
 
         event.preventDefault()
 
@@ -125,37 +129,40 @@ const ObjectivesListComponent = (props) => {
             margin: 'auto'
         }} />
     }
-    //let objectives_table = ""
-    //if( objectives && objectives.hasOwnProperty("objectives_fetching") && objectives.objectives_fetching == true ){
-    //    objectives_table = (
-    //     <img src="/images/gold-brass-gear-cogs-animated-5.gif" width="100" alt="Fetching...stand by..." />
-    //   )
-    //}
-    //else {
-        let objectives_table = (  (objectives && objectives.objectives_list && objectives.objectives_list.length > 0) ?
-            (
-                      <table className="table" id="objectives-table">
-                            <thead>
-                          <tr>
-                              <th scope="col" id="sort-by-description" onClick={sortBy} style={thStyle}>Description</th>
-                              <th scope="col" id="sort-by-full-name" onClick={sortBy} style={thStyle}>Assigned To</th>
-                            </tr>
-                        </thead>
-                            <tbody>
-                          {
-                                    objectives.objectives_list.map((objective, index) => (
-                                      <tr key={objective.objective_id}>
-                                          <td style={tdStyle} id={'description-' + objective.objective_id}>{objective.description}</td>
-                                          <td style={tdStyle} id={'full_name-' + objective.objective_id}>{objective.full_name}</td>
-                                        </tr>
-                                    ))
-                          }
-                        </tbody>
-                        </table>
-                    ) : (<h2>No objectives</h2>)
 
-        )
-    //}
+    let sCurrentSortByField = ""
+    if( objectives && objectives.objectives_filters && objectives.objectives_filters.sort_by_field ){
+       sCurrentSortByField =  objectives.objectives_filters.sort_by_field
+    }
+
+    let sCurrentSortByAscDesc = ""
+    if( objectives && objectives.objectives_filters && objectives.objectives_filters.sort_by_asc_desc){
+       sCurrentSortByAscDesc =  objectives.objectives_filters.sort_by_asc_desc
+    }
+
+    let objectives_table = (  (objectives && objectives.objectives_list && objectives.objectives_list.length > 0) ?
+        (
+                  <table className="table" id="objectives-table">
+                        <thead>
+                      <tr>
+                          <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='description' sWhatPretty='Description' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={sortBy} />:""}</th>
+                          <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='full_name' sWhatPretty='Assigned To' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={sortBy} />:""}</th>
+                      </tr>
+                    </thead>
+                        <tbody>
+                      {
+                                objectives.objectives_list.map((objective, index) => (
+                                  <tr key={objective.objective_id}>
+                                      <td style={tdStyle} id={'description-' + objective.objective_id}>{objective.description}</td>
+                                      <td style={tdStyle} id={'full_name-' + objective.objective_id}>{objective.full_name}</td>
+                                    </tr>
+                                ))
+                      }
+                    </tbody>
+                    </table>
+                ) : (<h2>No objectives</h2>)
+
+    )
 
     return (
       <div className="objectives-list-component container-fluid" style={{ paddingLeft: '1em' }}>

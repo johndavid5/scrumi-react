@@ -9,8 +9,10 @@ const { shallow, mount } = Enzyme
 import { config } from '../../../src/config'
 import { logajohn } from '../../../src/lib/logajohn'
 
+let sWhere = '__tests__/components/containers/ObjectivesFilterFormContainer.test.js'
+
 logajohn.setLevel(config.DEBUG_LEVEL)
-logajohn.debug(`__tests__/components/containers/ObjectivesFilterFormContainer.test.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
+logajohn.debug(`${sWhere}: logajohn.getLevel()=${logajohn.getLevel()}...`)
 
 jest.mock('../../../src/components/ui/ObjectivesFilterForm')
 
@@ -26,7 +28,6 @@ const mockStore = configureMockStore(middlewares)
 
 import { faux_objectives } from '../../../data/fauxObjectives'
 
-let here = '__tests__/components/containers/ObjectivesFilterFormContainer.test.js'
 
 describe("<ObjectivesFilterFormContainer /> Container ", () => {
 
@@ -60,9 +61,11 @@ describe("<ObjectivesFilterFormContainer /> Container ", () => {
     //    ).toBe("tomato")
     //})
 
+    // What we're really confirming is that in containers.js, mapDispatchToProps() connects onObjectivesFilter(filters) to 
+    // dispatch(objectivesFilter(filters)...capice...?
     it("dispatches an OBJECTIVES_GET action", (done) => {
 
-        let sWho = "__tests__/components/containers/ObjectivesFilterformContainer.test.js: dispatches an OBJECTIVES_GET action"
+        let sWho = `${sWhere}: dispatches an OBJECTIVES_GET action`
 
         fetch.resetMocks()
 

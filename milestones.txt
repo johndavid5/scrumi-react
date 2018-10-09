@@ -1,3 +1,5 @@
-1. 9/11/2018: First mock of an ES6 class:
+2. Tuesday 10/9/2018: Tested sort_by in model, created and tested SortButton, hooked up connector for successful "Sort By".
+
+1. Tuesday 9/11/2018: First mock of an ES6 class:
      src/server/models/__mocks__/objectives.js
      __tests__/mocks/objectives-mock.js

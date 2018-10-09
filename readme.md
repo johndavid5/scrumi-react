@@ -48,3 +48,10 @@ https://node-postgres.com/
     "For async action creators using Redux Thunk or other middleware, it's best to completely mock the Redux store for tests. You can apply the middleware to a mock store using redux-mock-store. You can also use fetch-mock to mock the HTTP requests."
 
     https://github.com/dmitry-zaets/redux-mock-store
+
+/* 10/9/2018: After many many annoying Jest crashes...
+* To prevent constant crashing of jest because it can't
+* lstat .p.swp or some other temp file, run it as admin...
+*/
+https://github.com/oblador/react-native-vector-icons/issues/354
+Error: EPERM: operation not permitted, lstat 'D:\reactnative\MyBaby\node_modules \.staging\react-native-vector-icons-2612cf43\Fonts\Zocial.ttf'

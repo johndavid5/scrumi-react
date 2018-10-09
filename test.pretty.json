@@ -1,13 +1,13 @@
 {
-  "numFailedTestSuites": 1,
-  "numFailedTests": 6,
-  "numPassedTestSuites": 8,
-  "numPassedTests": 25,
+  "numFailedTestSuites": 2,
+  "numFailedTests": 9,
+  "numPassedTestSuites": 7,
+  "numPassedTests": 34,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTotalTestSuites": 9,
-  "numTotalTests": 31,
+  "numTotalTests": 43,
   "snapshot": {
     "added": 0,
     "didUpdate": false,
@@ -22,9 +22,300 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1538174527875,
+  "startTime": 1539115469534,
   "success": false,
   "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [
+            "error: function full_name(character varying, character varying, character varying) does not exist\n    at Connection.Object.<anonymous>.Connection.parseE (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:553:11)\n    at Connection.Object.<anonymous>.Connection.parseMessage (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:378:19)\n    at Socket.<anonymous> (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:119:22)\n    at emitOne (events.js:96:13)\n    at Socket.emit (events.js:188:7)\n    at readableAddChunk (_stream_readable.js:176:18)\n    at Socket.Readable.push (_stream_readable.js:134:10)\n    at TCP.onread (net.js:548:20)"
+          ],
+          "fullName": "DbModels getObjectives -- before",
+          "status": "failed",
+          "title": "getObjectives -- before"
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [],
+          "fullName": "DbModels getUsers -- before",
+          "status": "passed",
+          "title": "getUsers -- before"
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [],
+          "fullName": "DbModels addUser...",
+          "status": "passed",
+          "title": "addUser..."
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [],
+          "fullName": "DbModels addObjective()...",
+          "status": "passed",
+          "title": "addObjective()..."
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [
+            "error: function full_name(character varying, character varying, character varying) does not exist\n    at Connection.Object.<anonymous>.Connection.parseE (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:553:11)\n    at Connection.Object.<anonymous>.Connection.parseMessage (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:378:19)\n    at Socket.<anonymous> (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:119:22)\n    at emitOne (events.js:96:13)\n    at Socket.emit (events.js:188:7)\n    at readableAddChunk (_stream_readable.js:176:18)\n    at Socket.Readable.push (_stream_readable.js:134:10)\n    at TCP.onread (net.js:548:20)"
+          ],
+          "fullName": "DbModels getObjectives -- after add -- length",
+          "status": "failed",
+          "title": "getObjectives -- after add -- length"
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [
+            "error: function full_name(character varying, character varying, character varying) does not exist\n    at Connection.Object.<anonymous>.Connection.parseE (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:553:11)\n    at Connection.Object.<anonymous>.Connection.parseMessage (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:378:19)\n    at Socket.<anonymous> (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:119:22)\n    at emitOne (events.js:96:13)\n    at Socket.emit (events.js:188:7)\n    at readableAddChunk (_stream_readable.js:176:18)\n    at Socket.Readable.push (_stream_readable.js:134:10)\n    at TCP.onread (net.js:548:20)"
+          ],
+          "fullName": "DbModels getObjectives -- description filter -- case insensitive",
+          "status": "failed",
+          "title": "getObjectives -- description filter -- case insensitive"
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [
+            "error: function full_name(character varying, character varying, character varying) does not exist\n    at Connection.Object.<anonymous>.Connection.parseE (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:553:11)\n    at Connection.Object.<anonymous>.Connection.parseMessage (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:378:19)\n    at Socket.<anonymous> (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:119:22)\n    at emitOne (events.js:96:13)\n    at Socket.emit (events.js:188:7)\n    at readableAddChunk (_stream_readable.js:176:18)\n    at Socket.Readable.push (_stream_readable.js:134:10)\n    at TCP.onread (net.js:548:20)"
+          ],
+          "fullName": "DbModels getObjectives -- sort_by description ASC",
+          "status": "failed",
+          "title": "getObjectives -- sort_by description ASC"
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [
+            "error: function full_name(character varying, character varying, character varying) does not exist\n    at Connection.Object.<anonymous>.Connection.parseE (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:553:11)\n    at Connection.Object.<anonymous>.Connection.parseMessage (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:378:19)\n    at Socket.<anonymous> (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:119:22)\n    at emitOne (events.js:96:13)\n    at Socket.emit (events.js:188:7)\n    at readableAddChunk (_stream_readable.js:176:18)\n    at Socket.Readable.push (_stream_readable.js:134:10)\n    at TCP.onread (net.js:548:20)"
+          ],
+          "fullName": "DbModels getObjectives -- sort_by description DESC",
+          "status": "failed",
+          "title": "getObjectives -- sort_by description DESC"
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [
+            "error: function full_name(character varying, character varying, character varying) does not exist\n    at Connection.Object.<anonymous>.Connection.parseE (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:553:11)\n    at Connection.Object.<anonymous>.Connection.parseMessage (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:378:19)\n    at Socket.<anonymous> (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:119:22)\n    at emitOne (events.js:96:13)\n    at Socket.emit (events.js:188:7)\n    at readableAddChunk (_stream_readable.js:176:18)\n    at Socket.Readable.push (_stream_readable.js:134:10)\n    at TCP.onread (net.js:548:20)"
+          ],
+          "fullName": "DbModels getObjectives -- sort_by full_name ASC",
+          "status": "failed",
+          "title": "getObjectives -- sort_by full_name ASC"
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [
+            "error: function full_name(character varying, character varying, character varying) does not exist\n    at Connection.Object.<anonymous>.Connection.parseE (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:553:11)\n    at Connection.Object.<anonymous>.Connection.parseMessage (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:378:19)\n    at Socket.<anonymous> (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:119:22)\n    at emitOne (events.js:96:13)\n    at Socket.emit (events.js:188:7)\n    at readableAddChunk (_stream_readable.js:176:18)\n    at Socket.Readable.push (_stream_readable.js:134:10)\n    at TCP.onread (net.js:548:20)"
+          ],
+          "fullName": "DbModels getObjectives -- sort_by full_name DESC",
+          "status": "failed",
+          "title": "getObjectives -- sort_by full_name DESC"
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [],
+          "fullName": "DbModels getObjectives -- null filter -- error",
+          "status": "passed",
+          "title": "getObjectives -- null filter -- error"
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [],
+          "fullName": "DbModels getUsers -- after add",
+          "status": "passed",
+          "title": "getUsers -- after add"
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [],
+          "fullName": "DbModels deleteObjectiveById()...",
+          "status": "passed",
+          "title": "deleteObjectiveById()..."
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [
+            "error: function full_name(character varying, character varying, character varying) does not exist\n    at Connection.Object.<anonymous>.Connection.parseE (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:553:11)\n    at Connection.Object.<anonymous>.Connection.parseMessage (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:378:19)\n    at Socket.<anonymous> (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\pg\\lib\\connection.js:119:22)\n    at emitOne (events.js:96:13)\n    at Socket.emit (events.js:188:7)\n    at readableAddChunk (_stream_readable.js:176:18)\n    at Socket.Readable.push (_stream_readable.js:134:10)\n    at TCP.onread (net.js:548:20)"
+          ],
+          "fullName": "DbModels getObjectives -- after delete",
+          "status": "failed",
+          "title": "getObjectives -- after delete"
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [],
+          "fullName": "DbModels deleteUserById()...",
+          "status": "passed",
+          "title": "deleteUserById()..."
+        },
+        {
+          "ancestorTitles": [
+            "DbModels"
+          ],
+          "failureMessages": [],
+          "fullName": "DbModels getUsers -- after delete",
+          "status": "passed",
+          "title": "getUsers -- after delete"
+        }
+      ],
+      "endTime": 1539115488893,
+      "message": "  ● DbModels › getObjectives -- before\n\n    error: function full_name(character varying, character varying, character varying) does not exist\n      \n      at Connection.Object.<anonymous>.Connection.parseE (node_modules/pg/lib/connection.js:553:11)\n      at Connection.Object.<anonymous>.Connection.parseMessage (node_modules/pg/lib/connection.js:378:19)\n      at Socket.<anonymous> (node_modules/pg/lib/connection.js:119:22)\n      at emitOne (events.js:96:13)\n      at Socket.emit (events.js:188:7)\n      at readableAddChunk (_stream_readable.js:176:18)\n      at Socket.Readable.push (_stream_readable.js:134:10)\n      at TCP.onread (net.js:548:20)\n\n  ● DbModels › getObjectives -- after add -- length\n\n    error: function full_name(character varying, character varying, character varying) does not exist\n      \n      at Connection.Object.<anonymous>.Connection.parseE (node_modules/pg/lib/connection.js:553:11)\n      at Connection.Object.<anonymous>.Connection.parseMessage (node_modules/pg/lib/connection.js:378:19)\n      at Socket.<anonymous> (node_modules/pg/lib/connection.js:119:22)\n      at emitOne (events.js:96:13)\n      at Socket.emit (events.js:188:7)\n      at readableAddChunk (_stream_readable.js:176:18)\n      at Socket.Readable.push (_stream_readable.js:134:10)\n      at TCP.onread (net.js:548:20)\n\n  ● DbModels › getObjectives -- description filter -- case insensitive\n\n    error: function full_name(character varying, character varying, character varying) does not exist\n      \n      at Connection.Object.<anonymous>.Connection.parseE (node_modules/pg/lib/connection.js:553:11)\n      at Connection.Object.<anonymous>.Connection.parseMessage (node_modules/pg/lib/connection.js:378:19)\n      at Socket.<anonymous> (node_modules/pg/lib/connection.js:119:22)\n      at emitOne (events.js:96:13)\n      at Socket.emit (events.js:188:7)\n      at readableAddChunk (_stream_readable.js:176:18)\n      at Socket.Readable.push (_stream_readable.js:134:10)\n      at TCP.onread (net.js:548:20)\n\n  ● DbModels › getObjectives -- sort_by description ASC\n\n    error: function full_name(character varying, character varying, character varying) does not exist\n      \n      at Connection.Object.<anonymous>.Connection.parseE (node_modules/pg/lib/connection.js:553:11)\n      at Connection.Object.<anonymous>.Connection.parseMessage (node_modules/pg/lib/connection.js:378:19)\n      at Socket.<anonymous> (node_modules/pg/lib/connection.js:119:22)\n      at emitOne (events.js:96:13)\n      at Socket.emit (events.js:188:7)\n      at readableAddChunk (_stream_readable.js:176:18)\n      at Socket.Readable.push (_stream_readable.js:134:10)\n      at TCP.onread (net.js:548:20)\n\n  ● DbModels › getObjectives -- sort_by description DESC\n\n    error: function full_name(character varying, character varying, character varying) does not exist\n      \n      at Connection.Object.<anonymous>.Connection.parseE (node_modules/pg/lib/connection.js:553:11)\n      at Connection.Object.<anonymous>.Connection.parseMessage (node_modules/pg/lib/connection.js:378:19)\n      at Socket.<anonymous> (node_modules/pg/lib/connection.js:119:22)\n      at emitOne (events.js:96:13)\n      at Socket.emit (events.js:188:7)\n      at readableAddChunk (_stream_readable.js:176:18)\n      at Socket.Readable.push (_stream_readable.js:134:10)\n      at TCP.onread (net.js:548:20)\n\n  ● DbModels › getObjectives -- sort_by full_name ASC\n\n    error: function full_name(character varying, character varying, character varying) does not exist\n      \n      at Connection.Object.<anonymous>.Connection.parseE (node_modules/pg/lib/connection.js:553:11)\n      at Connection.Object.<anonymous>.Connection.parseMessage (node_modules/pg/lib/connection.js:378:19)\n      at Socket.<anonymous> (node_modules/pg/lib/connection.js:119:22)\n      at emitOne (events.js:96:13)\n      at Socket.emit (events.js:188:7)\n      at readableAddChunk (_stream_readable.js:176:18)\n      at Socket.Readable.push (_stream_readable.js:134:10)\n      at TCP.onread (net.js:548:20)\n\n  ● DbModels › getObjectives -- sort_by full_name DESC\n\n    error: function full_name(character varying, character varying, character varying) does not exist\n      \n      at Connection.Object.<anonymous>.Connection.parseE (node_modules/pg/lib/connection.js:553:11)\n      at Connection.Object.<anonymous>.Connection.parseMessage (node_modules/pg/lib/connection.js:378:19)\n      at Socket.<anonymous> (node_modules/pg/lib/connection.js:119:22)\n      at emitOne (events.js:96:13)\n      at Socket.emit (events.js:188:7)\n      at readableAddChunk (_stream_readable.js:176:18)\n      at Socket.Readable.push (_stream_readable.js:134:10)\n      at TCP.onread (net.js:548:20)\n\n  ● DbModels › getObjectives -- after delete\n\n    error: function full_name(character varying, character varying, character varying) does not exist\n      \n      at Connection.Object.<anonymous>.Connection.parseE (node_modules/pg/lib/connection.js:553:11)\n      at Connection.Object.<anonymous>.Connection.parseMessage (node_modules/pg/lib/connection.js:378:19)\n      at Socket.<anonymous> (node_modules/pg/lib/connection.js:119:22)\n      at emitOne (events.js:96:13)\n      at Socket.emit (events.js:188:7)\n      at readableAddChunk (_stream_readable.js:176:18)\n      at Socket.Readable.push (_stream_readable.js:134:10)\n      at TCP.onread (net.js:548:20)\n",
+      "name": "c:\\Users\\john\\projects\\scrumi-react\\__tests__\\models\\dbmodels.test.js",
+      "startTime": 1539115483558,
+      "status": "failed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "<ObjectivesListComponent /> UI Component"
+          ],
+          "failureMessages": [],
+          "fullName": "<ObjectivesListComponent /> UI Component renders timestamp if objectives.objectives_timestamp is supplied...",
+          "status": "passed",
+          "title": "renders timestamp if objectives.objectives_timestamp is supplied..."
+        },
+        {
+          "ancestorTitles": [
+            "<ObjectivesListComponent /> UI Component"
+          ],
+          "failureMessages": [],
+          "fullName": "<ObjectivesListComponent /> UI Component renders filters...",
+          "status": "passed",
+          "title": "renders filters..."
+        },
+        {
+          "ancestorTitles": [
+            "<ObjectivesListComponent /> UI Component"
+          ],
+          "failureMessages": [],
+          "fullName": "<ObjectivesListComponent /> UI Component does not render timestamp if objectives.objectives_timestamp is not supplied...",
+          "status": "passed",
+          "title": "does not render timestamp if objectives.objectives_timestamp is not supplied..."
+        },
+        {
+          "ancestorTitles": [
+            "<ObjectivesListComponent /> UI Component"
+          ],
+          "failureMessages": [],
+          "fullName": "<ObjectivesListComponent /> UI Component renders table of objectives if objectives.objectives_list is populated...",
+          "status": "passed",
+          "title": "renders table of objectives if objectives.objectives_list is populated..."
+        },
+        {
+          "ancestorTitles": [
+            "<ObjectivesListComponent /> UI Component"
+          ],
+          "failureMessages": [],
+          "fullName": "<ObjectivesListComponent /> UI Component does not renders table of objectives if objectives.objectives_list is nonexistent...",
+          "status": "passed",
+          "title": "does not renders table of objectives if objectives.objectives_list is nonexistent..."
+        },
+        {
+          "ancestorTitles": [
+            "<ObjectivesListComponent /> UI Component"
+          ],
+          "failureMessages": [],
+          "fullName": "<ObjectivesListComponent /> UI Component does not renders table of objectives if objectives.objectives_list is of length zero...",
+          "status": "passed",
+          "title": "does not renders table of objectives if objectives.objectives_list is of length zero..."
+        },
+        {
+          "ancestorTitles": [
+            "<ObjectivesListComponent /> UI Component"
+          ],
+          "failureMessages": [],
+          "fullName": "<ObjectivesListComponent /> UI Component shows spinning gears if objectives.objectives_fetching is true... ",
+          "status": "passed",
+          "title": "shows spinning gears if objectives.objectives_fetching is true... "
+        },
+        {
+          "ancestorTitles": [
+            "<ObjectivesListComponent /> UI Component"
+          ],
+          "failureMessages": [],
+          "fullName": "<ObjectivesListComponent /> UI Component does not show spinning gears if objectives.objectives_fetching is nonexistent... ",
+          "status": "passed",
+          "title": "does not show spinning gears if objectives.objectives_fetching is nonexistent... "
+        },
+        {
+          "ancestorTitles": [
+            "<ObjectivesListComponent /> UI Component"
+          ],
+          "failureMessages": [],
+          "fullName": "<ObjectivesListComponent /> UI Component does not show spinning gears if objectives.objectives_fetching is false... ",
+          "status": "passed",
+          "title": "does not show spinning gears if objectives.objectives_fetching is false... "
+        },
+        {
+          "ancestorTitles": [
+            "<ObjectivesListComponent /> UI Component"
+          ],
+          "failureMessages": [
+            "Error: Method “simulate” is only meant to be run on a single node. 0 found instead.\n    at ReactWrapper.single (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\enzyme\\build\\ReactWrapper.js:1532:17)\n    at ReactWrapper.simulate (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\enzyme\\build\\ReactWrapper.js:867:14)\n    at Object.<anonymous> (c:\\Users\\john\\projects\\scrumi-react\\__tests__\\components\\ui\\ObjectivesListComponent.test.js:126:9)\n    at Object.asyncFn (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\jest\\node_modules\\jest-jasmine2\\build\\jasmine_async.js:124:345)\n    at e (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\jest\\node_modules\\jest-jasmine2\\build\\queue_runner.js:46:12)\n    at mapper (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\jest\\node_modules\\jest-jasmine2\\build\\queue_runner.js:34:499)\n    at promise.then (c:\\Users\\john\\projects\\scrumi-react\\node_modules\\jest\\node_modules\\jest-jasmine2\\build\\queue_runner.js:74:39)\n    at process._tickDomainCallback (internal/process/next_tick.js:129:7)"
+          ],
+          "fullName": "<ObjectivesListComponent /> UI Component click on heading invokes onObjectivesFilter - description ",
+          "status": "failed",
+          "title": "click on heading invokes onObjectivesFilter - description "
+        }
+      ],
+      "endTime": 1539115489182,
+      "message": "  ● <ObjectivesListComponent /> UI Component › click on heading invokes onObjectivesFilter - description \n\n    Method “simulate” is only meant to be run on a single node. 0 found instead.\n      \n      at ReactWrapper.single (node_modules/enzyme/build/ReactWrapper.js:1532:17)\n      at ReactWrapper.simulate (node_modules/enzyme/build/ReactWrapper.js:867:14)\n      at Object.<anonymous> (__tests__/components/ui/ObjectivesListComponent.test.js:126:9)\n      at process._tickDomainCallback (internal/process/next_tick.js:129:7)\n",
+      "name": "c:\\Users\\john\\projects\\scrumi-react\\__tests__\\components\\ui\\ObjectivesListComponent.test.js",
+      "startTime": 1539115483821,
+      "status": "failed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "<ObjectivesListContainer /> Container "
+          ],
+          "failureMessages": [],
+          "fullName": "<ObjectivesListContainer /> Container  renders objectives according to props.objectives.objectives_list",
+          "status": "passed",
+          "title": "renders objectives according to props.objectives.objectives_list"
+        }
+      ],
+      "endTime": 1539115493117,
+      "message": "",
+      "name": "c:\\Users\\john\\projects\\scrumi-react\\__tests__\\components\\containers\\ObjectivesListContainer.test.js",
+      "startTime": 1539115490349,
+      "status": "passed",
+      "summary": ""
+    },
     {
       "assertionResults": [
         {
@@ -37,10 +328,70 @@
           "title": "dispatches an OBJECTIVES_GET action"
         }
       ],
-      "endTime": 1538174533868,
+      "endTime": 1539115493854,
       "message": "",
-      "name": "c:\\inetpub\\wwwroot\\scrumi-react\\__tests__\\components\\containers\\ObjectivesFilterFormContainer.test.js",
-      "startTime": 1538174532668,
+      "name": "c:\\Users\\john\\projects\\scrumi-react\\__tests__\\components\\containers\\ObjectivesFilterFormContainer.test.js",
+      "startTime": 1539115490054,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Action Creators",
+            "objectivesFilter() thunk-based action creator..."
+          ],
+          "failureMessages": [],
+          "fullName": "Action Creators objectivesFilter() thunk-based action creator... should have objectives",
+          "status": "passed",
+          "title": "should have objectives"
+        },
+        {
+          "ancestorTitles": [
+            "Action Creators",
+            "objectivesFilter() thunk-based action creator..."
+          ],
+          "failureMessages": [],
+          "fullName": "Action Creators objectivesFilter() thunk-based action creator... should have timestamp",
+          "status": "passed",
+          "title": "should have timestamp"
+        },
+        {
+          "ancestorTitles": [
+            "Action Creators",
+            "objectivesFilter() thunk-based action creator..."
+          ],
+          "failureMessages": [],
+          "fullName": "Action Creators objectivesFilter() thunk-based action creator... should include filter items urlencoded in fetch url",
+          "status": "passed",
+          "title": "should include filter items urlencoded in fetch url"
+        },
+        {
+          "ancestorTitles": [
+            "Action Creators",
+            "objectivesIsFetching()...client-based action...(even though it uses immediately dispatched thunks...)"
+          ],
+          "failureMessages": [],
+          "fullName": "Action Creators objectivesIsFetching()...client-based action...(even though it uses immediately dispatched thunks...) can dispatch OBJECTIVES_FETCHING true",
+          "status": "passed",
+          "title": "can dispatch OBJECTIVES_FETCHING true"
+        },
+        {
+          "ancestorTitles": [
+            "Action Creators",
+            "objectivesIsFetching()...client-based action...(even though it uses immediately dispatched thunks...)"
+          ],
+          "failureMessages": [],
+          "fullName": "Action Creators objectivesIsFetching()...client-based action...(even though it uses immediately dispatched thunks...) can dispatch OBJECTIVES_FETCHING false",
+          "status": "passed",
+          "title": "can dispatch OBJECTIVES_FETCHING false"
+        }
+      ],
+      "endTime": 1539115496356,
+      "message": "",
+      "name": "c:\\Users\\john\\projects\\scrumi-react\\__tests__\\actions.test.js",
+      "startTime": 1539115494969,
       "status": "passed",
       "summary": ""
     },
@@ -72,102 +423,21 @@
           "fullName": "<ObjectivesFilterForm /> UI Component submit invokes onObjectivesFilter",
           "status": "passed",
           "title": "submit invokes onObjectivesFilter"
+        },
+        {
+          "ancestorTitles": [
+            "<ObjectivesFilterForm /> UI Component"
+          ],
+          "failureMessages": [],
+          "fullName": "<ObjectivesFilterForm /> UI Component submit invokes onObjectivesFilter -- description filter passed along",
+          "status": "passed",
+          "title": "submit invokes onObjectivesFilter -- description filter passed along"
         }
       ],
-      "endTime": 1538174534196,
+      "endTime": 1539115496456,
       "message": "",
-      "name": "c:\\inetpub\\wwwroot\\scrumi-react\\__tests__\\components\\ui\\ObjectivesFilterForm.test.js",
-      "startTime": 1538174533199,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Action Creators",
-            "objectivesFilter() thunk-based action creator..."
-          ],
-          "failureMessages": [],
-          "fullName": "Action Creators objectivesFilter() thunk-based action creator... should have objectives",
-          "status": "passed",
-          "title": "should have objectives"
-        },
-        {
-          "ancestorTitles": [
-            "Action Creators",
-            "objectivesFilter() thunk-based action creator..."
-          ],
-          "failureMessages": [],
-          "fullName": "Action Creators objectivesFilter() thunk-based action creator... should have timestamp",
-          "status": "passed",
-          "title": "should have timestamp"
-        },
-        {
-          "ancestorTitles": [
-            "Action Creators",
-            "objectivesIsFetching()...client-based action...(even though it uses immediately dispatched thunks...)"
-          ],
-          "failureMessages": [],
-          "fullName": "Action Creators objectivesIsFetching()...client-based action...(even though it uses immediately dispatched thunks...) can dispatch OBJECTIVES_FETCHING true",
-          "status": "passed",
-          "title": "can dispatch OBJECTIVES_FETCHING true"
-        },
-        {
-          "ancestorTitles": [
-            "Action Creators",
-            "objectivesIsFetching()...client-based action...(even though it uses immediately dispatched thunks...)"
-          ],
-          "failureMessages": [],
-          "fullName": "Action Creators objectivesIsFetching()...client-based action...(even though it uses immediately dispatched thunks...) can dispatch OBJECTIVES_FETCHING false",
-          "status": "passed",
-          "title": "can dispatch OBJECTIVES_FETCHING false"
-        }
-      ],
-      "endTime": 1538174534211,
-      "message": "",
-      "name": "c:\\inetpub\\wwwroot\\scrumi-react\\__tests__\\actions.test.js",
-      "startTime": 1538174534051,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Array Helpers",
-            "sortBy"
-          ],
-          "failureMessages": [],
-          "fullName": "Array Helpers sortBy sorts by title",
-          "status": "passed",
-          "title": "sorts by title"
-        },
-        {
-          "ancestorTitles": [
-            "Array Helpers",
-            "sortBy"
-          ],
-          "failureMessages": [],
-          "fullName": "Array Helpers sortBy sorts by rating",
-          "status": "passed",
-          "title": "sorts by rating"
-        },
-        {
-          "ancestorTitles": [
-            "Array Helpers",
-            "sortBy"
-          ],
-          "failureMessages": [],
-          "fullName": "Array Helpers sortBy sorts by date",
-          "status": "passed",
-          "title": "sorts by date"
-        }
-      ],
-      "endTime": 1538174534437,
-      "message": "",
-      "name": "c:\\inetpub\\wwwroot\\scrumi-react\\__tests__\\lib\\array-helpers.test.js",
-      "startTime": 1538174534377,
+      "name": "c:\\Users\\john\\projects\\scrumi-react\\__tests__\\components\\ui\\ObjectivesFilterForm.test.js",
+      "startTime": 1539115494317,
       "status": "passed",
       "summary": ""
     },
@@ -183,10 +453,10 @@
           "title": "doGet()..."
         }
       ],
-      "endTime": 1538174534468,
+      "endTime": 1539115498186,
       "message": "",
-      "name": "c:\\inetpub\\wwwroot\\scrumi-react\\__tests__\\api\\objectives-api.test.js",
-      "startTime": 1538174534372,
+      "name": "c:\\Users\\john\\projects\\scrumi-react\\__tests__\\api\\objectives-api.test.js",
+      "startTime": 1539115497446,
       "status": "passed",
       "summary": ""
     },
@@ -194,36 +464,49 @@
       "assertionResults": [
         {
           "ancestorTitles": [
-            "objectives reducers"
+            "<SortButton /> UI Component",
+            "Rendering and clicking"
           ],
           "failureMessages": [],
-          "fullName": "objectives reducers OBJECTIVES_GET success",
+          "fullName": "<SortButton /> UI Component Rendering and clicking renders a button with the text 'Description'",
           "status": "passed",
-          "title": "OBJECTIVES_GET success"
+          "title": "renders a button with the text 'Description'"
         },
         {
           "ancestorTitles": [
-            "objectives reducers"
+            "<SortButton /> UI Component",
+            "Rendering and clicking"
           ],
           "failureMessages": [],
-          "fullName": "objectives reducers OBJECTIVES_FETCHING true",
+          "fullName": "<SortButton /> UI Component Rendering and clicking renders the correct glyph -- with class .glyphicon-chevron-up",
           "status": "passed",
-          "title": "OBJECTIVES_FETCHING true"
+          "title": "renders the correct glyph -- with class .glyphicon-chevron-up"
         },
         {
           "ancestorTitles": [
-            "objectives reducers"
+            "<SortButton /> UI Component",
+            "Clicking"
           ],
           "failureMessages": [],
-          "fullName": "objectives reducers OBJECTIVES_FETCHING false",
+          "fullName": "<SortButton /> UI Component Clicking Invokes _onSortBy Function",
           "status": "passed",
-          "title": "OBJECTIVES_FETCHING false"
+          "title": "Invokes _onSortBy Function"
+        },
+        {
+          "ancestorTitles": [
+            "<SortButton /> UI Component",
+            "Clicking"
+          ],
+          "failureMessages": [],
+          "fullName": "<SortButton /> UI Component Clicking passes the correct arguments to _onSortBy",
+          "status": "passed",
+          "title": "passes the correct arguments to _onSortBy"
         }
       ],
-      "endTime": 1538174534735,
+      "endTime": 1539115498284,
       "message": "",
-      "name": "c:\\inetpub\\wwwroot\\scrumi-react\\__tests__\\store\\reducers\\objectives-reducers.test.js",
-      "startTime": 1538174534673,
+      "name": "c:\\Users\\john\\projects\\scrumi-react\\__tests__\\components\\ui\\SortButton.test.js",
+      "startTime": 1539115497522,
       "status": "passed",
       "summary": ""
     },
@@ -231,193 +514,20 @@
       "assertionResults": [
         {
           "ancestorTitles": [
-            "Objectives mock..."
+            "./src/lib/utils",
+            "objectToQueryString => queryStringToObject"
           ],
           "failureMessages": [],
-          "fullName": "Objectives mock... getObjectives()",
+          "fullName": "./src/lib/utils objectToQueryString => queryStringToObject converts...",
           "status": "passed",
-          "title": "getObjectives()"
-        },
-        {
-          "ancestorTitles": [
-            "Objectives mock..."
-          ],
-          "failureMessages": [],
-          "fullName": "Objectives mock... getObjectives()--exception if null filter",
-          "status": "passed",
-          "title": "getObjectives()--exception if null filter"
+          "title": "converts..."
         }
       ],
-      "endTime": 1538174534766,
+      "endTime": 1539115499513,
       "message": "",
-      "name": "c:\\inetpub\\wwwroot\\scrumi-react\\__tests__\\mocks\\objectives-mock.test.js",
-      "startTime": 1538174534700,
+      "name": "c:\\Users\\john\\projects\\scrumi-react\\__tests__\\lib\\utils.test.js",
+      "startTime": 1539115499102,
       "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Time Helpers",
-            "ago"
-          ],
-          "failureMessages": [],
-          "fullName": "Time Helpers ago less than a minute",
-          "status": "passed",
-          "title": "less than a minute"
-        },
-        {
-          "ancestorTitles": [
-            "Time Helpers",
-            "ago"
-          ],
-          "failureMessages": [],
-          "fullName": "Time Helpers ago 5 minutes",
-          "status": "passed",
-          "title": "5 minutes"
-        },
-        {
-          "ancestorTitles": [
-            "Time Helpers",
-            "ago"
-          ],
-          "failureMessages": [],
-          "fullName": "Time Helpers ago 2 hours",
-          "status": "passed",
-          "title": "2 hours"
-        },
-        {
-          "ancestorTitles": [
-            "Time Helpers",
-            "ago"
-          ],
-          "failureMessages": [],
-          "fullName": "Time Helpers ago 1 day",
-          "status": "passed",
-          "title": "1 day"
-        },
-        {
-          "ancestorTitles": [
-            "Time Helpers",
-            "ago"
-          ],
-          "failureMessages": [],
-          "fullName": "Time Helpers ago 5 days",
-          "status": "passed",
-          "title": "5 days"
-        },
-        {
-          "ancestorTitles": [
-            "Time Helpers",
-            "ago"
-          ],
-          "failureMessages": [],
-          "fullName": "Time Helpers ago over a month",
-          "status": "passed",
-          "title": "over a month"
-        },
-        {
-          "ancestorTitles": [
-            "Time Helpers",
-            "ago"
-          ],
-          "failureMessages": [],
-          "fullName": "Time Helpers ago years ago",
-          "status": "passed",
-          "title": "years ago"
-        }
-      ],
-      "endTime": 1538174534925,
-      "message": "",
-      "name": "c:\\inetpub\\wwwroot\\scrumi-react\\__tests__\\lib\\time-helpers.test.js",
-      "startTime": 1538174534876,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "DbModels"
-          ],
-          "failureMessages": [
-            "Error: connect ECONNREFUSED 127.0.0.1:5432\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)"
-          ],
-          "fullName": "DbModels getUsers -- before",
-          "status": "failed",
-          "title": "getUsers -- before"
-        },
-        {
-          "ancestorTitles": [
-            "DbModels"
-          ],
-          "failureMessages": [
-            "Error: connect ECONNREFUSED 127.0.0.1:5432\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)"
-          ],
-          "fullName": "DbModels addUser...",
-          "status": "failed",
-          "title": "addUser..."
-        },
-        {
-          "ancestorTitles": [
-            "DbModels"
-          ],
-          "failureMessages": [
-            "Error: connect ECONNREFUSED 127.0.0.1:5432\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)"
-          ],
-          "fullName": "DbModels getObjectives -- before",
-          "status": "failed",
-          "title": "getObjectives -- before"
-        },
-        {
-          "ancestorTitles": [
-            "DbModels"
-          ],
-          "failureMessages": [],
-          "fullName": "DbModels getObjectives -- null filter -- error",
-          "status": "passed",
-          "title": "getObjectives -- null filter -- error"
-        },
-        {
-          "ancestorTitles": [
-            "DbModels"
-          ],
-          "failureMessages": [
-            "Error: connect ECONNREFUSED 127.0.0.1:5432\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14) thrown"
-          ],
-          "fullName": "DbModels getUsers -- after add",
-          "status": "failed",
-          "title": "getUsers -- after add"
-        },
-        {
-          "ancestorTitles": [
-            "DbModels"
-          ],
-          "failureMessages": [
-            "Error: connect ECONNREFUSED 127.0.0.1:5432\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)"
-          ],
-          "fullName": "DbModels deleteUserById: quantity=0",
-          "status": "failed",
-          "title": "deleteUserById: quantity=0"
-        },
-        {
-          "ancestorTitles": [
-            "DbModels"
-          ],
-          "failureMessages": [
-            "Error: connect ECONNREFUSED 127.0.0.1:5432\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)"
-          ],
-          "fullName": "DbModels getUsers -- after delete",
-          "status": "failed",
-          "title": "getUsers -- after delete"
-        }
-      ],
-      "endTime": 1538174537185,
-      "message": "  ● DbModels › getUsers -- before\n\n    connect ECONNREFUSED 127.0.0.1:5432\n      \n      at Object._errnoException (util.js:1022:11)\n      at _exceptionWithHostPort (util.js:1044:20)\n      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)\n\n  ● DbModels › addUser...\n\n    connect ECONNREFUSED 127.0.0.1:5432\n      \n      at Object._errnoException (util.js:1022:11)\n      at _exceptionWithHostPort (util.js:1044:20)\n      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)\n\n  ● DbModels › getObjectives -- before\n\n    connect ECONNREFUSED 127.0.0.1:5432\n      \n      at Object._errnoException (util.js:1022:11)\n      at _exceptionWithHostPort (util.js:1044:20)\n      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)\n\n  ● DbModels › getUsers -- after add\n\n    connect ECONNREFUSED 127.0.0.1:5432\n      \n      at Object._errnoException (util.js:1022:11)\n      at _exceptionWithHostPort (util.js:1044:20)\n      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14) thrown\n\n  ● DbModels › deleteUserById: quantity=0\n\n    connect ECONNREFUSED 127.0.0.1:5432\n      \n      at Object._errnoException (util.js:1022:11)\n      at _exceptionWithHostPort (util.js:1044:20)\n      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)\n\n  ● DbModels › getUsers -- after delete\n\n    connect ECONNREFUSED 127.0.0.1:5432\n      \n      at Object._errnoException (util.js:1022:11)\n      at _exceptionWithHostPort (util.js:1044:20)\n      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)\n",
-      "name": "c:\\inetpub\\wwwroot\\scrumi-react\\__tests__\\models\\dbmodels.test.js",
-      "startTime": 1538174532590,
-      "status": "failed",
       "summary": ""
     }
   ],

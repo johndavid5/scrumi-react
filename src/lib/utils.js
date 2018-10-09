@@ -109,9 +109,28 @@ export const queryStringToObject = function(queryString) {
 
 } /* queryStringToObject() */
 
+export const strEqualsIgnoreCase = function(str1, str2) {
+    return compareStrings( str1, str2, true, true )
+}
+
+/* https://stackoverflow.com/questions/2140627/javascript-case-insensitive-string-comparison */
+export const compareStrings = function(string1, string2, ignoreCase, useLocale) {
+    if (ignoreCase) {
+        if (useLocale) {
+            string1 = string1.toLocaleLowerCase();
+            string2 = string2.toLocaleLowerCase();
+        }
+        else {
+            string1 = string1.toLowerCase();
+            string2 = string2.toLowerCase();
+        }
+    }
+
+    return string1 === string2;
+}
 
 //let utils = { customStringify: customStringify, errorStringify: errorStringify }
 // Or, using object literal assignment...
-let utils = { customStringify, errorStringify, objectToQueryString, queryStringToObject }
+let utils = { customStringify, errorStringify, objectToQueryString, queryStringToObject, strEqualsIgnoreCase, compareStrings }
 export { utils }
 export default utils

@@ -12,10 +12,11 @@ import { config } from '../../../src/config'
 import { logajohn } from '../../../src/lib/logajohn'
 import { customStringify } from '../../../src/lib/utils'
 
-logajohn.setLevel(config.DEBUG_LEVEL)
-logajohn.debug(`__tests__/actions.test.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
-
 let sWhere = "__tests__/components/ui/ObjectivesListComponent.test.js"
+
+logajohn.setLevel(config.DEBUG_LEVEL)
+logajohn.debug(`${sWhere}: logajohn.getLevel()=${logajohn.getLevel()}...`)
+
 
 describe("<ObjectivesListComponent /> UI Component", () => {
 
@@ -127,6 +128,9 @@ describe("<ObjectivesListComponent /> UI Component", () => {
         logajohn.debug(`${sWho} -- SHEMP: Moe, _onObjectivesFilter.mock.calls=`, _onObjectivesFilter.mock.calls )
 
         expect(_onObjectivesFilter).toBeCalled()
+
+        expect(_onObjectivesFilter.mock.calls[0][0].sort_by_field).toEqual('description')
+        expect(_onObjectivesFilter.mock.calls[0][0].sort_by_asc_desc).toEqual('asc')
     })
 
 })
