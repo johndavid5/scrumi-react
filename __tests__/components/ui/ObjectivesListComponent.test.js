@@ -115,13 +115,20 @@ describe("<ObjectivesListComponent /> UI Component", () => {
         expect(wrapper.find('#spinning-gears').length).toBe(0)
     })
 
-    it("click on heading invokes onObjectivesFilter - description ", () => {
+    // NOTE: Haven't yet mocked the SortButton, so we're using the real one here...
+    it("click on heading invokes onObjectivesFilter() - description, preserving current filters", () => {
 
         let sWho = sWhere + ": click on heading invokes onObjectivesFilter - description "
 
         const _onObjectivesFilter = jest.fn()
 
-        mount(<ObjectivesListComponent onObjectivesFilter={_onObjectivesFilter} objectives={{objectives_list: faux_objectives}} />)
+        let faux_description_filter = "glass"
+        let faux_objectives_filters = { "description_filter": faux_description_filter }
+
+        let wrapper = mount(<ObjectivesListComponent onObjectivesFilter={_onObjectivesFilter} objectives={{objectives_filters: faux_objectives_filters, objectives_list: faux_objectives}} />)
+
+        //mount(<ObjectivesListComponent onObjectivesFilter={_onObjectivesFilter} objectives={{objectives_list: faux_objectives}} />)
+            wrapper
             .find('#sort-by-description')
             .simulate('click')
 
@@ -129,8 +136,9 @@ describe("<ObjectivesListComponent /> UI Component", () => {
 
         expect(_onObjectivesFilter).toBeCalled()
 
-        expect(_onObjectivesFilter.mock.calls[0][0].sort_by_field).toEqual('description')
-        expect(_onObjectivesFilter.mock.calls[0][0].sort_by_asc_desc).toEqual('asc')
+        expect(_onObjectivesFilter.mock.calls[0][0].sort_by_field).toEqual('description') // sort by description asc
+        expect(_onObjectivesFilter.mock.calls[0][0].sort_by_asc_desc).toEqual('asc') // sort by description asc
+        expect(_onObjectivesFilter.mock.calls[0][0].description_filter).toEqual(faux_description_filter) // did not clobber description_filter...
     })
 
 })

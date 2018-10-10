@@ -72,8 +72,12 @@ const ObjectivesListComponent = (props) => {
         logajohn.info(`${sWho}(): props = `, customStringify(props) )
 
         const { onObjectivesFilter } = props; // Get dispatch method from props...
+        const currentFilters = ( props.objectives && props.objectives.objectives_filters ) ? props.objectives.objectives_filters : {}
 
-        let filters = { sort_by_field: sWhat, sort_by_asc_desc: sAscDesc };
+        logajohn.info(`${sWho}(): currentFilters = `, currentFilters )
+
+        // Important: Use spread operator ... to preserve current filters...
+        let filters = { ...currentFilters, sort_by_field: sWhat, sort_by_asc_desc: sAscDesc };
 
         event.preventDefault()
 
@@ -96,7 +100,7 @@ const ObjectivesListComponent = (props) => {
     if( objectives && objectives.objectives_filters && objectives.objectives_filters.description_filter ){
         gefilters.push( 
               <div className="filter-params row">
-                 <div className="col-sm-6 col-form-label" style={gefilterStyle}>Description Filter: <span id="static-description-filter">{objectives.objectives_filters.description_filter}</span></div>
+                 <div className="col-sm-6 col-form-label" style={gefilterStyle}>Description Filter: <span id="static-description-filter">{'"'+objectives.objectives_filters.description_filter+'"'}</span></div>
               </div>
         )
     }
@@ -142,7 +146,7 @@ const ObjectivesListComponent = (props) => {
 
     let objectives_table = (  (objectives && objectives.objectives_list && objectives.objectives_list.length > 0) ?
         (
-                  <table className="table" id="objectives-table">
+                  <table className="table" id="objectives-table" style={{marginTop: '10px'}}>
                         <thead>
                       <tr>
                           <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='description' sWhatPretty='Description' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={sortBy} />:""}</th>

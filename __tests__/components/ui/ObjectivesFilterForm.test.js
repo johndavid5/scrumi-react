@@ -9,8 +9,10 @@ const { shallow, mount } = Enzyme
 import { config } from '../../../src/config'
 import { logajohn } from '../../../src/lib/logajohn'
 
+let sWhere = '__tests__/components/ui/ObjectivesFilterform.test.js' 
+
 logajohn.setLevel(config.DEBUG_LEVEL)
-logajohn.debug(`ObjectivesFilterForm.test.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
+logajohn.debug(`${sWhere}: logajohn.getLevel()=${logajohn.getLevel()}...`)
 
 describe("<ObjectivesFilterForm /> UI Component", () => {
 
@@ -35,7 +37,7 @@ describe("<ObjectivesFilterForm /> UI Component", () => {
 
     it("submit invokes onObjectivesFilter", () => {
 
-        let sWho = "ObjectivesFilterForm.test.js: submit invokes onObjectivesFilter"
+        let sWho = `${sWhere}: submit invokes onObjectivesFilter`
 
         const _onObjectivesFilter = jest.fn()
         mount(<ObjectivesFilterForm onObjectivesFilter={_onObjectivesFilter} />)
@@ -44,14 +46,22 @@ describe("<ObjectivesFilterForm /> UI Component", () => {
         expect(_onObjectivesFilter).toBeCalled()
     })
 
-    it("submit invokes onObjectivesFilter -- description filter passed along", () => {
+    it("submit invokes onObjectivesFilter -- description filter passed along -- sort filters preserved", () => {
 
-        let sWho = "ObjectivesFilterForm.test.js: submit invokes onObjectivesFilter -- description filter passed along"
+        let sWho = `${sWhere}: submit invokes onObjectivesFilter -- description filter passed along -- sort filters preserved`
 
         const _onObjectivesFilter = jest.fn()
-        let s_description_filter = 'glassware'
+        let s_faux_description_filter = 'glassware'
 
-        let wrapper = mount(<ObjectivesFilterForm descriptionFilter={s_description_filter} onObjectivesFilter={_onObjectivesFilter} />)
+        // Attempted to simulate user input...
+        // ...instead using descriptionFilter prop
+        // to set description_filter...
+        let faux_objectives_filters = {
+           "sort_by_field": "description",
+           "sort_by_asc_desc": "asc"
+        }
+        let wrapper = mount(<ObjectivesFilterForm descriptionFilter={s_faux_description_filter} onObjectivesFilter={_onObjectivesFilter} objectives={{objectives_filters: faux_objectives_filters}}  />)
+        //let wrapper = mount(<ObjectivesFilterForm onObjectivesFilter={_onObjectivesFilter} />)
 
         //let le_props = wrapper.instance().props
         //let le_props = wrapper.props()
@@ -64,12 +74,25 @@ describe("<ObjectivesFilterForm /> UI Component", () => {
 
         //wrapper.find('#load-objectives')
         //    .simulate('change', {target: {value: s_description_filter}});
+        //
+
+        //wrapper.find("#description-filter").instance().value = s_faux_description_filter
+
+        const input = wrapper.find('#description-filter');
+
+        //input.simulate('focus');
+        //input.simulate('change', { target: { value: s_faux_description_filter } });
+
+        logajohn.debug(`${sWho}(): input.instance().value = `, input.instance().value )
 
         wrapper.find('#load-objectives')
                 .simulate('submit')
 
         logajohn.debug(`${sWho}(): _onObjectivesFilter.calls = `,  _onObjectivesFilter.calls )
-        expect(_onObjectivesFilter).toBeCalledWith({description_filter: 'glassware'})
+        //expect(_onObjectivesFilter).toBeCalledWith({description_filter: 'glassware'})
+        expect(_onObjectivesFilter.mock.calls[0][0].description_filter).toEqual(s_faux_description_filter) // submitted description_filter...
+        expect(_onObjectivesFilter.mock.calls[0][0].sort_by_field).toEqual(faux_objectives_filters.sort_by_field) // did not clobber sort_by_field...
+        expect(_onObjectivesFilter.mock.calls[0][0].sort_by_asc_desc).toEqual(faux_objectives_filters.sort_by_asc_desc) // did not clobber sort_by_asc_desc...
         
 
         //wrapper.find('#description-filter').simulate('change', {

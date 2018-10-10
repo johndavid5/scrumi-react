@@ -38,4 +38,6 @@ REM babel-node node_modules/jest/bin/jest.js --watch --no-colors "dbmodels.test.
 REM babel-node node_modules\jest\bin\jest.js --debug --verbose --watch --no-colors "ObjectivesListComponent.test.js$" 2>&1 | tee p.out
 REM babel-node node_modules\jest\bin\jest.js --debug --verbose --watch --no-colors "ObjectivesListComponent.test.js|SortButton.test.js" 2>&1 | tee p.out
 REM babel-node node_modules\jest\bin\jest.js --debug --verbose --watch --no-colors "ObjectivesListContainer.test.js" 2>&1 | tee p.out
-babel-node node_modules\jest\bin\jest.js --watchAll 2>&1 | tee p.out
+REM babel-node node_modules\jest\bin\jest.js --watchAll 2>&1 | tee p.out
+REM babel-node node_modules\jest\bin\jest.js --debug --verbose --watch --no-colors "SortButton.test.js" 2>&1 | tee p.out
+babel-node node_modules\jest\bin\jest.js --watch --no-colors "ObjectivesFilterForm.test.js$" 2>&1 | tee p.out

@@ -35,7 +35,7 @@ describe("<SortButton /> UI Component", () => {
             expect(wrapper.find("button.btn").text()).toEqual(props.sWhatPretty)
             let id = `#sort-by-${props.sWhat}`
             expect(wrapper.find(id).length).toEqual(1)
-            expect(wrapper.find(id).prop('aria-label')).toEqual(`Sort by ${props.sWhatPretty} Ascending`)
+            expect(wrapper.find(id).prop('aria-label')).toEqual(`Sort by ${props.sWhatPretty} Descending`)
         })
 
         it("renders the correct glyph -- with class .glyphicon-chevron-up", () =>

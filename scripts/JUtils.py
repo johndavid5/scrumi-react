@@ -49,3 +49,15 @@ class JUtils(object): # always inherit from object...it's just a good idea...
         match = my_regex.match(s_input)
         match_array[0] = match
         return match
+
+def array_grep(input_array, regex):
+    output_array = []
+    for el in input_array:    
+        if regex.match( el ): 
+            output_array.append( el )            
+    return output_array
+
+def array_to_string( array ):
+    return ', '.join( array )
+
+

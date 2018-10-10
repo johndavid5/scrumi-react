@@ -41,13 +41,15 @@ class ObjectivesFilterForm extends Component {
 
         let sWho = "ObjectivesFilterForm::submit";
 
-        //logajohn.info(`${sWho}(): this.refs = `, customStringify(this.refs) )
         logajohn.info(`${sWho}(): this.props = `, customStringify(this.props) )
         logajohn.info(`${sWho}(): this.state = `, customStringify(this.state) )
 
         const { onObjectivesFilter } = this.props; // Get dispatch method from props...
 
-        let filters = { description_filter: this.state.descriptionFilter};
+        const currentFilters = ( this.props.objectives && this.props.objectives.objectives_filters ) ? this.props.objectives.objectives_filters : {}
+
+        // Important: Use spread operator ... to preserve current filter fields...
+        let filters = { ...currentFilters, description_filter: this.state.descriptionFilter};
 
         event.preventDefault()
 
@@ -55,11 +57,6 @@ class ObjectivesFilterForm extends Component {
         
         onObjectivesFilter(filters);
 
-        // Optional: clear form values...
-        //_base_path.value = ''
-        //_addition_only_code.value = ''
-
-        //basePath.focus()
 
     }/* submit() */
 

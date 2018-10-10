@@ -1,20 +1,26 @@
-1. fancy: Use HTML5 video in lieue of animated gif in 
+1a. fancy: Use HTML5 video in lieue of animated gif in 
     ./dist/assets/images/gold-brass-gear-cogs-animated-5.gif
 
-2. Get rid of leftover stuff from treebuchet, etc. (to make istanbul say we're
+1b. fancy: Animate the submit button itself to "turn" along with
+    the gears...
+
+2a. fancy: default sort and remember last sort via browser db.
+2b. fancy: remember last filters -- through "browser db"...?
+
+3. Get rid of leftover stuff from treebuchet, etc. (to make istanbul say we're
    closer to 100% coverage)...then tweak tests to bring us closer to 100%
    coverage...
 
-3. Add "end-to-end" tests for the REST API...(using actual node request objects
+4. Add "end-to-end" tests for the REST API...(using actual node request objects
    and/or supertest for not quite end-to-end...)...we may be OK with using
    the actual database for these...(these may not _really_ be necessary
    since we're testing out the models themselves -- complete with DB
    connections, and also testing out the api's...but they are a good
    way to make sure everything's functioning REST-fully...)
 
-4. Add full end-to-end tests with Jest and Puppeteer...
+5. Add full end-to-end tests with Jest and Puppeteer...
 
-5. Add first filter -- description_filter 
+6. Add first filter -- description_filter 
         [x] dbmodels.test.js -- test that DB model filters by description
         [x] ObjectivesFilterForm.test.js -- test that description filter is
                passed in call to onObjectivesFilter... 
