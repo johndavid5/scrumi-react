@@ -1,3 +1,28 @@
+REM https://stackoverflow.com/questions/5944180/how-do-you-run-a-command-as-an-administrator-from-the-windows-command-line/18316648#18316648
+<!-- : --- Self-Elevating Batch Script ---------------------------
+@whoami /groups | find "S-1-16-12288" > nul && goto :admin
+set "ELEVATE_CMDLINE=cd /d "%~dp0" & call "%~f0" %*"
+cscript //nologo "%~f0?.wsf" //job:Elevate & exit /b
+
+-->
+<job id="Elevate"><script language="VBScript">
+  Set objShell = CreateObject("Shell.Application")
+  Set objWshShell = WScript.CreateObject("WScript.Shell")
+  Set objWshProcessEnv = objWshShell.Environment("PROCESS")
+  strCommandLine = Trim(objWshProcessEnv("ELEVATE_CMDLINE"))
+  objShell.ShellExecute "cmd", "/c " & strCommandLine, "", "runas"
+</script></job>
+:admin -----------------------------------------------------------
+
+@echo off
+echo Running as elevated user.
+echo Script file : %~f0
+echo Arguments   : %*
+echo Working dir : %cd%
+echo.
+:: administrator commands here
+:: e.g., run shell as admin
+REM cmd /k
 REM call demos\file-model-demo.bat 2>&1 | tee p.out
 REM call demos\objectives-demo.bat 2>&1 | tee p.out
 REM npm run test-models 2>&1 | tee p.out
@@ -36,8 +61,9 @@ REM babel-node node_modules\jest\bin\jest.js --debug --verbose --watch --no-colo
 REM babel-node node_modules\jest\bin\jest.js --watch --json --outputFile test.json 2>&1 | tee p.out
 REM babel-node node_modules/jest/bin/jest.js --watch --no-colors "dbmodels.test.js$" 2>&1 | tee p.out
 REM babel-node node_modules\jest\bin\jest.js --debug --verbose --watch --no-colors "ObjectivesListComponent.test.js$" 2>&1 | tee p.out
-REM babel-node node_modules\jest\bin\jest.js --debug --verbose --watch --no-colors "ObjectivesListComponent.test.js|SortButton.test.js" 2>&1 | tee p.out
 REM babel-node node_modules\jest\bin\jest.js --debug --verbose --watch --no-colors "ObjectivesListContainer.test.js" 2>&1 | tee p.out
-REM babel-node node_modules\jest\bin\jest.js --watchAll 2>&1 | tee p.out
 REM babel-node node_modules\jest\bin\jest.js --debug --verbose --watch --no-colors "SortButton.test.js" 2>&1 | tee p.out
-babel-node node_modules\jest\bin\jest.js --watch --no-colors "ObjectivesFilterForm.test.js$" 2>&1 | tee p.out
+REM babel-node node_modules\jest\bin\jest.js --watch --no-colors "ObjectivesFilterForm.test.js$" 2>&1 | tee p.out
+REM babel-node node_modules\jest\bin\jest.js --watchAll 2>&1 | tee p.out
+REM babel-node node_modules\jest\bin\jest.js --watch --no-colors "ObjectivesListComponent.test.js" 2>&1 | tee p.out
+babel-node node_modules\jest\bin\jest.js --watch --no-colors "index.test.js" 2>&1 | tee p.out

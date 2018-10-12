@@ -49,9 +49,11 @@ https://node-postgres.com/
 
     https://github.com/dmitry-zaets/redux-mock-store
 
-/* 10/9/2018: After many many annoying Jest crashes...
-* To prevent constant crashing of jest because it can't
-* lstat .p.swp or some other temp file, run it as admin...
-*/
-https://github.com/oblador/react-native-vector-icons/issues/354
-Error: EPERM: operation not permitted, lstat 'D:\reactnative\MyBaby\node_modules \.staging\react-native-vector-icons-2612cf43\Fonts\Zocial.ttf'
+* 10/9/2018: After many many annoying Jest crashes...
+  To prevent constant crashing of jest because it can't
+  lstat .p.swp or some other temp file, run it as admin...
+        Error: EPERM: operation not permitted, lstat 'c:\inetpub\wwwroot\scrumi-react\src\components\ui\4913'
+        Error: EPERM: operation not permitted, lstat 'D:\reactnative\MyBaby\node_modules \.staging\react-native-vector-icons-2612cf43\Fonts\Zocial.ttf'
+ https://github.com/oblador/react-native-vector-icons/issues/354
+ REM Self-Elevating Batch Script...
+ https://stackoverflow.com/questions/5944180/how-do-you-run-a-command-as-an-administrator-from-the-windows-command-line/18316648#18316648
