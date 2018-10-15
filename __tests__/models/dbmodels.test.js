@@ -38,6 +38,7 @@ describe('DbModels', () => {
     const testObjectivesIn = [
         { description: 'Wash glassware', user_index: 0 },
         { description: 'Arrange files', user_index: 1 },
+        { description: 'Steam open letters', user_index: 1 },
         { description: 'I\'ll be back, Bennett!', user_index: 2},
         { description: 'Let off some steam, Bennett!', user_index: 2}
     ]
@@ -85,8 +86,9 @@ describe('DbModels', () => {
         testUsersIn.forEach((user) => {
 	        usersModel.addUser(user)
 	        .then((newUser) => {
+                    logajohn.debug(`${sWho}() -- SHEMP: Moe, got newUser = `, newUser )
                     const userOutExpected = { ...user, user_id: newUser.user_id }
-	            expect(newUser).toEqual(userOutExpected)
+	                expect(newUser).toEqual(userOutExpected)
 
                     testUsersOut.push(newUser)
                     testUsersOutIdMap[newUser.user_id] = newUser
@@ -155,15 +157,46 @@ describe('DbModels', () => {
 
         objectivesModel.getObjectives( filter )
             .then((objectives) => {
-                logajohn.debug(`${sWho}(): after...then: objectives =`, objectives)
-                logajohn.debug(`${sWho}(): after...then: objectives.length =`, objectives.length)
+                logajohn.debug(`${sWho}(): .then: objectives =`, objectives)
+                logajohn.debug(`${sWho}(): .then: objectives.length =`, objectives.length)
 
                 // Get rid of objectives that we didn't add ourselves as part
                 // of the test...
                 let new_objectives = objectives.filter( objective => testObjectivesOutIdMap.hasOwnProperty(objective.objective_id) )
 
+                logajohn.debug(`${sWho}(): .then: new_objectives =`, new_objectives)
+                logajohn.debug(`${sWho}(): .then: new_objectives.length =`, new_objectives.length)
+
                 // Should just be the one of the _new_ test objective with description 'Wash glassware' 
                 expect(new_objectives.length).toEqual(1)
+                expect(new_objectives[0].description).toEqual("Wash glassware")
+                done()
+            })
+    })
+
+    it('getObjectives -- full name filter -- case insensitive', (done) => {
+
+        let sWho = sWhere + '::getObjectives -- full name filter -- case insensitive'
+
+        let filter = { full_name: 'ArNoLd' }  // case insensitive
+
+        logajohn.debug(`${sWho}(): filter = `, filter )
+
+        objectivesModel.getObjectives( filter )
+            .then((objectives) => {
+                logajohn.debug(`${sWho}(): .then: objectives =`, objectives)
+                logajohn.debug(`${sWho}(): .then: objectives.length =`, objectives.length)
+
+                // Get rid of objectives that we didn't add ourselves as part
+                // of the test...
+                let new_objectives = objectives.filter( objective => testObjectivesOutIdMap.hasOwnProperty(objective.objective_id) )
+
+                logajohn.debug(`${sWho}(): .then: new_objectives =`, new_objectives)
+                logajohn.debug(`${sWho}(): .then: new_objectives.length =`, new_objectives.length)
+
+                // Should just be the one of the _new_ test objective with description 'Wash glassware' 
+                expect(new_objectives.length).toEqual(2)
+                expect(new_objectives[0].full_name).toEqual("Arnold Schwarzenegger")
                 done()
             })
     })

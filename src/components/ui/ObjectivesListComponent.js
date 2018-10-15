@@ -100,7 +100,7 @@ const ObjectivesListComponent = (props) => {
     if( objectives && objectives.objectives_filters && objectives.objectives_filters.description_filter ){
         gefilters.push( 
               <div className="filter-params row">
-                 <div className="col-sm-6 col-form-label" style={gefilterStyle}>Description Filter: <span id="static-description-filter">{'"'+objectives.objectives_filters.description_filter+'"'}</span></div>
+                 <div className="col-sm-6 col-form-label" style={gefilterStyle}>Description Filter: &quot;<span id="static-description-filter">{objectives.objectives_filters.description_filter}</span>&quot;</div>
               </div>
         )
     }
