@@ -102,10 +102,10 @@ class ObjectivesFilterForm extends Component {
             <span class="glyphicon glyphicon-refresh" aria-hidden="true" style={{fontWeight: 'bold'}}></span>
          </button>
 
-         <label for="description-filter" style={{paddingLeft: '2px', paddingRight: '2px'}}>Description Filter:</label>
+         <label for="description-filter" style={{marginLeft: '4px', marginRight: '2px'}}>Description Filter:</label>
          <input type="text" className="form-control" id="description-filter" name="descriptionFilter" aria-label="Description Filter" value={this.state.descriptionFilter} onChange={this.handleInputChange} />
 
-         <label for="full-name-filter" style={{paddingLeft: '2px', paddingRight: '2px'}}>Assigned To Filter:</label>
+         <label for="full-name-filter" style={{marginLeft: '4px', marginRight: '2px'}}>Assigned To Filter:</label>
          <input type="text" className="form-control" id="full-name-filter" name="fullNameFilter" aria-label="Assigned To Filter" value={this.state.fullNameFilter} onChange={this.handleInputChange} />
         
         {/*<label class="sr-only" for="description-filter">Description Filter</label>

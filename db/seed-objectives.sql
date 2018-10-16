@@ -17,4 +17,3 @@ values
 ,( 'Do TEM analysis', 9 )
 ;
 
-;

@@ -1,5 +1,8 @@
 CREATE TABLE objectives (
     objective_id SERIAL PRIMARY KEY,
     description VARCHAR(100),
-    user_id_assigned_to INTEGER REFERENCES users(user_id)
+    user_id_assigned_to INTEGER REFERENCES users(user_id),
+    begun timestamp with time zone,
+    completed timestamp with time zone,
+    comment VARCHAR(100)
 );
