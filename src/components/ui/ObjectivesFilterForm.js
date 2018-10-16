@@ -27,7 +27,8 @@ class ObjectivesFilterForm extends Component {
         logajohn.info(`${sWho}(): this.props=`, customStringify(this.props, ' '))
 
         this.state = {
-            descriptionFilter: props.descriptionFilter ? props.descriptionFilter : ''
+            descriptionFilter: props.descriptionFilter ? props.descriptionFilter : '',
+            fullNameFilter: props.fullNameFilter ? props.fullNameFilter : ''
         }
 
         logajohn.info(`${sWho}(): this.state=`, this.state)
@@ -49,7 +50,7 @@ class ObjectivesFilterForm extends Component {
         const currentFilters = ( this.props.objectives && this.props.objectives.objectives_filters ) ? this.props.objectives.objectives_filters : {}
 
         // Important: Use spread operator ... to preserve current filter fields...
-        let filters = { ...currentFilters, description_filter: this.state.descriptionFilter};
+        let filters = { ...currentFilters, description_filter: this.state.descriptionFilter, full_name_filter: this.state.fullNameFilter };
 
         event.preventDefault()
 
@@ -103,6 +104,9 @@ class ObjectivesFilterForm extends Component {
 
          <label for="description-filter" style={{paddingLeft: '2px', paddingRight: '2px'}}>Description Filter:</label>
          <input type="text" className="form-control" id="description-filter" name="descriptionFilter" aria-label="Description Filter" value={this.state.descriptionFilter} onChange={this.handleInputChange} />
+
+         <label for="full-name-filter" style={{paddingLeft: '2px', paddingRight: '2px'}}>Assigned To Filter:</label>
+         <input type="text" className="form-control" id="full-name-filter" name="fullNameFilter" aria-label="Assigned To Filter" value={this.state.fullNameFilter} onChange={this.handleInputChange} />
         
         {/*<label class="sr-only" for="description-filter">Description Filter</label>
          <div class="input-group">

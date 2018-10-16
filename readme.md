@@ -12,6 +12,7 @@ PostgreSQL
 
 PostgreSQL node driver: "pg": "^7.4.3",
 https://node-postgres.com/
+https://stackoverflow.com/questions/50947066/error-sorry-too-many-clients-already
 
 * https://jestjs.io/docs/en/asynchronous.html
 * https://jestjs.io/docs/en/mock-functions

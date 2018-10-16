@@ -116,4 +116,45 @@ describe("<ObjectivesFilterForm /> UI Component", () => {
 
     })
 
+
+    it("submit invokes onObjectivesFilter -- full name filter passed along -- sort filters preserved", () => {
+
+        let sWho = `${sWhere}: submit invokes onObjectivesFilter -- full name filter passed along -- filters preserved`
+
+        const _onObjectivesFilter = jest.fn()
+        let s_faux_full_name_filter = 'Joe Kovacs'
+        let s_faux_description_filter = 'glassware'
+
+        // Attempted to simulate user input...
+        // ...instead using descriptionFilter prop
+        // to set description_filter...
+        let faux_objectives_filters = {
+           "sort_by_field": "description",
+           "sort_by_asc_desc": "asc"
+        }
+        let wrapper = mount(<ObjectivesFilterForm descriptionFilter={s_faux_description_filter} fullNameFilter={s_faux_full_name_filter} onObjectivesFilter={_onObjectivesFilter} objectives={{objectives_filters: faux_objectives_filters}}  />)
+
+        const full_name_filter = wrapper.find('#full-name-filter');
+
+        logajohn.debug(`${sWho}(): full_name_filter = `, full_name_filter )
+
+        // expect(typeof input).to.not.equal("undefined");
+        // expect(input).to.have.lengthOf(1);
+        // logajohn.debug(`${sWho}(): input.instance().value = `, input.instance().value )
+
+        wrapper.find('#load-objectives')
+                .simulate('submit')
+
+        logajohn.debug(`${sWho}(): _onObjectivesFilter.calls = `,  _onObjectivesFilter.calls )
+
+        //expect(_onObjectivesFilter).toBeCalledWith({description_filter: 'glassware'})
+        expect(_onObjectivesFilter.mock.calls[0][0].full_name_filter).toEqual(s_faux_full_name_filter) // submitted full_name_filter...
+
+        expect(_onObjectivesFilter.mock.calls[0][0].description_filter).toEqual(s_faux_description_filter) // did not clobber description_filter...
+
+        expect(_onObjectivesFilter.mock.calls[0][0].sort_by_field).toEqual(faux_objectives_filters.sort_by_field) // did not clobber sort_by_field...
+        expect(_onObjectivesFilter.mock.calls[0][0].sort_by_asc_desc).toEqual(faux_objectives_filters.sort_by_asc_desc) // did not clobber sort_by_asc_desc...
+        
+    })
+
 })

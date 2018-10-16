@@ -37,7 +37,8 @@ const ObjectivesListComponent = (props) => {
     }
 
     const gefilterStyle = {
-        color: 'blue'
+        color: 'blue',
+        whiteSpace: 'nowrap'
     }
 
     const timestampStyle = {
@@ -96,15 +97,49 @@ const ObjectivesListComponent = (props) => {
             ): "" )
 
     let gefilters = []
+    let gefilterees = [ 
+        { field: 'description_filter', pretty_field: 'Description Filter' }
+        ,{ field: 'full_name_filter', pretty_field: 'Assigned To Filter' }
+    ]
+
+    //gefilters = gefilterees.reduce((accumulator, val)=>{
+    //    if( objectives && objectives.objectives_filters && objectives.objectives_filters[val.field] ){
+    //        accumulator = accumulator.push(<div style={gefilterStyle}>{val.pretty_field}: &quot;<span id="static-description-filter">{objectives.objectives_filters[val.field]}</span>&quot;</div>);
+    //    }
+    //    return accumulator;
+    //}, gefilters )
+
+    gefilterees.forEach( (val)=>{
+        if( objectives && objectives.objectives_filters && objectives.objectives_filters[val.field] ){
+
+            let sluggified_field = val.field.replace(/_/g, '-') // e.g., 'description-field'
+
+            let id=`static-${sluggified_field}`; // e.g., 'static-description-field' 
+
+            if( gefilters.length > 0 ){
+                gefilters.push(', ')
+            }
+
+            gefilters.push(<span style={gefilterStyle}>{val.pretty_field}: &quot;<span id={id}>{objectives.objectives_filters[val.field]}</span>&quot;</span>);
+        }
+    })
+
+    //if( objectives && objectives.objectives_filters && objectives.objectives_filters.description_filter ){
+    //    gefilters.push( 
+    //        <div className="col-sm-1 col-form-label" style={gefilterStyle}>Description Filter: &quot;<span id="static-description-filter">{objectives.objectives_filters.description_filter}</span>&quot;</div>
+    //    )
+    //}
+
+    //if( objectives && objectives.objectives_filters && objectives.objectives_filters.full_name_filter ){
+    //    gefilters.push( 
+    //      <div className="col-sm-1 col-form-label" style={gefilterStyle}>Assigned To Filter: &quot;<span id="static-full-name-filter">{objectives.objectives_filters.full_name_filter}</span>&quot;</div>
+    //    )
+    //}
     
-    if( objectives && objectives.objectives_filters && objectives.objectives_filters.description_filter ){
-        gefilters.push( 
-              <div className="filter-params row">
-                 <div className="col-sm-6 col-form-label" style={gefilterStyle}>Description Filter: &quot;<span id="static-description-filter">{objectives.objectives_filters.description_filter}</span>&quot;</div>
-              </div>
-        )
-    }
-    
+    //if( gefilters.length > 0 ){
+    //    gefilters.unshift(<div className="filter-params row">);
+    //    gefilters.push(</div>);
+    //}
 
     //let filter_params = (  ( 1 == 0 ) ?
     //    (
@@ -171,7 +206,9 @@ const ObjectivesListComponent = (props) => {
     return (
       <div className="objectives-list-component container-fluid" style={{ paddingLeft: '1em' }}>
       {timestamp}
+      <div>
       {gefilters}
+      </div>
       {gears}
       {objectives_table}
       { ((debugee) => {

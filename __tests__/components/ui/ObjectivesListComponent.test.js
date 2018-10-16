@@ -32,17 +32,37 @@ describe("<ObjectivesListComponent /> UI Component", () => {
         expect(findee.text()).toBe(faux_timestamp)
     })
 
-    it("renders filters...", () => {
+    it("renders filters statically...", () => {
         let sWho = `${sWhere}: <ObjectivesListComponent /> UI Component -- renders filters`
 
         let faux_description_filter = "glass"
-        let faux_objectives_filters = { "description_filter": faux_description_filter }
+        let faux_full_name_filter = "Charlie"
+        let faux_objectives_filters = { "description_filter": faux_description_filter, "full_name_filter": faux_full_name_filter }
 
         let wrapper = mount(<ObjectivesListComponent objectives={{objectives_filters: faux_objectives_filters}} />)
-        let findee = wrapper.find('#static-description-filter')
-        logajohn.debug(`${sWho} -- SHEMP: Moe, findee.text() = `, findee.text() )
-        expect(findee.length).toBe(1)
-        expect(findee.text()).toBe(faux_description_filter)
+
+        let description_findee = wrapper.find('#static-description-filter')
+        logajohn.debug(`${sWho} -- SHEMP: Moe, description_findee.text() = `, description_findee.text() )
+        expect(description_findee.length).toBe(1)
+        expect(description_findee.text()).toBe(faux_description_filter)
+
+        let full_name_findee = wrapper.find('#static-full-name-filter')
+        logajohn.debug(`${sWho} -- SHEMP: Moe, full_name_findee.text() = `, full_name_findee.text() )
+        expect(full_name_findee.length).toBe(1)
+        expect(full_name_findee.text()).toBe(faux_full_name_filter)
+    })
+
+    it("does not render static filters if not specified...", () => {
+        let sWho = `${sWhere}: <ObjectivesListComponent /> UI Component -- renders filters`
+
+        let faux_description_filter = ""
+        let faux_full_name_filter = ""
+        let faux_objectives_filters = { "description_filter": faux_description_filter, "full_name_filter": faux_full_name_filter }
+
+        let wrapper = mount(<ObjectivesListComponent objectives={{objectives_filters: faux_objectives_filters}} />)
+
+        expect(wrapper.find('#static-description-filter').length).toBe(0);
+        expect(wrapper.find('#static-full-name--filter').length).toBe(0);
     })
 
     it("does not render timestamp if objectives.objectives_timestamp is not supplied...", () => {
