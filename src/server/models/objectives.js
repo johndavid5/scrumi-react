@@ -115,6 +115,7 @@ export class Objectives {
     }/* addObjective() */
 
     getObjectives(filter) {
+
         const sWho = 'Objectives::getObjectives'
 
         logajohn.debug(`${sWho}(): filter = `, filter )

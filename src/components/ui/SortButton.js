@@ -14,45 +14,55 @@ import { customStringify, strEqualsIgnoreCase } from '../../lib/utils' // custom
 class SortButton extends Component {
     render() {
         const {
-            sWhat, sWhatPretty, sCurrentSortBy, sCurrentAscDesc, onSortBy
+            sWhat, sWhatPretty, sCurrentSortBy, sCurrentAscDesc, onSortBy 
         } = this.props
 
-        let glyph = ""
+        let my_id = `sort-by-${sWhat}`
+        let my_aria_label = `Sort by ${sWhatPretty} ${sNextAscDescPretty}`
+
+        let glyphButton = ""
         let sNextAscDesc = ""
         let sNextAscDescPretty = ""
-        let glyphStyle={paddingLeft: '2px'} 
+        let sChevronClass= ""
+        //let glyphStyle={paddingLeft: '2px', height: '0.5em', width: '1.0em' } 
+        //let glyphStyle={paddingLeft: '2px', color: '#FFD9F2'}; /* pink */
+        let glyphStyle={paddingLeft: '2px'}; /* pink */
+
         if( strEqualsIgnoreCase( sCurrentSortBy, sWhat ) ){
                 if( strEqualsIgnoreCase( sCurrentAscDesc, "asc" ) ){
-                    glyph = <span className="glyphicon glyphicon-chevron-up" aria-hidden="true" style={glyphStyle}></span> 
                     sNextAscDesc = "desc"
                     sNextAscDescPretty = "Descending"
+                    sChevronClass = "glyphicon-chevron-up"
                 }
                 else if( strEqualsIgnoreCase( sCurrentAscDesc, "desc" ) ){
-                    glyph = <span className="glyphicon glyphicon-chevron-down" aria-hidden="true" style={glyphStyle}></span> 
                     sNextAscDesc = "asc"
                     sNextAscDescPretty = "Ascending"
+                    sChevronClass = "glyphicon-chevron-down"
                 }
                 else{
-                    glyph = <span className="glyphicon glyphicon-chevron-up" aria-hidden="true" style={glyphStyle}></span> 
+                    // Shouldn't happen, but if it does assume "asc"
                     sNextAscDesc = "desc"
                     sNextAscDescPretty = "Descending"
+                    sChevronClass = "glyphicon-chevron-up"
                 }
+
+                glyphButton = <span className={'glyphicon ' + sChevronClass} aria-hidden="true" style={glyphStyle}></span>
+                //glyphButton = <button type="button" className="btn btn-default" aria-label={my_aria_label} onClick={(e)=>onSortBy(e, sWhat, sNextAscDesc)} style={{height: '0.5em'}}><span className={'glyphicon ' + sChevronClass} aria-hidden="true" style={{height: '0.5em'}}></span></button> 
         }
         else{
             sNextAscDesc = "asc"
             sNextAscDescPretty = "Ascending"
         }
 
-        let my_id = `sort-by-${sWhat}`
-        let my_aria_label = `Sort by ${sWhatPretty} ${sNextAscDescPretty}`
 
         return (
-            <button type="button" className="btn btn-default" id={my_id}
+            <a href="#" id={my_id}
                     aria-label={my_aria_label}
-                    onClick={(e)=>onSortBy(e, sWhat, sNextAscDesc)}>
+                    onClick={(e)=>{e.preventDefault(); onSortBy(e, sWhat, sNextAscDesc);}}
+                    >
                     {sWhatPretty} 
-                    {glyph}
-            </button>
+                    {glyphButton}
+            </a>
         )
 
     }/* render() */

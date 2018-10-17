@@ -35,12 +35,26 @@ class ObjectivesFilterForm extends Component {
 
         this.submit = this.submit.bind(this)
 
-        this.handleInputChange = this.handleInputChange.bind(this)
+        this.filterIt = this.filterIt.bind(this)
+
+        this.handleInputChange = this.handleInputChange.bind(this);
+
     }
 
     submit(event) {
 
         let sWho = "ObjectivesFilterForm::submit";
+
+        if(event){
+            event.preventDefault()
+        }
+
+        this.filterIt(); 
+    }
+
+    filterIt(){
+
+        let sWho = "ObjectivesFilterForm::filterIt";
 
         logajohn.info(`${sWho}(): this.props = `, customStringify(this.props) )
         logajohn.info(`${sWho}(): this.state = `, customStringify(this.state) )
@@ -52,15 +66,18 @@ class ObjectivesFilterForm extends Component {
         // Important: Use spread operator ... to preserve current filter fields...
         let filters = { ...currentFilters, description_filter: this.state.descriptionFilter, full_name_filter: this.state.fullNameFilter };
 
-        event.preventDefault()
 
         logajohn.info(`${sWho}(): Calling onObjectivesFilter(filters=`, customStringify(filters), `...`);
         
         onObjectivesFilter(filters);
 
+    }/* filterIt() */
 
-    }/* submit() */
-
+    componentDidMount(){
+        let sWho = "ObjectivesFilterForm::componentDidMount";
+        logajohn.info(`${sWho}(): Calling this.filterIt(), Moe...`);
+        this.filterIt();
+    }
 
     handleInputChange(event) {
 
@@ -99,7 +116,7 @@ class ObjectivesFilterForm extends Component {
         <form className="objectives-filter-form form-inline" onSubmit={this.submit}>
 
          <button id="load-objectives" type="submit" className="btn btn-success" aria-label="Load Objectives">
-            <span class="glyphicon glyphicon-refresh" aria-hidden="true" style={{fontWeight: 'bold'}}></span>
+            <span className="glyphicon glyphicon-refresh" aria-hidden="true" style={{fontWeight: 'bold'}}></span>
          </button>
 
          <label for="description-filter" style={{marginLeft: '4px', marginRight: '2px'}}>Description Filter:</label>
@@ -108,12 +125,12 @@ class ObjectivesFilterForm extends Component {
          <label for="full-name-filter" style={{marginLeft: '4px', marginRight: '2px'}}>Assigned To Filter:</label>
          <input type="text" className="form-control" id="full-name-filter" name="fullNameFilter" aria-label="Assigned To Filter" value={this.state.fullNameFilter} onChange={this.handleInputChange} />
         
-        {/*<label class="sr-only" for="description-filter">Description Filter</label>
-         <div class="input-group">
-           <div class="input-group-prepend">
-             <div class="input-group-text">Description Filter</div>
+        {/*<label className="sr-only" for="description-filter">Description Filter</label>
+         <div className="input-group">
+           <div className="input-group-prepend">
+             <div className="input-group-text">Description Filter</div>
            </div>
-           <input type="text" class="form-control" id="description-filter" name="descriptionFilter" value={this.state.descriptionFilter} onChange={this.handleInputChange} >
+           <input type="text" className="form-control" id="description-filter" name="descriptionFilter" value={this.state.descriptionFilter} onChange={this.handleInputChange} >
          </div>*/}
 
 

@@ -20,16 +20,27 @@ import objectives_api from './objectives-api'
 import App from '../components/App'
 import storeFactory from '../store'
 
+
+
 // No, thank you...we're full stackers here, not front-enders, so
 // if we're going to fetch an initial state, we'll fetch it from the database,
-// not from a JSON file...
+// not from a JSON file...so later on, figure out how to fetch from
+// the database...it's a bit dicie because it's an async op
+// and all these ops are synchronous...
+//
 //import initialState from '../../data/initialState.json'
-let initialState = {}
+//import initialState from './initialState'
+let initialState = {};
 
 import { logajohn } from '../lib/logajohn'
 // import logatim from 'logatim'
 
-logajohn.setLevel('info')
+import { config } from '../config'
+
+let sWhere = "./src/server/app.js";
+
+logajohn.setLevel(config.DEBUG_LEVEL)
+logajohn.debug(`${sWhere}: logajohn.getLevel()=${logajohn.getLevel()}...`)
 
 /*
 * staticCSS: middleware to handle (and "compile") SCSS gracefully...
@@ -44,13 +55,14 @@ const fileAssets = express.static(path.join(__dirname, '../../dist/assets'))
 
 const serverStore = storeFactory(true, initialState)
 
+
 /* Save the state to a new JSON file every time the state changes...
 * The `serverStore` is now the main source of truth.
 * ...NOT!
 * Actually, we're not automatically updating the
 * store on the server side any more...instead we'll
 * write to the database upon update...the database
-* will be our single source of truth on the server
+* will be our "single source of truth" on the server
 * side, thank you very much...
 */
 serverStore.subscribe(() => fs.writeFile(

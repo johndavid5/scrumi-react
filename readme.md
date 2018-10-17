@@ -58,3 +58,8 @@ https://stackoverflow.com/questions/50947066/error-sorry-too-many-clients-alread
  https://github.com/oblador/react-native-vector-icons/issues/354
  REM Self-Elevating Batch Script...
  https://stackoverflow.com/questions/5944180/how-do-you-run-a-command-as-an-administrator-from-the-windows-command-line/18316648#18316648
+
+* Jest -- unit vs. integration testing -- excellent article: 
+    * The author suggests a special suffix *.ispec.js for integration tests,
+      and gives you tips on filtering the Jest tests...
+    https://medium.com/coding-stones/separating-unit-and-integration-tests-in-jest-f6dd301f399c

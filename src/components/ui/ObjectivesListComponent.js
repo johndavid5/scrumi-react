@@ -23,17 +23,17 @@ const ObjectivesListComponent = (props) => {
 
 
     const thStyle = {
-	  border: '2px solid purple',
-        color: 'white',
-        backgroundColor: 'purple',
+	  border: '2px solid #DCDCDC',
+      color: 'white',
+      backgroundColor: '#C1B9DB',
 	  padding: '2px',
-        textAlign: 'center',
+      textAlign: 'center',
     }
 
     const tdStyle = {
-	  border: '2px solid purple',
+	  border: '2px solid #DCDCDC',
 	  padding: '2px',
-        textAlign: 'left',
+      textAlign: 'left',
     }
 
     const gefilterStyle = {
@@ -199,7 +199,7 @@ const ObjectivesListComponent = (props) => {
                       }
                     </tbody>
                     </table>
-                ) : (<h2>No objectives</h2>)
+                ) : ""
 
     )
 
