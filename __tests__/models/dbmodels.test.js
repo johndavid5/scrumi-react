@@ -36,11 +36,11 @@ describe('DbModels', () => {
 
     // Note: supply index in testUsersIn...we'll use the user_id for the database insert...
     const testObjectivesIn = [
-        { description: 'Wash glassware', user_index: 0 },
-        { description: 'Arrange files', user_index: 1 },
-        { description: 'Steam open letters', user_index: 1 },
-        { description: 'I\'ll be back, Bennett!', user_index: 2},
-        { description: 'Let off some steam, Bennett!', user_index: 2}
+        { description: 'Wash glassware', user_index: 0, begun: '2018-10-18', completed: null, comment: ''  },
+        { description: 'Arrange files', user_index: 1, begin: '2018-10-17', completed: '2018-10-18', comment: null },
+        { description: 'Steam open letters', user_index: 1, begin: '2018-10-12 9:37:18', completed: '2018-10-12 9:40:18', comment: null },
+        { description: 'Say Au Revoir to Bennett', user_index: 2, begin: '1984-04-01 9:34:12', end: '1984-04-01 9:34:14', comment: 'I\'ll be back, Bennett!' }, 
+        { description: 'Say Adieu to Bennett', user_index: 2, begin: '1984-04-01 20:23:07', end: '1984-04-01 23:23:09', comment: 'Let off some steam, Bennett!' }
     ]
 
     const testUsersOut = [] // The newly added users...
