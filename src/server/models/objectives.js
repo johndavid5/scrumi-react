@@ -89,12 +89,18 @@ export class Objectives {
 	        const pool = new Pool(config)
 
 	        const sQuery = `INSERT into objectives 
-        	(description, user_id_assigned_to)
+        	(description, user_id_assigned_to, begun, completed, comment)
         	VALUES
-        	($1, $2)
-            RETURNING objective_id, description, user_id_assigned_to
+        	($1, $2, $3, $4, $5)
+            RETURNING objective_id, description, user_id_assigned_to, begun, completed, comment
         	`
-	        const args = [objective.description, objective.user_id_assigned_to]
+	        const args = [
+                objective.description,
+                objective.user_id_assigned_to,
+                objective.begun,
+                objective.completed,
+                objective.comment
+            ];
 
 	        logajohn.debug(`${sWho}(): Calling pool.query("${sQuery}", ${JSON.stringify(args)})...`)
 
@@ -125,6 +131,17 @@ export class Objectives {
             if (filter == null) {
                 reject(new Error('You supplied a null filter.'))
             }
+
+            let sQuery = `
+            SELECT
+                o.objective_id, o.description, o.user_id_assigned_to,
+                u.first_name, u.middle_name, u.last_name,
+                full_name(u.first_name, u.middle_name, u.last_name),  
+                begun, completed, comment 
+            FROM 
+                objectives o
+            LEFT OUTER JOIN
+                users u ON o.user_id_assigned_to = u.user_id`
 
             let args = []
             let wheres = []
@@ -168,17 +185,7 @@ export class Objectives {
                 }
             }
 
-            const config = { database: this.dbname }
 
-            let sQuery = `
-            SELECT
-                o.objective_id, o.description, o.user_id_assigned_to,
-                u.first_name, u.middle_name, u.last_name,
-                full_name(u.first_name, u.middle_name, u.last_name)  
-            FROM 
-                objectives o
-            LEFT OUTER JOIN
-                users u ON o.user_id_assigned_to = u.user_id`
 
             if( sWheres ){ 
                 sQuery += sWheres
@@ -187,6 +194,8 @@ export class Objectives {
             if( sOrderBy ){ 
                 sQuery += sOrderBy
             }
+
+            const config = { database: this.dbname }
 
             //logajohn.debug(`${sWho}(): Calling client = new Client(config), config = `, config)
             //const client = new Client(config)

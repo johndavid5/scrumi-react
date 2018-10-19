@@ -123,6 +123,11 @@ describe('DbModels', () => {
 
                     const objectiveOutExpected = { ...objective, objective_id: newObjective.objective_id }
 
+                    logajohn.debug(`${sWho}() -- SHEMP: objectiveOutExpected = `, objectiveOutExpected )
+                    logajohn.debug(`${sWho}() -- SHEMP: newObjective = `, newObjective )
+                    logajohn.debug(`${sWho}() -- SHEMP: typeof( newObjective.begun )= `, typeof(newObjective.begun) );
+                    logajohn.debug(`${sWho}() -- SHEMP: newObjective.begun.constructor.name = `, newObjective.begun.constructor.name );
+
     	            expect(newObjective).toEqual(objectiveOutExpected)
 
                     testObjectivesOut.push(newObjective)
