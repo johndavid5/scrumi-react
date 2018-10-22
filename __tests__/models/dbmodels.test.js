@@ -36,11 +36,11 @@ describe('DbModels', () => {
 
     // Note: supply index in testUsersIn...we'll use the user_id for the database insert...
     const testObjectivesIn = [
-        { description: 'Wash glassware', user_index: 0, begun: '2018-10-18', completed: null, comment: ''  },
-        { description: 'Arrange files', user_index: 1, begin: '2018-10-17', completed: '2018-10-18', comment: null },
-        { description: 'Steam open letters', user_index: 1, begin: '2018-10-12 9:37:18', completed: '2018-10-12 9:40:18', comment: null },
-        { description: 'Say Au Revoir to Bennett', user_index: 2, begin: '1984-04-01 9:34:12', end: '1984-04-01 9:34:14', comment: 'I\'ll be back, Bennett!' }, 
-        { description: 'Say Adieu to Bennett', user_index: 2, begin: '1984-04-01 20:23:07', end: '1984-04-01 23:23:09', comment: 'Let off some steam, Bennett!' }
+        { description: 'Wash glassware', user_index: 0, begun: '2018-10-18T04:00:00.000Z', completed: null, comment: ''  },
+        { description: 'Arrange files', user_index: 1, begun: '2018-10-17T04:00:00.000Z', completed: '2018-10-18T04:00:00.000Z', comment: null },
+        { description: 'Steam open letters', user_index: 1, begun: '2018-10-12T13:37:18.000Z', completed: '2018-10-12T13:37:19.500Z', comment: null },
+        { description: 'Say Au Revoir to Bennett', user_index: 2, begun: '1984-04-01T13:34:12.000Z', completed: '1984-04-01T13:34:14.000Z', comment: 'I\'ll be back, Bennett!' }, 
+        { description: 'Say Adieu to Bennett', user_index: 2, begun: '1984-04-02T03:23:07.000Z', completed: '1984-04-02T03:23:09.000Z', comment: 'Let off some steam, Bennett!' }
     ]
 
     const testUsersOut = [] // The newly added users...
@@ -48,8 +48,6 @@ describe('DbModels', () => {
 
     const testObjectivesOut = [] // The newly added objectives...
     const testObjectivesOutIdMap = {} // For quick lookup by objective_id...
-
- 
 
     let userCountBefore = null
     let objectiveCountBefore = null
@@ -113,20 +111,35 @@ describe('DbModels', () => {
             // Set user_id based on testUsersOut...
             objective.user_id_assigned_to = testUsersOut[objective.user_index].user_id
 
-            // Do away with objective.user_index...it will throw off our expect later...
-            delete objective.user_index
 
             logajohn.debug(`${sWho}() -- SHEMP: Calling addObjective(objective), objective = `, objective )
 
 	        objectivesModel.addObjective(objective)
 	        .then((newObjective) => {
 
+
                     const objectiveOutExpected = { ...objective, objective_id: newObjective.objective_id }
 
+                    // Do away with objective.user_index...it was just used to match 'em up...
+                    delete objectiveOutExpected.user_index;
+
+                    // It returns a Date object in the result set...so we should convert our strings to dates...
+                    if( objectiveOutExpected.begun ){
+                        objectiveOutExpected.begun = new Date(objectiveOutExpected.begun);
+                    }
+
+                    if( objectiveOutExpected.completed){
+                        objectiveOutExpected.completed= new Date(objectiveOutExpected.completed);
+                    }
+
                     logajohn.debug(`${sWho}() -- SHEMP: objectiveOutExpected = `, objectiveOutExpected )
+
                     logajohn.debug(`${sWho}() -- SHEMP: newObjective = `, newObjective )
                     logajohn.debug(`${sWho}() -- SHEMP: typeof( newObjective.begun )= `, typeof(newObjective.begun) );
-                    logajohn.debug(`${sWho}() -- SHEMP: newObjective.begun.constructor.name = `, newObjective.begun.constructor.name );
+                    logajohn.debug(`${sWho}() -- SHEMP: newObjective.begun = `, newObjective.begun );
+                    if( typeof(newObjective.begun) !== 'undefined' && newObjective.begun != null ){
+                        logajohn.debug(`${sWho}() -- SHEMP: newObjective.begun.constructor.name = `, newObjective.begun.constructor.name );
+                    }
 
     	            expect(newObjective).toEqual(objectiveOutExpected)
 
