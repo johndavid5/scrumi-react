@@ -3,31 +3,44 @@
 * To prevent
 * TypeError: Converting circular structure to JSON
 *      at JSON.stringify (<anonymous>)
+*
+* Examples: 
+*
+* import { customStringify } from '../../src/lib/utils'
+*
+* console.log("event = ${customStringify(event, ' ')}...") 
+*
+*
+*
+* import utils from '../../src/lib/utils'
+*
+* console.log("event = ${utils.customStringify(event, ' ')}...") 
+*
 */
-export const customStringify = function (v, s) {
-    if( typeof v == "undefined" ){
+export const customStringify = function (value, space) {
+    if( typeof value == "undefined" ){
         return "undefined"
     }
-    else if( v == null ){
+    else if( value == null ){
         return "null";
     }
 
     const cache = new Map()
-    return JSON.stringify(v, (key, value) => {
-        if (typeof value === 'object' && value !== null) {
-            if (cache.get(value)) {
+    return JSON.stringify(value, (le_key, le_value) => {
+        if (typeof le_value === 'object' && le_value !== null) {
+            if (cache.get(le_value)) {
                 // Circular reference found, discard key
                 return
             }
             // Store value in our map
-            cache.set(value, true)
+            cache.set(le_value, true)
         }
-        return value
-    }, s)
+        return le_value
+    }, space)
 }
 
 // https://stackoverflow.com/questions/38513493/why-are-my-js-promise-catch-error-objects-empty
-export const errorStringify = function (err, s) {
+export const errorStringify = function (err, space) {
     let sOut = ""
 
     if( err.hasOwnProperty("message") ){
@@ -39,7 +52,8 @@ export const errorStringify = function (err, s) {
         //err.stack = err["stack"]
     }
 
-    let sCustom = customStringify(err, s)
+    let sCustom = customStringify(err, space)
+
     if( sCustom && !sCustom == "{}" ){
         sOut += "\n" + sCustom
     }

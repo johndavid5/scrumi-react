@@ -9,7 +9,8 @@ import { Objectives } from '../../src/server/models/objectives'
 import { Users } from '../../src/server/models/users'
 
 import { logajohn } from '../../src/lib/logajohn'
-import { errorStringify } from '../../src/lib/utils'
+import { errorStringify, customStringify } from '../../src/lib/utils'
+import { utils } from '../../src/lib/utils'
 
 const usersModel = new Users(config.TEST_DB_NAME)
 const objectivesModel = new Objectives(config.TEST_DB_NAME)
@@ -28,23 +29,20 @@ describe('DbModels', () => {
     //})
 
     const testUsersIn = [
-        { first_name: 'Joe', middle_name: 'S.', last_name: 'Kovacs' },
-        { first_name: 'Jean', middle_name: 'R.', last_name: 'Kovacs' },
-        { first_name: "Arnold", middle_name: "", last_name: "Schwarzenegger" },
-        { first_name: "Robert", middle_name: "S.", last_name: "Peters" }
+        { first_name: "John", middle_name: "", last_name: "Matrix" },
+        { first_name: "Jenny", middle_name: "", last_name: "Matrix" },
+        { first_name: "Cindy", middle_name: "", last_name: "" },
+        { first_name: "", middle_name: "", last_name: "Bennett" }
     ]
 
-    // Note: supply index in testUsersIn...we'll use the user_id for the database insert...
     const testObjectivesIn = [
-        { description: 'Wash glassware', user_index: 0, begun: '2018-10-18T04:00:00.000Z', completed: null, comment: ''  },
-        { description: 'Arrange files', user_index: 1, begun: '2018-10-17T04:00:00.000Z', completed: '2018-10-18T04:00:00.000Z', comment: null },
-        { description: 'Steam open letters', user_index: 1, begun: '2018-10-12T13:37:18.000Z', completed: '2018-10-12T13:37:19.500Z', comment: null },
-        { description: 'Say Au Revoir to Bennett', user_index: 2, begun: '1984-04-01T13:34:12.000Z', completed: '1984-04-01T13:34:14.000Z', comment: 'I\'ll be back, Bennett!' }, 
-        { description: 'Say Adieu to Bennett', user_index: 2, begun: '1984-04-02T03:23:07.000Z', completed: '1984-04-02T03:23:09.000Z', comment: 'Let off some steam, Bennett!' }
+        { description: 'Say \'Au Revoir\' to Bennett', full_name: 'John Matrix', begun: '1985-04-01T13:34:12.000Z', completed: '1985-04-01T13:34:14.000Z', comment: 'I\'ll be back, Bennett!' }, 
+        { description: 'Say \'Adieu\' to Bennett', full_name: 'John Matrix', begun: '1985-04-02T03:23:07.000Z', completed: '1985-04-02T03:23:09.000Z', comment: 'Let off some steam, Bennett!' }
     ]
 
     const testUsersOut = [] // The newly added users...
     const testUsersOutIdMap = {} // For quick lookup by user_id... 
+    const testUsersOutFullNameMap = {} // For quick lookup by full name... 
 
     const testObjectivesOut = [] // The newly added objectives...
     const testObjectivesOutIdMap = {} // For quick lookup by objective_id...
@@ -88,12 +86,17 @@ describe('DbModels', () => {
                     const userOutExpected = { ...user, user_id: newUser.user_id }
 	                expect(newUser).toEqual(userOutExpected)
 
-                    testUsersOut.push(newUser)
-                    testUsersOutIdMap[newUser.user_id] = newUser
+                    testUsersOut.push(newUser);
+                    testUsersOutIdMap[newUser.user_id] = newUser;
+                    let fullName = Objectives.fullName( newUser.first_name, newUser.middle_name, newUser.last_name );
+                    testUsersOutFullNameMap[fullName] = newUser;
 
                     if (testUsersOut.length == testUsersIn.length) {
-                        logajohn.debug(`${sWho}() -- SHEMP: donezo!  testUsersOut = `, testUsersOut )
-                        logajohn.debug(`${sWho}() -- SHEMP: donezo!  testUsersOutIdMap = `, testUsersOutIdMap )
+                        logajohn.debug(`${sWho}() -- SHEMP: donezo!  testUsersOut = ${utils.customStringify(testUsersOut, ' ')}...`)
+                        //logajohn.debug(`${sWho}() -- SHEMP: donezo!  testUsersOutIdMap = `, testUsersOutIdMap )
+                        logajohn.debug(`${sWho}() -- SHEMP: donezo!  testUsersOutIdMap = ${utils.customStringify(testUsersOutIdMap, ' ')}...`)
+                        logajohn.debug(`${sWho}() -- SHEMP: donezo!  testUsersOutFullNameMap = ${utils.customStringify(testUsersOutFullNameMap, ' ')}...`)
+
                         done()
                     }
                 })
@@ -147,8 +150,10 @@ describe('DbModels', () => {
                     testObjectivesOutIdMap[newObjective.objective_id] = newObjective
 
                     if (testObjectivesOut.length == testObjectivesIn.length) {
-                        logajohn.debug(`${sWho}() -- SHEMP: donezo!  testObjectivesOut = `, testObjectivesOut )
-                        logajohn.debug(`${sWho}() -- SHEMP: donezo!  testObjectivesOutIdMap = `, testObjectivesOutIdMap )
+                        //logajohn.debug(`${sWho}() -- SHEMP: donezo!  testObjectivesOut = `, testObjectivesOut )
+                        logajohn.debug(`${sWho}() -- SHEMP: donezo!  customStringify(testObjectivesOut) = ${utils.customStringify(testObjectivesOut, ' ')}...`)
+                        //logajohn.debug(`${sWho}() -- SHEMP: donezo!  testObjectivesOutIdMap = `, testObjectivesOutIdMap )
+                        logajohn.debug(`${sWho}() -- SHEMP: donezo!  customStringify(testObjectivesOutIdMap) = ${utils.customStringify(testObjectivesOutIdMap, ' ')}...`)
                         done()
                     }
                 })
@@ -175,15 +180,16 @@ describe('DbModels', () => {
 
         objectivesModel.getObjectives( filter )
             .then((objectives) => {
-                logajohn.debug(`${sWho}(): .then: objectives =`, objectives)
+
                 logajohn.debug(`${sWho}(): .then: objectives.length =`, objectives.length)
+                logajohn.debug(`${sWho}(): .then: objectives =${utils.customStringify(objectives, ' ')}...`)
 
                 // Get rid of objectives that we didn't add ourselves as part
                 // of the test...
                 let new_objectives = objectives.filter( objective => testObjectivesOutIdMap.hasOwnProperty(objective.objective_id) )
 
-                logajohn.debug(`${sWho}(): .then: new_objectives =`, new_objectives)
                 logajohn.debug(`${sWho}(): .then: new_objectives.length =`, new_objectives.length)
+                logajohn.debug(`${sWho}(): .then: new_objectives =${utils.customStringify(new_objectives, ' ')}...`)
 
                 // Should just be the one of the _new_ test objective with description 'Wash glassware' 
                 expect(new_objectives.length).toEqual(1)
@@ -202,14 +208,14 @@ describe('DbModels', () => {
 
         objectivesModel.getObjectives( filter )
             .then((objectives) => {
-                logajohn.debug(`${sWho}(): .then: objectives =`, objectives)
                 logajohn.debug(`${sWho}(): .then: objectives.length =`, objectives.length)
+                logajohn.debug(`${sWho}(): .then: objectives =${utils.customStringify(objectives, ' ')}...`)
 
                 // Get rid of objectives that we didn't add ourselves as part of the test...
                 let new_objectives = objectives.filter( objective => testObjectivesOutIdMap.hasOwnProperty(objective.objective_id) )
 
-                logajohn.debug(`${sWho}(): .then: new_objectives =`, new_objectives)
                 logajohn.debug(`${sWho}(): .then: new_objectives.length =`, new_objectives.length)
+                logajohn.debug(`${sWho}(): .then: new_objectives =${utils.customStringify(new_objectives, ' ')}...`)
 
                 // Should just be the one of the _new_ test objective with description 'Wash glassware'...
                 expect(new_objectives.length).toEqual(2)
@@ -221,7 +227,7 @@ describe('DbModels', () => {
 
     it('getObjectives -- description filter and full name filter -- case insensitive', (done) => {
 
-        let sWho = sWhere + '::getObjectives -- desription filter and full name filter -- case insensitive'
+        let sWho = sWhere + '::getObjectives -- description filter and full name filter -- case insensitive'
 
         let filter = { description_filter: 'sTeAm', full_name_filter: 'ArNoLd' }  // case insensitive
 
