@@ -1,19 +1,6 @@
-
-insert into objectives (  description, user_id_assigned_to ) 
+insert into objectives (  description, user_id_assigned_to, begun, completed  ) 
 values
-( 'Wash glassware', 1 ),
-( 'Arrange files', 2 ),
-( 'Run Cyanide analysis', 3 )
+( 'Rescue Chenny', (select user_id from users where first_name='John' and last_name='Matrix'), '1985-05-03T13:23:07.000Z', '1985-05-04T01:23:07.000Z')
 ;
 
-
-insert into objectives (  description, user_id_assigned_to ) 
-values
-( 'Digest Fort Dix Samples', 4 )
-,( 'Act Important', 5 )
-,( 'Run Stink & Haas Extraction', 6 )
-,( 'Do PCM analysis', 7 )
-,( 'Do PCM analysis', 8 )
-,( 'Do TEM analysis', 9 )
-;
 
