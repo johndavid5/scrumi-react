@@ -60,6 +60,12 @@ https://stackoverflow.com/questions/50947066/error-sorry-too-many-clients-alread
  https://stackoverflow.com/questions/5944180/how-do-you-run-a-command-as-an-administrator-from-the-windows-command-line/18316648#18316648
 
 * Jest -- unit vs. integration testing -- excellent article: 
-    * The author suggests a special suffix *.ispec.js for integration tests,
-      and gives you tips on filtering the Jest tests...
+
+    The author suggests a special suffix *.ispec.js for integration tests,
+    and gives you tips on filtering the Jest tests...
+
     https://medium.com/coding-stones/separating-unit-and-integration-tests-in-jest-f6dd301f399c
+
+* 10/25/2018 Shall we attempt upgrade from node.js v6.9.0 to v8.12.0 LTS...?
+  C:\Program Files\nodejs\node
+  I really wouldn't advise it...you can make your own promisify, after all...

@@ -8,17 +8,14 @@
 * set PGUSER=<postgres_username>
 * set PGPASSWORD=<postgres_password>
 */
-// import { config } from '../../../config'
 import { config } from '../../config'
 
 import { logajohn } from '../../lib/logajohn'
 
 //const { Client } = require('pg')
-
 // Pool is better than Client...
 const { Pool } = require('pg') // PostgreSQL client pool...
 
-// logajohn.setLevel('info')
 logajohn.setLevel(config.DEBUG_LEVEL)
 logajohn.debug('objectives.js: logajohn.getLevel()=', logajohn.getLevel())
 
