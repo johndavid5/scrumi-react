@@ -20,7 +20,6 @@
     "jest-config": "jest --showConfig",
     "test": "jest",
     "test-all": "jest --all",
-    "test-watch": "jest --watch",
     "test-watch-all": "jest --watchAll",
     "test-coverage": "jest --coverage=true",
     "test-app": "jest --watch app.test.js",

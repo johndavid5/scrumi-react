@@ -1,8 +1,8 @@
--- Database: scrumi
+-- Database: scrumi-test
 
--- DROP DATABASE scrumi;
+-- DROP DATABASE "scrumi-test";
 
-CREATE DATABASE scrumi-test
+CREATE DATABASE "scrumi-test"
     WITH 
     OWNER = postgres
     ENCODING = 'UTF8'

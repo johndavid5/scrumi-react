@@ -12,14 +12,13 @@ import { StaticRouter } from 'react-router-dom' // When we want to render our co
 import { renderToString } from 'react-dom/server'
 
 /* Our API's...as middleware... */
-import color_api from './color-api'
-import links_qa_api from './links-qa-api'
-import file_api from './file-api'
+/* import color_api from './color-api' */
+/* import links_qa_api from './links-qa-api' */
+/* import file_api from './file-api' */
 import objectives_api from './objectives-api'
 
 import App from '../components/App'
 import storeFactory from '../store'
-
 
 
 // No, thank you...we're full stackers here, not front-enders, so

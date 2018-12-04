@@ -6,6 +6,6 @@ CREATE USER web_user WITH
 	INHERIT
 	REPLICATION
 	CONNECTION LIMIT -1
-	PASSWORD 'xxxxxx';
+	PASSWORD 'pass';
 
 GRANT postgres TO web_user;

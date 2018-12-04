@@ -1,15 +1,9 @@
+/* Dependencies: Bootstrap with its glyphicon-chevron-up and glyphicon-chevron-down... */
 import PropTypes from 'prop-types'
 
 import { Component } from 'react'
 
 import { customStringify, strEqualsIgnoreCase } from '../../lib/utils' // customStringify(): safer than JSON.stringify()... 
-
-// `withRouter` is an HOC.  When we export the `Color`
-// component, we send it to `withRouter` which wraps
-// it with a component that passes the router properties:
-// match, history, and location (as props)...
-//import { withRouter } from 'react-router'
-//import '../../../stylesheets/SortButton.scss'
 
 class SortButton extends Component {
     render() {
@@ -83,5 +77,4 @@ SortButton.propTypes = {
 //    onRate: f => f,
 //}
 
-//export default withRouter(SortButton)
 export default SortButton
