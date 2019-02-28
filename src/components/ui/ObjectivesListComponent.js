@@ -1,26 +1,111 @@
 import PropTypes from 'prop-types'
+import { Component } from 'react'
+
+// `withRouter` is an HOC.  When we export the 
+// component, we send it to `withRouter` which wraps
+// it with a component that passes the router properties:
+// match, history, and location (as props)...
+import { withRouter } from 'react-router'
+
+/* query-string: parse() query string into an object */
+/*               stringify() object into query string */
+/* reference: https://www.npmjs.com/package/query-string */
+import queryString from 'query-string'
+
 import SortButton from './SortButton'
 
 import { logajohn } from '../../lib/logajohn'
 
-import { customStringify, strEqualsIgnoreCase } from '../../lib/utils' // Safer than JSON.stringify()... 
+import { customStringify, strEqualsIgnoreCase, stringToBool } from '../../lib/utils' // Safer than JSON.stringify()... 
 
 // import '../../stylesheets/ObjectivesListComponent.scss'
 import '../../../stylesheets/ObjectivesListComponent.scss'
 
 // const ObjectivesListComponent = ({ linksQa={}, debug=true}) => {
-const ObjectivesListComponent = (props) => {
-    const sWho = 'ObjectivesListComponent'
+// const ObjectivesListComponent = (props) => {
+class ObjectivesListComponent extends Component {
 
-    const objectives = props.objectives
-    const debug = true
+    //const sWho = 'ObjectivesListComponent'
 
-    console.log(`${sWho}(): props = `, props)
-    logajohn.debug(`${sWho}(): props = `, props)
+    //const objectives = props.objectives
+    //const debug = true
 
-    console.log(`${sWho}(): objectives = `, objectives)
-    logajohn.debug(`${sWho}(): objectives = `, objectives)
+    //console.log(`${sWho}(): props = `, props)
+    //logajohn.debug(`${sWho}(): props = `, props)
 
+    //console.log(`${sWho}(): objectives = `, objectives)
+    //logajohn.debug(`${sWho}(): objectives = `, objectives)
+    
+    constructor(props){
+        super(props)
+
+        let sWho = `ObjectivesListComponent::constructor`
+        logajohn.info(`${sWho}(): this.props=`, customStringify(this.props, ' '))
+
+        this.sortBy = this.sortBy.bind(this)
+    } 
+
+    static formFullName(objective){
+        let s_out = ''
+
+        if (objective.first_name) {
+            s_out += objective.first_name
+        }
+
+        if (objective.middle_name && objective.middle_name.length > 0) {
+            s_out += ` ${objective.middle_name}`
+        }
+
+        if (objective.last_name && objective.last_name.length > 0) {
+            s_out += ` ${objective.last_name}`
+        }
+
+        return s_out
+    }/* formFullName(objective) */
+
+    sortBy(event, sWhat, sAscDesc){
+
+        let sWho = "ObjectivesListComponent::sortby";
+
+        logajohn.info(`${sWho}(): event = `, customStringify(event) )
+        logajohn.info(`${sWho}(): event.target = `, customStringify(event.target) )
+        logajohn.info(`${sWho}(): this.props = `, customStringify(this.props) )
+
+        const { onObjectivesFilter } = this.props; // Get dispatch method from props...
+        const currentFilters = ( this.props.objectives && this.props.objectives.objectives_filters ) ? this.props.objectives.objectives_filters : {}
+
+        logajohn.info(`${sWho}(): currentFilters = `, currentFilters )
+
+        // Important: Use spread operator ... to preserve current filters...
+        let filters = { ...currentFilters, sort_by_field: sWhat, sort_by_asc_desc: sAscDesc };
+
+        event.preventDefault()
+
+        logajohn.info(`${sWho}(): Calling onObjectivesFilter(filters=`, customStringify(filters), `...`);
+        
+        onObjectivesFilter(filters);
+
+    }/* sortBy() */
+
+    render(){ 
+
+        let sWho = "ObjectivesListComponent::render"
+
+        const objectives = this.props.objectives
+
+        // Make this.props.location.search query string into an object...
+        let search_object = queryString.parse(this.props.location.search)
+		console.log(`${sWho}(): search_object = `, search_object )
+
+        //let debug = false 
+        let debug = stringToBool( search_object.debug )
+		console.log(`${sWho}(): debug = `, debug )
+
+        console.log(`${sWho}(): this.props = `, this.props)
+        logajohn.debug(`${sWho}(): this.props = `, this.props)
+
+        console.log(`${sWho}(): objectives = `, objectives)
+        logajohn.debug(`${sWho}(): objectives = `, objectives)
 
     const thStyle = {
 	  border: '2px solid #DCDCDC',
@@ -46,47 +131,7 @@ const ObjectivesListComponent = (props) => {
         whiteSpace: 'nowrap'
     }
 
-    const formFullName = (objective) => {
-        let s_out = ''
 
-        if (objective.first_name) {
-            s_out += objective.first_name
-        }
-
-        if (objective.middle_name && objective.middle_name.length > 0) {
-            s_out += ` ${objective.middle_name}`
-        }
-
-        if (objective.last_name && objective.last_name.length > 0) {
-            s_out += ` ${objective.last_name}`
-        }
-
-        return s_out
-    }
-
-    const sortBy = (event, sWhat, sAscDesc) => {
-
-        let sWho = "ObjectivesListComponent::sortby";
-
-        logajohn.info(`${sWho}(): event = `, customStringify(event) )
-        logajohn.info(`${sWho}(): event.target = `, customStringify(event.target) )
-        logajohn.info(`${sWho}(): props = `, customStringify(props) )
-
-        const { onObjectivesFilter } = props; // Get dispatch method from props...
-        const currentFilters = ( props.objectives && props.objectives.objectives_filters ) ? props.objectives.objectives_filters : {}
-
-        logajohn.info(`${sWho}(): currentFilters = `, currentFilters )
-
-        // Important: Use spread operator ... to preserve current filters...
-        let filters = { ...currentFilters, sort_by_field: sWhat, sort_by_asc_desc: sAscDesc };
-
-        event.preventDefault()
-
-        logajohn.info(`${sWho}(): Calling onObjectivesFilter(filters=`, customStringify(filters), `...`);
-        
-        onObjectivesFilter(filters);
-
-    }/* sortBy() */
 
     let timestamp = ( objectives.objectives_timestamp ? (
               <div className="filter-params row">
@@ -184,8 +229,8 @@ const ObjectivesListComponent = (props) => {
                   <table className="table" id="objectives-table" style={{marginTop: '10px'}}>
                         <thead>
                       <tr>
-                          <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='description' sWhatPretty='Description' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={sortBy} />:""}</th>
-                          <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='full_name' sWhatPretty='Assigned To' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={sortBy} />:""}</th>
+                          <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='description' sWhatPretty='Description' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={this.sortBy} />:""}</th>
+                          <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='full_name' sWhatPretty='Assigned To' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={this.sortBy} />:""}</th>
                       </tr>
                     </thead>
                         <tbody>
@@ -211,12 +256,12 @@ const ObjectivesListComponent = (props) => {
       </div>
       {gears}
       {objectives_table}
-      { ((debugee) => {
+      { ((debugee)=>{
           if(debugee == true)
             return (
                 <div>
                     <pre style={{ fontSize: '125%', textAlign: 'left' }}>
-                    props = { JSON.stringify(props, null, ' ') }
+                    this.props = { JSON.stringify(this.props, null, ' ') }
                     </pre>
                 </div>
             )
@@ -225,12 +270,14 @@ const ObjectivesListComponent = (props) => {
   	      })( debug ) // IIFE
        }
        </div>
-    )
-}/* const ObjectivesListComponent = ( props ) */
+       )
+  }/* render() */
+
+}/* class ObjectivesListComponent extends Component */
 
 ObjectivesListComponent.propTypes = {
     objectives: PropTypes.object,
     debug: PropTypes.bool,
 }
 
-export default ObjectivesListComponent
+export default withRouter(ObjectivesListComponent)

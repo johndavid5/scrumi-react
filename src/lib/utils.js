@@ -143,8 +143,23 @@ export const compareStrings = function(string1, string2, ignoreCase, useLocale) 
     return string1 === string2;
 }
 
+export const stringToBool = function(str){
+        if(!str){
+            return false
+        }
+        else if( 1*str == 1 ){
+            return true
+        }
+        else if( "" + str == "true" ){
+            return true
+        }
+        else{
+            return false
+        }
+}/* stringToBool */
+
 //let utils = { customStringify: customStringify, errorStringify: errorStringify }
 // Or, using object literal assignment...
-let utils = { customStringify, errorStringify, objectToQueryString, queryStringToObject, strEqualsIgnoreCase, compareStrings }
+let utils = { customStringify, errorStringify, objectToQueryString, queryStringToObject, strEqualsIgnoreCase, compareStrings, stringToBool }
 export { utils }
 export default utils

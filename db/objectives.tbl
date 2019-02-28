@@ -1,3 +1,5 @@
+DROP TABLE objectives;
+
 CREATE TABLE objectives (
     objective_id SERIAL PRIMARY KEY,
     description VARCHAR(100),
