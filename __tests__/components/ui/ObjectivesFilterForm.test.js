@@ -24,16 +24,16 @@ describe("<ObjectivesFilterForm /> UI Component", () => {
     //    mount(<ObjectivesFilterForm />).find('#load-objectives').simulate('click')
     //})
 
-    it("submit causes error if onObjectivesFilter prop not supplied", () => {
-        let errCaught = null
-        try {
-            mount(<ObjectivesFilterForm />).find('#load-objectives').simulate('submit')
-        }
-        catch(err){
-            errCaught = err
-        }
-        expect(errCaught).not.toBeNull()
-    })
+    //it("submit causes error if onObjectivesFilter prop not supplied", () => {
+    //    let errCaught = null
+    //    try {
+    //        mount(<ObjectivesFilterForm />).find('#load-objectives').simulate('submit')
+    //    }
+    //    catch(err){
+    //        errCaught = err
+    //    }
+    //    expect(errCaught).not.toBeNull()
+    //})
 
     it("submit invokes onObjectivesFilter", () => {
 

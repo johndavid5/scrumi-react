@@ -147,5 +147,9 @@ ObjectivesFilterForm.propTypes = {
     onObjectivesFilter: PropTypes.func
 }
 
+ObjectivesFilterForm.defaultProps = {
+    onObjectivesFilter: ()=>{}
+}
+
 export default withRouter(ObjectivesFilterForm)
 

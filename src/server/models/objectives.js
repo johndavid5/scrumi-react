@@ -134,7 +134,7 @@ export class Objectives {
                 o.objective_id, o.description, o.user_id_assigned_to,
                 u.first_name, u.middle_name, u.last_name,
                 full_name(u.first_name, u.middle_name, u.last_name),  
-                begun, completed, comment 
+                o.begun, o.completed, o.comment 
             FROM 
                 objectives o
             LEFT OUTER JOIN
@@ -170,6 +170,9 @@ export class Objectives {
                 }
                 else if( filter.sort_by_field.toLowerCase() == 'full_name' ){ 
                     sOrderBy = "\nORDER BY full_name(u.first_name, u.middle_name, u.last_name)"
+                }
+                else if( filter.sort_by_field.toLowerCase() == 'comment' ){ 
+                    sOrderBy = "\nORDER BY o.comment"
                 }
             }
 

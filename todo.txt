@@ -1,6 +1,8 @@
 * Stop serving up Action's from the server...form
   the actions on the client instead.
-* Add router support for /debug=true as was done in treebuchet.
+[x-2019-02-27] Add router support for /debug=true as was done in treebuchet.
+* Display the new table columns
+* Put in default sort-by
 * Continue with basic CRUD functionality...and you may add
   tests _after_ implementing if you'd like...
 * Re-read Learning React 
@@ -10,8 +12,7 @@
     ./dist/assets/images/gold-brass-gear-cogs-animated-5.gif
 * fancy: Animate the submit button itself to "turn" along with the gears...
 
-* fancy: default sort and remember last sort via browser db.
-* fancy: remember last filters -- through "browser db"...?
+* fancy: remember last sort by and filters via browser db and/or cookies.
 
 * Get rid of leftover stuff from treebuchet, etc. (to make istanbul say we're
   closer to 100% coverage)...then tweak tests to bring us closer to 100%
@@ -31,3 +32,5 @@
         [x] ObjectivesFilterForm.test.js -- test that description filter is
                passed in call to onObjectivesFilter... 
 
+* break out dbmodels.test.js from unit tests since it's really more
+  of an end-to-end test...

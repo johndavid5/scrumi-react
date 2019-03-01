@@ -18,7 +18,7 @@
     "test-watch": "jest --watch",
     "clear-jest": "jest --clearCache",
     "jest-config": "jest --showConfig",
-    "test": "jest",
+    "test": "jest --testPathIgnorePatterns dbmodels.test.js",
     "test-all": "jest --all",
     "test-watch-all": "jest --watchAll",
     "test-coverage": "jest --coverage=true",

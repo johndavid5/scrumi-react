@@ -93,12 +93,16 @@ class ObjectivesListComponent extends Component {
 
         const objectives = this.props.objectives
 
-        // Make this.props.location.search query string into an object...
-        let search_object = queryString.parse(this.props.location.search)
-		console.log(`${sWho}(): search_object = `, search_object )
+        let debug = false 
 
-        //let debug = false 
-        let debug = stringToBool( search_object.debug )
+        // Bulletproofing in case we don't have this.props.location...
+        if(this.props.hasOwnProperty('location') && this.props.location.hasOwnProperty('search')){
+            // Make this.props.location.search query string into an object...
+            let search_object = queryString.parse(this.props.location.search)
+            console.log(`${sWho}(): search_object = `, search_object )
+
+            debug = stringToBool( search_object.debug )
+        }
 		console.log(`${sWho}(): debug = `, debug )
 
         console.log(`${sWho}(): this.props = `, this.props)
@@ -231,6 +235,7 @@ class ObjectivesListComponent extends Component {
                       <tr>
                           <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='description' sWhatPretty='Description' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={this.sortBy} />:""}</th>
                           <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='full_name' sWhatPretty='Assigned To' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={this.sortBy} />:""}</th>
+                          <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='comment' sWhatPretty='Comments' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={this.sortBy} />:""}</th>
                       </tr>
                     </thead>
                         <tbody>
@@ -239,6 +244,7 @@ class ObjectivesListComponent extends Component {
                                   <tr key={objective.objective_id}>
                                       <td style={tdStyle} id={'description-' + objective.objective_id}>{objective.description}</td>
                                       <td style={tdStyle} id={'full_name-' + objective.objective_id}>{objective.full_name}</td>
+                                      <td style={tdStyle} id={'comment-' + objective.objective_id}>{objective.comment}</td>
                                     </tr>
                                 ))
                       }
