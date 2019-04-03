@@ -11,8 +11,6 @@ class SortButton extends Component {
             sWhat, sWhatPretty, sCurrentSortBy, sCurrentAscDesc, onSortBy 
         } = this.props
 
-        let my_id = `sort-by-${sWhat}`
-        let my_aria_label = `Sort by ${sWhatPretty} ${sNextAscDescPretty}`
 
         let glyphButton = ""
         let sNextAscDesc = ""
@@ -48,6 +46,8 @@ class SortButton extends Component {
             sNextAscDescPretty = "Ascending"
         }
 
+        let my_id = `sort-by-${sWhat}`
+        let my_aria_label = `Sort by ${sWhatPretty} ${sNextAscDescPretty}`
 
         return (
             <a href="#" id={my_id}

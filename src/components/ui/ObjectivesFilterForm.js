@@ -21,6 +21,18 @@ class ObjectivesFilterForm extends Component {
 
     VERSION = "1.1.10"
 
+    // Even though we don't set sortBy stuff in this ObjectivesFilterForm,
+    // we do pass along the sort info we get from props...so it seems
+    // smoothest to set default sort here in our filterIt() method
+    // which automatically carries out the initial fetch...
+    // If we wanted to be fancier, we could also "remember"
+    // the user's most recent sort by fields via cookies
+    // or, better yet the HTML 5 localStorage object... 
+    //
+    // Use static method to simulate a "const"...
+    static DEFAULT_SORT_BY_FIELD(){ return "description"}
+    static DEFAULT_SORT_BY_ASC_DESC(){ return "asc"}
+
     constructor(props){
         super(props)
         let sWho = `ObjectivesFilterForm(${this.VERSION})::constructor`
@@ -63,8 +75,15 @@ class ObjectivesFilterForm extends Component {
 
         const currentFilters = ( this.props.objectives && this.props.objectives.objectives_filters ) ? this.props.objectives.objectives_filters : {}
 
-        // Important: Use spread operator ... to preserve current filter fields...
+        // Important: Use spread operator ... to preserve current filter fields such as sort_by_field and sort_by_asc_desc 
         let filters = { ...currentFilters, description_filter: this.state.descriptionFilter, full_name_filter: this.state.fullNameFilter };
+
+        if( ! filters.sort_by_field ){
+            filters.sort_by_field = ObjectivesFilterForm.DEFAULT_SORT_BY_FIELD(); 
+        }
+        if( ! filters.sort_by_asc_desc ){
+            filters.sort_by_asc_desc = ObjectivesFilterForm.DEFAULT_SORT_BY_ASC_DESC();
+        }
 
 
         logajohn.info(`${sWho}(): Calling onObjectivesFilter(filters=`, customStringify(filters), `...`);

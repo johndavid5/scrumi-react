@@ -1,5 +1,9 @@
 import React from 'react'
 import { hydrate } from 'react-dom'
+/* The provider adds the store to the context and
+ * updates the `App` component when actions have been
+ * dispatched.  The provider expects a single child component...
+ */
 import { Provider } from 'react-redux'
 /* To use the router isomorphically, use BrowserRouter
 * rather than HashRouter, which adds a # before each route...

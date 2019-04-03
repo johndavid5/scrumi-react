@@ -25,16 +25,6 @@ import '../../../stylesheets/ObjectivesListComponent.scss'
 // const ObjectivesListComponent = (props) => {
 class ObjectivesListComponent extends Component {
 
-    //const sWho = 'ObjectivesListComponent'
-
-    //const objectives = props.objectives
-    //const debug = true
-
-    //console.log(`${sWho}(): props = `, props)
-    //logajohn.debug(`${sWho}(): props = `, props)
-
-    //console.log(`${sWho}(): objectives = `, objectives)
-    //logajohn.debug(`${sWho}(): objectives = `, objectives)
     
     constructor(props){
         super(props)

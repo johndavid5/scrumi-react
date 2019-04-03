@@ -1,12 +1,12 @@
 * Stop serving up Action's from the server...form
   the actions on the client instead.
 [x-2019-02-27] Add router support for /debug=true as was done in treebuchet.
-* Display the new table columns
 * Put in default sort-by
+* Display the new table columns
 * Continue with basic CRUD functionality...and you may add
   tests _after_ implementing if you'd like...
 * Re-read Learning React 
-* Make RESTful API into GraphQL API...
+* LATER: Make RESTful API into GraphQL API...
 
 * fancy: Use HTML5 video in lieue of animated gif in 
     ./dist/assets/images/gold-brass-gear-cogs-animated-5.gif

@@ -51,6 +51,9 @@ const serverLogger = store => next => (action) => {
 * Note that we get the serverLogger if we're
 * running on the server, and the clientLogger
 * if we're running on the client...
+*
+* Note we incorporate the redux thunk
+* in there...
 */
 const middleware = server => [
     (server) ? serverLogger : clientLogger,
