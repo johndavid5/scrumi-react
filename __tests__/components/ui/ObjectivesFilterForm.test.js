@@ -158,7 +158,7 @@ describe("<ObjectivesFilterForm /> UI Component", () => {
 //    })
 
 
-    it("submit invokes onObjectivesFilter -- full_name_filter, description_filter, and comments_filter passed along -- sort filters preserved", () => {
+    it("submit invokes onObjectivesFilter -- with full_name_filter, description_filter, and comments_filter passed along -- sort filters preserved", () => {
 
         let sWho = `${sWhere}: submit invokes onObjectivesFilter -- comments filter passed along -- filters preserved`
 
@@ -177,13 +177,21 @@ describe("<ObjectivesFilterForm /> UI Component", () => {
         let wrapper = mount(<ObjectivesFilterForm descriptionFilter={s_faux_description_filter} fullNameFilter={s_faux_full_name_filter} commentsFilter={s_faux_comments_filter} onObjectivesFilter={_onObjectivesFilter} objectives={{objectives_filters: faux_objectives_filters}}  />)
 
         const description_filter = wrapper.find('#description-filter');
-        logajohn.debug(`${sWho}(): description_filter = `, description_filter )
+        expect(description_filter.at(0).props().value).toEqual(s_faux_description_filter) // Confirm value of #description-filter set via props...
+
+        logajohn.debug(`${sWho}(): SHEMP: Moe, description_filter = `, description_filter )
+        logajohn.debug(`${sWho}(): SHEMP: Shmoe, description_filter.at(0) = `, description_filter.at(0) )
+        logajohn.debug(`${sWho}(): SHEMP: Shmoe, description_filter.at(0).props() = `, description_filter.at(0).props() )
+        logajohn.debug(`${sWho}(): SHEMP: Shmoe, description_filter.at(0).props().value = `, description_filter.at(0).props().value )
+        logajohn.debug(`${sWho}(): SHEMP: Shmoe, description_filter.at(0).text() = `, description_filter.at(0).text() )
 
         const full_name_filter = wrapper.find('#full-name-filter');
-        logajohn.debug(`${sWho}(): full_name_filter = `, full_name_filter )
+        expect(full_name_filter.at(0).props().value).toEqual(s_faux_full_name_filter) // Confirm value of #full-name-filter set via props...
+        logajohn.debug(`${sWho}(): SHEMP: Moe, full_name_filter = `, full_name_filter )
 
         const comments_filter = wrapper.find('#comments-filter');
-        logajohn.debug(`${sWho}(): comments_filter = `, comments_filter )
+        expect(comments_filter.at(0).props().value).toEqual(s_faux_comments_filter) // Confirm value of #comments-filter set via props...
+        logajohn.debug(`${sWho}(): SHEMP: Moe, comments_filter = `, comments_filter )
 
         // expect(typeof input).to.not.equal("undefined");
         // expect(input).to.have.lengthOf(1);

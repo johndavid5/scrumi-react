@@ -38,9 +38,12 @@ class ObjectivesFilterForm extends Component {
         let sWho = `ObjectivesFilterForm(${this.VERSION})::constructor`
         logajohn.info(`${sWho}(): this.props=`, customStringify(this.props, ' '))
 
+        // Primarily for testing purposes, but may be useful somehow:
+        //    initialize filters in state with their corresponding props...
         this.state = {
             descriptionFilter: props.descriptionFilter ? props.descriptionFilter : '',
-            fullNameFilter: props.fullNameFilter ? props.fullNameFilter : ''
+            fullNameFilter: props.fullNameFilter ? props.fullNameFilter : '',
+            commentsFilter: props.commentsFilter ? props.commentsFilter : '',
         }
 
         logajohn.info(`${sWho}(): this.state=`, this.state)
@@ -76,7 +79,11 @@ class ObjectivesFilterForm extends Component {
         const currentFilters = ( this.props.objectives && this.props.objectives.objectives_filters ) ? this.props.objectives.objectives_filters : {}
 
         // Important: Use spread operator ... to preserve current filter fields such as sort_by_field and sort_by_asc_desc 
-        let filters = { ...currentFilters, description_filter: this.state.descriptionFilter, full_name_filter: this.state.fullNameFilter };
+        let filters = { ...currentFilters,
+            description_filter: this.state.descriptionFilter,
+            full_name_filter: this.state.fullNameFilter,
+            comments_filter: this.state.commentsFilter
+        };
 
         if( ! filters.sort_by_field ){
             filters.sort_by_field = ObjectivesFilterForm.DEFAULT_SORT_BY_FIELD(); 
@@ -98,6 +105,7 @@ class ObjectivesFilterForm extends Component {
         this.filterIt();
     }
 
+    // Should update state key to equal new value of corresponding component name... 
     handleInputChange(event) {
 
         let sWho = "ObjectivesFilterForm::handleInputChange"
@@ -143,6 +151,9 @@ class ObjectivesFilterForm extends Component {
 
          <label for="full-name-filter" style={{marginLeft: '4px', marginRight: '2px'}}>Assigned To Filter:</label>
          <input type="text" className="form-control" id="full-name-filter" name="fullNameFilter" aria-label="Assigned To Filter" value={this.state.fullNameFilter} onChange={this.handleInputChange} />
+
+         <label for="comments-filter" style={{marginLeft: '4px', marginRight: '2px'}}>Comments Filter:</label>
+         <input type="text" className="form-control" id="comments-filter" name="commentsFilter" aria-label="Comments Filter" value={this.state.commentsFilter} onChange={this.handleInputChange} />
         
         {/*<label className="sr-only" for="description-filter">Description Filter</label>
          <div className="input-group">

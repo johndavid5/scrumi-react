@@ -139,6 +139,7 @@ class ObjectivesListComponent extends Component {
     let gefilterees = [ 
         { field: 'description_filter', pretty_field: 'Description Filter' }
         ,{ field: 'full_name_filter', pretty_field: 'Assigned To Filter' }
+        ,{ field: 'comments_filter', pretty_field: 'Comments Filter' }
     ]
 
     //gefilters = gefilterees.reduce((accumulator, val)=>{
@@ -148,6 +149,7 @@ class ObjectivesListComponent extends Component {
     //    return accumulator;
     //}, gefilters )
 
+    // Form a string list of the filters for the benefit of the end-user...
     gefilterees.forEach( (val)=>{
         if( objectives && objectives.objectives_filters && objectives.objectives_filters[val.field] ){
 

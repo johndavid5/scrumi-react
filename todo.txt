@@ -1,8 +1,19 @@
 * Stop serving up Action's from the server...form
   the actions on the client instead.
 [x-2019-02-27] Add router support for /debug=true as was done in treebuchet.
-* Put in default sort-by
-* Display the new table columns
+* [2019-04-02] Put in default sort-by
+* Display the new table columns with filters...
+   [x][Comments]
+* Then deploy to digital ocean: "Let your light so shine before men that they
+  may see your good works and glorify your Father which is in heaven..."
+
+* Add test to ObjectivesListComponent.test.js to make sure the string
+  list of filters is populated properly...
+
+* ObjectivesListComponent.js: Make longhand timestamp a 12-hour rather than a
+  24-hour time...current sample:
+   "Wed Apr 03 2019 21:31:10 GMT-0400 (Eastern Daylight Time)"
+
 * Continue with basic CRUD functionality...and you may add
   tests _after_ implementing if you'd like...
 * Re-read Learning React 

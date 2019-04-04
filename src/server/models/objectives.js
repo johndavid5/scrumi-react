@@ -155,6 +155,11 @@ export class Objectives {
                 args.push(filter.full_name_filter);
             }
 
+            if( filter.comments_filter ){
+                wheres.push("\t" + "o.comment ILIKE '%' || $" + (wheres.length+1) + " || '%'");
+                args.push(filter.comments_filter);
+            }
+
             let sWheres = "" 
             if( wheres.length > 0 ){
                 sWheres = "\n" + 
