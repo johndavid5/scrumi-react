@@ -101,7 +101,9 @@ export const objectivesFilter = (filters) => (dispatch) => {
     // const url = "/objectives_api/objectives" + encodeURIComponent(JSON.stringify(filters))
     // const url = "/objectives_api/objectives?name=fred";
     // const url = '/objectives_api/objectives?name=fredrika'
-    const url = '/objectives_api/objectives?' + utils.objectToQueryString(filters)
+    //const url = '/objectives_api/objectives?' + utils.objectToQueryString(filters)
+    // For reverse proxy...prefix /scrumi-react...
+    const url = '/scrumi-react/objectives_api/objectives?' + utils.objectToQueryString(filters)
 
     logajohn.debug(`${sWho}(): Callin' fetchThenDispatch(${url})...`)
 
@@ -146,7 +148,8 @@ export const objectivesFilter = (filters) => (dispatch) => {
 */
 export const addColor = (title, color) => dispatch => fetchThenDispatch(
     dispatch,
-    '/color_api/colors',
+    //'/color_api/colors',
+    '/scrumi-react/color_api/colors',
     'POST',
     JSON.stringify({ title, color }),
 )
@@ -154,7 +157,8 @@ export const addColor = (title, color) => dispatch => fetchThenDispatch(
 /* thunk... */
 export const linksQaRun = (basePath, additionOnlyCode) => dispatch => fetchThenDispatch(
     dispatch,
-    '/links_qa_api/run_links_qa',
+    //'/links_qa_api/run_links_qa',
+    '/scrumi-react/links_qa_api/run_links_qa',
     'POST',
     JSON.stringify({ basePath, additionOnlyCode }),
 )
@@ -162,14 +166,16 @@ export const linksQaRun = (basePath, additionOnlyCode) => dispatch => fetchThenD
 /* thunk... */
 export const removeColor = id => dispatch => fetchThenDispatch(
     dispatch,
-    `/color_api/color/${id}`,
+    //`/color_api/color/${id}`,
+    `/scrumi-react/color_api/color/${id}`,
     'DELETE',
 )
 
 /* thunk... */
 export const rateColor = (id, rating) => dispatch => fetchThenDispatch(
     dispatch,
-    `/color_api/color/${id}`,
+    //`/color_api/color/${id}`,
+    `/scrumi-react/color_api/color/${id}`,
     'PUT',
     JSON.stringify({ rating }),
 )

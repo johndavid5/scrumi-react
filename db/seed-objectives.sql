@@ -5,6 +5,11 @@ values
 ( 'Make sure Matrix gets on the plane.', (select user_id from users where full_name(first_name,middle_name,last_name)='Sully'), '1985-05-03T13:13:07.000Z', '1985-05-03T13:23:07.000Z', '"Sully''ll make sure you get on the plane..."')
 ;
 
+insert into objectives (  description, user_id_assigned_to, begun, completed, comment  ) 
+values
+( 'Say ''Au Revoir'' to Bennett', (select user_id from users where full_name(first_name,middle_name,last_name)='John M. Matrix'), '1985-05-01T13:34:12.000Z', '1985-05-01T13:14:14.000Z', '"I''ll be back, Bennett!"')
+;
+
 insert into objectives (  description, user_id_assigned_to, begun, completed, comment ) 
 values
 ( 'Make sure Matrix gets off the plane.', (select user_id from users where full_name(first_name,middle_name,last_name)='Henriques'), '1985-05-03T13:13:07.000Z', null, '"Henriques will stay with ya...make sure you get off..."')
@@ -17,17 +22,22 @@ values
 
 insert into objectives (  description, user_id_assigned_to, begun, completed, comment  ) 
 values
-( 'Say ''Au Revoir'' to Bennett', (select user_id from users where full_name(first_name,middle_name,last_name)='John M. Matrix'), '1985-04-01T13:34:12.000Z', '1985-04-01T13:14:14.000Z', '"I''ll be back, Bennett!"')
+( 'Escape from the room', (select user_id from users where full_name(first_name,middle_name,last_name)='Jenny Matrix'), '1985-05-02T02:13:07.000Z', '1985-05-02T03:13:01.000Z', NULL)
 ;
 
 insert into objectives (  description, user_id_assigned_to, begun, completed, comment  ) 
 values
-( 'Say ''Bienvenu'' to Matrix', (select user_id from users where full_name(first_name,middle_name,last_name)='Bennett'), '1985-04-02T03:13:07.000Z', '1985-04-02T03:13:09.000Z', '"Welcome back, John...so glad you could make it..."')
+( 'Say ''Bienvenu'' to Matrix', (select user_id from users where full_name(first_name,middle_name,last_name)='Bennett'), '1985-05-02T03:13:07.000Z', '1985-05-02T03:13:09.000Z', '"Welcome back, John...so glad you could make it..."')
 ;
 
 insert into objectives (  description, user_id_assigned_to, begun, completed, comment  ) 
 values
-( 'Say ''Adieu'' to Bennett', (select user_id from users where full_name(first_name,middle_name,last_name)='John M. Matrix'), '1985-04-02T03:23:07.000Z', '1985-04-02T03:23:09.000Z', '"Let off some steam, Bennett!"')
+( 'Alert General Kirby', (select user_id from users where full_name(first_name,middle_name,last_name)='Cindy'), '1985-05-02T03:13:07.000Z', '1985-05-02T03:15:14.000Z', '"Commando!  I say again Commando!..."')
+;
+
+insert into objectives (  description, user_id_assigned_to, begun, completed, comment  ) 
+values
+( 'Say ''Adieu'' to Bennett', (select user_id from users where full_name(first_name,middle_name,last_name)='John M. Matrix'), '1985-05-02T03:23:07.000Z', '1985-05-02T03:23:09.000Z', '"Let off some steam, Bennett!"')
 ;
 
 

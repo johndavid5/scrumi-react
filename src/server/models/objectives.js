@@ -179,6 +179,12 @@ export class Objectives {
                 else if( filter.sort_by_field.toLowerCase() == 'comment' ){ 
                     sOrderBy = "\nORDER BY o.comment"
                 }
+                else if( filter.sort_by_field.toLowerCase() == 'begun' ){ 
+                    sOrderBy = "\nORDER BY o.begun"
+                }
+                else if( filter.sort_by_field.toLowerCase() == 'completed' ){ 
+                    sOrderBy = "\nORDER BY o.completed"
+                }
             }
 
             if( sOrderBy.length > 0 ){

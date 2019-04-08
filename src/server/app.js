@@ -81,7 +81,7 @@ const buildHTMLPage = ({ html, state, css }) => `
         <title>Scrumi-React</title>
         <meta charset="utf-8">
         <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" />
-        <link rel="shortcut icon" href="/images/tenacious-techie.ico" />
+        <link rel="shortcut icon" href="/scrumi-react/images/tenacious-techie.ico" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -92,7 +92,7 @@ const buildHTMLPage = ({ html, state, css }) => `
         <script>
             window.__INITIAL_STATE__ = ${JSON.stringify(state)}
         </script>
-        <script src="/bundle.js"></script>
+        <script src="/scrumi-react/bundle.js"></script>
     </body>
 </html>
 `
@@ -198,6 +198,10 @@ export default express()
     .use(bodyParser.json())
     .use(logger)
     .use(fileAssets)
+    // Also /scrumi-react prefix for reverse proxy...
+    .use('/scrumi-react', fileAssets)
     .use(addStoreToRequestPipeline)
     .use('/objectives_api', objectives_api)
+    // Also /scrumi-react prefix for reverse proxy...
+    .use('/scrumi-react/objectives_api', objectives_api)
     .use(respond)
