@@ -5,11 +5,14 @@ import React from 'react'
 // SCSS import statements...
 import ignoreStyles from 'ignore-styles'
 import app from './app'
+import { config } from '../config'
 
 // Make React globally visible...
 global.React = React
 
-app.set('port', process.env.PORT || 3000)
+let le_port = config.PORT
+//app.set('port', process.env.PORT || 3000)
+app.set('port', le_port || 3000)
 
 app.listen(
         app.get('port'),

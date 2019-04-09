@@ -9,6 +9,7 @@ const App = () => (
         <Route exact path="/" component={Objectives} />
         <Route path="/objectives" component={Objectives} />
         <Route path="/scrumi-react/objectives" component={Objectives} />
+        <Redirect from="/scrumi-react" to="/scrumi-react/objectives" />
     </Switch>
 )
 export default App;
