@@ -12,10 +12,8 @@ import { StaticRouter } from 'react-router-dom' // When we want to render our co
 import { renderToString } from 'react-dom/server'
 
 /* Our API's...as middleware... */
-/* import color_api from './color-api' */
-/* import links_qa_api from './links-qa-api' */
-/* import file_api from './file-api' */
 import objectives_api from './objectives-api'
+import users_api from './users-api'
 
 import App from '../components/App'
 import storeFactory from '../store'
@@ -202,6 +200,8 @@ export default express()
     .use('/scrumi-react', fileAssets)
     .use(addStoreToRequestPipeline)
     .use('/objectives_api', objectives_api)
+    .use('/users_api', users_api)
     // Also /scrumi-react prefix for reverse proxy...
     .use('/scrumi-react/objectives_api', objectives_api)
+    .use('/scrumi-react/users_api', users_api)
     .use(respond)

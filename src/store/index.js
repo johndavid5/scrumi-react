@@ -1,7 +1,7 @@
 /* Let's create a store factory, boys and girls... */
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import { colors, linksQa, objectives } from './reducers'
+import { objectives, users } from './reducers'
 
 import { config } from '../config'
 import { logajohn } from '../lib/logajohn'
@@ -61,7 +61,7 @@ const middleware = server => [
 ]
 
 const storeFactory = (server = false, initialState = {}) => applyMiddleware(...middleware(server))(createStore)(
-    combineReducers({ colors, linksQa, objectives }),
+    combineReducers({ objectives, users }),
     initialState,
 )
 
