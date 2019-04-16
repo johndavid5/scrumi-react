@@ -29,7 +29,7 @@ class UsersFilterForm extends Component {
     // or, better yet the HTML 5 localStorage object... 
     //
     // Use static method to simulate a "const"...
-    static DEFAULT_SORT_BY_FIELD(){ return "description"}
+    static DEFAULT_SORT_BY_FIELD(){ return "first_name"}
     static DEFAULT_SORT_BY_ASC_DESC(){ return "asc"}
 
     constructor(props){
@@ -40,9 +40,9 @@ class UsersFilterForm extends Component {
         // Primarily for testing purposes, but may be useful somehow:
         //    initialize filters in state with their corresponding props...
         this.state = {
-            descriptionFilter: props.descriptionFilter ? props.descriptionFilter : '',
-            fullNameFilter: props.fullNameFilter ? props.fullNameFilter : '',
-            commentsFilter: props.commentsFilter ? props.commentsFilter : '',
+            firstNameFilter: props.firstNameFilter ? props.firstNameFilter : '',
+            middleNameFilter: props.middleNameFilter ? props.middleNameFilter : '',
+            lastNameFilter: props.lastNameFilter ? props.lastNameFilter : ''
         }
 
         logajohn.info(`${sWho}(): this.state=`, this.state)
@@ -79,9 +79,9 @@ class UsersFilterForm extends Component {
 
         // Important: Use spread operator ... to preserve current filter fields such as sort_by_field and sort_by_asc_desc 
         let filters = { ...currentFilters,
-            description_filter: this.state.descriptionFilter,
-            full_name_filter: this.state.fullNameFilter,
-            comments_filter: this.state.commentsFilter
+            first_name_filter: this.state.firstNameFilter,
+            middle_name_filter: this.state.middleNameFilter,
+            last_name_filter: this.state.lastNameFilter
         };
 
         if( ! filters.sort_by_field ){
@@ -90,7 +90,6 @@ class UsersFilterForm extends Component {
         if( ! filters.sort_by_asc_desc ){
             filters.sort_by_asc_desc = UsersFilterForm.DEFAULT_SORT_BY_ASC_DESC();
         }
-
 
         logajohn.info(`${sWho}(): Calling onUsersFilter(filters=`, customStringify(filters), `...`);
         
@@ -146,8 +145,14 @@ class UsersFilterForm extends Component {
             <span className="glyphicon glyphicon-refresh" aria-hidden="true" style={{fontWeight: 'bold'}}></span>
          </button>
 
-         <label for="full-name-filter" style={{marginLeft: '4px', marginRight: '2px'}}>Name Filter:</label>
-         <input type="text" className="form-control" id="full-name-filter" name="fullNameFilter" aria-label="Name Filter" value={this.state.fullNameFilter} onChange={this.handleInputChange} />
+         <label for="first-name-filter" style={{marginLeft: '4px', marginRight: '2px'}}>First Name Filter:</label>
+         <input type="text" className="form-control" id="first-name-filter" name="firstNameFilter" aria-label="First Name Filter" value={this.state.firstNameFilter} onChange={this.handleInputChange} />
+
+         <label for="middle-name-filter" style={{marginLeft: '4px', marginRight: '2px'}}>Middle Name Filter:</label>
+         <input type="text" className="form-control" id="middle-name-filter" name="middleNameFilter" aria-label="Middle Name Filter" value={this.state.middleNameFilter} onChange={this.handleInputChange} />
+
+         <label for="last-name-filter" style={{marginLeft: '4px', marginRight: '2px'}}>Last Name Filter:</label>
+         <input type="text" className="form-control" id="last-name-filter" name="lastNameFilter" aria-label="Last Name Filter" value={this.state.lastNameFilter} onChange={this.handleInputChange} />
 
         </form>
         <hr/>

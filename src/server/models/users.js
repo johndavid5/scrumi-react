@@ -74,9 +74,69 @@ export class Users {
 	        logajohn.debug(`${sWho}(): Calling pool = new Pool(`, config, ')...')
 	        const pool = new Pool(config)
 
-	        const sQuery = 'SELECT * from users'
+	        let sQuery = 'SELECT user_id, first_name, middle_name, last_name from users'
 
-	        const args = []
+	        let args = []
+	        let wheres = []
+
+            if( filter.first_name_filter ){
+                // NOTE: string concatenation operator in PostgreSQL is "||" 
+                // NOTE: Use case-insensitive PostgreSQL-specific "ILIKE" in lieu of "like"...
+                wheres.push("\t" + "first_name ILIKE '%' || $" + (wheres.length+1) + " || '%'");
+                args.push(filter.first_name_filter);
+            }
+
+            if( filter.middle_name_filter ){
+                // NOTE: string concatenation operator in PostgreSQL is "||" 
+                // NOTE: Use case-insensitive PostgreSQL-specific "ILIKE" in lieu of "like"...
+                wheres.push("\t" + "middle_name ILIKE '%' || $" + (wheres.length+1) + " || '%'");
+                args.push(filter.middle_name_filter);
+            }
+
+            if( filter.last_name_filter ){
+                // NOTE: string concatenation operator in PostgreSQL is "||" 
+                // NOTE: Use case-insensitive PostgreSQL-specific "ILIKE" in lieu of "like"...
+                wheres.push("\t" + "last_name ILIKE '%' || $" + (wheres.length+1) + " || '%'");
+                args.push(filter.last_name_filter);
+            }
+
+            let sWheres = "" 
+            if( wheres.length > 0 ){
+                sWheres = "\n" + 
+                "WHERE\n" +
+                wheres.join("\n" + "AND" + "\n")
+            }
+
+            let sOrderBy = ""
+
+            if( filter.sort_by_field ){
+                if( filter.sort_by_field.toLowerCase() == 'first_name' ){ 
+                    sOrderBy = "\nORDER BY first_name"
+                }
+                else if( filter.sort_by_field.toLowerCase() == 'middle_name' ){ 
+                    sOrderBy = "\nORDER BY middle_name"
+                }
+                else if( filter.sort_by_field.toLowerCase() == 'last_name' ){ 
+                    sOrderBy = "\nORDER BY last_name"
+                }
+            }
+
+            if( sOrderBy.length > 0 ){
+                if( filter.sort_by_asc_desc && filter.sort_by_asc_desc.toUpperCase() == 'ASC' ){
+                    sOrderBy += " ASC"
+                }
+                else if( filter.sort_by_asc_desc && filter.sort_by_asc_desc.toUpperCase() == 'DESC' ){
+                    sOrderBy += " DESC"
+                }
+            }
+
+            if( sWheres ){ 
+                sQuery += sWheres
+            }
+
+            if( sOrderBy ){ 
+                sQuery += sOrderBy
+            }
 
 	        logajohn.debug(`${sWho}(): Calling pool.query("${sQuery}", ${JSON.stringify(args)})...`)
 

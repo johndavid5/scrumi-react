@@ -146,7 +146,7 @@ export class Objectives {
             if( filter.description_filter ){
                 // NOTE: string concatenation operator in PostgreSQL is "||" 
                 //wheres.push("\t" + "o.description like '%' || $" + (wheres.length+1) + " || '%'");
-                wheres.push("\t" + "o.description ILIKE '%' || $" + (wheres.length+1) + " || '%'"); // Use case-insensitive PostgreSQL specific "ILIKE" in lieu of "like"...
+                wheres.push("\t" + "o.description ILIKE '%' || $" + (wheres.length+1) + " || '%'"); // Use case-insensitive PostgreSQL-specific "ILIKE" in lieu of "like"...
                 args.push(filter.description_filter);
             }
 
