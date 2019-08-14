@@ -1,0 +1,2 @@
+REM curl -v --noproxy localhost --trace-ascii curl_new_user.trace-ascii.out -H "Content-Type: application/json" -XPUT --data "{\"username\":\"arnie\", \"password\":\"pass\"}" http://localhost:3002/api/users
+curl -v --noproxy localhost --trace-ascii curl_set_password.trace-ascii.out -H "Content-Type: application/json" -XPUT --data "{\"username\":\"matrix\", \"password\":\"pass\"}" "http://localhost:3004/scrumi-react/user_login_api"
