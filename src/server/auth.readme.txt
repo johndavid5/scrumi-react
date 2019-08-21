@@ -1,0 +1,21 @@
+ To set a user's password (for now, the user must _already_ exist
+ in the `users` table), call
+      PUT /user_login_api
+ passing in the username and password, and the password_hash will be
+ set in the DB table.  See ./curl/set-password.bat
+
+Once the user has a password, the login process has two steps:
+
+1. You call POST /user_login_sessions_api, passing in username and password, to 
+   authenticate the password and get a JWT.
+
+2. You call GET /user_login_api with x-auth in the HTTP header set to 
+   the JWT token, to get the currently logged-in user’s information.
+   (We authenticate the token, decode it, and look up the user info
+    in the database.)
+
+Authentication code is courtesy...
+
+ Dickey, Jeff. Write Modern Web Apps with the MEAN Stack:
+   Mongo, Express, AngularJS, and Node.js (Develop and Design) (p. 109). 
+   Pearson Education. Kindle Edition. 

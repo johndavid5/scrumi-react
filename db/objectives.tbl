@@ -1,4 +1,4 @@
-DROP TABLE objectives;
+-- DROP TABLE objectives;
 
 CREATE TABLE objectives (
     objective_id SERIAL PRIMARY KEY,

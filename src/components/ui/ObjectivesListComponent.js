@@ -171,6 +171,9 @@ class ObjectivesListComponent extends Component {
        sCurrentSortByAscDesc =  objectives.objectives_filters.sort_by_asc_desc
     }
 
+    console.log(`${sWho}(): SHEMP: Moe, sCurrentSortByField = '${sCurrentSortByField}', sCurrentSortByAscDesc = '${sCurrentSortByAscDesc}'...`)
+
+
     let objectives_table = (  (objectives && objectives.objectives_list && objectives.objectives_list.length > 0) ?
         (
                   <table className="table" id="objectives-table" style={{marginTop: '10px'}}>

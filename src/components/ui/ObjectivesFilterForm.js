@@ -137,35 +137,55 @@ class ObjectivesFilterForm extends Component {
 
         logajohn.info(`${sWho}(): this.props = `, this.props )
 
+        let bFetching = (this.props.objectives && this.props.objectives.hasOwnProperty("objectives_fetching") && this.props.objectives.objectives_fetching == true )
+
+        let sRefreshClasses = 'fa fa-refresh' + (bFetching ?' fa-spin':'')
+
         return (
         <div className="container-fluid">
+
         <hr/>
-        <form className="objectives-filter-form form-inline" onSubmit={this.submit}>
 
-         <button id="load-objectives" type="submit" className="btn btn-success" aria-label="Load Objectives">
-            <span className="glyphicon glyphicon-refresh" aria-hidden="true" style={{fontWeight: 'bold'}}></span>
-         </button>
+        <form className="objectives-filter-form form" onSubmit={this.submit}>
 
-         <label for="description-filter" style={{marginLeft: '4px', marginRight: '2px'}}>Description Filter:</label>
-         <input type="text" className="form-control" id="description-filter" name="descriptionFilter" aria-label="Description Filter" value={this.state.descriptionFilter} onChange={this.handleInputChange} />
+            <div className="row">
+  	          <div className="form-group col-md-4">
+  		         <label for="description-filter">Description Filter</label>
+  		         <input type="text" className="form-control form-control-sm" id="description-filter" name="descriptionFilter" aria-label="Description Filter" value={this.state.descriptionFilter} onChange={this.handleInputChange} />
+  	          </div>
+  
+  	          <div className="form-group col-md-4">
+      	         <label for="full-name-filter">Assigned To Filter</label>
+          	     <input type="text" className="form-control form-control-sm" id="full-name-filter" name="fullNameFilter" aria-label="Assigned To Filter" value={this.state.fullNameFilter} onChange={this.handleInputChange} />
+  	          </div>
 
-         <label for="full-name-filter" style={{marginLeft: '4px', marginRight: '2px'}}>Assigned To Filter:</label>
-         <input type="text" className="form-control" id="full-name-filter" name="fullNameFilter" aria-label="Assigned To Filter" value={this.state.fullNameFilter} onChange={this.handleInputChange} />
-
-         <label for="comments-filter" style={{marginLeft: '4px', marginRight: '2px'}}>Comments Filter:</label>
-         <input type="text" className="form-control" id="comments-filter" name="commentsFilter" aria-label="Comments Filter" value={this.state.commentsFilter} onChange={this.handleInputChange} />
-        
-        {/*<label className="sr-only" for="description-filter">Description Filter</label>
-         <div className="input-group">
-           <div className="input-group-prepend">
-             <div className="input-group-text">Description Filter</div>
+  	          <div className="form-group col-md-4">
+      	         <label for="comments-filter">Comments Filter</label>
+      	         <input type="text" className="form-control form-control-sm" id="comments-filter" name="commentsFilter" aria-label="Comments Filter" value={this.state.commentsFilter} onChange={this.handleInputChange} />
+  	          </div>
            </div>
-           <input type="text" className="form-control" id="description-filter" name="descriptionFilter" value={this.state.descriptionFilter} onChange={this.handleInputChange} >
-         </div>*/}
 
+          <div className="row">
 
+          <div className="form-group col-md-4">
+          </div>
+
+          <div className="form-group col-md-4" style={{textAlign: 'center', border: '1px clear green'}}>
+            <button id="load-objectives" type="submit" className="btn btn-primary btn-success btn-sm"  aria-label="Load Objectives">
+             Load Objectives <i className={sRefreshClasses}></i>
+	        </button>
+          </div>
+
+          <div className="form-group col-md-4">
+          </div>
+
+          </div>
+
+        
         </form>
+
         <hr/>
+
         </div>
         )
     }

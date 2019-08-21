@@ -1,5 +1,8 @@
 // Testing actual models...connecting to the database...
-// ...not using mocks...but if you're smart, you'll
+// ...not using mocks...so this is an integration test,
+// not a unit test...
+//
+// ...If you're smart, you'll
 // connect to a test database...
 // We do attempt to delete the rows that we've added at the end
 // of the tests, but also engineer the tests to work even if

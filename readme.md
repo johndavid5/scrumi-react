@@ -1,5 +1,12 @@
 Scrumi-React
 ============
+(1) install PostgreSQL and DB Tables (./db/*.tbl) and Functions (./db/*.fcn), and seed data (./db/seed-users.sql, ./db/seed-objectives.sql)
+(2) npm install
+- - - - - - - - - 
+(1) npm run build-client  /* watch mode */
+(2) npm run build-server  /* watch mode */
+(3) npm run start-server  /* watch mode */
+
 
 Create Read Update Delete tasks....
 ------------------------------------
@@ -46,7 +53,8 @@ https://stackoverflow.com/questions/50947066/error-sorry-too-many-clients-alread
     "However, if you wrap createStore with applyMiddleware, the middleware can interpret actions differently, and provide support for dispatching async actions. Async actions are usually asynchronous primitives like Promises, Observables, or thunks."
 
     https://redux.js.org/recipes/writingtests
-    "For async action creators using Redux Thunk or other middleware, it's best to completely mock the Redux store for tests. You can apply the middleware to a mock store using redux-mock-store. You can also use fetch-mock to mock the HTTP requests."
+    "For async action creators using Redux Thunk or other middleware, it's best to completely mock the Redux store for tests.
+     You can apply the middleware to a mock store using redux-mock-store. You can also use fetch-mock to mock the HTTP requests."
 
     https://github.com/dmitry-zaets/redux-mock-store
 

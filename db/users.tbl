@@ -1,8 +1,10 @@
-DROP TABLE users;
+-- DROP TABLE users;
 
 CREATE TABLE users (
   user_id SERIAL PRIMARY KEY,
   first_name VARCHAR(100),
   middle_name VARCHAR(100),
-  last_name VARCHAR(100)
+  last_name VARCHAR(100),
+  username VARCHAR(100) UNIQUE NOT NULL,
+  password_hash VARCHAR(100)
 );

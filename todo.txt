@@ -1,4 +1,15 @@
-* Add Users Screen (via Router)...
+8/14/2019: Add unit test for new set password hash api... 
+8/14/2019: See if we can get a better DB error message in
+./src/server/models/users.js when the login lookup fails...
+8/14/2019: Show 'login' on the users screen...
+
+* Put in tests for the Users Screen
+
+* [2019-04-15--deployed to johndavidaynedjian.com] Add Users Screen (via
+  Router)...with filters and sorting...
+
+* Put in edit functionality for Objectives and Users...(but first you'll need
+  login and token-based authentication, if you want to deploy to johndavidaynedjian.com...) 
 
 * Gussy: ObjectivesListComponent.js: Make longhand timestamp a 12-hour rather than a
   24-hour time...current sample:

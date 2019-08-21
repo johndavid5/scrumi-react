@@ -108,9 +108,10 @@ class UsersListComponent extends Component {
     let gefilters = []
     // Add filter information here if you wish the filter to be displayed...
     let gefilterees = [ 
-        { field: 'description_filter', pretty_field: 'Description Filter' }
-        ,{ field: 'full_name_filter', pretty_field: 'Assigned To Filter' }
-        ,{ field: 'comments_filter', pretty_field: 'Comments Filter' }
+        { field: 'user_name_filter', pretty_field: 'Username Filter' }
+        ,{ field: 'first_name_filter', pretty_field: 'First Name Filter' }
+        ,{ field: 'middle_name_filter', pretty_field: 'Middle Name Filter' }
+        ,{ field: 'last_name_filter', pretty_field: 'Last Name Filter' }
     ]
 
     // Form a string list of the filters for the benefit of the end-user...
@@ -155,6 +156,7 @@ class UsersListComponent extends Component {
                   <table className="table" id="users-table" style={{marginTop: '10px', width: '50%', marginLeft: 'auto', marginRight: 'auto'}}>
                         <thead>
                       <tr>
+                          <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='username' sWhatPretty='Username' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={this.sortBy} />:""}</th>
                           <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='first_name' sWhatPretty='First Name' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={this.sortBy} />:""}</th>
                           <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='middle_name' sWhatPretty='Middle Name' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={this.sortBy} />:""}</th>
                           <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='last_name' sWhatPretty='Last Name' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={this.sortBy} />:""}</th>
@@ -164,6 +166,7 @@ class UsersListComponent extends Component {
                       {
                                 users.users_list.map((user, index) => (
                                   <tr key={user.user_id}>
+                                      <td style={tdStyle} id={'username-' + user.user_id}>{user.username}</td>
                                       <td style={tdStyle} id={'first_name-' + user.user_id}>{user.first_name}</td>
                                       <td style={tdStyle} id={'middle_name-' + user.user_id}>{user.middle_name}</td>
                                       <td style={tdStyle} id={'last_name-' + user.user_id}>{user.last_name}</td>

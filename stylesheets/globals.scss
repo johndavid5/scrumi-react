@@ -28,6 +28,10 @@ html, body, div#react-container {
   min-height: 100%;
 }
 
+body {
+    background-color: #FBFBFB;
+}
+
 h1 {
   @include clear;
 }

@@ -24,22 +24,26 @@ class SortButton extends Component {
                 if( strEqualsIgnoreCase( sCurrentAscDesc, "asc" ) ){
                     sNextAscDesc = "desc"
                     sNextAscDescPretty = "Descending"
-                    sChevronClass = "glyphicon-chevron-up"
+                    //sChevronClass = "glyphicon-chevron-up"
+                    sChevronClass = "fa fa-chevron-up"
                 }
                 else if( strEqualsIgnoreCase( sCurrentAscDesc, "desc" ) ){
                     sNextAscDesc = "asc"
                     sNextAscDescPretty = "Ascending"
-                    sChevronClass = "glyphicon-chevron-down"
+                    //sChevronClass = "glyphicon-chevron-down"
+                    sChevronClass = "fa fa-chevron-down"
                 }
                 else{
                     // Shouldn't happen, but if it does assume "asc"
                     sNextAscDesc = "desc"
                     sNextAscDescPretty = "Descending"
-                    sChevronClass = "glyphicon-chevron-up"
+                    //sChevronClass = "glyphicon-chevron-up"
+                    sChevronClass = "fa fa-chevron-up"
                 }
 
-                glyphButton = <span className={'glyphicon ' + sChevronClass} aria-hidden="true" style={glyphStyle}></span>
                 //glyphButton = <button type="button" className="btn btn-default" aria-label={my_aria_label} onClick={(e)=>onSortBy(e, sWhat, sNextAscDesc)} style={{height: '0.5em'}}><span className={'glyphicon ' + sChevronClass} aria-hidden="true" style={{height: '0.5em'}}></span></button> 
+                //glyphButton = <span className={'glyphicon ' + sChevronClass} aria-hidden="true" style={glyphStyle}></span>
+                glyphButton = <i class={sChevronClass} aria-hidden="true" style={glyphStyle}></i>
         }
         else{
             sNextAscDesc = "asc"

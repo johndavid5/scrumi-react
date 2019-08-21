@@ -1,19 +1,19 @@
 
-insert into users ( first_name, middle_name, last_name)
+insert into users ( first_name, middle_name, last_name, username )
 values
-( 'John', 'M.', 'Matrix'),
-( 'Jenny', '', 'Matrix'),
-( 'Cindy', '', ''),
-( 'Franklin', 'J.', 'Kirby'),
-( 'El', 'Presidente', 'Arius'),
-( '', '', 'Lawson'),
-( 'Leslie', '', ''),
-( '', '', 'Forrestal'),
-( '', '', 'Bennett'),
-( '', '', 'Cooke'),
-( '', '', 'Sully'),
-( '', '', 'Jackson'),
-( '', '', 'Harris'),
-( '', '', 'Diaz'),
-( '', '', 'Henriques')
+( 'John', 'M.', 'Matrix', 'matrix'),
+( 'Jenny', '', 'Matrix', 'chenny'),
+( 'Cindy', '', '', 'cindy'),
+( 'Franklin', 'J.', 'Kirby', 'kirby'),
+( 'El', 'Presidente', 'Arius', 'arius'),
+( '', '', 'Lawson', 'lawson'),
+( 'Leslie', '', 'Lawson', 'leslie'),
+( '', '', 'Forrestal', 'forrestal'),
+( '', '', 'Bennett', 'bennett'),
+( '', '', 'Cooke', 'cooke'),
+( '', '', 'Sully', 'sully'),
+( '', '', 'Jackson', 'jackson'),
+( '', '', 'Harris', 'harris'),
+( '', '', 'Diaz', 'diaz'),
+( '', '', 'Henriques', 'henriques')
 ;

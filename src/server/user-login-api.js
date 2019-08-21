@@ -1,9 +1,5 @@
-/** This controller has two actions:
-* one to get an existing user, and the other
-* to create a new user...
-*/
 var router = require('express').Router();
-import C from '../constants'
+import C from '../constants';
 var bcrypt = require('bcrypt-nodejs');
 var jwt = require('jwt-simple');
 
@@ -18,22 +14,10 @@ logajohn.setLevel(config.DEBUG_LEVEL)
 logajohn.info(`user-login-api.js: config.DEBUG_LEVEL = `, config.DEBUG_LEVEL )
 logajohn.info(`user-login-api.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
 
-/*
-* First, to create a user, we call POST /user_login_api, passing in the
-* username and password.
+/* Call GET /user_login_api, passing x-auth=the JWT token you 
+* got from POST /user_login_sessions.
 *
-* Then, once the user exists, the login process has two steps:
-*
-* (1) You call POST /user_login_sessions_api, passing in username and password, to get a JWT;
-*
-* (2) You call GET /user_login_api to get the currently
-*     logged-in user’s information.
-*     (The client passes x-auth=token in HTTP header
-*      and we authenticate it, decode it, and look-up the user info in the database...)
-*
-* Dickey, Jeff. Write Modern Web Apps with the MEAN Stack:
-*   Mongo, Express, AngularJS, and Node.js (Develop and Design) (p. 109). 
-*   Pearson Education. Kindle Edition. 
+* You get back: information on the currently logged-in user.
 */
 function doGet(req, res, next){
 
@@ -73,15 +57,16 @@ function doGet(req, res, next){
 	//	res.json(user);
 	//});
 
-}
+}/* doGet() */
 
 router.get('/', doGet );
-	
 
 /* 
-* Set password for user: client passes username as req.body.username and password as req.body.password 
-* for a user, and you set the password_hash for the user using a one-way
-* hash of the password...
+* Set password for user: 
+* Call PUT /user_login_api, passing
+* username as req.body.username and password as req.body.password 
+* for the user, and we will set the password_hash for the user 
+* using a one-way hash of the password...
 */
 function doPut(req, res, next){
 
@@ -152,7 +137,7 @@ function doPut(req, res, next){
 			//});
 		});
 	});
-}
+}/* doPut() */
 
 router.put('/', doPut );
 

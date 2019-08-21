@@ -29,7 +29,7 @@ class UsersFilterForm extends Component {
     // or, better yet the HTML 5 localStorage object... 
     //
     // Use static method to simulate a "const"...
-    static DEFAULT_SORT_BY_FIELD(){ return "first_name"}
+    static DEFAULT_SORT_BY_FIELD(){ return "username"}
     static DEFAULT_SORT_BY_ASC_DESC(){ return "asc"}
 
     constructor(props){
@@ -40,6 +40,7 @@ class UsersFilterForm extends Component {
         // Primarily for testing purposes, but may be useful somehow:
         //    initialize filters in state with their corresponding props...
         this.state = {
+            userNameFilter: props.userNameFilter ? props.userNameFilter : '',
             firstNameFilter: props.firstNameFilter ? props.firstNameFilter : '',
             middleNameFilter: props.middleNameFilter ? props.middleNameFilter : '',
             lastNameFilter: props.lastNameFilter ? props.lastNameFilter : ''
@@ -79,6 +80,7 @@ class UsersFilterForm extends Component {
 
         // Important: Use spread operator ... to preserve current filter fields such as sort_by_field and sort_by_asc_desc 
         let filters = { ...currentFilters,
+            user_name_filter: this.state.userNameFilter,
             first_name_filter: this.state.firstNameFilter,
             middle_name_filter: this.state.middleNameFilter,
             last_name_filter: this.state.lastNameFilter
@@ -144,6 +146,10 @@ class UsersFilterForm extends Component {
          <button id="load-users" type="submit" className="btn btn-success" aria-label="Load Users">
             <span className="glyphicon glyphicon-refresh" aria-hidden="true" style={{fontWeight: 'bold'}}></span>
          </button>
+
+         <label for="user-name-filter" style={{marginLeft: '4px', marginRight: '2px'}}>User Name Filter:</label>
+         <input type="text" className="form-control" id="user-name-filter" name="userNameFilter" aria-label="User Name Filter" value={this.state.userNameFilter} onChange={this.handleInputChange} />
+
 
          <label for="first-name-filter" style={{marginLeft: '4px', marginRight: '2px'}}>First Name Filter:</label>
          <input type="text" className="form-control" id="first-name-filter" name="firstNameFilter" aria-label="First Name Filter" value={this.state.firstNameFilter} onChange={this.handleInputChange} />

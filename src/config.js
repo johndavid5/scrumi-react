@@ -4,7 +4,9 @@ export const config = {
     //DEBUG_LEVEL: 'trace', // trace not recommended...crashes logajohn=>logatim...unless we fix logatim...
     DEFAULT_DB_NAME: 'scrumi',
     TEST_DB_NAME: 'scrumi-test',
-    PORT: 3004 
+    PORT: 3004,
+
+    secret: 'supercalifragilisticexpyalidocious',
 }
 
 // console.log("config=",config)
