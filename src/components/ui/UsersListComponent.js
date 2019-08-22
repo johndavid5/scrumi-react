@@ -80,6 +80,9 @@ class UsersListComponent extends Component {
         console.log(`${sWho}(): users = `, users )
         logajohn.debug(`${sWho}(): users = `, users )
 
+    const thStyle = {}
+
+    /*
     const thStyle = {
 	  border: '2px solid #DCDCDC',
       color: 'white',
@@ -87,12 +90,17 @@ class UsersListComponent extends Component {
 	  padding: '2px',
       textAlign: 'center',
     }
+    */
 
+    const tdStyle = {}
+
+    /*
     const tdStyle = {
 	  border: '2px solid #DCDCDC',
 	  padding: '2px',
       textAlign: 'left',
     }
+    */
 
     const gefilterStyle = {
         color: 'blue',
@@ -101,7 +109,8 @@ class UsersListComponent extends Component {
 
     const timestampStyle = {
         color: 'purple',
-        whiteSpace: 'nowrap'
+        whiteSpace: 'nowrap',
+        margin: '0px'
     }
 
 
@@ -123,7 +132,11 @@ class UsersListComponent extends Component {
             let id=`static-${sluggified_field}`; // e.g., 'static-description-field' 
 
             if( gefilters.length > 0 ){
-                gefilters.push(', ')
+                gefilters.push(<span style={gefilterStyle}>, </span>)
+            }
+            else{
+                //gefilters.push('...with ')
+                gefilters.push(<span style={gefilterStyle}>...with...</span>)
             }
 
             gefilters.push(<span style={gefilterStyle}>{val.pretty_field}: &quot;<span id={id}>{users.users_filters[val.field]}</span>&quot;</span>);
@@ -151,9 +164,21 @@ class UsersListComponent extends Component {
        sCurrentSortByAscDesc =  users.users_filters.sort_by_asc_desc
     }
 
+    let i_num_users = (users && typeof(users.users_list) !== 'undefined' && typeof(users.users_list.length) !== 'undefined') ? users.users_list.length : 0
+
+    let s_num_users = ""
+    if( i_num_users == 0 ){
+        if( users.users_list ){
+          s_num_users = "No "    
+        }
+    }
+    else{
+          s_num_users = "" + i_num_users + " "
+    }
+
     let users_table = (  (users && users.users_list && users.users_list.length > 0) ?
         (
-                  <table className="table" id="users-table" style={{marginTop: '10px', width: '50%', marginLeft: 'auto', marginRight: 'auto'}}>
+                  <table className="table table-striped" id="users-table" style={{marginTop: '10px', display: 'inline-table'}}>
                         <thead>
                       <tr>
                           <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='username' sWhatPretty='Username' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={this.sortBy} />:""}</th>
@@ -180,20 +205,33 @@ class UsersListComponent extends Component {
     )
 
     return (
-      <div className="users-list-component container-fluid" style={{ paddingLeft: '1em' }}>
+      <div className="users-list-component container-fluid">
+
       <div className="filter-param row">
-        <div className="col-sm-4">
+        <div className="col-sm-12" style={{textAlign: 'center'}}>
           {users && users.users_timestamp ? <p id="users-timestamp" style={timestampStyle}>{users.users_timestamp}</p> : ""}
-        </div>
-        <div className="col-sm-4">
-          <h4 style={{color: 'purple', textAlign: 'center', margin: '0px'}}>Users</h4>
+          <h4 style={{color: 'purple', textAlign: 'center', margin: '2px'}}>{s_num_users}User{i_num_users == 1 ? "": "s"}</h4>
+          {gefilters}
         </div>
       </div>
-      <div>
-      {gefilters}
-      </div>
+
       {gears}
-      {users_table}
+
+      {/*
+      <div className="row">
+        <div className="col-lg-2"></div>
+        <div className="col-lg-10 table-responsive" style={{textAlign: 'center'}}>
+          {users_table}
+        </div>
+        <div className="col-lg-2"></div>
+      </div>
+      */}
+
+      <div className="table-responsive" style={{textAlign: 'center'}}>
+          {users_table}
+      </div>
+
+
       { ((debugee)=>{
           if(debugee == true)
             return (
@@ -207,6 +245,7 @@ class UsersListComponent extends Component {
             return ''
   	      })( debug ) // IIFE
        }
+
        </div>
        )
   }/* render() */

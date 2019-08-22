@@ -167,17 +167,17 @@ class ObjectivesFilterForm extends Component {
 
           <div className="row">
 
-          <div className="form-group col-md-4">
-          </div>
-
-          <div className="form-group col-md-4" style={{textAlign: 'center', border: '1px clear green'}}>
-            <button id="load-objectives" type="submit" className="btn btn-primary btn-success btn-sm"  aria-label="Load Objectives">
-             Load Objectives <i className={sRefreshClasses}></i>
-	        </button>
-          </div>
-
-          <div className="form-group col-md-4">
-          </div>
+	          <div className="form-group col-md-4">
+	          </div>
+	
+	          <div className="form-group col-md-4" style={{textAlign: 'center'}}>
+	            <button id="load-objectives" type="submit" className="btn btn-primary btn-success btn-sm btn-block"  aria-label="Load Objectives">
+	             Load Objectives <i className={sRefreshClasses}></i>
+		        </button>
+	          </div>
+	
+	          <div className="form-group col-md-4">
+	          </div>
 
           </div>
 

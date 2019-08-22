@@ -1,15 +1,34 @@
-8/14/2019: Add unit test for new set password hash api... 
-8/14/2019: See if we can get a better DB error message in
+* [x] Fix:
+  Center the timestamp and the "Objectives" heading...
+  (no more overlapping for tablet)
+* [x] Gussie: Add the "No Objectives", "1 Objective", "2 Objectives" functionality as with
+  1-800-FLOWERS ... and then filter text "...with Description Filter='Joe'"
+* (x) https://stackoverflow.com/questions/39451816/bootstrap-button-full-width-for-smaller-screen-sizes
+* [x] https://stackoverflow.com/questions/43954090/resize-html-table-width-based-on-screen-size   
+-- deploy --
+* Use fancy Bootstrap navbar on top of scrumi...
+* Replace tables with bootstrap div's:
+    https://stackoverflow.com/questions/32741186/how-to-convert-table-based-layout-with-bootstrap-row-and-col
+-- deploy -- 
+* Export as CSV...looks like these guys did most of the work for you...https://stackoverflow.com/questions/48760815/export-to-csv-button-in-react-table
+* Eventually: Paginating the objectives...which makes more sense if we have
+  more of 'em...
+* Add unit tests for all the validation stuff
+* 8/14/2019: See if we can get a better DB error message in
 ./src/server/models/users.js when the login lookup fails...
-8/14/2019: Show 'login' on the users screen...
+* 8/14/2019: Show 'login' on the users screen...
 
 * Put in tests for the Users Screen
+* Put in 1-800-FLOWERS comprehensive unit tests
 
 * [2019-04-15--deployed to johndavidaynedjian.com] Add Users Screen (via
   Router)...with filters and sorting...
 
 * Put in edit functionality for Objectives and Users...(but first you'll need
-  login and token-based authentication, if you want to deploy to johndavidaynedjian.com...) 
+  login and token-based authentication, if you want to deploy to johndavidaynedjian.com...
+  ...you can also later on perhaps add "superficial editing" if the user is not logged
+  in...as you did for the 1-800-FLOWERS thang...or perhaps better yet, session
+  based or Browser DB based non-persistent editing...?
 
 * Gussy: ObjectivesListComponent.js: Make longhand timestamp a 12-hour rather than a
   24-hour time...current sample:

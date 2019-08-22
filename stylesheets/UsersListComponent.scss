@@ -1,18 +1,36 @@
 @import "globals";
 
+
+/* make the table a 100% wide by default */
 #users-table {
-    /* Zebra-striped table */
-    tr:nth-child(even) {
-        background-color: #FFD9F2; /* pink */
-    }
-
-    tr:nth-child(odd) {
-        background-color: #FFFFFF;
-    }
+  width: 100%;
 }
 
-#users-table th button {
-    color: #4175B3 !important;
-    font-weight: bold !important;
-    /* font-size: 16px !important; */
+/* @media query: if the browser window is at least 768px-s wide: like '*-md-*' in boostrap */
+@media screen and (min-width: 768px) {
+  #users-table {
+  width: 90%;}
 }
+
+/* @media query: if the browser window is at least 992px-s wide: like '*-lg-*' in bootstrap */
+@media screen and (min-width: 992px) {
+  table {
+  width: 80%;}
+}
+
+//#users-table {
+//    /* Zebra-striped table */
+//    tr:nth-child(even) {
+//        background-color: #FFD9F2; /* pink */
+//    }
+//
+//    tr:nth-child(odd) {
+//        background-color: #FFFFFF;
+//    }
+//}
+//
+//#users-table th button {
+//    color: #4175B3 !important;
+//    font-weight: bold !important;
+//    /* font-size: 16px !important; */
+//}

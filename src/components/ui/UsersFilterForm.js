@@ -138,27 +138,66 @@ class UsersFilterForm extends Component {
 
         logajohn.info(`${sWho}(): this.props = `, this.props )
 
+        let bFetching = (this.props.users && this.props.users.hasOwnProperty("users_fetching") && this.props.users.users_fetching == true )
+
+        let sRefreshClasses = 'fa fa-refresh' + (bFetching ?' fa-spin':'')
+
         return (
         <div className="container-fluid">
+
         <hr/>
-        <form className="users-filter-form form-inline" onSubmit={this.submit}>
 
-         <button id="load-users" type="submit" className="btn btn-success" aria-label="Load Users">
-            <span className="glyphicon glyphicon-refresh" aria-hidden="true" style={{fontWeight: 'bold'}}></span>
-         </button>
+        <form className="users-filter-form form" onSubmit={this.submit}>
 
-         <label for="user-name-filter" style={{marginLeft: '4px', marginRight: '2px'}}>User Name Filter:</label>
-         <input type="text" className="form-control" id="user-name-filter" name="userNameFilter" aria-label="User Name Filter" value={this.state.userNameFilter} onChange={this.handleInputChange} />
+        <div className="row">
+	        <div className="col-md-2">
+	        </div>
 
+	        <div className="form-group col-md-4">
+	          <label for="user-name-filter">User Name Filter:</label>
+	          <input type="text" className="form-control form-control-sm" id="user-name-filter" name="userNameFilter" aria-label="User Name Filter" value={this.state.userNameFilter} onChange={this.handleInputChange} />
+	        </div>
+	
+	        <div className="form-group col-md-4">
+	          <label for="first-name-filter">First Name Filter:</label>
+	          <input type="text" className="form-control form-control-sm" id="first-name-filter" name="firstNameFilter" aria-label="First Name Filter" value={this.state.firstNameFilter} onChange={this.handleInputChange} />
+	        </div>
 
-         <label for="first-name-filter" style={{marginLeft: '4px', marginRight: '2px'}}>First Name Filter:</label>
-         <input type="text" className="form-control" id="first-name-filter" name="firstNameFilter" aria-label="First Name Filter" value={this.state.firstNameFilter} onChange={this.handleInputChange} />
+	        <div className="col-md-2">
+	        </div>
+        </div>
 
-         <label for="middle-name-filter" style={{marginLeft: '4px', marginRight: '2px'}}>Middle Name Filter:</label>
-         <input type="text" className="form-control" id="middle-name-filter" name="middleNameFilter" aria-label="Middle Name Filter" value={this.state.middleNameFilter} onChange={this.handleInputChange} />
+       <div className="row">
+	       <div className="col-md-2">
+	       </div>
 
-         <label for="last-name-filter" style={{marginLeft: '4px', marginRight: '2px'}}>Last Name Filter:</label>
-         <input type="text" className="form-control" id="last-name-filter" name="lastNameFilter" aria-label="Last Name Filter" value={this.state.lastNameFilter} onChange={this.handleInputChange} />
+	       <div className="form-group col-md-4">
+	         <label for="middle-name-filter">Middle Name Filter:</label>
+	         <input type="text" className="form-control form-control-sm" id="middle-name-filter" name="middleNameFilter" aria-label="Middle Name Filter" value={this.state.middleNameFilter} onChange={this.handleInputChange} />
+	       </div>
+	
+	       <div className="form-group col-md-4">
+	         <label for="last-name-filter">Last Name Filter:</label>
+	         <input type="text" className="form-control form-control-sm" id="last-name-filter" name="lastNameFilter" aria-label="Last Name Filter" value={this.state.lastNameFilter} onChange={this.handleInputChange} />
+	       </div>
+
+	       <div className="col-md-2">
+	       </div>
+        </div>
+
+       <div className="row">
+	       <div className="form-group col-md-4">
+	       </div>
+	
+	       <div className="form-group col-md-4" style={{textAlign: 'center'}}>
+	           <button id="load-users" type="submit" className="btn btn-primary btn-success btn-sm btn-block" aria-label="Load Users">
+	             Load Users <i className={sRefreshClasses}></i>
+	           </button>
+	       </div>
+	
+	       <div className="form-group col-md-4">
+	       </div>
+       </div>
 
         </form>
         <hr/>

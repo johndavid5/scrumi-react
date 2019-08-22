@@ -54,7 +54,7 @@ class SortButton extends Component {
         let my_aria_label = `Sort by ${sWhatPretty} ${sNextAscDescPretty}`
 
         return (
-            <a href="#" id={my_id}
+            <a href="#"  id={my_id}
                     aria-label={my_aria_label}
                     onClick={(e)=>{e.preventDefault(); onSortBy(e, sWhat, sNextAscDesc);}}
                     >

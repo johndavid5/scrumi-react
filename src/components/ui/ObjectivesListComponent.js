@@ -18,7 +18,6 @@ import { logajohn } from '../../lib/logajohn'
 
 import { customStringify, strEqualsIgnoreCase, stringToBool } from '../../lib/utils' // Safer than JSON.stringify()... 
 
-// import '../../stylesheets/ObjectivesListComponent.scss'
 import '../../../stylesheets/ObjectivesListComponent.scss'
 
 // const ObjectivesListComponent = ({ linksQa={}, debug=true}) => {
@@ -101,6 +100,9 @@ class ObjectivesListComponent extends Component {
         console.log(`${sWho}(): objectives = `, objectives)
         logajohn.debug(`${sWho}(): objectives = `, objectives)
 
+    const thStyle = {};
+
+    /*
     const thStyle = {
 	  border: '2px solid #DCDCDC',
       color: 'white',
@@ -108,12 +110,18 @@ class ObjectivesListComponent extends Component {
 	  padding: '2px',
       textAlign: 'center',
     }
+    */
 
+
+    const tdStyle = {};
+
+    /*
     const tdStyle = {
 	  border: '2px solid #DCDCDC',
 	  padding: '2px',
       textAlign: 'left',
     }
+    */
 
     const gefilterStyle = {
         color: 'blue',
@@ -122,7 +130,8 @@ class ObjectivesListComponent extends Component {
 
     const timestampStyle = {
         color: 'purple',
-        whiteSpace: 'nowrap'
+        whiteSpace: 'nowrap',
+        margin: '0px'
     }
 
 
@@ -143,7 +152,11 @@ class ObjectivesListComponent extends Component {
             let id=`static-${sluggified_field}`; // e.g., 'static-description-field' 
 
             if( gefilters.length > 0 ){
-                gefilters.push(', ')
+                gefilters.push(<span style={gefilterStyle}>, </span>)
+            }
+            else{
+                //gefilters.push('...with ')
+                gefilters.push(<span style={gefilterStyle}>...with...</span>)
             }
 
             gefilters.push(<span style={gefilterStyle}>{val.pretty_field}: &quot;<span id={id}>{objectives.objectives_filters[val.field]}</span>&quot;</span>);
@@ -173,18 +186,32 @@ class ObjectivesListComponent extends Component {
 
     console.log(`${sWho}(): SHEMP: Moe, sCurrentSortByField = '${sCurrentSortByField}', sCurrentSortByAscDesc = '${sCurrentSortByAscDesc}'...`)
 
+    let i_num_objectives = (objectives && typeof(objectives.objectives_list) !== 'undefined' && typeof(objectives.objectives_list.length) !== 'undefined') ? objectives.objectives_list.length : 0
+
+    let s_num_objectives = ""
+    if( i_num_objectives == 0 ){
+        if( objectives.objectives_list ){
+          s_num_objectives = "No "    
+        }
+    }
+    else{
+          s_num_objectives = "" + i_num_objectives + " "
+    }
+
+    // style={{width: '100%', marginTop: '10px'}}
+    //style={{width: '100%', marginLeft: 'auto', marginRight: 'auto'}}
 
     let objectives_table = (  (objectives && objectives.objectives_list && objectives.objectives_list.length > 0) ?
         (
-                  <table className="table" id="objectives-table" style={{marginTop: '10px'}}>
-                        <thead>
-                      <tr>
+                  <table className="table table-striped" id="objectives-table" style={{marginTop: '10px', display: 'inline-table'}}>
+                     <thead>
+                       <tr>
                           <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='description' sWhatPretty='Description' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={this.sortBy} />:""}</th>
                           <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='full_name' sWhatPretty='Assigned To' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={this.sortBy} />:""}</th>
                           <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='begun' sWhatPretty='Begun' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={this.sortBy} />:""}</th>
                           <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='completed' sWhatPretty='Completed' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={this.sortBy} />:""}</th>
                           <th scope="col" style={thStyle}>{1==1?<SortButton sWhat='comment' sWhatPretty='Comments' sCurrentSortBy={sCurrentSortByField} sCurrentAscDesc={sCurrentSortByAscDesc} onSortBy={this.sortBy} />:""}</th>
-                      </tr>
+                       </tr>
                     </thead>
                         <tbody>
                       {
@@ -205,20 +232,24 @@ class ObjectivesListComponent extends Component {
     )
 
     return (
-      <div className="objectives-list-component container-fluid" style={{ paddingLeft: '1em' }}>
+      <div className="objectives-list-component container-fluid" >
+
       <div className="filter-param row">
-        <div className="col-sm-4">
+        <div className="col-sm-10" style={{textAlign: 'center'}}>
           {objectives && objectives.objectives_timestamp ? <p id="objectives-timestamp" style={timestampStyle}>{objectives.objectives_timestamp}</p> : ""}
-        </div>
-        <div className="col-sm-4">
-          <h4 style={{color: 'purple', textAlign: 'center', margin: '0px'}}>Objectives</h4>
+          <h4 style={{color: 'purple', textAlign: 'center', margin: '2px'}}>{s_num_objectives}Objective{i_num_objectives == 1 ? "": "s"}</h4>
+          {gefilters}
         </div>
       </div>
-      <div>
-      {gefilters}
-      </div>
+
       {gears}
-      {objectives_table}
+
+      <div className="row">
+        <div className="col-sm-12 table-responsive" style={{textAlign: 'center'}}>
+          {objectives_table}
+        </div>
+      </div>
+
       { ((debugee)=>{
           if(debugee == true)
             return (

@@ -28,9 +28,9 @@ html, body, div#react-container {
   min-height: 100%;
 }
 
-body {
-    background-color: #FBFBFB;
-}
+//body {
+//    background-color: #FBFBFB;
+//}
 
 h1 {
   @include clear;
@@ -39,7 +39,7 @@ h1 {
 body {
 
   @include clear;
-  @include fade-bg($light, $light-grey);
+  //@include fade-bg($light, $light-grey);
 
 }
 
