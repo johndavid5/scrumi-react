@@ -235,7 +235,7 @@ class ObjectivesListComponent extends Component {
       <div className="objectives-list-component container-fluid" >
 
       <div className="filter-param row">
-        <div className="col-sm-10" style={{textAlign: 'center'}}>
+        <div className="col-sm-12" style={{textAlign: 'center'}}>
           {objectives && objectives.objectives_timestamp ? <p id="objectives-timestamp" style={timestampStyle}>{objectives.objectives_timestamp}</p> : ""}
           <h4 style={{color: 'purple', textAlign: 'center', margin: '2px'}}>{s_num_objectives}Objective{i_num_objectives == 1 ? "": "s"}</h4>
           {gefilters}
