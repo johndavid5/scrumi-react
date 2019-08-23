@@ -100,7 +100,7 @@ class ObjectivesListComponent extends Component {
         console.log(`${sWho}(): objectives = `, objectives)
         logajohn.debug(`${sWho}(): objectives = `, objectives)
 
-    const thStyle = {};
+    const thStyle = { textAlign: 'left' };
 
     /*
     const thStyle = {
@@ -113,7 +113,7 @@ class ObjectivesListComponent extends Component {
     */
 
 
-    const tdStyle = {};
+    const tdStyle = { textAlign: 'left' };
 
     /*
     const tdStyle = {

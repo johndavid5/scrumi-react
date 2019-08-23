@@ -1,3 +1,12 @@
+* Set alignment for <td>'s...right now they default to 'center'...most will be 'left', I presume...
+  ...but reverse engineer what we did for 1-800-FLOWERS
+* What about a prettier date/time display format?
+* date/time filters...with chooser widget
+* Use fancy Bootstrap navbar on top of scrumi...
+* Replace tables with bootstrap div's...?  Or should tabular data be displayed
+  in tables...?
+    https://stackoverflow.com/questions/32741186/how-to-convert-table-based-layout-with-bootstrap-row-and-col
+-- <deployed> late 8/21/2019 --
 * [x] Fix:
   Center the timestamp and the "Objectives" heading...
   (no more overlapping for tablet)
@@ -5,10 +14,7 @@
   1-800-FLOWERS ... and then filter text "...with Description Filter='Joe'"
 * (x) https://stackoverflow.com/questions/39451816/bootstrap-button-full-width-for-smaller-screen-sizes
 * [x] https://stackoverflow.com/questions/43954090/resize-html-table-width-based-on-screen-size   
--- deploy --
-* Use fancy Bootstrap navbar on top of scrumi...
-* Replace tables with bootstrap div's:
-    https://stackoverflow.com/questions/32741186/how-to-convert-table-based-layout-with-bootstrap-row-and-col
+-- </deployed> --
 -- deploy -- 
 * Export as CSV...looks like these guys did most of the work for you...https://stackoverflow.com/questions/48760815/export-to-csv-button-in-react-table
 * Eventually: Paginating the objectives...which makes more sense if we have

@@ -80,7 +80,7 @@ class UsersListComponent extends Component {
         console.log(`${sWho}(): users = `, users )
         logajohn.debug(`${sWho}(): users = `, users )
 
-    const thStyle = {}
+    const thStyle = { textAlign: 'left' };
 
     /*
     const thStyle = {
@@ -92,7 +92,7 @@ class UsersListComponent extends Component {
     }
     */
 
-    const tdStyle = {}
+    const tdStyle = { textAlign: 'left' };
 
     /*
     const tdStyle = {
