@@ -145,7 +145,7 @@ class UsersFilterForm extends Component {
         return (
         <div className="container-fluid">
 
-        <hr/>
+        {/*<hr/>*/}
 
         <form className="users-filter-form form" onSubmit={this.submit}>
 
@@ -200,7 +200,7 @@ class UsersFilterForm extends Component {
        </div>
 
         </form>
-        <hr/>
+        {/*<hr/>*/}
         </div>
         )
     }

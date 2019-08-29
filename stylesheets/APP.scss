@@ -1,5 +1,9 @@
 @import "globals";
 
+.link-active {
+    font-weight: bold;
+}
+
 div.app {
   display: flex;
   flex-direction: column;

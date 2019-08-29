@@ -144,7 +144,7 @@ class ObjectivesFilterForm extends Component {
         return (
         <div className="container-fluid">
 
-        <hr/>
+        {/*<hr/>*/}
 
         <form className="objectives-filter-form form" onSubmit={this.submit}>
 
@@ -184,7 +184,7 @@ class ObjectivesFilterForm extends Component {
         
         </form>
 
-        <hr/>
+       {/*<hr/>*/}
 
         </div>
         )
