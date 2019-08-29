@@ -151,17 +151,17 @@ class ObjectivesFilterForm extends Component {
             <div className="row">
   	          <div className="form-group col-md-4">
   		         <label for="description-filter">Description Filter</label>
-  		         <input type="text" className="form-control form-control-sm" id="description-filter" name="descriptionFilter" aria-label="Description Filter" value={this.state.descriptionFilter} onChange={this.handleInputChange} />
+  		         <input type="search" className="form-control form-control-sm" id="description-filter" name="descriptionFilter" aria-label="Description Filter" value={this.state.descriptionFilter} onChange={this.handleInputChange} />
   	          </div>
   
   	          <div className="form-group col-md-4">
       	         <label for="full-name-filter">Assigned To Filter</label>
-          	     <input type="text" className="form-control form-control-sm" id="full-name-filter" name="fullNameFilter" aria-label="Assigned To Filter" value={this.state.fullNameFilter} onChange={this.handleInputChange} />
+          	     <input type="search" className="form-control form-control-sm" id="full-name-filter" name="fullNameFilter" aria-label="Assigned To Filter" value={this.state.fullNameFilter} onChange={this.handleInputChange} />
   	          </div>
 
   	          <div className="form-group col-md-4">
       	         <label for="comments-filter">Comments Filter</label>
-      	         <input type="text" className="form-control form-control-sm" id="comments-filter" name="commentsFilter" aria-label="Comments Filter" value={this.state.commentsFilter} onChange={this.handleInputChange} />
+      	         <input type="search" className="form-control form-control-sm" id="comments-filter" name="commentsFilter" aria-label="Comments Filter" value={this.state.commentsFilter} onChange={this.handleInputChange} />
   	          </div>
            </div>
 

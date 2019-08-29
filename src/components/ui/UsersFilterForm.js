@@ -155,12 +155,12 @@ class UsersFilterForm extends Component {
 
 	        <div className="form-group col-md-4">
 	          <label for="user-name-filter">User Name Filter:</label>
-	          <input type="text" className="form-control form-control-sm" id="user-name-filter" name="userNameFilter" aria-label="User Name Filter" value={this.state.userNameFilter} onChange={this.handleInputChange} />
+	          <input type="search" className="form-control form-control-sm" id="user-name-filter" name="userNameFilter" aria-label="User Name Filter" value={this.state.userNameFilter} onChange={this.handleInputChange} />
 	        </div>
 	
 	        <div className="form-group col-md-4">
 	          <label for="first-name-filter">First Name Filter:</label>
-	          <input type="text" className="form-control form-control-sm" id="first-name-filter" name="firstNameFilter" aria-label="First Name Filter" value={this.state.firstNameFilter} onChange={this.handleInputChange} />
+	          <input type="search" className="form-control form-control-sm" id="first-name-filter" name="firstNameFilter" aria-label="First Name Filter" value={this.state.firstNameFilter} onChange={this.handleInputChange} />
 	        </div>
 
 	        <div className="col-md-2">
@@ -173,12 +173,12 @@ class UsersFilterForm extends Component {
 
 	       <div className="form-group col-md-4">
 	         <label for="middle-name-filter">Middle Name Filter:</label>
-	         <input type="text" className="form-control form-control-sm" id="middle-name-filter" name="middleNameFilter" aria-label="Middle Name Filter" value={this.state.middleNameFilter} onChange={this.handleInputChange} />
+	         <input type="search" className="form-control form-control-sm" id="middle-name-filter" name="middleNameFilter" aria-label="Middle Name Filter" value={this.state.middleNameFilter} onChange={this.handleInputChange} />
 	       </div>
 	
 	       <div className="form-group col-md-4">
 	         <label for="last-name-filter">Last Name Filter:</label>
-	         <input type="text" className="form-control form-control-sm" id="last-name-filter" name="lastNameFilter" aria-label="Last Name Filter" value={this.state.lastNameFilter} onChange={this.handleInputChange} />
+	         <input type="search" className="form-control form-control-sm" id="last-name-filter" name="lastNameFilter" aria-label="Last Name Filter" value={this.state.lastNameFilter} onChange={this.handleInputChange} />
 	       </div>
 
 	       <div className="col-md-2">
