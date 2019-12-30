@@ -108,6 +108,7 @@ const buildHTMLPage = ({ html, state, css }) => `
         if( 'serviceWorker' in navigator ){
             // Use the window load event to keep the page load performant...
             window.addEventListener('load', () => {
+                console.log("SHEMP: Calling navigator.serviceWorker.register('/service-worker.js'), Moe...");
                 navigator.serviceWorker.register('/service-worker.js');
             });
         }
@@ -217,17 +218,21 @@ const addStoreToRequestPipeline = (req, res, next) => {
 /* Otherwise, it seems to come back with mime type of text/html and gets slimed:
 * "Uncaught (in promise) DOMException: Failed to register a ServiceWorker for scope ('http://localhost:3004/')
 *  with script ('http://localhost:3004/service-worker.js'): The script has an unsupported MIME type ('text/html')."
+*
+*  Actually, this error was due to service-worker.js not being found in the ./assets folder...a build issue...
 */
+/*
 const serviceWorkerRouter = new express.Router()
 serviceWorkerRouter.get("/service-worker.js", (req, res) => {
   console.log("SHEMP: Looks like dha service-worker.js file, Moe...");
   res.sendFile(path.resolve(__dirname, "../../dist/assets", "service-worker.js"));
 });
+*/
 
 export default express()
     .use(bodyParser.json())
     .use(logger)
-    .use(serviceWorkerRouter)
+    //.use(serviceWorkerRouter)
     .use(fileAssets)
     // Also /scrumi-react prefix for reverse proxy...
     .use('/scrumi-react', fileAssets)
