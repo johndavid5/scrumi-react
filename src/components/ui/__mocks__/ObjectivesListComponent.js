@@ -1,5 +1,5 @@
-const ObjectivesListComponentMock = () => <div></div>
+const ObjectivesListComponentMock = () => <div />
 
-ObjectivesListComponentMock.displayName = "ObjectivesListComponentMock"
+ObjectivesListComponentMock.displayName = 'ObjectivesListComponentMock'
 
 export default ObjectivesListComponentMock
