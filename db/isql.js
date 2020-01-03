@@ -24,11 +24,15 @@ logajohn.setLevel(config.DEBUG_LEVEL)
 logajohn.debug('objectives.js: logajohn.getLevel()=', logajohn.getLevel())
 
 
-//fs.readFile('/etc/passwd', (err, data) => {
-//  if (err) throw err;
-//  console.log(data);
-//});
-
+/*
+* Make fs.readFile() into a function that returns a Promise...
+*
+* fs.readFile('/etc/passwd', (err, data) => {
+*  if (err) throw err;
+*  console.log(data);
+* });
+*
+*/
 function promisifiedReadFile(file_path){
 
     let sWho = "promisifiedReadFile";
