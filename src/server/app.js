@@ -88,9 +88,27 @@ const buildHTMLPage = ({ html, state, css }) => `
         <title>Scrumi-React</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="shortcut icon" href="/scrumi-react/images/tenacious-techie.ico" />
+        <link rel="shortcut icon" href="/scrumi-react/images/favicon-todo-green.ico" type="image/x-icon">
+        <link rel="icon" href="/scrumi-react/images/favicon-todo-green.ico" type="image/x-icon">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Link to manifest for PWA -->
+        <link rel="manifest" href="/scrumi-react/manifest.json">
+
+        <!-- iOS doesn't support manifest.json yet, so add meta tags and icons -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Scrumi React">
+        <link rel="apple-touch-icon" href="/scrumi-react/images/todo-152x152.png">
+
+        <!-- For SEO, add description -->
+        <meta name="description" content="A todo list app">
+
+        <!-- theme-color for PWA -- color of address bar -->
+        <meta name="theme-color" content="#007BFF" />
+
+
         <style>${staticCSS}</style>
     </head>
     <body>
