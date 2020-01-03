@@ -40,7 +40,8 @@ import { config } from '../config'
 let sWhere = "./src/server/app.js";
 
 logajohn.setLevel(config.DEBUG_LEVEL)
-logajohn.debug(`${sWhere}: logajohn.getLevel()=${logajohn.getLevel()}...`)
+logajohn.debug(`${sWhere}: logajohn.getLevel() = ${logajohn.getLevel()}...`)
+logajohn.debug(`${sWhere}: process.version = ${process.version}...`)
 
 /*
 * staticCSS: middleware to handle (and "compile") SCSS gracefully...
