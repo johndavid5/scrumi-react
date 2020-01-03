@@ -1,0 +1,21 @@
+https://developers.google.com/web/tools/workbox/guides/get-started
+...server needs to find ./service-worker.js
+
+https://stackoverflow.com/questions/41150430/how-to-register-service-worker-using-webpack
+
+12/27/2019: Need to figure out how to serve the service-worker.js file from
+   navigator.serviceWorker.register('./service-worker.js') 
+since everything goes into bundle.js...
+...could we simply ask webpack to copy service-worker.js from ./src to ./dist?
+
+   I found it easy to register a vanilla js service worker by putting it into its own file and
+   adding it as an entry point in my webpack config. I would like to dive deeper into a react
+   specific service worker which listens and re-renders a given component if an online/offline
+   event is triggered. Like yourself i'm quite new to react and I'm wondering if redux is the
+   way forward for this kind of behaviour. Redux is something I'm still struggling with though!
+   – Finbar Maginn Jan 17 '17 at 23:31
+
+Or, since we're serving up index.html from the server, we could serve up
+service-worker.js virtually from the server...or even do a dangerous hack
+and have the server serve it up from ./src, but actually that would be
+fatal since we are supposed to deploy only ./dist to production...

@@ -10,13 +10,13 @@ import { config } from '../config'
 // Make React globally visible...
 global.React = React
 
-let le_port = config.PORT
-//app.set('port', process.env.PORT || 3000)
+const le_port = config.PORT
+// app.set('port', process.env.PORT || 3000)
 app.set('port', le_port || 3000)
 
 app.listen(
         app.get('port'),
-        () => { console.log(`Scrumi-React running at 'http://localhost:${app.get('port')}'`) }
-);
+        () => { console.log(`Scrumi-React running at 'http://localhost:${app.get('port')}'`) },
+)
 
 module.exports = app

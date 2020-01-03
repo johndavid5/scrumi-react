@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "build-client": "webpack --progress --watch",
-    "build-service-worker": "babel assets/service-worker.js -d dist --watch",
     "build-server": "babel src -d build --watch",
     "start-server": "nodemon ./build/server/index.js",
     "dev-all": "npm run build-client & npm run build-server & npm run start-server-nodemon",

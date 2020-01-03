@@ -1,20 +1,19 @@
+import deepFreeze from 'deep-freeze' // deepFreeze: causes test to fail if object is modified...ensures pure functions...
 import C from '../../../src/constants'
 import { objectives } from '../../../src/store/reducers'
 import { faux_objectives } from '../../../data/fauxObjectives'
-import deepFreeze from 'deep-freeze' // deepFreeze: causes test to fail if object is modified...ensures pure functions...
 
-describe("objectives reducers", () => {
+describe('objectives reducers', () => {
+    const objectivesList = faux_objectives
 
-    let objectivesList = faux_objectives
-
-    it("OBJECTIVES_GET success", () => {
+    it('OBJECTIVES_GET success', () => {
         const state = {}
         const action = {
             type: C.OBJECTIVES_GET,
-            filters: {"description": "build"},
+            filters: { description: 'build' },
             timestamp: new Date().toString(),
             objectives: objectivesList,
-            error: ''
+            error: '',
         }
         deepFreeze(state)
         deepFreeze(action)
@@ -28,11 +27,11 @@ describe("objectives reducers", () => {
             })
     })
 
-    it("OBJECTIVES_FETCHING true", () => {
+    it('OBJECTIVES_FETCHING true', () => {
         const state = {}
         const action = {
             type: C.OBJECTIVES_FETCHING,
-            objectives_is_fetching: true
+            objectives_is_fetching: true,
         }
         deepFreeze(state)
         deepFreeze(action)
@@ -45,11 +44,11 @@ describe("objectives reducers", () => {
             })
     })
 
-    it("OBJECTIVES_FETCHING false", () => {
+    it('OBJECTIVES_FETCHING false', () => {
         const state = {}
         const action = {
             type: C.OBJECTIVES_FETCHING,
-            objectives_is_fetching: false 
+            objectives_is_fetching: false,
         }
         deepFreeze(state)
         deepFreeze(action)
@@ -61,5 +60,4 @@ describe("objectives reducers", () => {
                 objectives_fetching: false,
             })
     })
-
 })

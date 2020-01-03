@@ -5,8 +5,8 @@
 *
 * We do not have to define the mock directly in our test.
 */
-const ObjectivesFilterFormMock = () => <div></div>
+const ObjectivesFilterFormMock = () => <div />
 
-ObjectivesFilterFormMock.displayName = "ObjectivesFilterFormMock"
+ObjectivesFilterFormMock.displayName = 'ObjectivesFilterFormMock'
 
 export default ObjectivesFilterFormMock

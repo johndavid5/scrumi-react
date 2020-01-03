@@ -1,6 +1,10 @@
 import C from '../constants'
 import { logajohn } from '../lib/logajohn'
 
+/*
+* Remember, Luke, never modify the state...
+* Return a copy of the new state.
+*/
 export const objectives = (state = {}, action = { type: null }) => {
 
     const sWho = 'reducers::objectives'

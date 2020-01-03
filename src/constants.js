@@ -7,7 +7,7 @@ const constants = {
 
     USER_SET_PASSWORD_HASH: 'USER_SET_PASSWORD_HASH',
 
-    USER_LOGIN: 'USER_LOGIN'
+    USER_LOGIN: 'USER_LOGIN',
 }
 
 export default constants

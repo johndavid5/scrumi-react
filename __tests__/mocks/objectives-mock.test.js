@@ -5,21 +5,18 @@ import { Objectives, mockGetObjectives } from '../../src/server/models/objective
 
 // Explicitly supply the path to __mocks__/objectives
 // Objectives is now a mock constructor...
-jest.mock('../../src/server/models/objectives',() => {
-  return require('../../src/server/models/__mocks__/objectives');
-}); 
+jest.mock('../../src/server/models/objectives', () => require('../../src/server/models/__mocks__/objectives'))
 
 
 logajohn.setLevel(config.DEBUG_LEVEL)
 logajohn.debug(`objectives-mock.test.js: logajohn.getLevel()=${logajohn.getLevel()}...`)
 
 describe('Objectives mock...', () => {
-
     const objectivesMockModel = new Objectives(config.TEST_DB_NAME)
 
     beforeEach(() => {
-      //Objectives.mockClear();
-      objectivesMockModel.getObjectives.mockClear();
+        // Objectives.mockClear();
+        objectivesMockModel.getObjectives.mockClear()
     })
 
     it('getObjectives()', (done) => {
@@ -36,9 +33,9 @@ describe('Objectives mock...', () => {
     it('getObjectives()--exception if null filter', (done) => {
         objectivesMockModel.getObjectives(null)
             .catch((err) => {
-                logajohn.debug('__tests__/mocks/objectives-mock.test.js/getObjectives()--exception if null filter .catch: err.name =', err.name, ', err.message = ', err.message )
+                logajohn.debug('__tests__/mocks/objectives-mock.test.js/getObjectives()--exception if null filter .catch: err.name =', err.name, ', err.message = ', err.message)
                 expect(err).toBeDefined()
-                //expect(err).toEqual('You supplied a null filter...')
+                // expect(err).toEqual('You supplied a null filter...')
                 expect(err.name).toEqual('Error')
                 expect(err.message).toEqual('You supplied a null filter...')
                 done()

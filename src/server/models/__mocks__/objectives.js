@@ -1,7 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+
+
+Object.defineProperty(exports, '__esModule', { value: true })
 
 import { logajohn } from '../../../lib/logajohn'
+
 logajohn.debug('__mocks__/objectives.js: logajohn.getLevel()=', logajohn.getLevel())
 
 const faux_objectives = [
@@ -12,37 +14,37 @@ const faux_objectives = [
 ]
 
 const mockGetObjectives = jest.fn(
-    (filter)=>{
+    (filter) => {
+        logajohn.debug('./src/server/models/__mocks__/objectives.js: mockGetObjectives(): filter=', filter)
 
-        logajohn.debug('./src/server/models/__mocks__/objectives.js: mockGetObjectives(): filter=', filter )
-
-	    return new Promise((resolve,reject)=>{ 
+	    return new Promise((resolve, reject) => {
 	        if (filter == null) {
 	            reject(new Error('You supplied a null filter...'))
-	            //reject('You supplied a null filter...')
+	            // reject('You supplied a null filter...')
 	        }
 	        resolve(faux_objectives)
 	    })
-})
+    },
+)
 
 exports.mockGetObjectives = mockGetObjectives
 
 class Objectives {
     constructor() {
         logajohn.debug('./src/server/models/__mocks__/objectives.js: Objectives mock constructor...')
-        //this.disable = jest.fn((key) => {
+        // this.disable = jest.fn((key) => {
         //    this.setting[key] = false;
-        //});
-        this.getObjectives = mockGetObjectives;
-        return this;
+        // });
+        this.getObjectives = mockGetObjectives
+        return this
     }
 }
-exports.Objectives = Objectives;
-//# sourceMappingURL=express.js.map
+exports.Objectives = Objectives
+// # sourceMappingURL=express.js.map
 
 
-//const mock = jest.fn().mockImplementation(() => {
+// const mock = jest.fn().mockImplementation(() => {
 //  return {getObjectives: mockGetObjectives};
-//});
+// });
 
-//export default mock;
+// export default mock;

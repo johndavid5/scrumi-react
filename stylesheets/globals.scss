@@ -37,10 +37,9 @@ h1 {
 }
 
 body {
-
   @include clear;
   //@include fade-bg($light, $light-grey);
-
+  background-color: #EFEFEF;
 }
 
 input {

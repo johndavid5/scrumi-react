@@ -41,7 +41,8 @@ const serverLogger = store => next => (action) => {
     return next(action)
 }
 
-/* Return the Redux middleware that should
+/*
+* Return the Redux middleware that should
 * be incorporated to the new store in a single
 * array...add any Redux middleware to this
 * array, and it will be spread into the
@@ -60,6 +61,21 @@ const middleware = server => [
     thunk,
 ]
 
+/*
+* In order to create a single reducer tree that looks like
+* Figure 8-6 from the previous section, we must combine the
+* colors and sort reducers.
+*
+* Redux has a function for doing just that, `combineReducers()`,
+* which combines all of the reducers into a single reducer.
+* These reducers are used to build your state tree.
+*
+* The names of the fields match the names of the reducers that are passed in.
+* 
+* Banks, Alex; Porcello, Eve.
+* Learning React: Functional Web Development with React and Redux (p. 198).
+* O'Reilly Media. Kindle Edition. 
+*/
 const storeFactory = (server = false, initialState = {}) => applyMiddleware(...middleware(server))(createStore)(
     combineReducers({ objectives, users }),
     initialState,
