@@ -38,7 +38,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/scrumi-react",
+  "start_url": "/scrumi-react/",
   "display": "standalone",
   "background_color": "#EFEFEF",
   "theme_color": "#007BFF"
