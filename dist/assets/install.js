@@ -46,6 +46,7 @@ function saveBeforeInstallPromptEvent(evt) {
  * @param {Event} evt
  */
 function installPWA(evt) {
+  evt.preventDefault();
   evt.stopPropagation();
 
   // CODELAB: Add code show install prompt & hide the install button.
