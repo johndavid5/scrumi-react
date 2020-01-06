@@ -50,9 +50,12 @@ props.location.pathname=
                     <li className="nav-item">
                           <Link className={`nav-link${props.location.pathname == '/scrumi-react/objectives' ? ' active' : ''}`} to="/scrumi-react/objectives">Objectives</Link>
                         </li>
-                        <li className="nav-item">
+                    <li className="nav-item">
                             <Link className={`nav-link${props.location.pathname == '/scrumi-react/users' ? ' active' : ''}`} to="/scrumi-react/users">Users</Link>
-                      </li>
+                    </li>
+                    <li className="nav-item">
+ 						<a className="nav-link" id="butInstall" href="#" aria-label="Install Scrumi React" style={{color: '#28A745'}} hidden>Install Scrumi React&nbsp;<img src="/scrumi-react/images/todo-96x96.png" style={{width: '24px', height: '24px'}}/></a>
+                    </li>
                   </ul>
                 ) : ''
             }
